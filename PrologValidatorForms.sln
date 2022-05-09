@@ -1,0 +1,36 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.32014.148
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrologValidatorForms", "PrologValidatorForms\PrologValidatorForms.csproj", "{E1A4E735-8014-4B46-8689-963839371694}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSProlog", "CSProlog\CSProlog.csproj", "{721E06EF-2BE2-44BF-A0B7-BBE163A29F26}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		LibraryRelease|Any CPU = LibraryRelease|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E1A4E735-8014-4B46-8689-963839371694}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E1A4E735-8014-4B46-8689-963839371694}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E1A4E735-8014-4B46-8689-963839371694}.LibraryRelease|Any CPU.ActiveCfg = Release|Any CPU
+		{E1A4E735-8014-4B46-8689-963839371694}.LibraryRelease|Any CPU.Build.0 = Release|Any CPU
+		{E1A4E735-8014-4B46-8689-963839371694}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E1A4E735-8014-4B46-8689-963839371694}.Release|Any CPU.Build.0 = Release|Any CPU
+		{721E06EF-2BE2-44BF-A0B7-BBE163A29F26}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{721E06EF-2BE2-44BF-A0B7-BBE163A29F26}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{721E06EF-2BE2-44BF-A0B7-BBE163A29F26}.LibraryRelease|Any CPU.ActiveCfg = LibraryRelease|Any CPU
+		{721E06EF-2BE2-44BF-A0B7-BBE163A29F26}.LibraryRelease|Any CPU.Build.0 = LibraryRelease|Any CPU
+		{721E06EF-2BE2-44BF-A0B7-BBE163A29F26}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{721E06EF-2BE2-44BF-A0B7-BBE163A29F26}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0E399091-F9D6-44DA-9129-7938DC1854D2}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,16 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3": {
+      "ProjectGuid": "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3",
+      "DisplayName": "Różne pliki",
+      "ColorIndex": -1
+    },
+    "721e06ef-2be2-44bf-a0b7-bbe163a29f26": {
+      "ProjectGuid": "721e06ef-2be2-44bf-a0b7-bbe163a29f26",
+      "DisplayName": "CSProlog",
+      "ColorIndex": 0
+    }
+  },
+  "NextColorIndex": 1
+}
