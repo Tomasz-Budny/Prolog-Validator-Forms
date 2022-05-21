@@ -55,3 +55,22 @@ C:\Users\tomek\OneDrive\Pulpit\Semestr4\InżynieriaOprogramowania\ProjekcikProlo
 C:\Users\tomek\OneDrive\Pulpit\Semestr4\InżynieriaOprogramowania\ProjekcikProlog\IO\IO\PrologValidatorForms\obj\Debug\PrologValidatorForms.exe
 C:\Users\tomek\OneDrive\Pulpit\Semestr4\InżynieriaOprogramowania\ProjekcikProlog\IO\IO\PrologValidatorForms\obj\Debug\PrologValidatorForms.pdb
 C:\Users\tomek\OneDrive\Pulpit\Semestr4\InżynieriaOprogramowania\ProjekcikProlog\IO\IO\PrologValidatorForms\obj\Debug\PrologValidatorForms.csproj.CopyComplete
+C:\Users\GAMING\Desktop\Nowy folder\COS\IO\PrologValidatorForms\bin\Debug\PrologValidatorForms.exe.config
+C:\Users\GAMING\Desktop\Nowy folder\COS\IO\PrologValidatorForms\bin\Debug\PrologValidatorForms.exe
+C:\Users\GAMING\Desktop\Nowy folder\COS\IO\PrologValidatorForms\bin\Debug\PrologValidatorForms.pdb
+C:\Users\GAMING\Desktop\Nowy folder\COS\IO\PrologValidatorForms\bin\Debug\CSProlog.dll
+C:\Users\GAMING\Desktop\Nowy folder\COS\IO\PrologValidatorForms\bin\Debug\EPPlus.dll
+C:\Users\GAMING\Desktop\Nowy folder\COS\IO\PrologValidatorForms\bin\Debug\SwiftExcel.dll
+C:\Users\GAMING\Desktop\Nowy folder\COS\IO\PrologValidatorForms\bin\Debug\System.ComponentModel.Annotations.dll
+C:\Users\GAMING\Desktop\Nowy folder\COS\IO\PrologValidatorForms\bin\Debug\CSProlog.pdb
+C:\Users\GAMING\Desktop\Nowy folder\COS\IO\PrologValidatorForms\bin\Debug\EPPlus.xml
+C:\Users\GAMING\Desktop\Nowy folder\COS\IO\PrologValidatorForms\obj\Debug\PrologValidatorForms.csproj.AssemblyReference.cache
+C:\Users\GAMING\Desktop\Nowy folder\COS\IO\PrologValidatorForms\obj\Debug\PrologValidatorForms.csproj.SuggestedBindingRedirects.cache
+C:\Users\GAMING\Desktop\Nowy folder\COS\IO\PrologValidatorForms\obj\Debug\PrologValidatorForms.Eksplorator.resources
+C:\Users\GAMING\Desktop\Nowy folder\COS\IO\PrologValidatorForms\obj\Debug\PrologValidatorForms.Main.resources
+C:\Users\GAMING\Desktop\Nowy folder\COS\IO\PrologValidatorForms\obj\Debug\PrologValidatorForms.Properties.Resources.resources
+C:\Users\GAMING\Desktop\Nowy folder\COS\IO\PrologValidatorForms\obj\Debug\PrologValidatorForms.csproj.GenerateResource.cache
+C:\Users\GAMING\Desktop\Nowy folder\COS\IO\PrologValidatorForms\obj\Debug\PrologValidatorForms.csproj.CoreCompileInputs.cache
+C:\Users\GAMING\Desktop\Nowy folder\COS\IO\PrologValidatorForms\obj\Debug\PrologValidatorForms.csproj.CopyComplete
+C:\Users\GAMING\Desktop\Nowy folder\COS\IO\PrologValidatorForms\obj\Debug\PrologValidatorForms.exe
+C:\Users\GAMING\Desktop\Nowy folder\COS\IO\PrologValidatorForms\obj\Debug\PrologValidatorForms.pdb
