@@ -36,24 +36,24 @@ namespace PrologValidatorForms
         //    }
         //}
 
-        private void label1_Click(object sender, EventArgs e)
-        {
+        //private void label1_Click(object sender, EventArgs e)
+        //{
 
-        }
+        //}
 
-        private void label2_Click(object sender, EventArgs e)
-        {
+        //private void label2_Click(object sender, EventArgs e)
+        //{
 
-        }
-        private void button2_Click(object sender, EventArgs e)
-        {
-            labelInfo.Text = "";
-            if (folderBrowserDialog1.ShowDialog() == DialogResult.OK)
-            {
-                finalPath = folderBrowserDialog1.SelectedPath;
-                label2.Text = finalPath;
-            }
-        }
+        //}
+        //private void button2_Click(object sender, EventArgs e)
+        //{
+        //    labelInfo.Text = "";
+        //    if (folderBrowserDialog1.ShowDialog() == DialogResult.OK)
+        //    {
+        //        finalPath = folderBrowserDialog1.SelectedPath;
+        //        label2.Text = finalPath;
+        //    }
+        //}
 
         private string DisplayErrors(string path, string finalPath)
         {
@@ -75,17 +75,17 @@ namespace PrologValidatorForms
             return result;
         }
 
-        private void button3_Click(object sender, EventArgs e)
-        {
-            labelInfo.Text = "";
-            labelInfo.Text = DisplayErrors(pathName, finalPath);
-            if(InputValidator.ValidateStudentDirectory(pathName) == true && finalPath !="")
-            {
-                ValSolution vs = new ValSolution(pathName, labelInfo, finalPath);
-                vs.AnalyzeSolution();
-            }
+        //private void button3_Click(object sender, EventArgs e)
+        //{
+        //    labelInfo.Text = "";
+        //    labelInfo.Text = DisplayErrors(pathName, finalPath);
+        //    if(InputValidator.ValidateStudentDirectory(pathName) == true && finalPath !="")
+        //    {
+        //        ValSolution vs = new ValSolution(pathName, labelInfo, finalPath);
+        //        vs.AnalyzeSolution();
+        //    }
             
-        }
+        //}
 
         // Wybieramy ścieżke -> jak dobra idziemy dalej -> zatwierdź żeby zapisać informacje w PROGRAMIE -> zapisz jako excel żęby zapisać z programu do excela
 

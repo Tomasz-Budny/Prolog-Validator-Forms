@@ -54,3 +54,21 @@ C:\Users\tomek\OneDrive\Pulpit\Semestr4\InżynieriaOprogramowania\ProjekcikProlo
 C:\Users\tomek\OneDrive\Pulpit\Semestr4\InżynieriaOprogramowania\ProjekcikProlog\IO\IO\PrologValidatorForms\obj\Debug\PrologValidatorForms.csproj.CoreCompileInputs.cache
 C:\Users\tomek\OneDrive\Pulpit\Semestr4\InżynieriaOprogramowania\ProjekcikProlog\IO\IO\PrologValidatorForms\obj\Debug\PrologValidatorForms.exe
 C:\Users\tomek\OneDrive\Pulpit\Semestr4\InżynieriaOprogramowania\ProjekcikProlog\IO\IO\PrologValidatorForms\obj\Debug\PrologValidatorForms.pdb
+E:\E-Szkoła\SGGW\Semestr 4\Inżynieria oprogramowania\Projekt\IO\PrologValidatorForms\bin\Debug\PrologValidatorForms.exe.config
+E:\E-Szkoła\SGGW\Semestr 4\Inżynieria oprogramowania\Projekt\IO\PrologValidatorForms\bin\Debug\PrologValidatorForms.exe
+E:\E-Szkoła\SGGW\Semestr 4\Inżynieria oprogramowania\Projekt\IO\PrologValidatorForms\bin\Debug\PrologValidatorForms.pdb
+E:\E-Szkoła\SGGW\Semestr 4\Inżynieria oprogramowania\Projekt\IO\PrologValidatorForms\bin\Debug\CSProlog.dll
+E:\E-Szkoła\SGGW\Semestr 4\Inżynieria oprogramowania\Projekt\IO\PrologValidatorForms\bin\Debug\EPPlus.dll
+E:\E-Szkoła\SGGW\Semestr 4\Inżynieria oprogramowania\Projekt\IO\PrologValidatorForms\bin\Debug\SwiftExcel.dll
+E:\E-Szkoła\SGGW\Semestr 4\Inżynieria oprogramowania\Projekt\IO\PrologValidatorForms\bin\Debug\System.ComponentModel.Annotations.dll
+E:\E-Szkoła\SGGW\Semestr 4\Inżynieria oprogramowania\Projekt\IO\PrologValidatorForms\bin\Debug\CSProlog.pdb
+E:\E-Szkoła\SGGW\Semestr 4\Inżynieria oprogramowania\Projekt\IO\PrologValidatorForms\bin\Debug\EPPlus.xml
+E:\E-Szkoła\SGGW\Semestr 4\Inżynieria oprogramowania\Projekt\IO\PrologValidatorForms\obj\Debug\PrologValidatorForms.csprojAssemblyReference.cache
+E:\E-Szkoła\SGGW\Semestr 4\Inżynieria oprogramowania\Projekt\IO\PrologValidatorForms\obj\Debug\PrologValidatorForms.Eksplorator.resources
+E:\E-Szkoła\SGGW\Semestr 4\Inżynieria oprogramowania\Projekt\IO\PrologValidatorForms\obj\Debug\PrologValidatorForms.Main.resources
+E:\E-Szkoła\SGGW\Semestr 4\Inżynieria oprogramowania\Projekt\IO\PrologValidatorForms\obj\Debug\PrologValidatorForms.Properties.Resources.resources
+E:\E-Szkoła\SGGW\Semestr 4\Inżynieria oprogramowania\Projekt\IO\PrologValidatorForms\obj\Debug\PrologValidatorForms.csproj.GenerateResource.cache
+E:\E-Szkoła\SGGW\Semestr 4\Inżynieria oprogramowania\Projekt\IO\PrologValidatorForms\obj\Debug\PrologValidatorForms.csproj.CoreCompileInputs.cache
+E:\E-Szkoła\SGGW\Semestr 4\Inżynieria oprogramowania\Projekt\IO\PrologValidatorForms\obj\Debug\PrologValidatorForms.csproj.CopyComplete
+E:\E-Szkoła\SGGW\Semestr 4\Inżynieria oprogramowania\Projekt\IO\PrologValidatorForms\obj\Debug\PrologValidatorForms.exe
+E:\E-Szkoła\SGGW\Semestr 4\Inżynieria oprogramowania\Projekt\IO\PrologValidatorForms\obj\Debug\PrologValidatorForms.pdb
