@@ -26,15 +26,15 @@ namespace PrologValidatorForms
             folderBrowserDialog1 = new FolderBrowserDialog();
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            labelInfo.Text = "";
-            if (folderBrowserDialog1.ShowDialog() == DialogResult.OK)
-            {
-                pathName = folderBrowserDialog1.SelectedPath;
-                label1.Text = pathName;
-            }
-        }
+        //private void button1_Click(object sender, EventArgs e)
+        //{
+        //    labelInfo.Text = "";
+        //    if (folderBrowserDialog1.ShowDialog() == DialogResult.OK)
+        //    {
+        //        pathName = folderBrowserDialog1.SelectedPath;
+        //        label1.Text = pathName;
+        //    }
+        //}
 
         private void label1_Click(object sender, EventArgs e)
         {
@@ -111,6 +111,11 @@ namespace PrologValidatorForms
         }
 
         private void cb1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_export_Click(object sender, EventArgs e)
         {
 
         }

@@ -29,7 +29,6 @@ namespace PrologValidatorForms
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
             this.button2 = new System.Windows.Forms.Button();
@@ -41,16 +40,6 @@ namespace PrologValidatorForms
             this.cb1 = new PrologValidatorForms.Eksplorator();
             this.btn_export = new System.Windows.Forms.Button();
             this.SuspendLayout();
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(624, 501);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(83, 24);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Wybierz folder";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label1
             // 
@@ -114,7 +103,7 @@ namespace PrologValidatorForms
             // cb2
             // 
             this.cb2.Location = new System.Drawing.Point(531, 40);
-            this.cb2.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.cb2.Margin = new System.Windows.Forms.Padding(1);
             this.cb2.Name = "cb2";
             this.cb2.Size = new System.Drawing.Size(525, 369);
             this.cb2.TabIndex = 7;
@@ -123,7 +112,7 @@ namespace PrologValidatorForms
             // cb1
             // 
             this.cb1.Location = new System.Drawing.Point(11, 40);
-            this.cb1.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.cb1.Margin = new System.Windows.Forms.Padding(1);
             this.cb1.Name = "cb1";
             this.cb1.Size = new System.Drawing.Size(525, 369);
             this.cb1.TabIndex = 6;
@@ -137,6 +126,7 @@ namespace PrologValidatorForms
             this.btn_export.TabIndex = 10;
             this.btn_export.Text = "Zapisz";
             this.btn_export.UseVisualStyleBackColor = true;
+            this.btn_export.Click += new System.EventHandler(this.btn_export_Click);
             // 
             // Main
             // 
@@ -152,7 +142,6 @@ namespace PrologValidatorForms
             this.Controls.Add(this.label2);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.button1);
             this.Name = "Main";
             this.Text = "Prolog Validator";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -164,8 +153,6 @@ namespace PrologValidatorForms
         #endregion
         private string pathName = "";
         private string finalPath = "";
-
-        private System.Windows.Forms.Button button1; 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.FolderBrowserDialog folderBrowserDialog1;
         private System.Windows.Forms.Button button2;
