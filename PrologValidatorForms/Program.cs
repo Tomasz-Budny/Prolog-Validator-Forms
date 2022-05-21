@@ -4,6 +4,7 @@ using System.IO;
 using System.Linq;
 using System.Windows.Forms;
 using Prolog;
+using PrologValidatorForms.Library;
 
 namespace PrologValidatorForms
 {
@@ -56,6 +57,14 @@ namespace PrologValidatorForms
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Main());
 
+            string dirPath = @"C:\Users\tomek\OneDrive\Pulpit\Testy\G4_2022";
+            string destDir = @"C:\Users\tomek\OneDrive\Pulpit\Testy\Excel";
+            Label testLabel = new Label();
+
+            GroupManager gm = new GroupManager(dirPath, destDir, testLabel);
+            gm.AnalyzeSolution();
+
+            Console.WriteLine("Siema");
             
         }
     }

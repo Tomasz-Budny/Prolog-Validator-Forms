@@ -13,14 +13,14 @@ namespace PrologValidatorForms.Library
         string dirPath;
         string name;
         string destDir;
-        Label infoLabel;
+        Label label;
         List<ValSolution> vss = new List<ValSolution>();
 
-        public GroupManager(string dirPath, string name, string destDir, Label infoLabel)
+        public GroupManager(string dirPath, string destDir, Label infoLabel)
         {
             this.dirPath = dirPath;
-            this.name = name;
             this.destDir = destDir;
+            this.label = infoLabel;
         }
 
         public void AnalyzeSolution()
@@ -29,7 +29,7 @@ namespace PrologValidatorForms.Library
             {
                 if(InputValidator.ValidateStudentDirectory(dir)==true)
                 {
-                    ValSolution vs = new ValSolution(dir, infoLabel, destDir);
+                    ValSolution vs = new ValSolution(dir, label, destDir);
                     vs.AnalyzeSolution();
                     this.vss.Add(vs);
                 }
