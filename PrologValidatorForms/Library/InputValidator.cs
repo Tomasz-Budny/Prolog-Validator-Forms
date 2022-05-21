@@ -14,7 +14,7 @@ namespace PrologValidatorForms
         // K - numer grupy
         // XXXX - rocznik
         
-        public static bool ValidateDirectory(string path)
+        public static bool ValidateStudentDirectory(string path)
         {
             if (path.Length < 11)
                 return false;
@@ -22,10 +22,7 @@ namespace PrologValidatorForms
             return studentDirectoryPattern.IsMatch(dirs[dirs.Length - 1]);
         }
 
-        // 
-        // C:\directory\directory\K1_1111_1
-
-        public static bool ValidateGroup(string path)
+        public static bool ValidateGroupDirectory(string path)
         {
             if (path.Length < 7)
                 return false;

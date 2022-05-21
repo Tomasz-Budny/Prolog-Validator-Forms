@@ -59,7 +59,7 @@ namespace PrologValidatorForms
             {
                 result += "Nie podano ścieżki z rozwiązaniem!\n";
             }
-            else if(InputValidator.ValidateDirectory(path) != true)
+            else if(InputValidator.ValidateStudentDirectory(path) != true)
             {
                 result += "podana ścieżka jest w nieprawidłowym formacie, poprawny: Kx_yyyyyy_Z\n";
             }
@@ -75,7 +75,7 @@ namespace PrologValidatorForms
         {
             labelInfo.Text = "";
             labelInfo.Text = DisplayErrors(pathName, finalPath);
-            if(InputValidator.ValidateDirectory(pathName) == true && finalPath !="")
+            if(InputValidator.ValidateStudentDirectory(pathName) == true && finalPath !="")
             {
                 ValSolution vs = new ValSolution(pathName, labelInfo, finalPath);
                 vs.AnalyzeSolution();
@@ -87,7 +87,7 @@ namespace PrologValidatorForms
         {
             string inputPath = cb1.PresentPath;
             string outputpath = cb2.PresentPath;
-            if (InputValidator.ValidateDirectory(inputPath) == true)
+            if (InputValidator.ValidateStudentDirectory(inputPath) == true)
             {
                 ValSolution vs = new ValSolution(inputPath, labelInfo, outputpath);
                 vs.AnalyzeSolution();
