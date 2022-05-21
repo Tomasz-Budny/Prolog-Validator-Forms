@@ -7,11 +7,15 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using System.IO;
+using PrologValidatorForms.Library;
 
 namespace PrologValidatorForms
 {
     public partial class Main : Form
     {
+
+        GroupManager gm;
+
         public Main()
         {
             InitializeComponent();
@@ -82,6 +86,9 @@ namespace PrologValidatorForms
             }
             
         }
+
+        // Wybieramy ścieżke -> jak dobra idziemy dalej -> zatwierdź żeby zapisać informacje w PROGRAMIE -> zapisz jako excel żęby zapisać z programu do excela
+
 
         private void btn_confirm_Click(object sender, EventArgs e)
         {
