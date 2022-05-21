@@ -25,14 +25,23 @@ namespace PrologValidatorForms.Library
 
         public void AnalyzeSolution()
         {
-            foreach (string dir in Directory.GetDirectories(dirPath))
+            FileInfo fi = new FileInfo(dirPath + @"\klucz.txt");
+            if (fi.Exists)
             {
-                if(InputValidator.ValidateStudentDirectory(dir)==true)
+                foreach (string dir in Directory.GetDirectories(dirPath))
                 {
-                    ValSolution vs = new ValSolution(dir, label, destDir);
-                    vs.AnalyzeSolution();
-                    this.vss.Add(vs);
+                    if (InputValidator.ValidateStudentDirectory(dir) == true)
+                    {
+                        ValSolution vs = new ValSolution(dir, label, destDir);
+                        vs.AnalyzeSolution();
+                        this.vss.Add(vs);
+                    }
                 }
+            }
+            else
+            {
+                MessageBox.Show($"W ścieżce: {dirPath} brak pliku klucz.txt!", "Błąd", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                label.Text += "w katalogu z rozwiązaniem brak pliku: klucz.txt!\n";
             }
         }
     }
