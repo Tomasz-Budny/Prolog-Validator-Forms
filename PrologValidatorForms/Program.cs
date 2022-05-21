@@ -51,7 +51,6 @@ namespace PrologValidatorForms
 
 
 
-            //  ROZWIĄZANIA : GUITEST I PROLOGVALIDATORLIBRARY SĄ ARCHIWALNE NIE MA POTRZEBY SIĘ Z NIMY ZAPOZNAWAĆ
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);

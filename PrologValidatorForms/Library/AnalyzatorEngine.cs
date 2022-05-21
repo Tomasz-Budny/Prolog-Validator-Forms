@@ -195,6 +195,10 @@ namespace PrologValidatorForms
         string content;
         bool isCorrect;
 
+        public string Content
+        {
+            get { return content; }
+        }
         public Test(string content, bool isCorrect)
         {
             this.content = content;
