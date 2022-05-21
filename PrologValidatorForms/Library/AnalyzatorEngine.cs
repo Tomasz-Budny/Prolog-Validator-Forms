@@ -18,11 +18,12 @@ namespace PrologValidatorForms
         Label infoLabel;
         List<Task> tasks = new List<Task>();
 
-        public ValSolution(string path, Label infoLabel, string finalPath)
+        public ValSolution(string path, Label infoLabel, string finalPath, string keyPath)
         {
             this.path = path;
             this.infoLabel = infoLabel;
             this.finalPath = finalPath;
+            this.keyPath = keyPath;
             solutionName = path.Substring(path.Length - 11, 11);
         }
 
@@ -38,17 +39,7 @@ namespace PrologValidatorForms
 
         public void AnalyzeSolution()
         {
-            FileInfo fi = new FileInfo(path + @"\klucz.txt");
-            if (fi.Exists)
-            {
-                keyPath = path + @"\klucz.txt";
-                AnalyzeTasks();
-            }
-            else
-            {
-                MessageBox.Show($"W ścieżce: {path} brak pliku klucz.txt!", "Błąd", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                infoLabel.Text += "w katalogu z rozwiązaniem brak pliku: klucz.txt!\n";
-            }
+            AnalyzeTasks();
         }
 
         private void AnalyzeTasks()
@@ -89,7 +80,7 @@ namespace PrologValidatorForms
             }
             else
             {
-                CreateExcelFile();
+                //CreateExcelFile();
             }
 
             // W celu testowania usunąć potem

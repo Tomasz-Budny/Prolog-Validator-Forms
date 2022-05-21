@@ -75,13 +75,14 @@ namespace PrologValidatorForms
             return result;
         }
 
+        // Archiwalna do usunięcia
         private void button3_Click(object sender, EventArgs e)
         {
             labelInfo.Text = "";
             labelInfo.Text = DisplayErrors(pathName, finalPath);
             if(InputValidator.ValidateStudentDirectory(pathName) == true && finalPath !="")
             {
-                ValSolution vs = new ValSolution(pathName, labelInfo, finalPath);
+                ValSolution vs = new ValSolution(pathName, labelInfo, finalPath, null);
                 vs.AnalyzeSolution();
             }
             
