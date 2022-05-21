@@ -90,18 +90,19 @@ namespace PrologValidatorForms
         // Wybieramy ścieżke -> jak dobra idziemy dalej -> zatwierdź żeby zapisać informacje w PROGRAMIE -> zapisz jako excel żęby zapisać z programu do excela
 
 
+        // Zmiana ciała metody btn_confirm_Click
         private void btn_confirm_Click(object sender, EventArgs e)
         {
             string inputPath = cb1.PresentPath;
             string outputpath = cb2.PresentPath;
-            if (InputValidator.ValidateStudentDirectory(inputPath) == true)
+            if (InputValidator.ValidateGroupDirectory(inputPath) == true)
             {
-                ValSolution vs = new ValSolution(inputPath, labelInfo, outputpath);
-                vs.AnalyzeSolution();
+                gm = new GroupManager(inputPath, outputpath, labelInfo);
+                gm.AnalyzeSolution();
             }
             else
             {
-                MessageBox.Show($"Nieprawidłowy format ścięzki z rozwiązaniem! Prawidłowy format: Kx_yyyyyy_Z", "Błąd", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show($"Nieprawidłowy format ścięzki z rozwiązaniem! Prawidłowy format: Gx_YYYY", "Błąd", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 

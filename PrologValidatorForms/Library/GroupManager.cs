@@ -21,6 +21,8 @@ namespace PrologValidatorForms.Library
             this.dirPath = dirPath;
             this.destDir = destDir;
             this.label = infoLabel;
+            this.name = dirPath.Substring(dirPath.Length - 7, 7);
+            Console.WriteLine($"{name}");
         }
 
         public void AnalyzeSolution()
