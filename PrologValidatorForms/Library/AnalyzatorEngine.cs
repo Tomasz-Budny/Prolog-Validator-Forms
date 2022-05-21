@@ -18,6 +18,16 @@ namespace PrologValidatorForms
         Label infoLabel;
         List<Task> tasks = new List<Task>();
 
+        public string SolutionName
+        {
+            get { return solutionName; }
+        }
+
+        public List<Task> Tasks
+        {
+            get { return tasks; }
+        }
+
         public ValSolution(string path, Label infoLabel, string finalPath, string keyPath)
         {
             this.path = path;
@@ -108,6 +118,11 @@ namespace PrologValidatorForms
             this.taskPath = taskPath;
             this.creationTime = creationTime;
             this.sizeOfFile = sizeOfFile;
+        }
+
+        public List<Test> Tests
+        {
+            get { return tests; }
         }
 
         public long SizeOfFile
