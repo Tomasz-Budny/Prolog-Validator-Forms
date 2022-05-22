@@ -82,7 +82,7 @@ namespace PrologValidatorForms
             labelInfo.Text = DisplayErrors(pathName, finalPath);
             if(InputValidator.ValidateStudentDirectory(pathName) == true && finalPath !="")
             {
-                ValSolution vs = new ValSolution(pathName, labelInfo, finalPath, null);
+                StudentTasksManager vs = new StudentTasksManager(pathName, labelInfo, finalPath, null);
                 vs.AnalyzeSolution();
             }
             

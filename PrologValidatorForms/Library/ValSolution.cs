@@ -8,7 +8,7 @@ using System.Windows.Forms;
 
 namespace PrologValidatorForms
 {
-    partial class ValSolution
+    partial class StudentTasksManager
     {
         string path;
         string solutionName;
@@ -33,7 +33,7 @@ namespace PrologValidatorForms
             get { return tasks; }
         }
 
-        public ValSolution(string path, Label infoLabel, string finalPath, string keyPath)
+        public StudentTasksManager(string path, Label infoLabel, string finalPath, string keyPath)
         {
             this.path = path;
             this.infoLabel = infoLabel;

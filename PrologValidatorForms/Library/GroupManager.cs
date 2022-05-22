@@ -18,7 +18,7 @@ namespace PrologValidatorForms.Library
         string destDir;
         Label label;
         string keyPath;
-        List<ValSolution> vss = new List<ValSolution>();
+        List<StudentTasksManager> vss = new List<StudentTasksManager>();
 
         public GroupManager(string dirPath, string destDir, Label infoLabel)
         {
@@ -39,7 +39,7 @@ namespace PrologValidatorForms.Library
                 {
                     if (InputValidator.ValidateStudentDirectory(dir) == true)
                     {
-                        ValSolution vs = new ValSolution(dir, label, destDir, keyPath);
+                        StudentTasksManager vs = new StudentTasksManager(dir, label, destDir, keyPath);
                         vs.AnalyzeSolution();
                         this.vss.Add(vs);
                     }
@@ -62,7 +62,7 @@ namespace PrologValidatorForms.Library
 
                 ExcelWorksheet ws = excelPackage.Workbook.Worksheets.Add("Podsumowanie");
 
-                foreach (ValSolution item in vss)
+                foreach (StudentTasksManager item in vss)
                 {
                     //Informacje podstawowe
                     ws = excelPackage.Workbook.Worksheets.Add(item.SolutionName);

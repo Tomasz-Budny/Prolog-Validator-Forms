@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace PrologValidatorForms
 {
-    partial class ValSolution
+    partial class StudentTasksManager
     {
         private void CreateExcelFile()
         {
