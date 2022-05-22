@@ -112,14 +112,16 @@ namespace PrologValidatorForms.Library
                         {
                             How_many = item.Tasks[i].Tests.Count;
                         }
+                        
                         for (int j = 0; j < item.Tasks[i].Tests.Count; j++)
                         {
                             ws.Cells[dataCellsRow + i + 1, dataCellsColumn + j + 1].Value = item.Tasks[i].Tests[j].IsCorrect;
+                            ws.Cells[dataCellsRow, dataCellsColumn + j + 1].Value = "test" + Convert.ToString(j+1);
                         }
                     }
-                    ws.Cells[dataCellsRow, dataCellsColumn + 1 + How_many].Value = "Ilosc zaliczonych testow";
-                    ws.Cells[dataCellsRow, dataCellsColumn + 1 + How_many + 1].Value = "Ilosc testow przeprowadzonych";
-                    ws.Cells[dataCellsRow, dataCellsColumn + 1 + How_many + 2].Value = "Procent zaliczonych testow";
+                    ws.Cells[dataCellsRow, dataCellsColumn + 1 + How_many].Value = "Ilość zaliczonych testów";
+                    ws.Cells[dataCellsRow, dataCellsColumn + 1 + How_many + 1].Value = "Ilość testów przeprowadzonych";
+                    ws.Cells[dataCellsRow, dataCellsColumn + 1 + How_many + 2].Value = "Procent zaliczonych testów";
                     for (int i = 0; i < item.Tasks.Count; i++)
                     {
                         ws.Cells[dataCellsRow + i + 1, dataCellsColumn + 1 + How_many].Value = item.Tasks[i].CorrectAnswers;
