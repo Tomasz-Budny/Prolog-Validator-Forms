@@ -91,8 +91,6 @@ namespace PrologValidatorForms.Library
 
                     infCellsColumn++;
 
-                    ws.Cells[10, 10].Value = item.Tasks.Count;
-
                     for (int i = 0; i < item.Tasks.Count; i++)
                     {
                         ws.Cells[infCellsRow + 1, infCellsColumn + i].Value = item.Tasks[i].TaskName;
@@ -115,9 +113,17 @@ namespace PrologValidatorForms.Library
                         }
                         for (int j = 0; j < item.Tasks[i].Tests.Count; j++)
                         {
-                            
                             ws.Cells[dataCellsRow + i + 1, dataCellsColumn + j + 1].Value = item.Tasks[i].Tests[j].IsCorrect;
                         }
+                    }
+                    ws.Cells[dataCellsRow, dataCellsColumn + 1 + How_many].Value = "Ilosc zaliczonych testow";
+                    ws.Cells[dataCellsRow, dataCellsColumn + 1 + How_many + 1].Value = "Ilosc testow przeprowadzonych";
+                    ws.Cells[dataCellsRow, dataCellsColumn + 1 + How_many + 2].Value = "Procent zaliczonych testow";
+                    for (int i = 0; i < item.Tasks.Count; i++)
+                    {
+                        ws.Cells[dataCellsRow + i + 1, dataCellsColumn + 1 + How_many].Value = item.Tasks[i].CorrectAnswers;
+                        ws.Cells[dataCellsRow + i + 1, dataCellsColumn + 1 + How_many + 1].Value = item.Tasks[i].TotalAnswers;
+                        ws.Cells[dataCellsRow + i + 1, dataCellsColumn + 1 + How_many + 2].Value = Convert.ToString(item.Tasks[i].CorrectAnswers / item.Tasks[i].TotalAnswers) + '%';
                     }
 
 
@@ -125,7 +131,7 @@ namespace PrologValidatorForms.Library
 
                     //Automatyczne wyrównanie kolumn
 
-                    ws.Cells[1, 1, 30, 30].AutoFitColumns();
+                    ws.Cells[1, 1, 50, 50].AutoFitColumns();
                 }
 
 
