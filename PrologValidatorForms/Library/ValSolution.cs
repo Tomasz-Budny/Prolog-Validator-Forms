@@ -89,7 +89,7 @@ namespace PrologValidatorForms
             }
             else
             {
-                //CreateExcelFile();
+
             }
 
             // W celu testowania usunąć potem
