@@ -104,6 +104,7 @@ namespace PrologValidatorForms.Library
                     int dataCellsColumn = 2;
 
                     int How_many = 0;
+
                     for (int i = 0; i < item.Tasks.Count; i++)
                     {
                         ws.Cells[dataCellsRow + i + 1, dataCellsColumn].Value = item.Tasks[i].TaskName;
@@ -123,7 +124,7 @@ namespace PrologValidatorForms.Library
                     {
                         ws.Cells[dataCellsRow + i + 1, dataCellsColumn + 1 + How_many].Value = item.Tasks[i].CorrectAnswers;
                         ws.Cells[dataCellsRow + i + 1, dataCellsColumn + 1 + How_many + 1].Value = item.Tasks[i].TotalAnswers;
-                        ws.Cells[dataCellsRow + i + 1, dataCellsColumn + 1 + How_many + 2].Value = Convert.ToString(item.Tasks[i].CorrectAnswers / item.Tasks[i].TotalAnswers) + '%';
+                        ws.Cells[dataCellsRow + i + 1, dataCellsColumn + 1 + How_many + 2].Value = Convert.ToString((Convert.ToDouble(item.Tasks[i].CorrectAnswers) / Convert.ToDouble(item.Tasks[i].TotalAnswers))*100) + '%';
                     }
 
 
