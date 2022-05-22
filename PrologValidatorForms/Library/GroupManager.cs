@@ -132,7 +132,7 @@ namespace PrologValidatorForms.Library
 
                     //Testy
 
-                    int dataCellsRow = 7;
+                    int dataCellsRow = 8;
                     int dataCellsColumn = 2;
 
                     int How_many = 0;
@@ -148,7 +148,7 @@ namespace PrologValidatorForms.Library
                         for (int j = 0; j < item.Tasks[i].Tests.Count; j++)
                         {
                             ws.Cells[dataCellsRow + i + 1, dataCellsColumn + j + 1].Value = item.Tasks[i].Tests[j].IsCorrect;
-                            ws.Cells[dataCellsRow, dataCellsColumn + j + 1].Value = "test" + Convert.ToString(j+1);
+                            ws.Cells[dataCellsRow, dataCellsColumn + j + 1].Value = "Test " + Convert.ToString(j+1);
                         }
                     }
                     ws.Cells[dataCellsRow, dataCellsColumn + 1 + How_many].Value = "Ilość zaliczonych testów";
@@ -161,7 +161,39 @@ namespace PrologValidatorForms.Library
                         ws.Cells[dataCellsRow + i + 1, dataCellsColumn + 1 + How_many + 2].Value = Convert.ToString((Convert.ToDouble(item.Tasks[i].CorrectAnswers) / Convert.ToDouble(item.Tasks[i].TotalAnswers))*100) + '%';
                     }
 
+                    // Napis wyniki Analizy + Styl do tego
 
+                    dataCellsRow--;
+
+
+                    ws.Cells[dataCellsRow, dataCellsColumn, dataCellsRow, dataCellsColumn + How_many + 3].Merge = true;
+                    ws.Cells[dataCellsRow, dataCellsColumn].Value = "Wyniki Analizy";
+
+                    ws.Cells[dataCellsRow, dataCellsColumn].Style.Font.Bold = true;
+                    ws.Cells[dataCellsRow, dataCellsColumn].Style.Fill.PatternType = ExcelFillStyle.Solid;
+                    ws.Cells[dataCellsRow, dataCellsColumn].Style.Fill.BackgroundColor.SetColor(Color.FromArgb(36, 47, 155));
+
+                    dataCellsRow++;
+
+                    //Style do Tablicy z wynikami analizy
+
+                    ws.Cells[dataCellsRow, dataCellsColumn, dataCellsRow, dataCellsColumn + How_many + 3].Style.Font.Bold = true;
+                    ws.Cells[dataCellsRow, dataCellsColumn, dataCellsRow, dataCellsColumn + How_many + 3].Style.Fill.PatternType = ExcelFillStyle.Solid;
+                    ws.Cells[dataCellsRow, dataCellsColumn, dataCellsRow, dataCellsColumn + How_many + 3].Style.Fill.BackgroundColor.SetColor(Color.FromArgb(100, 111, 212));
+
+                    ws.Cells[dataCellsRow, dataCellsColumn, dataCellsRow + item.Tasks.Count, dataCellsColumn].Style.Font.Bold = true;
+                    ws.Cells[dataCellsRow, dataCellsColumn, dataCellsRow + item.Tasks.Count, dataCellsColumn].Style.Fill.PatternType = ExcelFillStyle.Solid;
+                    ws.Cells[dataCellsRow, dataCellsColumn, dataCellsRow + item.Tasks.Count, dataCellsColumn].Style.Fill.BackgroundColor.SetColor(Color.FromArgb(100, 111, 212));
+
+                    dataCellsColumn++;
+                    dataCellsRow++;
+
+                    ws.Cells[dataCellsRow, dataCellsColumn, dataCellsRow + item.Tasks.Count - 1, dataCellsColumn + How_many - 1].Style.Font.Bold = true;
+                    ws.Cells[dataCellsRow, dataCellsColumn, dataCellsRow + item.Tasks.Count - 1, dataCellsColumn + How_many - 1].Style.Fill.PatternType = ExcelFillStyle.Solid;
+                    ws.Cells[dataCellsRow, dataCellsColumn, dataCellsRow + item.Tasks.Count - 1, dataCellsColumn + How_many - 1].Style.Fill.BackgroundColor.SetColor(Color.FromArgb(155, 163, 235));
+
+                    dataCellsRow--;
+                    dataCellsColumn--;
 
 
                     //Automatyczne wyrównanie kolumn
