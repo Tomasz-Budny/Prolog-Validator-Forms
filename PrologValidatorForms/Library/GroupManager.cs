@@ -112,7 +112,23 @@ namespace PrologValidatorForms.Library
                         ws.Cells[infCellsRow + 1, infCellsColumn + i].Value = item.Tasks[i].TaskName;
                         ws.Cells[infCellsRow + 2, infCellsColumn + i].Value = item.Tasks[i].CreationTime;
                         ws.Cells[infCellsRow + 3, infCellsColumn + i].Value = item.Tasks[i].SizeOfFile;
+
+                        ws.Cells[infCellsRow + 1, infCellsColumn + i, infCellsRow + 3, infCellsColumn + i].Style.Font.Bold = true;
+                        ws.Cells[infCellsRow + 1, infCellsColumn + i, infCellsRow + 3, infCellsColumn + i].Style.Fill.PatternType = ExcelFillStyle.Solid;
+                        ws.Cells[infCellsRow + 1, infCellsColumn + i, infCellsRow + 3, infCellsColumn + i].Style.Fill.BackgroundColor.SetColor(Color.FromArgb(155, 163, 235));
                     }
+
+                    //Wyglad Informacji o plikach
+
+                    infCellsColumn--;
+
+                    ws.Cells[infCellsRow, infCellsColumn].Style.Font.Bold = true;
+                    ws.Cells[infCellsRow, infCellsColumn].Style.Fill.PatternType = ExcelFillStyle.Solid;
+                    ws.Cells[infCellsRow, infCellsColumn].Style.Fill.BackgroundColor.SetColor(Color.FromArgb(36, 47, 155));
+
+                    ws.Cells[infCellsRow + 1, infCellsColumn, infCellsRow + 3, infCellsColumn].Style.Font.Bold = true;
+                    ws.Cells[infCellsRow + 1, infCellsColumn, infCellsRow + 3, infCellsColumn].Style.Fill.PatternType = ExcelFillStyle.Solid;
+                    ws.Cells[infCellsRow + 1, infCellsColumn, infCellsRow + 3, infCellsColumn].Style.Fill.BackgroundColor.SetColor(Color.FromArgb(100, 111, 212));
 
                     //Testy
 
