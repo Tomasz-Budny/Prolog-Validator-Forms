@@ -16,16 +16,12 @@ namespace PrologValidatorForms
         
         public static bool ValidateStudentDirectory(string path)
         {
-            if (path.Length < 11)
-                return false;
             string[] dirs = path.Split(Path.DirectorySeparatorChar);
             return studentDirectoryPattern.IsMatch(dirs[dirs.Length - 1]);
         }
 
         public static bool ValidateGroupDirectory(string path)
         {
-            if (path.Length < 7)
-                return false;
             string[] dirs = path.Split(Path.DirectorySeparatorChar);
             return groupDirectoryPattern.IsMatch(dirs[dirs.Length - 1]);
         }
