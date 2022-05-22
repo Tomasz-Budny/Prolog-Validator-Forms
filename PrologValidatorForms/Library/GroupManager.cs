@@ -6,6 +6,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
 using OfficeOpenXml;
+using OfficeOpenXml.Style;
+using System.Drawing;
 
 namespace PrologValidatorForms.Library
 {
@@ -75,6 +77,20 @@ namespace PrologValidatorForms.Library
                     ws.Cells[basicCellsRow + 2, basicCellsColumn + 1].Value = Convert.ToInt32(item.SolutionName.Substring(1, 1));
                     ws.Cells[basicCellsRow + 3, basicCellsColumn].Value = "Grupa:";
                     ws.Cells[basicCellsRow + 3, basicCellsColumn + 1].Value = Convert.ToInt32(item.SolutionName.Substring(10, 1));
+
+                    //Wyglad Informacji podstawowych
+
+                    ws.Cells[basicCellsRow, basicCellsColumn].Style.Font.Bold = true;
+                    ws.Cells[basicCellsRow, basicCellsColumn].Style.Fill.PatternType = ExcelFillStyle.Solid;
+                    ws.Cells[basicCellsRow, basicCellsColumn].Style.Fill.BackgroundColor.SetColor(Color.FromArgb(36, 47, 155));
+                    string basicCells1 = "B3:B5";
+                    ws.Cells[basicCells1].Style.Font.Bold = true;
+                    ws.Cells[basicCells1].Style.Fill.PatternType = ExcelFillStyle.Solid;
+                    ws.Cells[basicCells1].Style.Fill.BackgroundColor.SetColor(Color.FromArgb(100, 111, 212));
+                    string basicCells2 = "C3:C5";
+                    ws.Cells[basicCells2].Style.Font.Bold = true;
+                    ws.Cells[basicCells2].Style.Fill.PatternType = ExcelFillStyle.Solid;
+                    ws.Cells[basicCells2].Style.Fill.BackgroundColor.SetColor(Color.FromArgb(155, 163, 235));
 
 
                     //Informacje o plikach
