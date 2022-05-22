@@ -212,16 +212,17 @@ namespace PrologValidatorForms.Library
                 }
 
 
+                string finalDir = destDir + $@"\{name}.xlsx";
 
                 try
-                {
-                    FileInfo fi = new FileInfo(destDir + @"\File.xlsx");
+                {    
+                    FileInfo fi = new FileInfo(finalDir);
                     excelPackage.SaveAs(fi);
-                    System.Diagnostics.Process.Start(destDir + @"\File.xlsx");
+                    System.Diagnostics.Process.Start(finalDir);
                 }
                 catch (System.InvalidOperationException ioe)
                 {
-                    label.Text += $"plik {destDir + @"\File.xlsx"} jest obecnie otwarty!, {ioe.Message}\n";
+                    label.Text += $"plik {finalDir} jest obecnie otwarty!, {ioe.Message}\n";
                 }
                 catch (Exception e)
                 {
