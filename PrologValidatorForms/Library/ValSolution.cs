@@ -74,6 +74,7 @@ namespace PrologValidatorForms
                         {
                             infoLabel.Text += $"Nie znaleziono pliku: {data[1]}.pl!\n";
                             Task task = new Task(null, $"{data[1]}.pl", Convert.ToInt32(data[2]), "Plik nie istnieje!", 0);
+                            task.AnalyzeTests(sr, Convert.ToInt32(data[2]));
                             tasks.Add(task);
                         }
                     }
