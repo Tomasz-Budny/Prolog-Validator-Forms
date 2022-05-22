@@ -135,15 +135,11 @@ namespace PrologValidatorForms.Library
                     int dataCellsRow = 8;
                     int dataCellsColumn = 2;
 
-                    int How_many = 0;
+                    int How_many = item.MaxTestCount;
 
                     for (int i = 0; i < item.Tasks.Count; i++)
                     {
                         ws.Cells[dataCellsRow + i + 1, dataCellsColumn].Value = item.Tasks[i].TaskName;
-                        if (How_many< item.Tasks[i].Tests.Count)
-                        {
-                            How_many = item.Tasks[i].Tests.Count;
-                        }
                         
                         for (int j = 0; j < item.Tasks[i].Tests.Count; j++)
                         {

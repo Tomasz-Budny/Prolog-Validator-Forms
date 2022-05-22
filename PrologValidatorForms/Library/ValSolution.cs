@@ -14,8 +14,14 @@ namespace PrologValidatorForms
         string solutionName;
         string keyPath;
         string finalPath;
+        int maxTestsCount;
         Label infoLabel;
         List<Task> tasks = new List<Task>();
+
+        public int MaxTestCount
+        {
+            get { return maxTestsCount; }
+        }
 
         public string SolutionName
         {
@@ -46,6 +52,13 @@ namespace PrologValidatorForms
             return result;
         }
 
+        private void AddTask(Task task)
+        {
+            if (maxTestsCount < task.Tests.Count)
+                maxTestsCount = task.Tests.Count;
+            tasks.Add(task);
+        }
+
         public void AnalyzeSolution()
         {
             AnalyzeTasks();
@@ -68,14 +81,14 @@ namespace PrologValidatorForms
                         {
                             Task task = new Task(path + $@"\{data[1]}.pl", $"{data[1]}.pl", Convert.ToInt32(data[2]), fi.CreationTime.ToString(), fi.Length);
                             task.AnalyzeTests(sr, Convert.ToInt32(data[2]));
-                            tasks.Add(task);
+                            AddTask(task);
                         }
                         else
                         {
                             infoLabel.Text += $"Nie znaleziono pliku: {data[1]}.pl!\n";
                             Task task = new Task(null, $"{data[1]}.pl", Convert.ToInt32(data[2]), "Plik nie istnieje!", 0);
                             task.AnalyzeTests(sr, Convert.ToInt32(data[2]));
-                            tasks.Add(task);
+                            AddTask(task);
                         }
                     }
                     else
