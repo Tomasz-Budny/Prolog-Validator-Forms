@@ -113,6 +113,10 @@ namespace PrologValidatorForms
         {
             get { return content; }
         }
+        public int IsCorrect
+        {
+            get { if (isCorrect) { return 1; } else { return 0; } }
+        }
         public Test(string content, bool isCorrect)
         {
             this.content = content;
