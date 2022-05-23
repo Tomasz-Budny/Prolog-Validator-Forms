@@ -54,7 +54,7 @@ namespace PrologValidatorForms
             this.listView.Location = new System.Drawing.Point(9, 37);
             this.listView.Margin = new System.Windows.Forms.Padding(2);
             this.listView.Name = "listView";
-            this.listView.Size = new System.Drawing.Size(506, 320);
+            this.listView.Size = new System.Drawing.Size(650, 320);
             this.listView.SmallImageList = this.imageList;
             this.listView.TabIndex = 0;
             this.listView.UseCompatibleStateImageBehavior = false;

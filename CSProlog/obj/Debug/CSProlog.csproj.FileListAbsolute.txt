@@ -52,3 +52,11 @@ C:\Users\tomek\OneDrive\Pulpit\Semestr4\InżynieriaOprogramowania\ProjekcikProlo
 C:\Users\tomek\OneDrive\Pulpit\Semestr4\InżynieriaOprogramowania\ProjekcikProlog\IO\IO\CSProlog\obj\Debug\CSProlog.csproj.CoreCompileInputs.cache
 C:\Users\tomek\OneDrive\Pulpit\Semestr4\InżynieriaOprogramowania\ProjekcikProlog\IO\IO\CSProlog\obj\Debug\CSProlog.dll
 C:\Users\tomek\OneDrive\Pulpit\Semestr4\InżynieriaOprogramowania\ProjekcikProlog\IO\IO\CSProlog\obj\Debug\CSProlog.pdb
+E:\E-Szkoła\SGGW\Semestr 4\Inżynieria oprogramowania\Projekt\IO\CSProlog\bin\Debug\CSProlog.dll
+E:\E-Szkoła\SGGW\Semestr 4\Inżynieria oprogramowania\Projekt\IO\CSProlog\bin\Debug\CSProlog.pdb
+E:\E-Szkoła\SGGW\Semestr 4\Inżynieria oprogramowania\Projekt\IO\CSProlog\obj\Debug\CSProlog.csprojAssemblyReference.cache
+E:\E-Szkoła\SGGW\Semestr 4\Inżynieria oprogramowania\Projekt\IO\CSProlog\obj\Debug\CSProlog.CsPrologHelp.resources
+E:\E-Szkoła\SGGW\Semestr 4\Inżynieria oprogramowania\Projekt\IO\CSProlog\obj\Debug\CSProlog.csproj.GenerateResource.cache
+E:\E-Szkoła\SGGW\Semestr 4\Inżynieria oprogramowania\Projekt\IO\CSProlog\obj\Debug\CSProlog.csproj.CoreCompileInputs.cache
+E:\E-Szkoła\SGGW\Semestr 4\Inżynieria oprogramowania\Projekt\IO\CSProlog\obj\Debug\CSProlog.dll
+E:\E-Szkoła\SGGW\Semestr 4\Inżynieria oprogramowania\Projekt\IO\CSProlog\obj\Debug\CSProlog.pdb
