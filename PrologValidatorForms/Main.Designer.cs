@@ -152,8 +152,6 @@ namespace PrologValidatorForms
         }
 
         #endregion
-        private string pathName = "";
-        private string finalPath = "";
         private System.Windows.Forms.FolderBrowserDialog folderBrowserDialog1;
         private Eksplorator cb1;
         private Eksplorator cb2;
