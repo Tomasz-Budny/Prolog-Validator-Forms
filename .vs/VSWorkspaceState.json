@@ -1,6 +1,11 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\Assets",
+    "\\packages",
+    "\\PrologValidatorForms",
+    "\\PrologValidatorForms\\Library"
   ],
+  "SelectedNode": "\\PrologValidatorForms\\Library\\GroupManager.cs",
   "PreviewInSolutionExplorer": false
 }

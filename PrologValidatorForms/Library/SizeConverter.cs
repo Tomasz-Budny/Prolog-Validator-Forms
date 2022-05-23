@@ -19,18 +19,8 @@ namespace PrologValidatorForms.Library
                 numAsDouble /= 1024;
                 prefix++;
             }
-            if (prefix == 0)
-            {
-                return numAsDouble.ToString() + " kB";
-            }
-            else if (prefix == 1)
-            {
-                return numAsDouble.ToString() + " MB";
-            }
-            else
-            {
-                return numAsDouble.ToString() + " GB";
-            }
+            string finalSize = numAsDouble.ToString() + $" {(Prefixes)prefix}";
+            return finalSize;
         }
     }
 }
