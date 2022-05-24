@@ -8,19 +8,17 @@ namespace PrologValidatorForms.Library
 {
     static class SizeConverter
     {
-        // Metoda klasy statycznej SizeConverter ma konwertować bajty na kilobajty lub megabajty, w zależności
-        // od rzędu wielkości. Metoda ma pobierać rozmiar jako long a zwracać jako string z odpowiednik prefiksem kilo lub mega.
-        public static string Convert(long num)
+        public static string ConvertSize(long fileSizeInBytes)
         {
             int prefix = 0;
-            double numAsDouble = (double)num;
-            while (numAsDouble > 1024)
+            double fileSizeInBytesConvertedToDouble = (double)fileSizeInBytes;
+            while (fileSizeInBytesConvertedToDouble > 1024)
             {
-                numAsDouble /= 1024;
+                fileSizeInBytesConvertedToDouble /= 1024;
                 prefix++;
             }
-            string finalSize = numAsDouble.ToString() + $" {(Prefixes)prefix}";
-            return finalSize;
+            string convertedFileSize = fileSizeInBytesConvertedToDouble.ToString() + $" {(Prefixes)prefix}";
+            return convertedFileSize;
         }
     }
 }
