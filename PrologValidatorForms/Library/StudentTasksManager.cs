@@ -59,10 +59,8 @@ namespace PrologValidatorForms
             tasks.Add(task);
         }
 
-        public void AnalyzeSolution()
-        {
-            AnalyzeTasks();
-        }
+        public void AnalyzeSolution() => AnalyzeTasks();
+        
 
         private void AnalyzeTasks()
         {
