@@ -240,6 +240,7 @@ namespace PrologValidatorForms.Library
             foreach(StudentTasksManager stm in Lstm)
             {
                 final += "________________________________________________\n";
+                final += "<" + stm.ToString() + ">\n\n";
                 final += stm.ShowTasks();
                 final += "________________________________________________\n";
 
@@ -249,7 +250,7 @@ namespace PrologValidatorForms.Library
 
         public override string ToString()
         {
-            return name + "\n" + ShowStudents();
+            return "####### " + name + " #######" + "\n" + ShowStudents();
         }
     }
 }
