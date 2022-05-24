@@ -65,22 +65,70 @@ namespace PrologValidatorForms
             tests.Add(new Test(content, isCorrect));
         }
 
+        private bool AnylyzeArray(PrologEngine e, string current)
+        {
+            string query = "";
+            string[] data = current.Split(' ');
+            if (data.Length > 0)
+                query = data[1];
+
+            SolutionSet ss = e.GetAllSolutions(taskPath, query);
+            List<string> values = new List<string>();
+
+            foreach (Solution s in ss.NextSolution)
+            {
+                foreach (Variable v in s.NextVariable)
+                {
+                    values.Add(v.Value);
+                }
+            }
+
+            List<string> compArr = new List<string>();
+            for (int i = 2; i < data.Length; i++)
+            {
+                compArr.Add(data[i]);
+            }
+
+            values.Sort();
+
+            bool final = false;
+            if (values.Count == compArr.Count)
+            {
+                final = true;
+                for (int i = 0; i < values.Count; i++)
+                {
+                    if (values[i] != compArr[i])
+                    {
+                        final = false;
+                        break;
+                    }
+                }
+            }
+
+            return final;
+        }
+
         public void AnalyzeTests(StreamReader sr, int iterations)
         {
             PrologEngine e = new PrologEngine();
 
             int i = 0;
             string currentLine = "";
-            while(i < iterations && (currentLine = sr.ReadLine()) != null)
+            while (i < iterations && (currentLine = sr.ReadLine()) != null)
             {
-                SolutionSet ssman = e.GetAllSolutions(taskPath, currentLine);
-                if(ssman.Success)
+                bool final;
+
+                if (currentLine != "" && currentLine[0] == '$')
                 {
-                    this.AddTest(currentLine, true);
+                    final = AnylyzeArray(e, currentLine);
+                    this.AddTest(currentLine, final);
                 }
                 else
                 {
-                    this.AddTest(currentLine, false);
+                    SolutionSet ssman = e.GetAllSolutions(taskPath, currentLine);
+                    final = ssman.Success;
+                    this.AddTest(currentLine, final);
+
                 }
                 i++;
             }
@@ -88,8 +136,8 @@ namespace PrologValidatorForms
 
         public override string ToString()
         {
-            if(taskPath != null)
-                return taskName + "   |   " + taskPath +"\n" + ShowTests();
+            if (taskPath != null)
+                return taskName + "   |   " + taskPath + "\n" + ShowTests();
             return "";
         }
 
