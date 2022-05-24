@@ -69,7 +69,7 @@ namespace PrologValidatorForms
         {
             string query = "";
             string[] data = current.Split(' ');
-            if (data.Length > 0)
+            if (data.Length > 1)
                 query = data[1];
 
             SolutionSet ss = e.GetAllSolutions(taskPath, query);
@@ -99,7 +99,7 @@ namespace PrologValidatorForms
             values.Sort();
 
             bool final = false;
-            if (values.Count == compArr.Count)
+            if (values.Count != 0 && values.Count == compArr.Count)
             {
                 final = true;
                 for (int i = 0; i < values.Count; i++)
