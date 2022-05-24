@@ -77,10 +77,17 @@ namespace PrologValidatorForms
 
             foreach (Solution s in ss.NextSolution)
             {
+                string answer = "";
+                bool moreThan1 = false;
+
                 foreach (Variable v in s.NextVariable)
                 {
-                    values.Add(v.Value);
+                    if (moreThan1)
+                        answer += "+";
+                    answer += v.Value;
+                    moreThan1 = true;
                 }
+                values.Add(answer);
             }
 
             List<string> compArr = new List<string>();
