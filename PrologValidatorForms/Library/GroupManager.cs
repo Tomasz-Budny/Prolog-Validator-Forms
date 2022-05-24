@@ -233,5 +233,23 @@ namespace PrologValidatorForms.Library
                 }
             }
         }
+
+        private string ShowStudents()
+        {
+            string final = "";
+            foreach(StudentTasksManager stm in Lstm)
+            {
+                final += "________________________________________________\n";
+                final += stm.ShowTasks();
+                final += "________________________________________________\n";
+
+            }
+            return final;
+        }
+
+        public override string ToString()
+        {
+            return name + "\n" + ShowStudents();
+        }
     }
 }

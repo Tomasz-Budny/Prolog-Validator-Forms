@@ -42,7 +42,7 @@ namespace PrologValidatorForms
             solutionName = path.Substring(path.Length - 11, 11);
         }
 
-        private string ShowTasks()
+        public string ShowTasks()
         {
             string result = "\n";
             for (int i = 0; i < tasks.Count; i++)
