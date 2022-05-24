@@ -110,5 +110,10 @@ namespace PrologValidatorForms
             sr.Close();
         }
 
+        public override string ToString()
+        {
+            return SolutionName;
+        }
+
     }
 }
