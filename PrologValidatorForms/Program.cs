@@ -51,9 +51,11 @@ namespace PrologValidatorForms
             // X - logo aplikacji, logo ikonek (folderów, plików tekstowych, plików .pl, .xslt itd)
 
 
-            string keyFilePath = @"C:\Users\tomek\OneDrive\Pulpit\Testy\klucz.txt";
-            KeyManager km = new KeyManager(keyFilePath);
-            km.AnalyzeKeyFile();
+            string path = @"C:\Users\tomek\OneDrive\Pulpit\Testy\NoweTesty\G1_1000";
+            GroupManager gm = new GroupManager(path, "", null);
+            gm.AnalyzeSolutionTest();
+
+            Console.WriteLine(gm);
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);

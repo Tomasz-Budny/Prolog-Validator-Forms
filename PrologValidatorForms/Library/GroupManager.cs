@@ -29,6 +29,27 @@ namespace PrologValidatorForms.Library
             Console.WriteLine($"{name}");
         }
 
+        public void AnalyzeSolutionTest()
+        {
+            string keyFilePath = dirPath + @"\klucz.txt";
+            FileInfo fi = new FileInfo(keyFilePath);
+            if (fi.Exists)
+            {
+                KeyManager km = new KeyManager(keyFilePath);
+                km.AnalyzeKeyFile();
+
+                foreach (string directory in Directory.GetDirectories(dirPath))
+                {
+                    if (InputValidator.ValidateStudentDirectory(directory) == true)
+                    {
+                        StudentTasksManager stm = new StudentTasksManager(directory, km);
+                        stm.AnalyzeTasksTest();
+                        Lstm.Add(stm);
+                    }
+                }
+            }
+        }
+
         public void AnalyzeSolution()
         {
             FileInfo fi = new FileInfo(dirPath + @"\klucz.txt");

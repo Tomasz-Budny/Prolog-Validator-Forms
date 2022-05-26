@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.IO;
 using Prolog;
 using System.Windows.Forms;
+using PrologValidatorForms.Library;
 
 namespace PrologValidatorForms
 {
@@ -14,18 +15,26 @@ namespace PrologValidatorForms
         long sizeOfFile;
         string taskPath;
         string taskName;
-        string creationTime;
+        string creationDate;
         int correctAnswers = 0;
         int totalAnswers = 0;
         List<Test> tests = new List<Test>();
 
-        public Task(string taskPath, string taskName, int totalAnswers, string creationTime, long sizeOfFile)
+        // Dodatkowe parametry
+
+        public Task(string taskPath, string taskName, int totalAnswers, string creationDate, long sizeOfFile)
         {
             this.totalAnswers = totalAnswers;
             this.taskName = taskName;
             this.taskPath = taskPath;
-            this.creationTime = creationTime;
+            this.creationDate = creationDate;
             this.sizeOfFile = sizeOfFile;
+        }
+
+        public Task(string taskPath, string taskName)
+        {
+            this.taskPath = taskPath;
+            this.taskName = taskName;
         }
 
         public List<Test> Tests
@@ -45,7 +54,7 @@ namespace PrologValidatorForms
 
         public string CreationTime
         {
-            get { return creationTime; }
+            get { return creationDate; }
         }
 
         public int CorrectAnswers
@@ -113,6 +122,45 @@ namespace PrologValidatorForms
             }
 
             return final;
+        }
+
+        public void GetBasicInformations()
+        {
+            FileInfo fi = new FileInfo(taskPath);
+            if(fi.Exists)
+            {
+                this.creationDate = fi.CreationTime.ToString();
+                this.sizeOfFile = fi.Length;
+            }
+            else
+            {
+                this.creationDate = "Plik nie istnieje!";
+                this.sizeOfFile = 0;
+            }
+        }
+
+        public void AnalyzeTestsTest(List<string> tests)
+        {
+            if(creationDate != "Plik nie istnieje!")
+            {
+                PrologEngine e = new PrologEngine();
+
+                foreach (string test in tests)
+                {
+                    bool final;
+                    if (test[0] == '$')
+                    {
+                        final = AnylyzeArray(e, test);
+                        this.AddTest(test, final);
+                    }
+                    else
+                    {
+                        SolutionSet ssman = e.GetAllSolutions(taskPath, test);
+                        final = ssman.Success;
+                        this.AddTest(test, final);
+                    }
+                }
+            }
         }
 
         public void AnalyzeTests(StreamReader sr, int iterations)

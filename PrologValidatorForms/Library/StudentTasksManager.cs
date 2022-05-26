@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PrologValidatorForms.Library;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -17,6 +18,9 @@ namespace PrologValidatorForms
         int maxTestsCount;
         Label infoLabel;
         List<Task> tasks = new List<Task>();
+
+        // Nowe parametry używane w testowej wersji aplikacji
+        KeyManager keyManager;
 
         public int MaxTestCount
         {
@@ -42,6 +46,14 @@ namespace PrologValidatorForms
             solutionName = path.Substring(path.Length - 11, 11);
         }
 
+        // Konstruktor który domyślnie zastąpi ten z góry
+        public StudentTasksManager(string path,  KeyManager keyManager)
+        {
+            this.path = path;
+            solutionName = path.Substring(path.Length - 11, 11);
+            this.keyManager = keyManager;
+        }
+
         public string ShowTasks()
         {
             string result = "\n";
@@ -61,6 +73,19 @@ namespace PrologValidatorForms
 
         public void AnalyzeSolution() => AnalyzeTasks();
         
+
+        public void AnalyzeTasksTest()
+        {
+            foreach(DeclaredTask declaredTask in keyManager.DeclaredTasks)
+            {
+                string taskPath = path + $@"\{declaredTask.NameOfTask}.pl";
+                string taskName = declaredTask.NameOfTask;
+                Task task = new Task(taskPath, taskName);
+                task.GetBasicInformations();
+                task.AnalyzeTestsTest(declaredTask.DeclaretedTests);
+                AddTask(task);
+            }
+        }
 
         private void AnalyzeTasks()
         {

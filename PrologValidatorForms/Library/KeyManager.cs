@@ -17,6 +17,13 @@ namespace PrologValidatorForms.Library
             this.keyFilePath = keyFilePath;
         }
 
+        public List<DeclaredTask> DeclaredTasks
+        {
+            get { return declaredTasks; }
+        }
+
+
+
         public void AnalyzeKeyFile()
         {
             StreamReader sr = new StreamReader(keyFilePath);
@@ -47,21 +54,30 @@ namespace PrologValidatorForms.Library
             }
         }
 
-        class DeclaredTask
+    }
+    class DeclaredTask
+    {
+        string nameOfTask;
+        List<string> declaretedTests = new List<string>();
+
+        public List<string> DeclaretedTests
         {
-            string nameOfTask;
-            List<string> declaretedTests = new List<string>();
-
-            public void AddTest(string testContent)
-            {
-                declaretedTests.Add(testContent);
-            }
-
-            public DeclaredTask(string nameOfTask)
-            {
-                this.nameOfTask = nameOfTask;
-            }
+            get { return declaretedTests; }
         }
 
+        public string NameOfTask
+        {
+            get { return nameOfTask; }
+        }
+
+        public void AddTest(string testContent)
+        {
+            declaretedTests.Add(testContent);
+        }
+
+        public DeclaredTask(string nameOfTask)
+        {
+            this.nameOfTask = nameOfTask;
+        }
     }
 }
