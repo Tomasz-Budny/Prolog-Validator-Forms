@@ -38,6 +38,9 @@ namespace PrologValidatorForms.Library
 
         private void AddTestToLastTask(string currentLine)
         {
+            if (currentLine == "")
+                return;
+
             if(declaredTasks.Count !=0)
             {
                 declaredTasks[declaredTasks.Count - 1].AddTest(currentLine);
