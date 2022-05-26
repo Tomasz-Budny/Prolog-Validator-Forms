@@ -31,20 +31,28 @@ namespace PrologValidatorForms.Library
                 }
                 else
                 {
-
+                    AddTestToLastTask(currentLine);
                 }
             }
         }
 
         private void AddTestToLastTask(string currentLine)
         {
-
+            if(declaredTasks.Count !=0)
+            {
+                declaredTasks[declaredTasks.Count - 1].AddTest(currentLine);
+            }
         }
 
         class DeclaredTask
         {
             string nameOfTask;
             List<string> declaretedTests = new List<string>();
+
+            public void AddTest(string testContent)
+            {
+                declaretedTests.Add(testContent);
+            }
 
             public DeclaredTask(string nameOfTask)
             {
