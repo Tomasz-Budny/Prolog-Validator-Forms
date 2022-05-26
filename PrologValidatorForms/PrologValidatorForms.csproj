@@ -66,7 +66,6 @@
       <DependentUpon>CustomFileBrowser.cs</DependentUpon>
     </Compile>
     <Compile Include="Library\AnalyzatorEngine.cs" />
-    <Compile Include="Library\ExcelFileCreator.cs" />
     <Compile Include="Library\GroupManager.cs" />
     <Compile Include="Library\InputValidator.cs" />
     <Compile Include="Library\KeyManager.cs" />

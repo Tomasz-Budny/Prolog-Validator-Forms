@@ -220,7 +220,7 @@ namespace PrologValidatorForms.Library
                 }
                 catch (System.InvalidOperationException ioe)
                 {
-                    
+                    // Wyjątek odpowiedzialny za próbe otworzenia już otworzonego pliku
                 }
                 catch (Exception e)
                 {
