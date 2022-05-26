@@ -58,11 +58,11 @@ namespace PrologValidatorForms.Library
     class DeclaredTask
     {
         string nameOfTask;
-        List<string> declaretedTests = new List<string>();
+        List<string> declaredTests = new List<string>();
 
-        public List<string> DeclaretedTests
+        public List<string> DeclaredTests
         {
-            get { return declaretedTests; }
+            get { return declaredTests; }
         }
 
         public string NameOfTask
@@ -72,7 +72,7 @@ namespace PrologValidatorForms.Library
 
         public void AddTest(string testContent)
         {
-            declaretedTests.Add(testContent);
+            declaredTests.Add(testContent);
         }
 
         public DeclaredTask(string nameOfTask)

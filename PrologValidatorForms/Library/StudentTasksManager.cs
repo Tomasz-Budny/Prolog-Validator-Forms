@@ -82,7 +82,7 @@ namespace PrologValidatorForms
                 string taskName = declaredTask.NameOfTask;
                 Task task = new Task(taskPath, taskName);
                 task.GetBasicInformations();
-                task.AnalyzeTestsTest(declaredTask.DeclaretedTests);
+                task.AnalyzeTestsTest(declaredTask.DeclaredTests);
                 AddTask(task);
             }
         }
