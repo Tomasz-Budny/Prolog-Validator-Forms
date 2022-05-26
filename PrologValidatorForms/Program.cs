@@ -51,12 +51,6 @@ namespace PrologValidatorForms
             // X - logo aplikacji, logo ikonek (folderów, plików tekstowych, plików .pl, .xslt itd)
 
 
-            string path = @"C:\Users\tomek\OneDrive\Pulpit\Testy\NoweTesty\G1_1000";
-            GroupManager gm = new GroupManager(path, "");
-            gm.AnalyzeSolution();
-
-            Console.WriteLine(gm);
-
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Main());

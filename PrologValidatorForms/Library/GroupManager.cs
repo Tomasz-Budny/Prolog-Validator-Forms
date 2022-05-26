@@ -49,6 +49,8 @@ namespace PrologValidatorForms.Library
             {
                 MessageBox.Show($"W ścieżce: {dirPath} brak pliku klucz.txt!", "Błąd", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+
+            Console.WriteLine(this);
         }
 
         public void CreateExcelFile()

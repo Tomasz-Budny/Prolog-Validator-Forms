@@ -151,6 +151,13 @@ namespace PrologValidatorForms
                     }
                 }
             }
+            else
+            {
+                foreach(string test in tests)
+                {
+                    this.AddTest(test, false);
+                }
+            }
         }
 
         public override string ToString()
