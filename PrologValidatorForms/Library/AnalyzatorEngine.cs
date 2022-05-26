@@ -20,17 +20,6 @@ namespace PrologValidatorForms
         int totalAnswers = 0;
         List<Test> tests = new List<Test>();
 
-        // Dodatkowe parametry
-
-        public Task(string taskPath, string taskName, int totalAnswers, string creationDate, long sizeOfFile)
-        {
-            this.totalAnswers = totalAnswers;
-            this.taskName = taskName;
-            this.taskPath = taskPath;
-            this.creationDate = creationDate;
-            this.sizeOfFile = sizeOfFile;
-        }
-
         public Task(string taskPath, string taskName)
         {
             this.taskPath = taskPath;
@@ -161,32 +150,6 @@ namespace PrologValidatorForms
                         this.AddTest(test, final);
                     }
                 }
-            }
-        }
-
-        public void AnalyzeTests(StreamReader sr, int iterations)
-        {
-            PrologEngine e = new PrologEngine();
-
-            int i = 0;
-            string currentLine = "";
-            while (i < iterations && (currentLine = sr.ReadLine()) != null)
-            {
-                bool final;
-
-                if (currentLine != "" && currentLine[0] == '$')
-                {
-                    final = AnylyzeArray(e, currentLine);
-                    this.AddTest(currentLine, final);
-                }
-                else
-                {
-                    SolutionSet ssman = e.GetAllSolutions(taskPath, currentLine);
-                    final = ssman.Success;
-                    this.AddTest(currentLine, final);
-
-                }
-                i++;
             }
         }
 

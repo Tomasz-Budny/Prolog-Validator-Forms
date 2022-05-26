@@ -107,20 +107,20 @@ namespace PrologValidatorForms
 
                 ws.Cells[1, 1, podsCellsRow, podsCellsColumn].AutoFitColumns();
 
-                try
-                {
-                    FileInfo fi = new FileInfo(finalPath + @"\File.xlsx");
-                    excelPackage.SaveAs(fi);
-                    System.Diagnostics.Process.Start(finalPath + @"\File.xlsx");
-                }
-                catch(System.InvalidOperationException ioe)
-                {
-                    infoLabel.Text += $"plik {finalPath + @"\File.xlsx"} jest obecnie otwarty!, {ioe.Message}\n";
-                }
-                catch(Exception e)
-                {
-                    infoLabel.Text += $"Wystąpił niespodziewany błąd: {e.Message}\n";
-                }
+                //try
+                //{
+                //    FileInfo fi = new FileInfo(finalPath + @"\File.xlsx");
+                //    excelPackage.SaveAs(fi);
+                //    System.Diagnostics.Process.Start(finalPath + @"\File.xlsx");
+                //}
+                //catch(System.InvalidOperationException ioe)
+                //{
+                    
+                //}
+                //catch(Exception e)
+                //{
+                    
+                //}
             }
         }
     }

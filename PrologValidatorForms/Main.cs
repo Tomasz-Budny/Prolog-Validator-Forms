@@ -52,7 +52,7 @@ namespace PrologValidatorForms
             string outputpath = cb2.PresentPath;
             if (InputValidator.ValidateGroupDirectory(inputPath) == true)
             {
-                gm = new GroupManager(inputPath, outputpath, labelInfo);
+                gm = new GroupManager(inputPath, outputpath);
                 gm.AnalyzeSolutionTest();
                 gm.CreateExcelFile();
             }

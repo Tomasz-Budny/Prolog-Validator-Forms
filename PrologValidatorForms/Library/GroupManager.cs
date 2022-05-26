@@ -16,15 +16,12 @@ namespace PrologValidatorForms.Library
         string dirPath;
         string name;
         string destDir;
-        Label label;
-        string keyPath;
         List<StudentTasksManager> Lstm = new List<StudentTasksManager>();
 
-        public GroupManager(string dirPath, string destDir, Label infoLabel)
+        public GroupManager(string dirPath, string destDir)
         {
             this.dirPath = dirPath;
             this.destDir = destDir;
-            this.label = infoLabel;
             this.name = dirPath.Substring(dirPath.Length - 7, 7);
             Console.WriteLine($"{name}");
         }
@@ -51,33 +48,6 @@ namespace PrologValidatorForms.Library
             else
             {
                 MessageBox.Show($"W ścieżce: {dirPath} brak pliku klucz.txt!", "Błąd", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-
-        public void AnalyzeSolution()
-        {
-            FileInfo fi = new FileInfo(dirPath + @"\klucz.txt");
-            if (fi.Exists)
-            {
-                keyPath = dirPath + @"\klucz.txt";
-                foreach (string dir in Directory.GetDirectories(dirPath))
-                {
-                    if (InputValidator.ValidateStudentDirectory(dir) == true)
-                    {
-                        StudentTasksManager stm = new StudentTasksManager(dir, label, destDir, keyPath);
-                        stm.AnalyzeSolution();
-                        Lstm.Add(stm);
-                    }
-                }
-                Console.WriteLine("\n\n\n\n");
-                Console.WriteLine(this);
-                Console.WriteLine("\n\n\n\n");
-                CreateExcelFile();
-            }
-            else
-            {
-                MessageBox.Show($"W ścieżce: {dirPath} brak pliku klucz.txt!", "Błąd", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                label.Text += "w katalogu z rozwiązaniem brak pliku: klucz.txt!\n";
             }
         }
 
@@ -250,11 +220,11 @@ namespace PrologValidatorForms.Library
                 }
                 catch (System.InvalidOperationException ioe)
                 {
-                    label.Text += $"plik {finalDir} jest obecnie otwarty!, {ioe.Message}\n";
+                    
                 }
                 catch (Exception e)
                 {
-                    label.Text += $"Wystąpił niespodziewany błąd: {e.Message}\n";
+                    
                 }
             }
         }
