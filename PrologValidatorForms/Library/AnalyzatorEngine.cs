@@ -117,7 +117,7 @@ namespace PrologValidatorForms
         public void GetBasicInformations()
         {
             FileInfo fi = new FileInfo(taskPath);
-            if(fi.Exists)
+            if (fi.Exists)
             {
                 this.creationDate = fi.CreationTime.ToString();
                 this.sizeOfFile = fi.Length;
@@ -131,34 +131,26 @@ namespace PrologValidatorForms
 
         public void AnalyzeTests(List<string> tests)
         {
-            if(creationDate != "Plik nie istnieje!")
-            {
-                PrologEngine e = new PrologEngine();
 
-                foreach (string test in tests)
-                {
-                    bool final;
-                    if (test[0] == '$')
-                    {
-                        final = AnylyzeArray(e, test);
-                        this.AddTest(test, final);
-                    }
-                    else
-                    {
-                        SolutionSet ssman = e.GetAllSolutions(taskPath, test);
-                        final = ssman.Success;
-                        this.AddTest(test, final);
-                    }
-                }
-            }
-            else
+            PrologEngine e = new PrologEngine();
+
+            foreach (string test in tests)
             {
-                foreach(string test in tests)
+                bool final;
+                if (test[0] == '$')
                 {
-                    this.AddTest(test, false);
+                    final = AnylyzeArray(e, test);
+                    this.AddTest(test, final);
+                }
+                else
+                {
+                    SolutionSet ssman = e.GetAllSolutions(taskPath, test);
+                    final = ssman.Success;
+                    this.AddTest(test, final);
                 }
             }
         }
+
 
         public override string ToString()
         {
