@@ -26,7 +26,7 @@ namespace PrologValidatorForms.Library
             Console.WriteLine($"{name}");
         }
 
-        public void AnalyzeSolutionTest()
+        public void AnalyzeSolution()
         {
             string keyFilePath = dirPath + @"\klucz.txt";
             FileInfo fi = new FileInfo(keyFilePath);
@@ -40,7 +40,7 @@ namespace PrologValidatorForms.Library
                     if (InputValidator.ValidateStudentDirectory(directory))
                     {
                         StudentTasksManager stm = new StudentTasksManager(directory, km);
-                        stm.AnalyzeTasksTest();
+                        stm.AnalyzeTasks();
                         Lstm.Add(stm);
                     }
                 }

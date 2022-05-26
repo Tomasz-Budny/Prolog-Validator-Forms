@@ -53,7 +53,7 @@ namespace PrologValidatorForms
 
             string path = @"C:\Users\tomek\OneDrive\Pulpit\Testy\NoweTesty\G1_1000";
             GroupManager gm = new GroupManager(path, "");
-            gm.AnalyzeSolutionTest();
+            gm.AnalyzeSolution();
 
             Console.WriteLine(gm);
 

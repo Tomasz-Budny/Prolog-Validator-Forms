@@ -56,7 +56,7 @@ namespace PrologValidatorForms
             tasks.Add(task);
         }
 
-        public void AnalyzeTasksTest()
+        public void AnalyzeTasks()
         {
             foreach(DeclaredTask declaredTask in keyManager.DeclaredTasks)
             {
@@ -64,7 +64,7 @@ namespace PrologValidatorForms
                 string taskName = declaredTask.NameOfTask;
                 Task task = new Task(taskPath, taskName);
                 task.GetBasicInformations();
-                task.AnalyzeTestsTest(declaredTask.DeclaredTests);
+                task.AnalyzeTests(declaredTask.DeclaredTests);
                 AddTask(task);
             }
         }

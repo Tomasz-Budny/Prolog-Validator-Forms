@@ -129,7 +129,7 @@ namespace PrologValidatorForms
             }
         }
 
-        public void AnalyzeTestsTest(List<string> tests)
+        public void AnalyzeTests(List<string> tests)
         {
             if(creationDate != "Plik nie istnieje!")
             {
