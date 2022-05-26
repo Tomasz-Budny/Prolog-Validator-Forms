@@ -40,13 +40,17 @@ namespace PrologValidatorForms.Library
 
                 foreach (string directory in Directory.GetDirectories(dirPath))
                 {
-                    if (InputValidator.ValidateStudentDirectory(directory) == true)
+                    if (InputValidator.ValidateStudentDirectory(directory))
                     {
                         StudentTasksManager stm = new StudentTasksManager(directory, km);
                         stm.AnalyzeTasksTest();
                         Lstm.Add(stm);
                     }
                 }
+            }
+            else
+            {
+                MessageBox.Show($"W ścieżce: {dirPath} brak pliku klucz.txt!", "Błąd", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 

@@ -69,6 +69,7 @@ namespace PrologValidatorForms
 
         private void AddTest(string content, bool isCorrect)
         {
+            totalAnswers++;
             if (isCorrect)
                 correctAnswers++;
             tests.Add(new Test(content, isCorrect));

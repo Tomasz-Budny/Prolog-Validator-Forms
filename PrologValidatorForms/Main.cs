@@ -53,7 +53,8 @@ namespace PrologValidatorForms
             if (InputValidator.ValidateGroupDirectory(inputPath) == true)
             {
                 gm = new GroupManager(inputPath, outputpath, labelInfo);
-                gm.AnalyzeSolution();
+                gm.AnalyzeSolutionTest();
+                gm.CreateExcelFile();
             }
             else
             {
