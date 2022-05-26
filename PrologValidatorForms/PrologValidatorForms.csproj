@@ -69,6 +69,7 @@
     <Compile Include="Library\ExcelFileCreator.cs" />
     <Compile Include="Library\GroupManager.cs" />
     <Compile Include="Library\InputValidator.cs" />
+    <Compile Include="Library\KeyManager.cs" />
     <Compile Include="Library\PathsManager.cs" />
     <Compile Include="Library\StudentTasksManager.cs" />
     <Compile Include="Main.cs">
