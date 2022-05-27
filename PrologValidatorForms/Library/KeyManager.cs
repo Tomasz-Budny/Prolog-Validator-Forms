@@ -24,21 +24,29 @@ namespace PrologValidatorForms.Library
 
         public void AnalyzeKeyFile()
         {
-            StreamReader sr = new StreamReader(keyFilePath);
-            string currentLine = "";
-
-            while ((currentLine = sr.ReadLine()) != null)
+            try
             {
-                if(InputValidator.ValidateTaskName(currentLine))
+                StreamReader sr = new StreamReader(keyFilePath);
+                string currentLine = "";
+
+                while ((currentLine = sr.ReadLine()) != null)
                 {
-                    DeclaredTask dt = new DeclaredTask(currentLine);
-                    declaredTasks.Add(dt);
-                }
-                else
-                {
-                    AddTestToLastTask(currentLine);
+                    if (InputValidator.ValidateTaskName(currentLine))
+                    {
+                        DeclaredTask dt = new DeclaredTask(currentLine);
+                        declaredTasks.Add(dt);
+                    }
+                    else
+                    {
+                        AddTestToLastTask(currentLine);
+                    }
                 }
             }
+            catch(Exception)
+            {
+
+            }
+            
         }
 
         private void AddTestToLastTask(string currentLine)
