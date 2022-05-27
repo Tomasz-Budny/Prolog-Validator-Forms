@@ -81,12 +81,16 @@ namespace PrologValidatorForms
 
                 foreach (Variable v in s.NextVariable)
                 {
+                    if (v.Type == "namedvar")
+                        goto EndOfLoop;
                     if (moreThan1)
                         answer += "+";
                     answer += v.Value;
                     moreThan1 = true;
                 }
+                
                 values.Add(answer);
+            EndOfLoop:;
             }
 
             List<string> compArr = new List<string>();
