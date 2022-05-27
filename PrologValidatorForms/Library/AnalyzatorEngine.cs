@@ -96,7 +96,8 @@ namespace PrologValidatorForms
             List<string> compArr = new List<string>();
             for (int i = 2; i < data.Length; i++)
             {
-                compArr.Add(data[i]);
+                if(data[i] != "")
+                    compArr.Add(data[i]);
             }
 
             values.Sort();
