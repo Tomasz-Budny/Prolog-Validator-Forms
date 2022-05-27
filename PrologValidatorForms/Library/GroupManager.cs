@@ -32,14 +32,14 @@ namespace PrologValidatorForms.Library
             FileInfo fi = new FileInfo(keyFilePath);
             if (fi.Exists)
             {
-                KeyManager km = new KeyManager(keyFilePath);
-                km.AnalyzeKeyFile();
+                KeyManager keyManager = new KeyManager(keyFilePath);
+                keyManager.AnalyzeKeyFile();
 
                 foreach (string directory in Directory.GetDirectories(groupDirectoryPath))
                 {
                     if (InputValidator.ValidateStudentDirectory(directory))
                     {
-                        StudentTasksManager stm = new StudentTasksManager(directory, km);
+                        StudentTasksManager stm = new StudentTasksManager(directory, keyManager);
                         stm.AnalyzeTasks();
                         studentTasksManagers.Add(stm);
                     }
@@ -62,21 +62,21 @@ namespace PrologValidatorForms.Library
 
                 ExcelWorksheet ws = excelPackage.Workbook.Worksheets.Add("Podsumowanie");
 
-                foreach (StudentTasksManager item in studentTasksManagers)
+                foreach (StudentTasksManager stm in studentTasksManagers)
                 {
                     //Informacje podstawowe
-                    ws = excelPackage.Workbook.Worksheets.Add(item.SolutionName);
+                    ws = excelPackage.Workbook.Worksheets.Add(stm.SolutionName);
                     int basicCellsRow = 2;
                     int basicCellsColumn = 2;
                     ws.Cells[basicCellsRow, basicCellsColumn, basicCellsRow, basicCellsColumn + 1].Merge = true;
                     ws.Cells[basicCellsRow, basicCellsColumn].Value = "Informacje Podstawowe";
 
                     ws.Cells[basicCellsRow + 1, basicCellsColumn].Value = "Numer Albumu:";
-                    ws.Cells[basicCellsRow + 1, basicCellsColumn + 1].Value = Convert.ToInt32(item.SolutionName.Substring(3, 6));
+                    ws.Cells[basicCellsRow + 1, basicCellsColumn + 1].Value = Convert.ToInt32(stm.SolutionName.Substring(3, 6));
                     ws.Cells[basicCellsRow + 2, basicCellsColumn].Value = "Numer podejścia:";
-                    ws.Cells[basicCellsRow + 2, basicCellsColumn + 1].Value = Convert.ToInt32(item.SolutionName.Substring(1, 1));
+                    ws.Cells[basicCellsRow + 2, basicCellsColumn + 1].Value = Convert.ToInt32(stm.SolutionName.Substring(1, 1));
                     ws.Cells[basicCellsRow + 3, basicCellsColumn].Value = "Grupa:";
-                    ws.Cells[basicCellsRow + 3, basicCellsColumn + 1].Value = Convert.ToInt32(item.SolutionName.Substring(10, 1));
+                    ws.Cells[basicCellsRow + 3, basicCellsColumn + 1].Value = Convert.ToInt32(stm.SolutionName.Substring(10, 1));
 
                     //Wyglad Informacji podstawowych
 
@@ -98,7 +98,7 @@ namespace PrologValidatorForms.Library
                     int infCellsRow = 2;
                     int infCellsColumn = 6;
 
-                    ws.Cells[infCellsRow, infCellsColumn, infCellsRow, infCellsColumn + item.Tasks.Count].Merge = true;
+                    ws.Cells[infCellsRow, infCellsColumn, infCellsRow, infCellsColumn + stm.Tasks.Count].Merge = true;
                     ws.Cells[infCellsRow, infCellsColumn].Value = "Informacje o plikach";
 
                     ws.Cells[infCellsRow + 1, infCellsColumn].Value = "Nazwa pliku";
@@ -107,11 +107,11 @@ namespace PrologValidatorForms.Library
 
                     infCellsColumn++;
 
-                    for (int i = 0; i < item.Tasks.Count; i++)
+                    for (int i = 0; i < stm.Tasks.Count; i++)
                     {
-                        ws.Cells[infCellsRow + 1, infCellsColumn + i].Value = item.Tasks[i].TaskName;
-                        ws.Cells[infCellsRow + 2, infCellsColumn + i].Value = item.Tasks[i].CreationTime;
-                        ws.Cells[infCellsRow + 3, infCellsColumn + i].Value = item.Tasks[i].SizeOfFile;
+                        ws.Cells[infCellsRow + 1, infCellsColumn + i].Value = stm.Tasks[i].TaskName;
+                        ws.Cells[infCellsRow + 2, infCellsColumn + i].Value = stm.Tasks[i].CreationTime;
+                        ws.Cells[infCellsRow + 3, infCellsColumn + i].Value = stm.Tasks[i].SizeOfFile;
 
                         ws.Cells[infCellsRow + 1, infCellsColumn + i, infCellsRow + 3, infCellsColumn + i].Style.Font.Bold = true;
                         ws.Cells[infCellsRow + 1, infCellsColumn + i, infCellsRow + 3, infCellsColumn + i].Style.Fill.PatternType = ExcelFillStyle.Solid;
@@ -135,26 +135,26 @@ namespace PrologValidatorForms.Library
                     int dataCellsRow = 8;
                     int dataCellsColumn = 2;
 
-                    int How_many = item.MaxTestCount;
+                    int How_many = stm.MaxTestCount;
 
-                    for (int i = 0; i < item.Tasks.Count; i++)
+                    for (int i = 0; i < stm.Tasks.Count; i++)
                     {
-                        ws.Cells[dataCellsRow + i + 1, dataCellsColumn].Value = item.Tasks[i].TaskName;
+                        ws.Cells[dataCellsRow + i + 1, dataCellsColumn].Value = stm.Tasks[i].TaskName;
                         
-                        for (int j = 0; j < item.Tasks[i].Tests.Count; j++)
+                        for (int j = 0; j < stm.Tasks[i].Tests.Count; j++)
                         {
-                            ws.Cells[dataCellsRow + i + 1, dataCellsColumn + j + 1].Value = item.Tasks[i].Tests[j].IsCorrect;
+                            ws.Cells[dataCellsRow + i + 1, dataCellsColumn + j + 1].Value = stm.Tasks[i].Tests[j].IsCorrect;
                             ws.Cells[dataCellsRow, dataCellsColumn + j + 1].Value = "Test " + Convert.ToString(j+1);
                         }
                     }
                     ws.Cells[dataCellsRow, dataCellsColumn + 1 + How_many].Value = "Ilość zaliczonych testów";
                     ws.Cells[dataCellsRow, dataCellsColumn + 1 + How_many + 1].Value = "Ilość testów przeprowadzonych";
                     ws.Cells[dataCellsRow, dataCellsColumn + 1 + How_many + 2].Value = "Procent zaliczonych testów";
-                    for (int i = 0; i < item.Tasks.Count; i++)
+                    for (int i = 0; i < stm.Tasks.Count; i++)
                     {
-                        ws.Cells[dataCellsRow + i + 1, dataCellsColumn + 1 + How_many].Value = item.Tasks[i].CorrectAnswers;
-                        ws.Cells[dataCellsRow + i + 1, dataCellsColumn + 1 + How_many + 1].Value = item.Tasks[i].TotalAnswers;
-                        ws.Cells[dataCellsRow + i + 1, dataCellsColumn + 1 + How_many + 2].Value = Convert.ToString((Convert.ToDouble(item.Tasks[i].CorrectAnswers) / Convert.ToDouble(item.Tasks[i].TotalAnswers))*100) + '%';
+                        ws.Cells[dataCellsRow + i + 1, dataCellsColumn + 1 + How_many].Value = stm.Tasks[i].CorrectAnswers;
+                        ws.Cells[dataCellsRow + i + 1, dataCellsColumn + 1 + How_many + 1].Value = stm.Tasks[i].TotalAnswers;
+                        ws.Cells[dataCellsRow + i + 1, dataCellsColumn + 1 + How_many + 2].Value = Convert.ToString((Convert.ToDouble(stm.Tasks[i].CorrectAnswers) / Convert.ToDouble(stm.Tasks[i].TotalAnswers))*100) + '%';
 
                         ws.Cells[dataCellsRow + i + 1, dataCellsColumn + 1 + How_many].Style.Font.Bold = true;
                         ws.Cells[dataCellsRow + i + 1, dataCellsColumn + 1 + How_many].Style.Fill.PatternType = ExcelFillStyle.Solid;
@@ -189,16 +189,16 @@ namespace PrologValidatorForms.Library
                     ws.Cells[dataCellsRow, dataCellsColumn, dataCellsRow, dataCellsColumn + How_many + 3].Style.Fill.PatternType = ExcelFillStyle.Solid;
                     ws.Cells[dataCellsRow, dataCellsColumn, dataCellsRow, dataCellsColumn + How_many + 3].Style.Fill.BackgroundColor.SetColor(Color.FromArgb(100, 111, 212));
 
-                    ws.Cells[dataCellsRow, dataCellsColumn, dataCellsRow + item.Tasks.Count, dataCellsColumn].Style.Font.Bold = true;
-                    ws.Cells[dataCellsRow, dataCellsColumn, dataCellsRow + item.Tasks.Count, dataCellsColumn].Style.Fill.PatternType = ExcelFillStyle.Solid;
-                    ws.Cells[dataCellsRow, dataCellsColumn, dataCellsRow + item.Tasks.Count, dataCellsColumn].Style.Fill.BackgroundColor.SetColor(Color.FromArgb(100, 111, 212));
+                    ws.Cells[dataCellsRow, dataCellsColumn, dataCellsRow + stm.Tasks.Count, dataCellsColumn].Style.Font.Bold = true;
+                    ws.Cells[dataCellsRow, dataCellsColumn, dataCellsRow + stm.Tasks.Count, dataCellsColumn].Style.Fill.PatternType = ExcelFillStyle.Solid;
+                    ws.Cells[dataCellsRow, dataCellsColumn, dataCellsRow + stm.Tasks.Count, dataCellsColumn].Style.Fill.BackgroundColor.SetColor(Color.FromArgb(100, 111, 212));
 
                     dataCellsColumn++;
                     dataCellsRow++;
 
-                    ws.Cells[dataCellsRow, dataCellsColumn, dataCellsRow + item.Tasks.Count - 1, dataCellsColumn + How_many - 1].Style.Font.Bold = true;
-                    ws.Cells[dataCellsRow, dataCellsColumn, dataCellsRow + item.Tasks.Count - 1, dataCellsColumn + How_many - 1].Style.Fill.PatternType = ExcelFillStyle.Solid;
-                    ws.Cells[dataCellsRow, dataCellsColumn, dataCellsRow + item.Tasks.Count - 1, dataCellsColumn + How_many - 1].Style.Fill.BackgroundColor.SetColor(Color.FromArgb(155, 163, 235));
+                    ws.Cells[dataCellsRow, dataCellsColumn, dataCellsRow + stm.Tasks.Count - 1, dataCellsColumn + How_many - 1].Style.Font.Bold = true;
+                    ws.Cells[dataCellsRow, dataCellsColumn, dataCellsRow + stm.Tasks.Count - 1, dataCellsColumn + How_many - 1].Style.Fill.PatternType = ExcelFillStyle.Solid;
+                    ws.Cells[dataCellsRow, dataCellsColumn, dataCellsRow + stm.Tasks.Count - 1, dataCellsColumn + How_many - 1].Style.Fill.BackgroundColor.SetColor(Color.FromArgb(155, 163, 235));
 
                     dataCellsRow--;
                     dataCellsColumn--;
