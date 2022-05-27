@@ -22,8 +22,6 @@ namespace PrologValidatorForms.Library
             get { return declaredTasks; }
         }
 
-
-
         public void AnalyzeKeyFile()
         {
             StreamReader sr = new StreamReader(keyFilePath);

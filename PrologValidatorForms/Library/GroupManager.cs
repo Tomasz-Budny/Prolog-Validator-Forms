@@ -13,41 +13,41 @@ namespace PrologValidatorForms.Library
 {
     class GroupManager
     {
-        string dirPath;
+        string groupDirectoryPath;
         string name;
-        string destDir;
-        List<StudentTasksManager> Lstm = new List<StudentTasksManager>();
+        string destinationDirectory;
+        List<StudentTasksManager> studentTasksManagers = new List<StudentTasksManager>();
 
-        public GroupManager(string dirPath, string destDir)
+        public GroupManager(string groupDirectoryPath, string destinationDirectory)
         {
-            this.dirPath = dirPath;
-            this.destDir = destDir;
-            this.name = dirPath.Substring(dirPath.Length - 7, 7);
+            this.groupDirectoryPath = groupDirectoryPath;
+            this.destinationDirectory = destinationDirectory;
+            this.name = groupDirectoryPath.Substring(groupDirectoryPath.Length - 7, 7);
             Console.WriteLine($"{name}");
         }
 
         public void AnalyzeSolution()
         {
-            string keyFilePath = dirPath + @"\klucz.txt";
+            string keyFilePath = groupDirectoryPath + @"\klucz.txt";
             FileInfo fi = new FileInfo(keyFilePath);
             if (fi.Exists)
             {
                 KeyManager km = new KeyManager(keyFilePath);
                 km.AnalyzeKeyFile();
 
-                foreach (string directory in Directory.GetDirectories(dirPath))
+                foreach (string directory in Directory.GetDirectories(groupDirectoryPath))
                 {
                     if (InputValidator.ValidateStudentDirectory(directory))
                     {
                         StudentTasksManager stm = new StudentTasksManager(directory, km);
                         stm.AnalyzeTasks();
-                        Lstm.Add(stm);
+                        studentTasksManagers.Add(stm);
                     }
                 }
             }
             else
             {
-                MessageBox.Show($"W ścieżce: {dirPath} brak pliku klucz.txt!", "Błąd", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show($"W ścieżce: {groupDirectoryPath} brak pliku klucz.txt!", "Błąd", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
             Console.WriteLine(this);
@@ -62,7 +62,7 @@ namespace PrologValidatorForms.Library
 
                 ExcelWorksheet ws = excelPackage.Workbook.Worksheets.Add("Podsumowanie");
 
-                foreach (StudentTasksManager item in Lstm)
+                foreach (StudentTasksManager item in studentTasksManagers)
                 {
                     //Informacje podstawowe
                     ws = excelPackage.Workbook.Worksheets.Add(item.SolutionName);
@@ -212,7 +212,7 @@ namespace PrologValidatorForms.Library
                 }
 
 
-                string finalDir = destDir + $@"\{name}.xlsx";
+                string finalDir = destinationDirectory + $@"\{name}.xlsx";
 
                 try
                 {    
@@ -234,7 +234,7 @@ namespace PrologValidatorForms.Library
         private string ShowStudents()
         {
             string final = "";
-            foreach(StudentTasksManager stm in Lstm)
+            foreach(StudentTasksManager stm in studentTasksManagers)
             {
                 final += "________________________________________________\n";
                 final += "<" + stm.ToString() + ">\n\n";

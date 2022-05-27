@@ -13,16 +13,16 @@ namespace PrologValidatorForms
     class Task
     {
         long sizeOfFile;
-        string taskPath;
+        string taskFilePath;
         string taskName;
         string creationDate;
         int correctAnswers = 0;
         int totalAnswers = 0;
         List<Test> tests = new List<Test>();
 
-        public Task(string taskPath, string taskName)
+        public Task(string taskFilePath, string taskName)
         {
-            this.taskPath = taskPath;
+            this.taskFilePath = taskFilePath;
             this.taskName = taskName;
         }
 
@@ -71,7 +71,7 @@ namespace PrologValidatorForms
             if (data.Length > 1)
                 query = data[1];
 
-            SolutionSet ss = e.GetAllSolutions(taskPath, query);
+            SolutionSet ss = e.GetAllSolutions(taskFilePath, query);
             List<string> values = new List<string>();
 
             foreach (Solution s in ss.NextSolution)
@@ -116,7 +116,7 @@ namespace PrologValidatorForms
 
         public void GetBasicInformations()
         {
-            FileInfo fi = new FileInfo(taskPath);
+            FileInfo fi = new FileInfo(taskFilePath);
             if (fi.Exists)
             {
                 this.creationDate = fi.CreationTime.ToString();
@@ -144,7 +144,7 @@ namespace PrologValidatorForms
                 }
                 else
                 {
-                    SolutionSet ssman = e.GetAllSolutions(taskPath, test);
+                    SolutionSet ssman = e.GetAllSolutions(taskFilePath, test);
                     final = ssman.Success;
                     this.AddTest(test, final);
                 }
@@ -154,8 +154,8 @@ namespace PrologValidatorForms
 
         public override string ToString()
         {
-            if (taskPath != null)
-                return taskName + "   |   " + taskPath + "\n" + ShowTests();
+            if (taskFilePath != null)
+                return taskName + "   |   " + taskFilePath + "\n" + ShowTests();
             return "";
         }
 

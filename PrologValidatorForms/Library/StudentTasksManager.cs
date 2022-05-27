@@ -11,7 +11,7 @@ namespace PrologValidatorForms
 {
     partial class StudentTasksManager
     {
-        string path;
+        string studentDirectoryPath;
         string solutionName;
         int maxTestsCount;
         KeyManager keyManager;
@@ -32,10 +32,10 @@ namespace PrologValidatorForms
             get { return tasks; }
         }
 
-        public StudentTasksManager(string path,  KeyManager keyManager)
+        public StudentTasksManager(string studentDirectoryPath,  KeyManager keyManager)
         {
-            this.path = path;
-            solutionName = path.Substring(path.Length - 11, 11);
+            this.studentDirectoryPath = studentDirectoryPath;
+            solutionName = studentDirectoryPath.Substring(studentDirectoryPath.Length - 11, 11);
             this.keyManager = keyManager;
         }
 
@@ -60,7 +60,7 @@ namespace PrologValidatorForms
         {
             foreach(DeclaredTask declaredTask in keyManager.DeclaredTasks)
             {
-                string taskPath = path + $@"\{declaredTask.NameOfTask}.pl";
+                string taskPath = studentDirectoryPath + $@"\{declaredTask.NameOfTask}.pl";
                 string taskName = declaredTask.NameOfTask;
                 Task task = new Task(taskPath, taskName);
                 task.GetBasicInformations();
