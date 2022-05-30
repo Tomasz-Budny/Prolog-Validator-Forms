@@ -45,6 +45,7 @@ namespace PrologValidatorForms
             // 
             // listView
             // 
+            this.listView.BackColor = System.Drawing.Color.White;
             this.listView.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.nameColumn,
             this.dateColumn,
@@ -59,6 +60,7 @@ namespace PrologValidatorForms
             this.listView.TabIndex = 0;
             this.listView.UseCompatibleStateImageBehavior = false;
             this.listView.View = System.Windows.Forms.View.Details;
+            this.listView.SelectedIndexChanged += new System.EventHandler(this.listView_SelectedIndexChanged);
             this.listView.DoubleClick += new System.EventHandler(this.listView_DoubleClick);
             // 
             // nameColumn
@@ -88,44 +90,61 @@ namespace PrologValidatorForms
             // 
             // btnChoose
             // 
-            this.btnChoose.Location = new System.Drawing.Point(443, 9);
+            this.btnChoose.BackColor = System.Drawing.Color.SlateGray;
+            this.btnChoose.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnChoose.FlatAppearance.BorderSize = 0;
+            this.btnChoose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnChoose.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.btnChoose.ForeColor = System.Drawing.Color.Black;
+            this.btnChoose.Location = new System.Drawing.Point(515, 10);
             this.btnChoose.Margin = new System.Windows.Forms.Padding(2);
             this.btnChoose.Name = "btnChoose";
-            this.btnChoose.Size = new System.Drawing.Size(72, 22);
+            this.btnChoose.Size = new System.Drawing.Size(144, 22);
             this.btnChoose.TabIndex = 1;
             this.btnChoose.Text = "Wybierz";
-            this.btnChoose.UseVisualStyleBackColor = true;
+            this.btnChoose.UseVisualStyleBackColor = false;
             this.btnChoose.Click += new System.EventHandler(this.button_Click);
             // 
             // textBox
             // 
-            this.textBox.Location = new System.Drawing.Point(71, 11);
+            this.textBox.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.textBox.ForeColor = System.Drawing.SystemColors.MenuText;
+            this.textBox.Location = new System.Drawing.Point(162, 11);
             this.textBox.Margin = new System.Windows.Forms.Padding(2);
             this.textBox.Name = "textBox";
-            this.textBox.Size = new System.Drawing.Size(368, 20);
+            this.textBox.Size = new System.Drawing.Size(349, 22);
             this.textBox.TabIndex = 2;
             this.textBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox_KeyDown);
             // 
             // btnBackward
             // 
+            this.btnBackward.BackColor = System.Drawing.Color.SlateGray;
+            this.btnBackward.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnBackward.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBackward.Font = new System.Drawing.Font("Forte", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBackward.Location = new System.Drawing.Point(10, 10);
             this.btnBackward.Margin = new System.Windows.Forms.Padding(2);
             this.btnBackward.Name = "btnBackward";
-            this.btnBackward.Size = new System.Drawing.Size(30, 20);
+            this.btnBackward.Size = new System.Drawing.Size(69, 20);
             this.btnBackward.TabIndex = 3;
             this.btnBackward.Text = "<<";
-            this.btnBackward.UseVisualStyleBackColor = true;
+            this.btnBackward.UseVisualStyleBackColor = false;
             this.btnBackward.Click += new System.EventHandler(this.btnBackward_Click);
             // 
             // btnForward
             // 
-            this.btnForward.Location = new System.Drawing.Point(40, 10);
+            this.btnForward.BackColor = System.Drawing.Color.SlateGray;
+            this.btnForward.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnForward.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnForward.Font = new System.Drawing.Font("Forte", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnForward.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnForward.Location = new System.Drawing.Point(83, 10);
             this.btnForward.Margin = new System.Windows.Forms.Padding(2);
             this.btnForward.Name = "btnForward";
-            this.btnForward.Size = new System.Drawing.Size(27, 20);
+            this.btnForward.Size = new System.Drawing.Size(75, 20);
             this.btnForward.TabIndex = 4;
             this.btnForward.Text = ">>";
-            this.btnForward.UseVisualStyleBackColor = true;
+            this.btnForward.UseVisualStyleBackColor = false;
             this.btnForward.Click += new System.EventHandler(this.btnForward_Click);
             // 
             // Eksplorator
@@ -139,7 +158,7 @@ namespace PrologValidatorForms
             this.Controls.Add(this.listView);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Eksplorator";
-            this.Size = new System.Drawing.Size(525, 369);
+            this.Size = new System.Drawing.Size(672, 369);
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
