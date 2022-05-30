@@ -8,6 +8,7 @@ using System.Text;
 using System.Windows.Forms;
 using System.IO;
 using PrologValidatorForms.Library;
+using System.Threading;
 
 namespace PrologValidatorForms
 {
@@ -19,11 +20,14 @@ namespace PrologValidatorForms
         public Main()
         {
             InitializeComponent();
+            this.Text = string.Empty;
+            this.ControlBox = false;
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
             folderBrowserDialog1 = new FolderBrowserDialog();
+            btn_export.Hide();
         }
 
         private string DisplayErrors(string path, string finalPath)
@@ -48,10 +52,25 @@ namespace PrologValidatorForms
 
         private void btn_confirm_Click(object sender, EventArgs e)
         {
-            string inputPath = cb1.PresentPath;
-            string outputpath = cb2.PresentPath;
+            
+            string inputPath = cb2.PresentPath;
+            string outputpath = cb1.PresentPath;
             if (InputValidator.ValidateGroupDirectory(inputPath) == true)
             {
+                panel5.Width = 10;
+                timer1.Start();
+                panel4.Visible = true;
+                panel5.Visible = true;
+                do
+                {
+                    panel5.Width += 17;
+                    Thread.Sleep(2);
+
+                } while (panel5.Width <= 1408);
+
+                timer1.Stop();
+                panel5.Visible = false;
+                panel4.Visible = false;
                 gm = new GroupManager(inputPath, outputpath, labelInfo);
                 gm.AnalyzeSolution();
             }
@@ -60,6 +79,7 @@ namespace PrologValidatorForms
                 MessageBox.Show($"Nieprawidłowy format ścięzki z rozwiązaniem! Prawidłowy format: Gx_YYYY", "Błąd", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
 
         private void cb2_Load(object sender, EventArgs e)
         {
@@ -73,7 +93,64 @@ namespace PrologValidatorForms
 
         private void btn_export_Click(object sender, EventArgs e)
         {
+            
+        }
 
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel4_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panel5_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            timer1.Stop();
+            panel4.Visible = false;
+            panel5.Visible = false;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        static class Control
+        {
+            public static void Minimize(Form form)
+            {
+                if (form.WindowState == FormWindowState.Minimized)
+                {
+                    form.WindowState = FormWindowState.Normal;
+                }
+                else if (form.WindowState == FormWindowState.Normal)
+                {
+                    form.WindowState = FormWindowState.Minimized;
+                }
+            }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Control.Minimize(this);
         }
     }
 }
