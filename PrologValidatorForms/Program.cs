@@ -37,8 +37,8 @@ namespace PrologValidatorForms
             // dodać kolumnę z procentowym udziałem zaliczonych testów
             // 
 
-            // Dodać nową warstwę przechowującą grupy a w niej pliku poszczególnych uczniów (obudowaywałaby ona klasę valSolution)
-            // Zmienić wygląd Excela
+            
+           
 
 
             //                           PODZIAŁ PRAC

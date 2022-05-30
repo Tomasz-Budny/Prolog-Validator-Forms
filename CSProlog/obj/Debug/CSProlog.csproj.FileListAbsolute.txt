@@ -60,3 +60,11 @@ E:\E-Szkoła\SGGW\Semestr 4\Inżynieria oprogramowania\Projekt\IO\CSProlog\obj\D
 E:\E-Szkoła\SGGW\Semestr 4\Inżynieria oprogramowania\Projekt\IO\CSProlog\obj\Debug\CSProlog.csproj.CoreCompileInputs.cache
 E:\E-Szkoła\SGGW\Semestr 4\Inżynieria oprogramowania\Projekt\IO\CSProlog\obj\Debug\CSProlog.dll
 E:\E-Szkoła\SGGW\Semestr 4\Inżynieria oprogramowania\Projekt\IO\CSProlog\obj\Debug\CSProlog.pdb
+C:\Users\User\Desktop\IOREPO\IO\CSProlog\bin\Debug\CSProlog.dll
+C:\Users\User\Desktop\IOREPO\IO\CSProlog\bin\Debug\CSProlog.pdb
+C:\Users\User\Desktop\IOREPO\IO\CSProlog\obj\Debug\CSProlog.csprojAssemblyReference.cache
+C:\Users\User\Desktop\IOREPO\IO\CSProlog\obj\Debug\CSProlog.CsPrologHelp.resources
+C:\Users\User\Desktop\IOREPO\IO\CSProlog\obj\Debug\CSProlog.csproj.GenerateResource.cache
+C:\Users\User\Desktop\IOREPO\IO\CSProlog\obj\Debug\CSProlog.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\IOREPO\IO\CSProlog\obj\Debug\CSProlog.dll
+C:\Users\User\Desktop\IOREPO\IO\CSProlog\obj\Debug\CSProlog.pdb
