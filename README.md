@@ -19,3 +19,10 @@
 ```
 [+] Dodano logo aplikacji
 ```
+
+```
+[?] Pasek - Zaokrąglenie / Połysk
+[?] Możliwość poruszania oknem 
+[?] Lewy bok aplikacji coś dodać 
+[?] Sprawdzenie pod Rozdzielczość na innych monitorach 
+```
