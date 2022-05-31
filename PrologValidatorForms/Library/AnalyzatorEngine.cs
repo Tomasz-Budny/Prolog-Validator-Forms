@@ -26,35 +26,12 @@ namespace PrologValidatorForms
             this.taskName = taskName;
         }
 
-        public List<Test> Tests
-        {
-            get { return tests; }
-        }
-
-        public long SizeOfFile
-        {
-            get { return sizeOfFile; }
-        }
-
-        public string TaskName
-        {
-            get { return taskName; }
-        }
-
-        public string CreationTime
-        {
-            get { return creationDate; }
-        }
-
-        public int CorrectAnswers
-        {
-            get { return correctAnswers; }
-        }
-
-        public int TotalAnswers
-        {
-            get { return totalAnswers; }
-        }
+        public List<Test> Tests => tests;
+        public long SizeOfFile => sizeOfFile;
+        public string TaskName => taskName;
+        public string CreationTime => creationDate;
+        public int CorrectAnswers => correctAnswers;
+        public int TotalAnswers => totalAnswers;
 
         private void AddTest(string content, bool isCorrect)
         {
