@@ -157,10 +157,7 @@ namespace PrologValidatorForms
         string content;
         bool isCorrect;
 
-        public string Content
-        {
-            get { return content; }
-        }
+        public string Content => content;
         public int IsCorrect
         {
             get { if (isCorrect) { return 1; } else { return 0; } }

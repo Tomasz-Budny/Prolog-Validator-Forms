@@ -17,10 +17,7 @@ namespace PrologValidatorForms.Library
             this.keyFilePath = keyFilePath;
         }
 
-        public List<DeclaredTask> DeclaredTasks
-        {
-            get { return declaredTasks; }
-        }
+        public List<DeclaredTask> DeclaredTasks => declaredTasks;
 
         public void AnalyzeKeyFile()
         {
@@ -66,15 +63,8 @@ namespace PrologValidatorForms.Library
         string nameOfTask;
         List<string> declaredTests = new List<string>();
 
-        public List<string> DeclaredTests
-        {
-            get { return declaredTests; }
-        }
-
-        public string NameOfTask
-        {
-            get { return nameOfTask; }
-        }
+        public List<string> DeclaredTests => declaredTests;
+        public string NameOfTask => nameOfTask;
 
         public void AddTest(string testContent)
         {
