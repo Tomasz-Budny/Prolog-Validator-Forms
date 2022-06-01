@@ -25,4 +25,5 @@
 [?] Możliwość poruszania oknem 
 [?] Lewy bok aplikacji coś dodać 
 [?] Sprawdzenie pod Rozdzielczość na innych monitorach 
+[?] Ukryć tekst, wyświetlający się po otwarciu Excela
 ```
