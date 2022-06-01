@@ -17,7 +17,8 @@ namespace PrologValidatorForms.Library
                 fileSizeInBytesConvertedToDouble /= 1024;
                 prefix++;
             }
-            string convertedFileSize = fileSizeInBytesConvertedToDouble.ToString() + $" {(Prefixes)prefix}";
+            double roundedFileSize = Math.Round(fileSizeInBytesConvertedToDouble, 1);
+            string convertedFileSize = roundedFileSize.ToString() + $" {(Prefixes)prefix}";
             return convertedFileSize;
         }
     }
