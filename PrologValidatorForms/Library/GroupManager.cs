@@ -44,6 +44,8 @@ namespace PrologValidatorForms.Library
                         studentTasksManagers.Add(stm);
                     }
                 }
+
+                CreateExcelFile();
             }
             else
             {

@@ -54,7 +54,6 @@ namespace PrologValidatorForms
             {
                 gm = new GroupManager(inputPath, outputpath);
                 gm.AnalyzeSolution();
-                gm.CreateExcelFile();
             }
             else
             {
