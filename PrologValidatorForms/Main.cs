@@ -24,10 +24,25 @@ namespace PrologValidatorForms
             this.ControlBox = false;
         }
 
+        [System.Runtime.InteropServices.DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
+        public static extern System.IntPtr CreateRoundRectRgn(
+           int nLeftRect, // x-współrzędne lewego-górnego rogu
+           int nTopRect, // y-współrzędne lewego-górnego rogu
+           int nRightRect, // x-współrzędne prawego-dolnego rogu
+           int nBottomRect, // y-współrzędne prawego-dolnego rogu
+           int nWidthEllipse, // wysokość obiektu
+           int nHeightEllipse // szerokość obiektu
+           );
+
         private void Form1_Load(object sender, EventArgs e)
         {
             folderBrowserDialog1 = new FolderBrowserDialog();
-            btn_export.Hide();
+            btn_export.Hide();            
+            btn_confirm.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, btn_confirm.Width, btn_confirm.Height, 30, 30));
+            button1.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, button1.Width, button1.Height, 30, 30));
+            button2.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, button2.Width, button2.Height, 30, 30));            
+            panel2.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, panel2.Width, panel2.Height, 30, 30));
+            panel3.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, panel3.Width, panel3.Height, 30, 30));            
         }
 
         private string DisplayErrors(string path, string finalPath)
@@ -57,7 +72,7 @@ namespace PrologValidatorForms
             string outputpath = cb1.PresentPath;
             if (InputValidator.ValidateGroupDirectory(inputPath) == true)
             {
-                panel5.Width = 10;
+                panel5.Width = 10;                
                 timer1.Start();
                 panel4.Visible = true;
                 panel5.Visible = true;
@@ -112,8 +127,7 @@ namespace PrologValidatorForms
         }
 
         private void panel4_Paint(object sender, PaintEventArgs e)
-        {
-
+        {            
         }
 
         private void panel5_Paint(object sender, PaintEventArgs e)
@@ -151,6 +165,10 @@ namespace PrologValidatorForms
         private void button2_Click(object sender, EventArgs e)
         {
             Control.Minimize(this);
+        }
+
+        private void Main_Paint(object sender, PaintEventArgs e)
+        {           
         }
     }
 }
