@@ -30,6 +30,7 @@ namespace PrologValidatorForms
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
             this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
             this.btn_confirm = new System.Windows.Forms.Button();
             this.labelInfo = new System.Windows.Forms.Label();
@@ -45,12 +46,15 @@ namespace PrologValidatorForms
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.informator1 = new System.Windows.Forms.PictureBox();
             this.cb1 = new PrologValidatorForms.Eksplorator();
             this.cb2 = new PrologValidatorForms.Eksplorator();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.informator1)).BeginInit();
             this.SuspendLayout();
             // 
             // btn_confirm
@@ -135,6 +139,7 @@ namespace PrologValidatorForms
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
+            this.panel2.Controls.Add(this.informator1);
             this.panel2.Controls.Add(this.cb2);
             this.panel2.Controls.Add(this.label1);
             this.panel2.Location = new System.Drawing.Point(224, 74);
@@ -207,6 +212,23 @@ namespace PrologValidatorForms
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
+            // toolTip1
+            // 
+            this.toolTip1.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
+            // 
+            // informator1
+            // 
+            this.informator1.BackColor = System.Drawing.Color.White;
+            this.informator1.Image = ((System.Drawing.Image)(resources.GetObject("informator1.Image")));
+            this.informator1.Location = new System.Drawing.Point(498, 21);
+            this.informator1.Name = "informator1";
+            this.informator1.Size = new System.Drawing.Size(25, 23);
+            this.informator1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.informator1.TabIndex = 12;
+            this.informator1.TabStop = false;
+            this.informator1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.informator1_MouseClick);
+            this.informator1.MouseHover += new System.EventHandler(this.informator1_MouseHover);
+            // 
             // cb1
             // 
             this.cb1.BackColor = System.Drawing.Color.Transparent;
@@ -259,6 +281,7 @@ namespace PrologValidatorForms
             this.panel2.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.informator1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -282,6 +305,8 @@ namespace PrologValidatorForms
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.ToolTip toolTip1;
+        private System.Windows.Forms.PictureBox informator1;
     }
 }
 

@@ -44,6 +44,7 @@ namespace PrologValidatorForms
             panel2.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, panel2.Width, panel2.Height, 30, 30));
             panel3.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, panel3.Width, panel3.Height, 30, 30));
             this.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, this.Width, this.Height, 70, 70));
+            informator1.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, informator1.Width, informator1.Height, 30, 30));
         }
 
         private string DisplayErrors(string path, string finalPath)
@@ -170,6 +171,34 @@ namespace PrologValidatorForms
 
         private void Main_Paint(object sender, PaintEventArgs e)
         {           
+        }
+
+        private void informator1_MouseHover(object sender, EventArgs e)
+        {
+            string Information = "------------------------------------------- INSTRUKCJA ------------------------------------------- \n" +
+                                 "1. Twój folder z folderami rozwiązań studentów powinien być nazywany w formacie: GK_XXXX, \n"
+                                 + "gdzie X - to numer grupy , a XXXX - to rocznik utowrzenia folderu. \n" +
+                                 "2. W tym folderze powinny znajdować się foldery rozwiązań studentów w formacie: Kx_yyyyyy_z, \n"
+                                 + "gdzie X - to numer podejścia , a yyyyyy - to numer albumu, a z- to grupa studencka. \n"
+                                 + "3. W folderze GK_XXXX powinien się także znajdiować plik .txt o nazwie \"klucz\". \n"
+                                 + "4. W folderze Kx_yyyyyy_z powinny się znajdować pliki .pl w formacie ZadX.pl , \n"
+                                 + "gdzie X - to numer zadania \n"
+                                 + "-----------------------------------------------------------------------------------------------------";
+            toolTip1.Show(Information, informator1);
+        }
+
+        private void informator1_MouseClick(object sender, MouseEventArgs e)
+        {
+            string Information = "------------------------------------------- INSTRUKCJA ------------------------------------------- \n" +
+                                 "1. Twój folder z folderami rozwiązań studentów powinien być nazywany w formacie: GK_XXXX, \n"
+                                 + "gdzie X - to numer grupy , a XXXX - to rocznik utowrzenia folderu. \n" +
+                                 "2. W tym folderze powinny znajdować się foldery rozwiązań studentów w formacie: Kx_yyyyyy_z, \n"
+                                 + "gdzie X - to numer podejścia , a yyyyyy - to numer albumu, a z- to grupa studencka. \n"
+                                 + "3. W folderze GK_XXXX powinien się także znajdiować plik .txt o nazwie \"klucz\". \n"
+                                 + "4. W folderze Kx_yyyyyy_z powinny się znajdować pliki .pl w formacie ZadX.pl , \n"
+                                 + "gdzie X - to numer zadania \n"
+                                 + "-----------------------------------------------------------------------------------------------------";
+            toolTip1.Show(Information, informator1);
         }
     }
 }
