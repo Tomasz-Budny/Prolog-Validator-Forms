@@ -40,21 +40,21 @@ namespace PrologValidatorForms
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.informator1 = new System.Windows.Forms.PictureBox();
+            this.cb2 = new PrologValidatorForms.Eksplorator();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.cb1 = new PrologValidatorForms.Eksplorator();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.informator1 = new System.Windows.Forms.PictureBox();
-            this.cb1 = new PrologValidatorForms.Eksplorator();
-            this.cb2 = new PrologValidatorForms.Eksplorator();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
-            this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.informator1)).BeginInit();
+            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // btn_confirm
@@ -147,6 +147,29 @@ namespace PrologValidatorForms
             this.panel2.Size = new System.Drawing.Size(701, 445);
             this.panel2.TabIndex = 15;
             // 
+            // informator1
+            // 
+            this.informator1.BackColor = System.Drawing.Color.White;
+            this.informator1.Image = ((System.Drawing.Image)(resources.GetObject("informator1.Image")));
+            this.informator1.Location = new System.Drawing.Point(498, 21);
+            this.informator1.Name = "informator1";
+            this.informator1.Size = new System.Drawing.Size(25, 23);
+            this.informator1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.informator1.TabIndex = 12;
+            this.informator1.TabStop = false;
+            this.informator1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.informator1_MouseClick);
+            this.informator1.MouseHover += new System.EventHandler(this.informator1_MouseHover);
+            // 
+            // cb2
+            // 
+            this.cb2.BackColor = System.Drawing.Color.Transparent;
+            this.cb2.Location = new System.Drawing.Point(19, 48);
+            this.cb2.Margin = new System.Windows.Forms.Padding(1);
+            this.cb2.Name = "cb2";
+            this.cb2.Size = new System.Drawing.Size(663, 369);
+            this.cb2.TabIndex = 7;
+            this.cb2.Load += new System.EventHandler(this.cb2_Load);
+            // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
@@ -156,6 +179,16 @@ namespace PrologValidatorForms
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(701, 445);
             this.panel3.TabIndex = 16;
+            // 
+            // cb1
+            // 
+            this.cb1.BackColor = System.Drawing.Color.Transparent;
+            this.cb1.Location = new System.Drawing.Point(21, 48);
+            this.cb1.Margin = new System.Windows.Forms.Padding(1);
+            this.cb1.Name = "cb1";
+            this.cb1.Size = new System.Drawing.Size(663, 369);
+            this.cb1.TabIndex = 6;
+            this.cb1.Load += new System.EventHandler(this.cb1_Load);
             // 
             // panel4
             // 
@@ -216,39 +249,6 @@ namespace PrologValidatorForms
             // 
             this.toolTip1.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
             // 
-            // informator1
-            // 
-            this.informator1.BackColor = System.Drawing.Color.White;
-            this.informator1.Image = ((System.Drawing.Image)(resources.GetObject("informator1.Image")));
-            this.informator1.Location = new System.Drawing.Point(498, 21);
-            this.informator1.Name = "informator1";
-            this.informator1.Size = new System.Drawing.Size(25, 23);
-            this.informator1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.informator1.TabIndex = 12;
-            this.informator1.TabStop = false;
-            this.informator1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.informator1_MouseClick);
-            this.informator1.MouseHover += new System.EventHandler(this.informator1_MouseHover);
-            // 
-            // cb1
-            // 
-            this.cb1.BackColor = System.Drawing.Color.Transparent;
-            this.cb1.Location = new System.Drawing.Point(21, 48);
-            this.cb1.Margin = new System.Windows.Forms.Padding(1);
-            this.cb1.Name = "cb1";
-            this.cb1.Size = new System.Drawing.Size(663, 369);
-            this.cb1.TabIndex = 6;
-            this.cb1.Load += new System.EventHandler(this.cb1_Load);
-            // 
-            // cb2
-            // 
-            this.cb2.BackColor = System.Drawing.Color.Transparent;
-            this.cb2.Location = new System.Drawing.Point(19, 48);
-            this.cb2.Margin = new System.Windows.Forms.Padding(1);
-            this.cb2.Name = "cb2";
-            this.cb2.Size = new System.Drawing.Size(663, 369);
-            this.cb2.TabIndex = 7;
-            this.cb2.Load += new System.EventHandler(this.cb2_Load);
-            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -275,13 +275,16 @@ namespace PrologValidatorForms
             this.Text = "Prolog Validator";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.Paint += new System.Windows.Forms.PaintEventHandler(this.Main_Paint);
+            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Main_MouseDown);
+            this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Main_MouseMove);
+            this.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Main_MouseUp);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.informator1)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.informator1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

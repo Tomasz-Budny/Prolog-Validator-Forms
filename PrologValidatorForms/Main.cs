@@ -21,7 +21,7 @@ namespace PrologValidatorForms
         {
             InitializeComponent();
             this.Text = string.Empty;
-            this.ControlBox = false;
+            this.ControlBox = false;               
         }
 
         [System.Runtime.InteropServices.DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
@@ -199,6 +199,30 @@ namespace PrologValidatorForms
                                  + "gdzie X - to numer zadania \n"
                                  + "-----------------------------------------------------------------------------------------------------";
             toolTip1.Show(Information, informator1);
+        }
+
+        //Funkcjonalność przesuwania oknem po pulpicie 
+        bool mouse_Down;
+        private Point offset;
+        private void Main_MouseDown(object sender, MouseEventArgs e)
+        {
+            offset.X = e.X;
+            offset.Y = e.Y;
+            mouse_Down = true;
+        }
+
+        private void Main_MouseMove(object sender, MouseEventArgs e)
+        {
+            if(mouse_Down == true)
+            {
+                Point current_Screen_Position = PointToScreen(e.Location);
+                Location = new Point(current_Screen_Position.X - offset.X, current_Screen_Position.Y - offset.Y);
+            }
+        }
+
+        private void Main_MouseUp(object sender, MouseEventArgs e)
+        {
+            mouse_Down = false;
         }
     }
 }
