@@ -2,13 +2,13 @@
 
 Sprawozdanie z pracy nad projektem
 
-*** Doświadczalnie 
+*** Doświadczalnie ***
 ```
 [+] utworzenie początkowego szkicu GUI aplikacji
 [+] poboczne zaprojektowanie rdzenia aplikacji (pobieranie pliku -> kompilowanie przez prologra -> zapisywanie wyników zapytań do pliku tekstowego)
 [+] próba validacji jedynie folderów i plików .txt oraz .pl w celu ich wyłącznego wyświetlania w Folder Browserze
 ```
-*** Faktyczny wkład
+*** Faktyczny wkład ***
 ```
 [+] Dodanie zaokrąglonych przycisków i elementów dekoracyjnych w oknie aplikacji
 [+] Usunięcie przestarzałych ovbramówek przycisków i zewnętrznego okna aplikacji
