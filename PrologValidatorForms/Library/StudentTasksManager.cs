@@ -105,7 +105,7 @@ namespace PrologValidatorForms
             }
 
             // W celu testowania usunąć potem
-            infoLabel.Text += ShowTasks();
+            //infoLabel.Text += ShowTasks();
 
             sr.Close();
         }

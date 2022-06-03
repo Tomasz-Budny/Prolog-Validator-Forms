@@ -44,9 +44,9 @@ namespace PrologValidatorForms.Library
                         Lstm.Add(stm);
                     }
                 }
-                Console.WriteLine("\n\n\n\n");
-                Console.WriteLine(this);
-                Console.WriteLine("\n\n\n\n");
+                //Console.WriteLine("\n\n\n\n");
+                //Console.WriteLine(this);
+                //Console.WriteLine("\n\n\n\n");
                 CreateExcelFile();
             }
             else

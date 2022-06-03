@@ -78,11 +78,12 @@ namespace PrologValidatorForms
                 timer1.Start();
                 panel4.Visible = true;
                 panel5.Visible = true;
+                panel5.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, panel5.Width, panel5.Height, 30, 30));
                 do
                 {
                     panel5.Width += 17;
-                    Thread.Sleep(2);
-
+                    panel5.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, panel5.Width, panel5.Height, 30, 30));
+                    Thread.Sleep(2);                    
                 } while (panel5.Width <= 1408);
 
                 timer1.Stop();
