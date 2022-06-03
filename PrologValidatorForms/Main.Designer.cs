@@ -57,6 +57,7 @@ namespace PrologValidatorForms
             // 
             this.btn_confirm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
             this.btn_confirm.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_confirm.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.btn_confirm.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.btn_confirm.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.btn_confirm.Location = new System.Drawing.Point(623, 538);
