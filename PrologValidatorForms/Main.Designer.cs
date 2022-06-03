@@ -233,7 +233,7 @@ namespace PrologValidatorForms
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1663, 645);
+            this.ClientSize = new System.Drawing.Size(1679, 684);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.panel5);
@@ -243,6 +243,7 @@ namespace PrologValidatorForms
             this.Controls.Add(this.btn_confirm);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.labelInfo);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(1679, 684);
             this.MinimizeBox = false;
