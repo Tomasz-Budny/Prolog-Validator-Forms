@@ -65,12 +65,50 @@ namespace PrologValidatorForms.Library
 
                 ExcelWorksheet ws = excelPackage.Workbook.Worksheets.Add("Podsumowanie");
 
+                int basicCellsRow = 1;
+                int basicCellsColumn = 1;
+                int dataCellsRow = 3;
+                int dataCellsColumn = 1;
+
+
+                foreach (StudentTasksManager item in Lstm)
+                {
+                    int sumazdobyta = 0;
+                    int sumadozdobycia = 0;
+
+                    for (int i = 0; i < item.Tasks.Count; i++)
+                    {
+                        ws.Cells[basicCellsRow, basicCellsColumn + 1 + i*2, basicCellsRow, basicCellsColumn + 2 + i*2].Merge = true;
+                        ws.Cells[basicCellsRow, basicCellsColumn + 1 + i*2].Value = item.Tasks[i].TaskName;
+                        ws.Cells[basicCellsRow + 1, basicCellsColumn + 1 + i*2].Value = "Ilość zaliczonych testów";
+                        ws.Cells[basicCellsRow + 1, basicCellsColumn + 2 + i*2].Value = "Ilość wszystkich podjętych testów";
+                        ws.Cells[dataCellsRow, dataCellsColumn + 1 + i * 2].Value = item.Tasks[i].CorrectAnswers;
+                        ws.Cells[dataCellsRow, dataCellsColumn + 2 + i * 2].Value = item.Tasks[i].TotalAnswers;
+                        sumazdobyta += item.Tasks[i].CorrectAnswers;
+                        sumadozdobycia += item.Tasks[i].TotalAnswers;
+                    }
+                    ws.Cells[dataCellsRow, dataCellsColumn].Value = Convert.ToInt32(item.SolutionName.Substring(3, 6));
+                    ws.Cells[basicCellsRow, basicCellsColumn + 1 + (item.Tasks.Count) * 2].Value = "Uzyskana liczba punktów";
+                    ws.Cells[basicCellsRow, basicCellsColumn + 2 + (item.Tasks.Count) * 2].Value = "Maksymalna liczba punktów do zdobycia";
+                    ws.Cells[basicCellsRow, basicCellsColumn + 1 + (item.Tasks.Count) * 2, basicCellsRow + 1, basicCellsColumn + 1 + (item.Tasks.Count) * 2].Merge = true;
+                    ws.Cells[basicCellsRow, basicCellsColumn + 2 + (item.Tasks.Count) * 2, basicCellsRow + 1, basicCellsColumn + 2 + (item.Tasks.Count) * 2].Merge = true;
+                    ws.Cells[dataCellsRow, dataCellsColumn + 1 + (item.Tasks.Count) * 2].Value = sumazdobyta;
+                    ws.Cells[dataCellsRow, dataCellsColumn + 2 + (item.Tasks.Count) * 2].Value = sumadozdobycia;
+
+                    dataCellsRow++;
+                }
+
+                //Automatyczne wyrównanie kolumn
+
+                ws.Cells[1, 1, 50, 50].AutoFitColumns();
+
+
                 foreach (StudentTasksManager item in Lstm)
                 {
                     //Informacje podstawowe
                     ws = excelPackage.Workbook.Worksheets.Add(item.SolutionName);
-                    int basicCellsRow = 2;
-                    int basicCellsColumn = 2;
+                    basicCellsRow = 2;
+                    basicCellsColumn = 2;
                     ws.Cells[basicCellsRow, basicCellsColumn, basicCellsRow, basicCellsColumn + 1].Merge = true;
                     ws.Cells[basicCellsRow, basicCellsColumn].Value = "Informacje Podstawowe";
 
@@ -139,8 +177,8 @@ namespace PrologValidatorForms.Library
 
                     //Testy
 
-                    int dataCellsRow = 8;
-                    int dataCellsColumn = 2;
+                    dataCellsRow = 8;
+                    dataCellsColumn = 2;
 
                     int How_many = item.MaxTestCount;
                     
