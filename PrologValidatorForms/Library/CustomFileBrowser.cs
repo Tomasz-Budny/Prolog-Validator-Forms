@@ -63,7 +63,8 @@ namespace PrologValidatorForms
                     ListViewItem listItem = new ListViewItem(fi.Name.Split('.')[0], imageList.Images.Count - 1);
                     listItem.SubItems.Add(fi.CreationTime.ToString());
                     listItem.SubItems.Add(fi.Extension.ToString());
-                    listItem.SubItems.Add(fi.Length.ToString());
+                    string convertedNumber = Library.SizeConverter.ConvertSize(fi.Length);
+                    listItem.SubItems.Add(convertedNumber);
                     listView.Items.Add(listItem);
                 }
             }

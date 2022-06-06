@@ -79,7 +79,7 @@ namespace PrologValidatorForms
             // 
             // sizeColumn
             // 
-            this.sizeColumn.Text = "Rozmiar w bajtach";
+            this.sizeColumn.Text = "Rozmiar";
             this.sizeColumn.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // imageList
