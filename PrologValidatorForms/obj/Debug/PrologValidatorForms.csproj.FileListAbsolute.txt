@@ -15,6 +15,7 @@ C:\Users\tomek\OneDrive\Pulpit\Semestr4\InżynieriaOprogramowania\ProjekcikProlo
 C:\Users\tomek\OneDrive\Pulpit\Semestr4\InżynieriaOprogramowania\ProjekcikProlog\IO\IO\PrologValidatorForms\obj\Debug\PrologValidatorForms.exe
 C:\Users\tomek\OneDrive\Pulpit\Semestr4\InżynieriaOprogramowania\ProjekcikProlog\IO\IO\PrologValidatorForms\obj\Debug\PrologValidatorForms.pdb
 C:\Users\tomek\OneDrive\Pulpit\Semestr4\InżynieriaOprogramowania\ProjekcikProlog\IO\IO\PrologValidatorForms\obj\Debug\PrologValidatorForms.csproj.AssemblyReference.cache
+<<<<<<< HEAD
 C:\Users\User\Desktop\IOREPO\IO\PrologValidatorForms\bin\Debug\PrologValidatorForms.exe.config
 C:\Users\User\Desktop\IOREPO\IO\PrologValidatorForms\bin\Debug\PrologValidatorForms.exe
 C:\Users\User\Desktop\IOREPO\IO\PrologValidatorForms\bin\Debug\PrologValidatorForms.pdb
@@ -33,3 +34,42 @@ C:\Users\User\Desktop\IOREPO\IO\PrologValidatorForms\obj\Debug\PrologValidatorFo
 C:\Users\User\Desktop\IOREPO\IO\PrologValidatorForms\obj\Debug\PrologValidatorForms.csproj.CopyComplete
 C:\Users\User\Desktop\IOREPO\IO\PrologValidatorForms\obj\Debug\PrologValidatorForms.exe
 C:\Users\User\Desktop\IOREPO\IO\PrologValidatorForms\obj\Debug\PrologValidatorForms.pdb
+=======
+C:\Users\Kuba\Desktop\KUBA\Private\STUDIA\4 sem\Inżynieria Oprogramowania\PROLOG GitHub ORYGINAL\IO\PrologValidatorForms\bin\Debug\PrologValidatorForms.exe.config
+C:\Users\Kuba\Desktop\KUBA\Private\STUDIA\4 sem\Inżynieria Oprogramowania\PROLOG GitHub ORYGINAL\IO\PrologValidatorForms\bin\Debug\PrologValidatorForms.exe
+C:\Users\Kuba\Desktop\KUBA\Private\STUDIA\4 sem\Inżynieria Oprogramowania\PROLOG GitHub ORYGINAL\IO\PrologValidatorForms\bin\Debug\PrologValidatorForms.pdb
+C:\Users\Kuba\Desktop\KUBA\Private\STUDIA\4 sem\Inżynieria Oprogramowania\PROLOG GitHub ORYGINAL\IO\PrologValidatorForms\bin\Debug\CSProlog.dll
+C:\Users\Kuba\Desktop\KUBA\Private\STUDIA\4 sem\Inżynieria Oprogramowania\PROLOG GitHub ORYGINAL\IO\PrologValidatorForms\bin\Debug\EPPlus.dll
+C:\Users\Kuba\Desktop\KUBA\Private\STUDIA\4 sem\Inżynieria Oprogramowania\PROLOG GitHub ORYGINAL\IO\PrologValidatorForms\bin\Debug\SwiftExcel.dll
+C:\Users\Kuba\Desktop\KUBA\Private\STUDIA\4 sem\Inżynieria Oprogramowania\PROLOG GitHub ORYGINAL\IO\PrologValidatorForms\bin\Debug\System.ComponentModel.Annotations.dll
+C:\Users\Kuba\Desktop\KUBA\Private\STUDIA\4 sem\Inżynieria Oprogramowania\PROLOG GitHub ORYGINAL\IO\PrologValidatorForms\bin\Debug\CSProlog.pdb
+C:\Users\Kuba\Desktop\KUBA\Private\STUDIA\4 sem\Inżynieria Oprogramowania\PROLOG GitHub ORYGINAL\IO\PrologValidatorForms\bin\Debug\EPPlus.xml
+C:\Users\Kuba\Desktop\KUBA\Private\STUDIA\4 sem\Inżynieria Oprogramowania\PROLOG GitHub ORYGINAL\IO\PrologValidatorForms\obj\Debug\PrologValidatorForms.csprojAssemblyReference.cache
+C:\Users\Kuba\Desktop\KUBA\Private\STUDIA\4 sem\Inżynieria Oprogramowania\PROLOG GitHub ORYGINAL\IO\PrologValidatorForms\obj\Debug\PrologValidatorForms.Eksplorator.resources
+C:\Users\Kuba\Desktop\KUBA\Private\STUDIA\4 sem\Inżynieria Oprogramowania\PROLOG GitHub ORYGINAL\IO\PrologValidatorForms\obj\Debug\PrologValidatorForms.Main.resources
+C:\Users\Kuba\Desktop\KUBA\Private\STUDIA\4 sem\Inżynieria Oprogramowania\PROLOG GitHub ORYGINAL\IO\PrologValidatorForms\obj\Debug\PrologValidatorForms.Properties.Resources.resources
+C:\Users\Kuba\Desktop\KUBA\Private\STUDIA\4 sem\Inżynieria Oprogramowania\PROLOG GitHub ORYGINAL\IO\PrologValidatorForms\obj\Debug\PrologValidatorForms.csproj.GenerateResource.cache
+C:\Users\Kuba\Desktop\KUBA\Private\STUDIA\4 sem\Inżynieria Oprogramowania\PROLOG GitHub ORYGINAL\IO\PrologValidatorForms\obj\Debug\PrologValidatorForms.csproj.CoreCompileInputs.cache
+C:\Users\Kuba\Desktop\KUBA\Private\STUDIA\4 sem\Inżynieria Oprogramowania\PROLOG GitHub ORYGINAL\IO\PrologValidatorForms\obj\Debug\PrologValidatorForms.csproj.CopyComplete
+C:\Users\Kuba\Desktop\KUBA\Private\STUDIA\4 sem\Inżynieria Oprogramowania\PROLOG GitHub ORYGINAL\IO\PrologValidatorForms\obj\Debug\PrologValidatorForms.exe
+C:\Users\Kuba\Desktop\KUBA\Private\STUDIA\4 sem\Inżynieria Oprogramowania\PROLOG GitHub ORYGINAL\IO\PrologValidatorForms\obj\Debug\PrologValidatorForms.pdb
+>>>>>>> frontend_JW
+C:\Users\przem\Desktop\Projekt IO\PrologValidatorForms\bin\Debug\PrologValidatorForms.exe.config
+C:\Users\przem\Desktop\Projekt IO\PrologValidatorForms\bin\Debug\PrologValidatorForms.exe
+C:\Users\przem\Desktop\Projekt IO\PrologValidatorForms\bin\Debug\PrologValidatorForms.pdb
+C:\Users\przem\Desktop\Projekt IO\PrologValidatorForms\bin\Debug\CSProlog.dll
+C:\Users\przem\Desktop\Projekt IO\PrologValidatorForms\bin\Debug\EPPlus.dll
+C:\Users\przem\Desktop\Projekt IO\PrologValidatorForms\bin\Debug\SwiftExcel.dll
+C:\Users\przem\Desktop\Projekt IO\PrologValidatorForms\bin\Debug\System.ComponentModel.Annotations.dll
+C:\Users\przem\Desktop\Projekt IO\PrologValidatorForms\bin\Debug\CSProlog.pdb
+C:\Users\przem\Desktop\Projekt IO\PrologValidatorForms\bin\Debug\EPPlus.xml
+C:\Users\przem\Desktop\Projekt IO\PrologValidatorForms\obj\Debug\PrologValidatorForms.csproj.AssemblyReference.cache
+C:\Users\przem\Desktop\Projekt IO\PrologValidatorForms\obj\Debug\PrologValidatorForms.csproj.SuggestedBindingRedirects.cache
+C:\Users\przem\Desktop\Projekt IO\PrologValidatorForms\obj\Debug\PrologValidatorForms.Eksplorator.resources
+C:\Users\przem\Desktop\Projekt IO\PrologValidatorForms\obj\Debug\PrologValidatorForms.Main.resources
+C:\Users\przem\Desktop\Projekt IO\PrologValidatorForms\obj\Debug\PrologValidatorForms.Properties.Resources.resources
+C:\Users\przem\Desktop\Projekt IO\PrologValidatorForms\obj\Debug\PrologValidatorForms.csproj.GenerateResource.cache
+C:\Users\przem\Desktop\Projekt IO\PrologValidatorForms\obj\Debug\PrologValidatorForms.csproj.CoreCompileInputs.cache
+C:\Users\przem\Desktop\Projekt IO\PrologValidatorForms\obj\Debug\PrologValidatorForms.csproj.CopyComplete
+C:\Users\przem\Desktop\Projekt IO\PrologValidatorForms\obj\Debug\PrologValidatorForms.exe
+C:\Users\przem\Desktop\Projekt IO\PrologValidatorForms\obj\Debug\PrologValidatorForms.pdb
