@@ -14,8 +14,8 @@ C:\Users\tomek\OneDrive\Pulpit\Semestr4\InżynieriaOprogramowania\ProjekcikProlo
 C:\Users\tomek\OneDrive\Pulpit\Semestr4\InżynieriaOprogramowania\ProjekcikProlog\IO\IO\PrologValidatorForms\obj\Debug\PrologValidatorForms.csproj.CoreCompileInputs.cache
 C:\Users\tomek\OneDrive\Pulpit\Semestr4\InżynieriaOprogramowania\ProjekcikProlog\IO\IO\PrologValidatorForms\obj\Debug\PrologValidatorForms.exe
 C:\Users\tomek\OneDrive\Pulpit\Semestr4\InżynieriaOprogramowania\ProjekcikProlog\IO\IO\PrologValidatorForms\obj\Debug\PrologValidatorForms.pdb
-C:\Users\tomek\OneDrive\Pulpit\Semestr4\InżynieriaOprogramowania\ProjekcikProlog\IO\IO\PrologValidatorForms\obj\Debug\PrologValidatorForms.csproj.AssemblyReference.cache
 <<<<<<< HEAD
+C:\Users\tomek\OneDrive\Pulpit\Semestr4\InżynieriaOprogramowania\ProjekcikProlog\IO\IO\PrologValidatorForms\obj\Debug\PrologValidatorForms.csproj.AssemblyReference.cache
 C:\Users\User\Desktop\IOREPO\IO\PrologValidatorForms\bin\Debug\PrologValidatorForms.exe.config
 C:\Users\User\Desktop\IOREPO\IO\PrologValidatorForms\bin\Debug\PrologValidatorForms.exe
 C:\Users\User\Desktop\IOREPO\IO\PrologValidatorForms\bin\Debug\PrologValidatorForms.pdb
@@ -95,3 +95,4 @@ C:\Users\GAMING\Desktop\Projekt IO KOD\PrologValidatorForms\obj\Debug\PrologVali
 C:\Users\GAMING\Desktop\Projekt IO KOD\PrologValidatorForms\obj\Debug\PrologValidatorForms.pdb
 C:\Users\tomek\OneDrive\Pulpit\Semestr4\InżynieriaOprogramowania\ProjekcikProlog\IO\IO\PrologValidatorForms\obj\Debug\PrologValidatorForms.csproj.CopyComplete
 >>>>>>> better_key_pattern
+>>>>>>> size_converter

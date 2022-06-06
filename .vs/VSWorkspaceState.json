@@ -1,6 +1,16 @@
 {
   "ExpandedNodes": [
+<<<<<<< HEAD
     ""
   ],
+=======
+    "",
+    "\\Assets",
+    "\\packages",
+    "\\PrologValidatorForms",
+    "\\PrologValidatorForms\\Library"
+  ],
+  "SelectedNode": "\\PrologValidatorForms\\Library\\SizeConverter.cs",
+>>>>>>> size_converter
   "PreviewInSolutionExplorer": false
 }
