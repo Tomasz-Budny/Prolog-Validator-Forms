@@ -16,7 +16,7 @@ namespace PrologValidatorForms
         int maxTestsCount;
         KeyManager keyManager;
         List<Task> tasks = new List<Task>();
-        
+
         public int MaxTestCount { get => maxTestsCount;  }
         public string SolutionName { get => solutionName; }
         public List<Task> Tasks { get => tasks; }
