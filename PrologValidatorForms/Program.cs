@@ -14,7 +14,7 @@ namespace PrologValidatorForms
         /// Główny punkt wejścia dla aplikacji.
         /// </summary>
         [STAThread]
-        static void Main()
+        public static void Main()
         {
 
             // Do zrobienia:
@@ -52,9 +52,8 @@ namespace PrologValidatorForms
 
 
             Application.EnableVisualStyles();
-            Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Main());
-            
+            Application.SetCompatibleTextRenderingDefault(false);            
+            Application.Run(new Main());            
         }
     }
 }
