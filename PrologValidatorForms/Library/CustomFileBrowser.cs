@@ -137,20 +137,27 @@ namespace PrologValidatorForms
         }
         private void listView_DoubleClick(object sender, EventArgs e)
         {
-            if (listView.FocusedItem != null)
+            try
             {
-                forwardPaths.Clear();
-                int index = listView.FocusedItem.Index;
+                if (listView.FocusedItem != null)
+                {
+                    forwardPaths.Clear();
+                    int index = listView.FocusedItem.Index;
 
-                if (pm.GetPathType(index) == PathListTypes.Directory)
-                {
-                    backwardPaths.Add(presentPath);
-                    RefreshList(pm.GetPath(index));
+                    if (pm.GetPathType(index) == PathListTypes.Directory)
+                    {
+                        backwardPaths.Add(presentPath);
+                        RefreshList(pm.GetPath(index));
+                    }
+                    else if (pm.GetPathType(index) == PathListTypes.File)
+                    {
+                        Process.Start(pm.GetPath(index));
+                    }
                 }
-                else if(pm.GetPathType(index) == PathListTypes.File)
-                {
-                    Process.Start(pm.GetPath(index));
-                } 
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
             }
         }
 
