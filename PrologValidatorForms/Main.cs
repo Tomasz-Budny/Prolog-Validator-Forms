@@ -89,7 +89,6 @@ namespace PrologValidatorForms
                 timer1.Stop();
                 panel5.Visible = false;
                 panel4.Visible = false;
-                gm = new GroupManager(inputPath, outputpath, labelInfo);
                 gm = new GroupManager(inputPath, outputpath);
                 gm.AnalyzeSolution();
             }

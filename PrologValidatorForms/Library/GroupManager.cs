@@ -70,15 +70,15 @@ namespace PrologValidatorForms.Library
                 int dataCellsColumn = 1;
 
 
-                foreach (StudentTasksManager item in Lstm)
+                foreach (StudentTasksManager stm in studentTasksManagers)
                 {
                     int sumazdobyta = 0;
                     int sumadozdobycia = 0;
 
-                    for (int i = 0; i < item.Tasks.Count; i++)
+                    for (int i = 0; i < stm.Tasks.Count; i++)
                     {
                         ws.Cells[basicCellsRow, basicCellsColumn + 1 + i * 2, basicCellsRow, basicCellsColumn + 2 + i*2].Merge = true;
-                        ws.Cells[basicCellsRow, basicCellsColumn + 1 + i * 2].Value = item.Tasks[i].TaskName;
+                        ws.Cells[basicCellsRow, basicCellsColumn + 1 + i * 2].Value = stm.Tasks[i].TaskName;
                        
                         ws.Cells[basicCellsRow, basicCellsColumn + 1 + i * 2].Style.Font.Bold = true;
                         ws.Cells[basicCellsRow, basicCellsColumn + 1 + i * 2].Style.Fill.PatternType = ExcelFillStyle.Solid;
@@ -97,40 +97,40 @@ namespace PrologValidatorForms.Library
                         ws.Cells[basicCellsRow + 1, basicCellsColumn + 2 + i * 2].Style.Font.Color.SetColor(Color.White);
 
 
-                        ws.Cells[dataCellsRow, dataCellsColumn + 1 + i * 2].Value = item.Tasks[i].CorrectAnswers;
-                        ws.Cells[dataCellsRow, dataCellsColumn + 2 + i * 2].Value = item.Tasks[i].TotalAnswers;
+                        ws.Cells[dataCellsRow, dataCellsColumn + 1 + i * 2].Value = stm.Tasks[i].CorrectAnswers;
+                        ws.Cells[dataCellsRow, dataCellsColumn + 2 + i * 2].Value = stm.Tasks[i].TotalAnswers;
 
                         ws.Cells[dataCellsRow, dataCellsColumn + 1 + i * 2 ,dataCellsRow, dataCellsColumn + 2 + i * 2].Style.Fill.PatternType = ExcelFillStyle.Solid;
                         ws.Cells[dataCellsRow, dataCellsColumn + 1 + i * 2, dataCellsRow, dataCellsColumn + 2 + i * 2].Style.Fill.BackgroundColor.SetColor(Color.FromArgb(155, 163, 235));
 
 
 
-                        sumazdobyta += item.Tasks[i].CorrectAnswers;
-                        sumadozdobycia += item.Tasks[i].TotalAnswers;
+                        sumazdobyta += stm.Tasks[i].CorrectAnswers;
+                        sumadozdobycia += stm.Tasks[i].TotalAnswers;
                     }
-                    ws.Cells[dataCellsRow, dataCellsColumn].Value = Convert.ToInt32(item.SolutionName.Substring(3, 6));
+                    ws.Cells[dataCellsRow, dataCellsColumn].Value = Convert.ToInt32(stm.SolutionName.Substring(3, 6));
                     ws.Cells[dataCellsRow, dataCellsColumn].Style.Fill.PatternType = ExcelFillStyle.Solid;
                     ws.Cells[dataCellsRow, dataCellsColumn].Style.Fill.BackgroundColor.SetColor(Color.FromArgb(100, 111, 212));
                     ws.Cells[dataCellsRow, dataCellsColumn].Style.Font.Color.SetColor(Color.White);
 
-                    ws.Cells[basicCellsRow, basicCellsColumn + 1 + (item.Tasks.Count) * 2].Value = "Uzyskana liczba punktów";
-                    ws.Cells[basicCellsRow, basicCellsColumn + 2 + (item.Tasks.Count) * 2].Value = "Maksymalna liczba punktów do zdobycia";
-                    ws.Cells[basicCellsRow, basicCellsColumn + 1 + (item.Tasks.Count) * 2, basicCellsRow + 1, basicCellsColumn + 1 + (item.Tasks.Count) * 2].Merge = true;
-                    ws.Cells[basicCellsRow, basicCellsColumn + 2 + (item.Tasks.Count) * 2, basicCellsRow + 1, basicCellsColumn + 2 + (item.Tasks.Count) * 2].Merge = true;
-                    ws.Cells[dataCellsRow, dataCellsColumn + 1 + (item.Tasks.Count) * 2].Value = sumazdobyta;
-                    ws.Cells[dataCellsRow, dataCellsColumn + 2 + (item.Tasks.Count) * 2].Value = sumadozdobycia;
+                    ws.Cells[basicCellsRow, basicCellsColumn + 1 + (stm.Tasks.Count) * 2].Value = "Uzyskana liczba punktów";
+                    ws.Cells[basicCellsRow, basicCellsColumn + 2 + (stm.Tasks.Count) * 2].Value = "Maksymalna liczba punktów do zdobycia";
+                    ws.Cells[basicCellsRow, basicCellsColumn + 1 + (stm.Tasks.Count) * 2, basicCellsRow + 1, basicCellsColumn + 1 + (stm.Tasks.Count) * 2].Merge = true;
+                    ws.Cells[basicCellsRow, basicCellsColumn + 2 + (stm.Tasks.Count) * 2, basicCellsRow + 1, basicCellsColumn + 2 + (stm.Tasks.Count) * 2].Merge = true;
+                    ws.Cells[dataCellsRow, dataCellsColumn + 1 + (stm.Tasks.Count) * 2].Value = sumazdobyta;
+                    ws.Cells[dataCellsRow, dataCellsColumn + 2 + (stm.Tasks.Count) * 2].Value = sumadozdobycia;
 
-                    ws.Cells[dataCellsRow, dataCellsColumn + 1 + (item.Tasks.Count) * 2, dataCellsRow, dataCellsColumn + 2 + (item.Tasks.Count) * 2].Style.Fill.PatternType = ExcelFillStyle.Solid;
-                    ws.Cells[dataCellsRow, dataCellsColumn + 1 + (item.Tasks.Count) * 2, dataCellsRow, dataCellsColumn + 2 + (item.Tasks.Count) * 2].Style.Fill.BackgroundColor.SetColor(Color.FromArgb(155, 163, 235));
+                    ws.Cells[dataCellsRow, dataCellsColumn + 1 + (stm.Tasks.Count) * 2, dataCellsRow, dataCellsColumn + 2 + (stm.Tasks.Count) * 2].Style.Fill.PatternType = ExcelFillStyle.Solid;
+                    ws.Cells[dataCellsRow, dataCellsColumn + 1 + (stm.Tasks.Count) * 2, dataCellsRow, dataCellsColumn + 2 + (stm.Tasks.Count) * 2].Style.Fill.BackgroundColor.SetColor(Color.FromArgb(155, 163, 235));
 
 
-                    ws.Cells[basicCellsRow, basicCellsColumn + 1 + (item.Tasks.Count) * 2].Style.Fill.PatternType = ExcelFillStyle.Solid;
-                    ws.Cells[basicCellsRow, basicCellsColumn + 1 + (item.Tasks.Count) * 2].Style.Fill.BackgroundColor.SetColor(Color.FromArgb(100, 111, 212));
-                    ws.Cells[basicCellsRow, basicCellsColumn + 1 + (item.Tasks.Count) * 2].Style.Font.Color.SetColor(Color.White);
+                    ws.Cells[basicCellsRow, basicCellsColumn + 1 + (stm.Tasks.Count) * 2].Style.Fill.PatternType = ExcelFillStyle.Solid;
+                    ws.Cells[basicCellsRow, basicCellsColumn + 1 + (stm.Tasks.Count) * 2].Style.Fill.BackgroundColor.SetColor(Color.FromArgb(100, 111, 212));
+                    ws.Cells[basicCellsRow, basicCellsColumn + 1 + (stm.Tasks.Count) * 2].Style.Font.Color.SetColor(Color.White);
 
-                    ws.Cells[basicCellsRow, basicCellsColumn + 2 + (item.Tasks.Count) * 2].Style.Fill.PatternType = ExcelFillStyle.Solid;
-                    ws.Cells[basicCellsRow, basicCellsColumn + 2 + (item.Tasks.Count) * 2].Style.Fill.BackgroundColor.SetColor(Color.FromArgb(100, 111, 212));
-                    ws.Cells[basicCellsRow, basicCellsColumn + 2 + (item.Tasks.Count) * 2].Style.Font.Color.SetColor(Color.White);
+                    ws.Cells[basicCellsRow, basicCellsColumn + 2 + (stm.Tasks.Count) * 2].Style.Fill.PatternType = ExcelFillStyle.Solid;
+                    ws.Cells[basicCellsRow, basicCellsColumn + 2 + (stm.Tasks.Count) * 2].Style.Fill.BackgroundColor.SetColor(Color.FromArgb(100, 111, 212));
+                    ws.Cells[basicCellsRow, basicCellsColumn + 2 + (stm.Tasks.Count) * 2].Style.Font.Color.SetColor(Color.White);
                     dataCellsRow++;
                 }
 
@@ -139,10 +139,10 @@ namespace PrologValidatorForms.Library
                 ws.Cells[1, 1, 50, 50].AutoFitColumns();
 
 
-                foreach (StudentTasksManager item in Lstm)
+                foreach (StudentTasksManager stm in studentTasksManagers)
                 {
                     //Informacje podstawowe
-                    ws = excelPackage.Workbook.Worksheets.Add(item.SolutionName);
+                    ws = excelPackage.Workbook.Worksheets.Add(stm.SolutionName);
                     basicCellsRow = 2;
                     basicCellsColumn = 2;
                     ws.Cells[basicCellsRow, basicCellsColumn, basicCellsRow, basicCellsColumn + 1].Merge = true;
@@ -216,17 +216,17 @@ namespace PrologValidatorForms.Library
                     dataCellsRow = 8;
                     dataCellsColumn = 2;
 
-                    int How_many = item.MaxTestCount;
+                    int How_many = stm.MaxTestCount;
                     
 
-                    for (int i = 0; i < item.Tasks.Count; i++)
+                    for (int i = 0; i < stm.Tasks.Count; i++)
                     {
                                                 
-                            ws.Cells[dataCellsRow + i + 1, dataCellsColumn].Value = item.Tasks[i].TaskName;
+                            ws.Cells[dataCellsRow + i + 1, dataCellsColumn].Value = stm.Tasks[i].TaskName;
 
-                            for (int j = 0; j < item.Tasks[i].Tests.Count; j++)
+                            for (int j = 0; j < stm.Tasks[i].Tests.Count; j++)
                             {
-                                ws.Cells[dataCellsRow + i + 1, dataCellsColumn + j + 1].Value = item.Tasks[i].Tests[j].IsCorrect;
+                                ws.Cells[dataCellsRow + i + 1, dataCellsColumn + j + 1].Value = stm.Tasks[i].Tests[j].IsCorrect;
                                 ws.Cells[dataCellsRow, dataCellsColumn + j + 1].Value = "Test " + Convert.ToString(j + 1);
                             }
                             ws.Cells[dataCellsRow + i + 1, dataCellsColumn + 1, dataCellsRow + i + 1, dataCellsColumn  + How_many].Style.Font.Bold = true;
@@ -239,21 +239,21 @@ namespace PrologValidatorForms.Library
                     ws.Cells[dataCellsRow, dataCellsColumn + 1 + How_many + 1].Value = "Ilość testów przeprowadzonych";
                     ws.Cells[dataCellsRow, dataCellsColumn + 1 + How_many + 2].Value = "Procent zaliczonych testów";
                     
-                    for (int i = 0; i < item.Tasks.Count; i++)
+                    for (int i = 0; i < stm.Tasks.Count; i++)
                     {
-                        if(item.Tasks[i].TotalAnswers != 0)
+                        if(stm.Tasks[i].TotalAnswers != 0)
                         {
-                            ws.Cells[dataCellsRow + i + 1, dataCellsColumn + 1 + How_many].Value = item.Tasks[i].CorrectAnswers;
+                            ws.Cells[dataCellsRow + i + 1, dataCellsColumn + 1 + How_many].Value = stm.Tasks[i].CorrectAnswers;
                             ws.Cells[dataCellsRow + i + 1, dataCellsColumn + 1 + How_many].Style.Font.Bold = true;
                             ws.Cells[dataCellsRow + i + 1, dataCellsColumn + 1 + How_many].Style.Fill.PatternType = ExcelFillStyle.Solid;
                             ws.Cells[dataCellsRow + i + 1, dataCellsColumn + 1 + How_many].Style.Fill.BackgroundColor.SetColor(Color.FromArgb(219, 223, 253));
 
-                            ws.Cells[dataCellsRow + i + 1, dataCellsColumn + 1 + How_many + 1].Value = item.Tasks[i].TotalAnswers;
+                            ws.Cells[dataCellsRow + i + 1, dataCellsColumn + 1 + How_many + 1].Value = stm.Tasks[i].TotalAnswers;
                             ws.Cells[dataCellsRow + i + 1, dataCellsColumn + 1 + How_many + 1].Style.Font.Bold = true;
                             ws.Cells[dataCellsRow + i + 1, dataCellsColumn + 1 + How_many + 1].Style.Fill.PatternType = ExcelFillStyle.Solid;
                             ws.Cells[dataCellsRow + i + 1, dataCellsColumn + 1 + How_many + 1].Style.Fill.BackgroundColor.SetColor(Color.FromArgb(219, 223, 253));
 
-                            ws.Cells[dataCellsRow + i + 1, dataCellsColumn + 1 + How_many + 2].Value = Convert.ToDouble(item.Tasks[i].CorrectAnswers) / Convert.ToDouble(item.Tasks[i].TotalAnswers);
+                            ws.Cells[dataCellsRow + i + 1, dataCellsColumn + 1 + How_many + 2].Value = Convert.ToDouble(stm.Tasks[i].CorrectAnswers) / Convert.ToDouble(stm.Tasks[i].TotalAnswers);
                             ws.Cells[dataCellsRow + i + 1, dataCellsColumn + 1 + How_many + 2].Style.Font.Bold = true;
                             ws.Cells[dataCellsRow + i + 1, dataCellsColumn + 1 + How_many + 2].Style.Fill.PatternType = ExcelFillStyle.Solid;
                             ws.Cells[dataCellsRow + i + 1, dataCellsColumn + 1 + How_many + 2].Style.Fill.BackgroundColor.SetColor(Color.FromArgb(219, 223, 253));
@@ -295,10 +295,10 @@ namespace PrologValidatorForms.Library
                     ws.Cells[dataCellsRow, dataCellsColumn, dataCellsRow, dataCellsColumn + How_many + 3].Style.Fill.BackgroundColor.SetColor(Color.FromArgb(100, 111, 212));
                     ws.Cells[dataCellsRow, dataCellsColumn, dataCellsRow, dataCellsColumn + How_many + 3].Style.Font.Color.SetColor(Color.White);
 
-                    ws.Cells[dataCellsRow, dataCellsColumn, dataCellsRow + item.Tasks.Count, dataCellsColumn].Style.Font.Bold = true;
-                    ws.Cells[dataCellsRow, dataCellsColumn, dataCellsRow + item.Tasks.Count, dataCellsColumn].Style.Fill.PatternType = ExcelFillStyle.Solid;
-                    ws.Cells[dataCellsRow, dataCellsColumn, dataCellsRow + item.Tasks.Count, dataCellsColumn].Style.Fill.BackgroundColor.SetColor(Color.FromArgb(100, 111, 212));
-                    ws.Cells[dataCellsRow, dataCellsColumn, dataCellsRow + item.Tasks.Count, dataCellsColumn].Style.Font.Color.SetColor(Color.White);
+                    ws.Cells[dataCellsRow, dataCellsColumn, dataCellsRow + stm.Tasks.Count, dataCellsColumn].Style.Font.Bold = true;
+                    ws.Cells[dataCellsRow, dataCellsColumn, dataCellsRow + stm.Tasks.Count, dataCellsColumn].Style.Fill.PatternType = ExcelFillStyle.Solid;
+                    ws.Cells[dataCellsRow, dataCellsColumn, dataCellsRow + stm.Tasks.Count, dataCellsColumn].Style.Fill.BackgroundColor.SetColor(Color.FromArgb(100, 111, 212));
+                    ws.Cells[dataCellsRow, dataCellsColumn, dataCellsRow + stm.Tasks.Count, dataCellsColumn].Style.Font.Color.SetColor(Color.White);
 
                     
                     //Automatyczne wyrównanie kolumn
