@@ -13,47 +13,46 @@ namespace PrologValidatorForms.Library
 {
     class GroupManager
     {
-        string dirPath;
+        string groupDirectoryPath;
         string name;
-        string destDir;
-        Label label;
-        string keyPath;
-        List<StudentTasksManager> Lstm = new List<StudentTasksManager>();
+        string destinationDirectory;
+        List<StudentTasksManager> studentTasksManagers = new List<StudentTasksManager>();
 
-        public GroupManager(string dirPath, string destDir, Label infoLabel)
+        public GroupManager(string groupDirectoryPath, string destinationDirectory)
         {
-            this.dirPath = dirPath;
-            this.destDir = destDir;
-            this.label = infoLabel;
-            this.name = dirPath.Substring(dirPath.Length - 7, 7);
+            this.groupDirectoryPath = groupDirectoryPath;
+            this.destinationDirectory = destinationDirectory;
+            this.name = groupDirectoryPath.Substring(groupDirectoryPath.Length - 7, 7);
             Console.WriteLine($"{name}");
         }
 
         public void AnalyzeSolution()
         {
-            FileInfo fi = new FileInfo(dirPath + @"\klucz.txt");
+            string keyFilePath = groupDirectoryPath + @"\klucz.txt";
+            FileInfo fi = new FileInfo(keyFilePath);
             if (fi.Exists)
             {
-                keyPath = dirPath + @"\klucz.txt";
-                foreach (string dir in Directory.GetDirectories(dirPath))
+                KeyManager keyManager = new KeyManager(keyFilePath);
+                keyManager.AnalyzeKeyFile();
+
+                foreach (string directory in Directory.GetDirectories(groupDirectoryPath))
                 {
-                    if (InputValidator.ValidateStudentDirectory(dir) == true)
+                    if (InputValidator.ValidateStudentDirectory(directory))
                     {
-                        StudentTasksManager stm = new StudentTasksManager(dir, label, destDir, keyPath);
-                        stm.AnalyzeSolution();
-                        Lstm.Add(stm);
+                        StudentTasksManager stm = new StudentTasksManager(directory, keyManager);
+                        stm.AnalyzeTasks();
+                        studentTasksManagers.Add(stm);
                     }
                 }
-                Console.WriteLine("\n\n\n\n");
-                Console.WriteLine(this);
-                Console.WriteLine("\n\n\n\n");
+
                 CreateExcelFile();
             }
             else
             {
-                MessageBox.Show($"W ścieżce: {dirPath} brak pliku klucz.txt!", "Błąd", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                label.Text += "w katalogu z rozwiązaniem brak pliku: klucz.txt!\n";
+                MessageBox.Show($"W ścieżce: {groupDirectoryPath} brak pliku klucz.txt!", "Błąd", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+
+            Console.WriteLine(this);
         }
 
         public void CreateExcelFile()
@@ -150,11 +149,11 @@ namespace PrologValidatorForms.Library
                     ws.Cells[basicCellsRow, basicCellsColumn].Value = "Informacje Podstawowe";
 
                     ws.Cells[basicCellsRow + 1, basicCellsColumn].Value = "Numer Albumu:";
-                    ws.Cells[basicCellsRow + 1, basicCellsColumn + 1].Value = Convert.ToInt32(item.SolutionName.Substring(3, 6));
+                    ws.Cells[basicCellsRow + 1, basicCellsColumn + 1].Value = Convert.ToInt32(stm.SolutionName.Substring(3, 6));
                     ws.Cells[basicCellsRow + 2, basicCellsColumn].Value = "Numer podejścia:";
-                    ws.Cells[basicCellsRow + 2, basicCellsColumn + 1].Value = Convert.ToInt32(item.SolutionName.Substring(1, 1));
+                    ws.Cells[basicCellsRow + 2, basicCellsColumn + 1].Value = Convert.ToInt32(stm.SolutionName.Substring(1, 1));
                     ws.Cells[basicCellsRow + 3, basicCellsColumn].Value = "Grupa:";
-                    ws.Cells[basicCellsRow + 3, basicCellsColumn + 1].Value = Convert.ToInt32(item.SolutionName.Substring(10, 1));
+                    ws.Cells[basicCellsRow + 3, basicCellsColumn + 1].Value = Convert.ToInt32(stm.SolutionName.Substring(10, 1));
 
                     //Wyglad Informacji podstawowych
 
@@ -178,7 +177,7 @@ namespace PrologValidatorForms.Library
                     int infCellsRow = 2;
                     int infCellsColumn = 6;
 
-                    ws.Cells[infCellsRow, infCellsColumn, infCellsRow, infCellsColumn + item.Tasks.Count].Merge = true;
+                    ws.Cells[infCellsRow, infCellsColumn, infCellsRow, infCellsColumn + stm.Tasks.Count].Merge = true;
                     ws.Cells[infCellsRow, infCellsColumn].Value = "Informacje o plikach";
 
                     ws.Cells[infCellsRow + 1, infCellsColumn].Value = "Nazwa pliku";
@@ -187,11 +186,11 @@ namespace PrologValidatorForms.Library
 
                     infCellsColumn++;
 
-                    for (int i = 0; i < item.Tasks.Count; i++)
+                    for (int i = 0; i < stm.Tasks.Count; i++)
                     {
-                        ws.Cells[infCellsRow + 1, infCellsColumn + i].Value = item.Tasks[i].TaskName;
-                        ws.Cells[infCellsRow + 2, infCellsColumn + i].Value = item.Tasks[i].CreationTime;
-                        ws.Cells[infCellsRow + 3, infCellsColumn + i].Value = item.Tasks[i].SizeOfFile;
+                        ws.Cells[infCellsRow + 1, infCellsColumn + i].Value = stm.Tasks[i].TaskName;
+                        ws.Cells[infCellsRow + 2, infCellsColumn + i].Value = stm.Tasks[i].CreationTime;
+                        ws.Cells[infCellsRow + 3, infCellsColumn + i].Value = stm.Tasks[i].SizeOfFile;
 
                         ws.Cells[infCellsRow + 1, infCellsColumn + i, infCellsRow + 3, infCellsColumn + i].Style.Font.Bold = true;
                         ws.Cells[infCellsRow + 1, infCellsColumn + i, infCellsRow + 3, infCellsColumn + i].Style.Fill.PatternType = ExcelFillStyle.Solid;
@@ -308,7 +307,7 @@ namespace PrologValidatorForms.Library
                 }
 
 
-                string finalDir = destDir + $@"\{name}.xlsx";
+                string finalDir = destinationDirectory + $@"\{name}.xlsx";
 
                 try
                 {    
@@ -318,11 +317,11 @@ namespace PrologValidatorForms.Library
                 }
                 catch (System.InvalidOperationException ioe)
                 {
-                    label.Text += $"plik {finalDir} jest obecnie otwarty!, {ioe.Message}\n";
+                    // Wyjątek odpowiedzialny za próbe otworzenia już otworzonego pliku
                 }
                 catch (Exception e)
                 {
-                    label.Text += $"Wystąpił niespodziewany błąd: {e.Message}\n";
+                    
                 }
             }
         }
@@ -330,7 +329,7 @@ namespace PrologValidatorForms.Library
         private string ShowStudents()
         {
             string final = "";
-            foreach(StudentTasksManager stm in Lstm)
+            foreach(StudentTasksManager stm in studentTasksManagers)
             {
                 final += "________________________________________________\n";
                 final += "<" + stm.ToString() + ">\n\n";

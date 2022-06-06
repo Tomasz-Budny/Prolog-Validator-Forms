@@ -51,8 +51,6 @@ namespace PrologValidatorForms
             // X - logo aplikacji, logo ikonek (folderów, plików tekstowych, plików .pl, .xslt itd)
 
 
-
-
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Main());

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PrologValidatorForms.Library;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -10,36 +11,21 @@ namespace PrologValidatorForms
 {
     partial class StudentTasksManager
     {
-        string path;
+        string studentDirectoryPath;
         string solutionName;
-        string keyPath;
-        string finalPath;
         int maxTestsCount;
-        Label infoLabel;
+        KeyManager keyManager;
         List<Task> tasks = new List<Task>();
+        
+        public int MaxTestCount { get => maxTestsCount;  }
+        public string SolutionName { get => solutionName; }
+        public List<Task> Tasks { get => tasks; }
 
-        public int MaxTestCount
+        public StudentTasksManager(string studentDirectoryPath,  KeyManager keyManager)
         {
-            get { return maxTestsCount; }
-        }
-
-        public string SolutionName
-        {
-            get { return solutionName; }
-        }
-
-        public List<Task> Tasks
-        {
-            get { return tasks; }
-        }
-
-        public StudentTasksManager(string path, Label infoLabel, string finalPath, string keyPath)
-        {
-            this.path = path;
-            this.infoLabel = infoLabel;
-            this.finalPath = finalPath;
-            this.keyPath = keyPath;
-            solutionName = path.Substring(path.Length - 11, 11);
+            this.studentDirectoryPath = studentDirectoryPath;
+            solutionName = studentDirectoryPath.Substring(studentDirectoryPath.Length - 11, 11);
+            this.keyManager = keyManager;
         }
 
         public string ShowTasks()
@@ -59,55 +45,17 @@ namespace PrologValidatorForms
             tasks.Add(task);
         }
 
-        public void AnalyzeSolution() => AnalyzeTasks();
-        
-
-        private void AnalyzeTasks()
+        public void AnalyzeTasks()
         {
-            StreamReader sr = new StreamReader(keyPath);
-            string currentLine = "";
-
-            while ((currentLine = sr.ReadLine()) != null)
+            foreach(DeclaredTask declaredTask in keyManager.DeclaredTasks)
             {
-                string[] data = currentLine.Split(' ');
-                if (data[0] == "!")
-                {
-                    if (InputValidator.ValidateTaskName(data[1]) == true)
-                    {
-                        FileInfo fi = new FileInfo(path + $@"\{data[1]}.pl");
-                        if (fi.Exists)
-                        {
-                            Task task = new Task(path + $@"\{data[1]}.pl", $"{data[1]}.pl", Convert.ToInt32(data[2]), fi.CreationTime.ToString(), fi.Length);
-                            task.AnalyzeTests(sr, Convert.ToInt32(data[2]));
-                            AddTask(task);
-                        }
-                        else
-                        {
-                            infoLabel.Text += $"Nie znaleziono pliku: {data[1]}.pl!\n";
-                            Task task = new Task(null, $"{data[1]}.pl", Convert.ToInt32(data[2]), "Plik nie istnieje!", 0);
-                            task.AnalyzeTests(sr, Convert.ToInt32(data[2]));
-                            AddTask(task);
-                        }
-                    }
-                    else
-                    {
-                        infoLabel.Text += $"plik: {data[1]} nie spełnia warunków konwencji: zadx.pl\n";
-                    }
-                }
+                string taskPath = studentDirectoryPath + $@"\{declaredTask.NameOfTask}.pl";
+                string taskName = declaredTask.NameOfTask;
+                Task task = new Task(taskPath, taskName);
+                task.GetBasicInformations();
+                task.AnalyzeTests(declaredTask.DeclaredTests);
+                AddTask(task);
             }
-            if (tasks.Count == 0)
-            {
-                infoLabel.Text += "Nie znaleziono żadnego pliku z zadaniem!\n";
-            }
-            else
-            {
-
-            }
-
-            // W celu testowania usunąć potem
-            infoLabel.Text += ShowTasks();
-
-            sr.Close();
         }
 
         public override string ToString()

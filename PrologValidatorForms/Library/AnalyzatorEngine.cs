@@ -6,60 +6,36 @@ using System.Threading.Tasks;
 using System.IO;
 using Prolog;
 using System.Windows.Forms;
+using PrologValidatorForms.Library;
 
 namespace PrologValidatorForms
 {
     class Task
     {
         long sizeOfFile;
-        string taskPath;
+        string taskFilePath;
         string taskName;
-        string creationTime;
+        string creationDate;
         int correctAnswers = 0;
         int totalAnswers = 0;
         List<Test> tests = new List<Test>();
 
-        public Task(string taskPath, string taskName, int totalAnswers, string creationTime, long sizeOfFile)
+        public Task(string taskFilePath, string taskName)
         {
-            this.totalAnswers = totalAnswers;
+            this.taskFilePath = taskFilePath;
             this.taskName = taskName;
-            this.taskPath = taskPath;
-            this.creationTime = creationTime;
-            this.sizeOfFile = sizeOfFile;
         }
 
-        public List<Test> Tests
-        {
-            get { return tests; }
-        }
-
-        public long SizeOfFile
-        {
-            get { return sizeOfFile; }
-        }
-
-        public string TaskName
-        {
-            get { return taskName; }
-        }
-
-        public string CreationTime
-        {
-            get { return creationTime; }
-        }
-
-        public int CorrectAnswers
-        {
-            get { return correctAnswers; }
-        }
-
-        public int TotalAnswers
-        {
-            get { return totalAnswers; }
-        }
+        public List<Test> Tests => tests;
+        public long SizeOfFile => sizeOfFile;
+        public string TaskName => taskName;
+        public string CreationTime => creationDate;
+        public int CorrectAnswers => correctAnswers;
+        public int TotalAnswers => totalAnswers;
 
         private void AddTest(string content, bool isCorrect)
         {
+            totalAnswers++;
             if (isCorrect)
                 correctAnswers++;
             tests.Add(new Test(content, isCorrect));
@@ -72,7 +48,7 @@ namespace PrologValidatorForms
             if (data.Length > 1)
                 query = data[1];
 
-            SolutionSet ss = e.GetAllSolutions(taskPath, query);
+            SolutionSet ss = e.GetAllSolutions(taskFilePath, query);
             List<string> values = new List<string>();
 
             foreach (Solution s in ss.NextSolution)
@@ -82,18 +58,23 @@ namespace PrologValidatorForms
 
                 foreach (Variable v in s.NextVariable)
                 {
+                    if (v.Type == "namedvar")
+                        goto EndOfLoop;
                     if (moreThan1)
                         answer += "+";
                     answer += v.Value;
                     moreThan1 = true;
                 }
+                
                 values.Add(answer);
+            EndOfLoop:;
             }
 
             List<string> compArr = new List<string>();
             for (int i = 2; i < data.Length; i++)
             {
-                compArr.Add(data[i]);
+                if(data[i] != "")
+                    compArr.Add(data[i]);
             }
 
             values.Sort();
@@ -115,36 +96,48 @@ namespace PrologValidatorForms
             return final;
         }
 
-        public void AnalyzeTests(StreamReader sr, int iterations)
+        public void GetBasicInformations()
         {
-            PrologEngine e = new PrologEngine();
-
-            int i = 0;
-            string currentLine = "";
-            while (i < iterations && (currentLine = sr.ReadLine()) != null)
+            FileInfo fi = new FileInfo(taskFilePath);
+            if (fi.Exists)
             {
-                bool final;
-
-                if (currentLine != "" && currentLine[0] == '$')
-                {
-                    final = AnylyzeArray(e, currentLine);
-                    this.AddTest(currentLine, final);
-                }
-                else
-                {
-                    SolutionSet ssman = e.GetAllSolutions(taskPath, currentLine);
-                    final = ssman.Success;
-                    this.AddTest(currentLine, final);
-
-                }
-                i++;
+                this.creationDate = fi.CreationTime.ToString();
+                this.sizeOfFile = fi.Length;
+            }
+            else
+            {
+                this.creationDate = "Plik nie istnieje!";
+                this.sizeOfFile = 0;
             }
         }
 
+        public void AnalyzeTests(List<string> tests)
+        {
+
+            PrologEngine e = new PrologEngine();
+
+            foreach (string test in tests)
+            {
+                bool final;
+                if (test[0] == '$')
+                {
+                    final = AnylyzeArray(e, test);
+                    this.AddTest(test, final);
+                }
+                else
+                {
+                    SolutionSet ssman = e.GetAllSolutions(taskFilePath, test);
+                    final = ssman.Success;
+                    this.AddTest(test, final);
+                }
+            }
+        }
+
+
         public override string ToString()
         {
-            if (taskPath != null)
-                return taskName + "   |   " + taskPath + "\n" + ShowTests();
+            if (taskFilePath != null)
+                return taskName + "   |   " + taskFilePath + "\n" + ShowTests();
             return "";
         }
 
@@ -164,10 +157,7 @@ namespace PrologValidatorForms
         string content;
         bool isCorrect;
 
-        public string Content
-        {
-            get { return content; }
-        }
+        public string Content => content;
         public int IsCorrect
         {
             get { if (isCorrect) { return 1; } else { return 0; } }
