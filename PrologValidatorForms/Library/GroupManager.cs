@@ -17,6 +17,9 @@ namespace PrologValidatorForms.Library
         string name;
         string destinationDirectory;
         List<StudentTasksManager> studentTasksManagers = new List<StudentTasksManager>();
+        // nowe
+        double maxProgressBarValue;
+        Panel progressBar;
 
         public GroupManager(string groupDirectoryPath, string destinationDirectory)
         {
@@ -24,6 +27,22 @@ namespace PrologValidatorForms.Library
             this.destinationDirectory = destinationDirectory;
             this.name = groupDirectoryPath.Substring(groupDirectoryPath.Length - 7, 7);
             Console.WriteLine($"{name}");
+        }
+
+        public GroupManager(string groupDirectoryPath, string destinationDirectory, double maxProgressBarValue, Panel progressBar)
+        {
+            this.groupDirectoryPath = groupDirectoryPath;
+            this.destinationDirectory = destinationDirectory;
+            this.name = groupDirectoryPath.Substring(groupDirectoryPath.Length - 7, 7);
+            this.maxProgressBarValue = maxProgressBarValue;
+            this.progressBar = progressBar;
+            Console.WriteLine($"{name}");
+        }
+
+        private void UpdateProgressBar(double presentStudentNumber, double maxStudentNumber)
+        {
+            progressBar.Width = Convert.ToInt32(presentStudentNumber / maxStudentNumber * maxProgressBarValue);
+            progressBar.Region = Region.FromHrgn(Main.CreateRoundRectRgn(0, 0, progressBar.Width, progressBar.Height, 30, 30));
         }
 
         public void AnalyzeSolution()
@@ -40,9 +59,17 @@ namespace PrologValidatorForms.Library
                     if (InputValidator.ValidateStudentDirectory(directory))
                     {
                         StudentTasksManager stm = new StudentTasksManager(directory, keyManager);
-                        stm.AnalyzeTasks();
                         studentTasksManagers.Add(stm);
                     }
+                }
+
+                double presentStudentNumber = 1;
+                double maxStudentNumber = studentTasksManagers.Count;
+                foreach (StudentTasksManager stm in studentTasksManagers)
+                {
+                    stm.AnalyzeTasks();
+                    UpdateProgressBar(presentStudentNumber, maxStudentNumber);
+                    presentStudentNumber++;
                 }
 
                 CreateExcelFile();

@@ -16,6 +16,7 @@ namespace PrologValidatorForms
     {
 
         GroupManager gm;
+        static readonly double maxProgressBarValue = 1408;
 
         public Main()
         {
@@ -73,9 +74,14 @@ namespace PrologValidatorForms
             string outputpath = cb1.PresentPath;
             if (InputValidator.ValidateGroupDirectory(inputPath) == true)
             {
-                UpdateProgressBar();
-                gm = new GroupManager(inputPath, outputpath);
+                panel4.Visible = true;
+                panel5.Visible = true;
+                //UpdateProgressBar();
+                gm = new GroupManager(inputPath, outputpath, maxProgressBarValue, panel5);
                 gm.AnalyzeSolution();
+                panel5.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, panel5.Width, panel5.Height, 30, 30));
+                panel4.Visible = false;
+                panel5.Visible = false;
             }
             else
             {
