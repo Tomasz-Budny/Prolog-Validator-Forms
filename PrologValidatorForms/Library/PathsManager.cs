@@ -11,6 +11,9 @@ namespace PrologValidatorForms
         File
     }
 
+    /// <summary>
+    /// 
+    /// </summary>
     class PathsManager
     {
         List<string> paths = new List<string>();
@@ -22,16 +25,29 @@ namespace PrologValidatorForms
             types.Add(type);
         }
 
+        /// <summary>
+        /// Metoda
+        /// </summary>
         public void Clear()
         {
             paths.Clear(); types.Clear();
         }
 
+        /// <summary>
+        /// Metoda 
+        /// </summary>
+        /// <param name="index"></param>
+        /// <returns></returns>
         public string GetPath(int index)
         {
             return paths[index];
         }
 
+        /// <summary>
+        /// Metoda 
+        /// </summary>
+        /// <param name="index"></param>
+        /// <returns></returns>
         public PathListTypes GetPathType(int index)
         {
             return types[index];

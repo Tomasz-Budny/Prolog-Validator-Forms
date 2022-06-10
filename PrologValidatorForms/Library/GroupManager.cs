@@ -41,6 +41,13 @@ namespace PrologValidatorForms.Library
             Console.WriteLine($"{name}");
         }
 
+        /// <summary>
+        /// Alternatywny konstruktor kopiujący inicializujący wszystkie pola składowej klasy
+        /// </summary>
+        /// <param name="groupDirectoryPath">Przechowywuje ścieżkę w której znajduje się grupa</param>
+        /// <param name="destinationDirectory">Przechowywuje ścieżkę w której ma zostać wygenerowany plik exel</param>
+        /// <param name="maxProgressBarValue"></param>
+        /// <param name="progressBar"></param>
         public GroupManager(string groupDirectoryPath, string destinationDirectory, double maxProgressBarValue, Panel progressBar)
         {
             this.groupDirectoryPath = groupDirectoryPath;

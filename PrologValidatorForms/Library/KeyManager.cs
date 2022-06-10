@@ -10,6 +10,7 @@ namespace PrologValidatorForms.Library
     /// <summary>
     /// Klasa przetrzymująca informacje dotyczące klucza
     /// </summary>
+    /// <param name="keyFilePath">Przechowywyje ścieżkę klucza</param>
     class KeyManager
     {
         string keyFilePath;
@@ -75,8 +76,9 @@ namespace PrologValidatorForms.Library
     }
 
     /// <summary>
-    /// Klasa przetrzymująca 
+    /// Klasa przetrzymująca zapytania do danego zadania
     /// </summary>
+    /// <param name="nameOfTask">Przechowywyje nazwę obiektu z zapytaniami do danego zadania</param>
     class DeclaredTask
     {
         string nameOfTask;
@@ -85,11 +87,19 @@ namespace PrologValidatorForms.Library
         public List<string> DeclaredTests => declaredTests;
         public string NameOfTask => nameOfTask;
 
+        /// <summary>
+        /// Metoda dodająca zapytanie do listy zapytań
+        /// </summary>
+        /// <param name="testContent">Przetrzymuje treśc zapytania</param>
         public void AddTest(string testContent)
         {
             declaredTests.Add(testContent);
         }
 
+        /// <summary>
+        /// Konstruktor kopiujący inicializujący wszystkie pola składowej klasy
+        /// </summary>
+        /// <param name="nameOfTask">Przechowywyje nazwę obiektu z zapytaniami do danego zadania</param>
         public DeclaredTask(string nameOfTask)
         {
             this.nameOfTask = nameOfTask;
