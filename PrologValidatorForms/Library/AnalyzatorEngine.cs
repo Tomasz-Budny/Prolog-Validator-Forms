@@ -10,6 +10,15 @@ using PrologValidatorForms.Library;
 
 namespace PrologValidatorForms
 {
+    /// <summary>
+    /// Klasa
+    /// </summary>
+    /// <param name="studentDirectoryPath">Przechowywuje </param>
+    /// <param name="solutionName">Przechowywuje </param>
+    /// <param name="solutionName">Przechowywuje </param>
+    /// <param name="maxTestsCount">Przechowywuje </param>
+    /// <param name="keyManager">Przechowywuje </param>
+    /// <param name="types">Lista przechowująca obiekty typu PathListTypes</param>
     class Task
     {
         long sizeOfFile;

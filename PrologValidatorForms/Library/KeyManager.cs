@@ -11,6 +11,7 @@ namespace PrologValidatorForms.Library
     /// Klasa przetrzymująca informacje dotyczące klucza
     /// </summary>
     /// <param name="keyFilePath">Przechowywyje ścieżkę klucza</param>
+    /// <param name="declaredTasks">Lista przechowująca obiekty typu DeclaredTask</param>
     class KeyManager
     {
         string keyFilePath;
@@ -79,6 +80,7 @@ namespace PrologValidatorForms.Library
     /// Klasa przetrzymująca zapytania do danego zadania
     /// </summary>
     /// <param name="nameOfTask">Przechowywyje nazwę obiektu z zapytaniami do danego zadania</param>
+    /// <param name="declaredTests">Lista przechowująca obiekty typu string</param>
     class DeclaredTask
     {
         string nameOfTask;

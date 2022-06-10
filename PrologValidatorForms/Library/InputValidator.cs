@@ -7,6 +7,9 @@ namespace PrologValidatorForms
     /// <summary>
     /// Klasa która przetrzymuje paterny nazw i posiada metody je sprawdzające
     /// </summary>
+    /// <param name="studentDirectoryPattern">Przechowywuje patern nazwy studenta</param>
+    /// <param name="taskNamePattern">Przechowywuje patern nazwy zadania</param>
+    /// <param name="groupDirectoryPattern">Przechowywuje patern nazwy grupy studentów</param>
     static class InputValidator
     {
         private static Regex studentDirectoryPattern = new Regex("^K[1-9]_[0-9]{6}_[1-9]$");

@@ -17,7 +17,9 @@ namespace PrologValidatorForms.Library
     /// <param name="groupDirectoryPath">Przechowywuje ścieżkę w której znajduje się grupa</param>
     /// <param name="name">Przechowywuje nazwę grupy studentów</param>
     /// <param name="destinationDirectory">Przechowywuje ścieżkę w której ma zostać wygenerowany plik exel</param>
-    
+    /// <param name="studentTasksManagers">Lista przechowująca obiekty typu StudentTasksManager</param>  
+    /// <param name="maxProgressBarValue">Przechowywuje szerokość paska postępu w pełni wypełnionego</param>  
+    /// <param name="progressBar">Obiekt będący odwołaniem do paska postępu</param>  
     class GroupManager
     {
         string groupDirectoryPath;
@@ -46,8 +48,8 @@ namespace PrologValidatorForms.Library
         /// </summary>
         /// <param name="groupDirectoryPath">Przechowywuje ścieżkę w której znajduje się grupa</param>
         /// <param name="destinationDirectory">Przechowywuje ścieżkę w której ma zostać wygenerowany plik exel</param>
-        /// <param name="maxProgressBarValue"></param>
-        /// <param name="progressBar"></param>
+        /// <param name="maxProgressBarValue">Przechowywuje szerokość paska postępu w pełni wypełnionego</param>
+        /// <param name="progressBar">Obiekt będący odwołaniem do paska postępu</param>
         public GroupManager(string groupDirectoryPath, string destinationDirectory, double maxProgressBarValue, Panel progressBar)
         {
             this.groupDirectoryPath = groupDirectoryPath;
@@ -58,6 +60,11 @@ namespace PrologValidatorForms.Library
             Console.WriteLine($"{name}");
         }
 
+        /// <summary>
+        /// Metoda aktualizująca postęp paska postępu 
+        /// </summary>
+        /// <param name="presentStudentNumber">Przechowywyje numer aktualnie sprawdzanego studenta</param>
+        /// <param name="maxStudentNumber">Przechowywuje ilość wszystkich analizowanych studentów</param>
         private void UpdateProgressBar(double presentStudentNumber, double maxStudentNumber)
         {
             progressBar.Width = Convert.ToInt32(presentStudentNumber / maxStudentNumber * maxProgressBarValue);

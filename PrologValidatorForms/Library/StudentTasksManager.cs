@@ -9,6 +9,16 @@ using System.Windows.Forms;
 
 namespace PrologValidatorForms
 {
+
+    /// <summary>
+    /// Klasa
+    /// </summary>
+    /// <param name="studentDirectoryPath">Przechowywuje </param>
+    /// <param name="solutionName">Przechowywuje </param>
+    /// <param name="solutionName">Przechowywuje </param>
+    /// <param name="maxTestsCount">Przechowywuje </param>
+    /// <param name="keyManager">Przechowywuje </param>
+    /// <param name="types">Lista przechowująca obiekty typu PathListTypes</param>
     partial class StudentTasksManager
     {
         string studentDirectoryPath;
@@ -21,6 +31,11 @@ namespace PrologValidatorForms
         public string SolutionName { get => solutionName; }
         public List<Task> Tasks { get => tasks; }
 
+        /// <summary>
+        /// Konstruktor kopiujący inicializujący wszystkie pola składowej klasy
+        /// </summary>
+        /// <param name="studentDirectoryPath">Przechowywuje ścieżkę w której znajduje się grupa</param>
+        /// <param name="keyManager"></param>
         public StudentTasksManager(string studentDirectoryPath,  KeyManager keyManager)
         {
             this.studentDirectoryPath = studentDirectoryPath;
@@ -28,6 +43,10 @@ namespace PrologValidatorForms
             this.keyManager = keyManager;
         }
 
+        /// <summary>
+        /// Metoda 
+        /// </summary>
+        /// <returns></returns>
         public string ShowTasks()
         {
             string result = "\n";
@@ -38,6 +57,10 @@ namespace PrologValidatorForms
             return result;
         }
 
+        /// <summary>
+        /// Metoda 
+        /// </summary>
+        /// <param name="task"></param>
         private void AddTask(Task task)
         {
             if (maxTestsCount < task.Tests.Count)
@@ -45,6 +68,9 @@ namespace PrologValidatorForms
             tasks.Add(task);
         }
 
+        /// <summary>
+        /// Metoda 
+        /// </summary>
         public void AnalyzeTasks()
         {
             foreach(DeclaredTask declaredTask in keyManager.DeclaredTasks)
@@ -58,6 +84,10 @@ namespace PrologValidatorForms
             }
         }
 
+        /// <summary>
+        /// Metoda 
+        /// </summary>
+        /// <returns></returns>
         public override string ToString()
         {
             return SolutionName;

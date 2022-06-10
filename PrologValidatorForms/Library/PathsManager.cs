@@ -12,13 +12,20 @@ namespace PrologValidatorForms
     }
 
     /// <summary>
-    /// 
+    /// Klasa
     /// </summary>
+    /// <param name="paths">Lista przechowująca obiekty typu string</param>
+    /// <param name="types">Lista przechowująca obiekty typu PathListTypes</param>
     class PathsManager
     {
         List<string> paths = new List<string>();
         List<PathListTypes> types = new List<PathListTypes>();
 
+        /// <summary>
+        /// Metoda
+        /// </summary>
+        /// <param name="path"></param>
+        /// <param name="type"></param>
         public void Add(string path, PathListTypes type)
         {
             paths.Add(path);
