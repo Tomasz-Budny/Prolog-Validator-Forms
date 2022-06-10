@@ -76,10 +76,10 @@ namespace PrologValidatorForms
             {
                 panel4.Visible = true;
                 panel5.Visible = true;
-                //UpdateProgressBar();
+
                 gm = new GroupManager(inputPath, outputpath, maxProgressBarValue, panel5);
                 gm.AnalyzeSolution();
-                panel5.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, panel5.Width, panel5.Height, 30, 30));
+
                 panel4.Visible = false;
                 panel5.Visible = false;
             }
