@@ -13,12 +13,13 @@ namespace PrologValidatorForms
     /// <summary>
     /// Klasa
     /// </summary>
-    /// <param name="studentDirectoryPath">Przechowywuje </param>
-    /// <param name="solutionName">Przechowywuje </param>
-    /// <param name="solutionName">Przechowywuje </param>
-    /// <param name="maxTestsCount">Przechowywuje </param>
-    /// <param name="keyManager">Przechowywuje </param>
-    /// <param name="types">Lista przechowująca obiekty typu PathListTypes</param>
+    /// <param name="sizeOfFile">Przechowywuje </param>
+    /// <param name="taskFilePath">Przechowywuje </param>
+    /// <param name="taskName">Przechowywuje </param>
+    /// <param name="creationDate">Przechowywuje </param>
+    /// <param name="correctAnswers">Przechowywuje </param>
+    /// <param name="totalAnswers">Przechowywuje </param>
+    /// <param name="tests">Lista przechowująca obiekty typu Test</param> 
     class Task
     {
         long sizeOfFile;
@@ -29,6 +30,11 @@ namespace PrologValidatorForms
         int totalAnswers = 0;
         List<Test> tests = new List<Test>();
 
+        /// <summary>
+        /// Konstruktor kopiujący inicializujący pola klasy
+        /// </summary>
+        /// <param name="taskFilePath">Przechowywuje </param>
+        /// <param name="taskName">Przechowywuje </param>
         public Task(string taskFilePath, string taskName)
         {
             this.taskFilePath = taskFilePath;

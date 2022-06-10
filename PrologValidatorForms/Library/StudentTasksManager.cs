@@ -11,14 +11,13 @@ namespace PrologValidatorForms
 {
 
     /// <summary>
-    /// Klasa
+    /// Klasa odpowiadająca za analizę zadań dla konkretnego stydenta
     /// </summary>
-    /// <param name="studentDirectoryPath">Przechowywuje </param>
-    /// <param name="solutionName">Przechowywuje </param>
-    /// <param name="solutionName">Przechowywuje </param>
-    /// <param name="maxTestsCount">Przechowywuje </param>
-    /// <param name="keyManager">Przechowywuje </param>
-    /// <param name="types">Lista przechowująca obiekty typu PathListTypes</param>
+    /// <param name="studentDirectoryPath">Przechowywuje ścieżkę w której znajduje się grupa</param>
+    /// <param name="solutionName">Przechowywuje nazwę studenta, jego grupy i numer podejścia</param>
+    /// <param name="maxTestsCount">Przechowywuje największą ilość testów przeprowadzanych dla wszystkich zadań</param>
+    /// <param name="keyManager">Przechowywuje obiekt typu KeyManager</param>
+    /// <param name="types">Lista przechowująca obiekty typu Task</param>
     partial class StudentTasksManager
     {
         string studentDirectoryPath;
@@ -27,15 +26,29 @@ namespace PrologValidatorForms
         KeyManager keyManager;
         List<Task> tasks = new List<Task>();
 
+        /// <summary>
+        /// Metoda zwracająca największą ilość testów przeprowadzanych dla wszystkich zadań
+        /// </summary>
+        /// <returns>Zwraca największą ilość testów przeprowadzanych dla wszystkich zadań</returns>
         public int MaxTestCount { get => maxTestsCount;  }
+
+        /// <summary>
+        /// Metoda zwracająca nazwę studenta, jego grupy i numer podejścia
+        /// </summary>
+        /// <returns>Zwraca nazwę studenta, jego grupy i numer podejścia</returns>
         public string SolutionName { get => solutionName; }
+
+        /// <summary>
+        /// Metoda zwracająca listę obiektów typu Task
+        /// </summary>
+        /// <returns>Zwraca listę obiektów typu Task</returns>
         public List<Task> Tasks { get => tasks; }
 
         /// <summary>
         /// Konstruktor kopiujący inicializujący wszystkie pola składowej klasy
         /// </summary>
         /// <param name="studentDirectoryPath">Przechowywuje ścieżkę w której znajduje się grupa</param>
-        /// <param name="keyManager"></param>
+        /// <param name="keyManager">Przechowywuje obiekt typu KeyManager</param>
         public StudentTasksManager(string studentDirectoryPath,  KeyManager keyManager)
         {
             this.studentDirectoryPath = studentDirectoryPath;
@@ -44,9 +57,9 @@ namespace PrologValidatorForms
         }
 
         /// <summary>
-        /// Metoda 
+        /// Metoda zwracająca nazwę zadania, jego ścieżkę oraz wyniki testów
         /// </summary>
-        /// <returns></returns>
+        /// <returns>Zwraca nazwę zadania, jego ścieżkę oraz wyniki testów</returns>
         public string ShowTasks()
         {
             string result = "\n";
@@ -58,9 +71,9 @@ namespace PrologValidatorForms
         }
 
         /// <summary>
-        /// Metoda 
+        /// Metoda dodająca do listy tasks dodająca obiekt typy Task
         /// </summary>
-        /// <param name="task"></param>
+        /// <param name="task">Przechowywuje obiekt typu Task</param>
         private void AddTask(Task task)
         {
             if (maxTestsCount < task.Tests.Count)
@@ -69,7 +82,7 @@ namespace PrologValidatorForms
         }
 
         /// <summary>
-        /// Metoda 
+        /// Metoda zbierająca podstawowe informacje o pliku oraz zapisuje wyniki zapytań
         /// </summary>
         public void AnalyzeTasks()
         {
@@ -85,9 +98,9 @@ namespace PrologValidatorForms
         }
 
         /// <summary>
-        /// Metoda 
+        /// Metoda zwracając anazwę studenta, jego grupy i numer podejścia
         /// </summary>
-        /// <returns></returns>
+        /// <returns>Zwraca nazwę studenta, jego grupy i numer podejścia</returns>
         public override string ToString()
         {
             return SolutionName;
