@@ -16,6 +16,7 @@ namespace PrologValidatorForms
     {
 
         GroupManager gm;
+        static readonly double maxProgressBarValue = 1408;
 
         public Main()
         {
@@ -48,24 +49,23 @@ namespace PrologValidatorForms
             pictureBox1.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, pictureBox1.Width, pictureBox1.Height, 30, 30));
         }
 
-        private string DisplayErrors(string path, string finalPath)
+        private void UpdateProgressBar()
         {
-            string result = "";
+            panel5.Width = 10;
+            timer1.Start();
+            panel4.Visible = true;
+            panel5.Visible = true;
+            panel5.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, panel5.Width, panel5.Height, 30, 30));
+            do
+            {
+                panel5.Width += 17;
+                panel5.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, panel5.Width, panel5.Height, 30, 30));
+                Thread.Sleep(2);
+            } while (panel5.Width <= 1408);
 
-            if (path == "")
-            {
-                result += "Nie podano ścieżki z rozwiązaniem!\n";
-            }
-            else if (InputValidator.ValidateStudentDirectory(path) != true)
-            {
-                result += "podana ścieżka jest w nieprawidłowym formacie, poprawny: Kx_yyyyyy_Z\n";
-            }
-            if (finalPath == "")
-            {
-                result += "nie podano ścieżki do zapisu pliku .xlsx!\n";
-            }
-
-            return result;
+            timer1.Stop();
+            panel5.Visible = false;
+            panel4.Visible = false;
         }
 
         private void btn_confirm_Click(object sender, EventArgs e)
@@ -75,23 +75,14 @@ namespace PrologValidatorForms
             string outputpath = cb1.PresentPath;
             if (InputValidator.ValidateGroupDirectory(inputPath) == true)
             {
-                panel5.Width = 10;                
-                timer1.Start();
                 panel4.Visible = true;
                 panel5.Visible = true;
-                panel5.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, panel5.Width, panel5.Height, 30, 30));
-                do
-                {
-                    panel5.Width += 17;
-                    panel5.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, panel5.Width, panel5.Height, 30, 30));
-                    Thread.Sleep(2);                    
-                } while (panel5.Width <= 1408);
 
-                timer1.Stop();
-                panel5.Visible = false;
-                panel4.Visible = false;
-                gm = new GroupManager(inputPath, outputpath);
+                gm = new GroupManager(inputPath, outputpath, maxProgressBarValue, panel5);
                 gm.AnalyzeSolution();
+
+                panel4.Visible = false;
+                panel5.Visible = false;
             }
             else
             {
