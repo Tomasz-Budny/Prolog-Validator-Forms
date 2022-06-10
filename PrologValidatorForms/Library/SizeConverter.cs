@@ -6,8 +6,16 @@ using System.Threading.Tasks;
 
 namespace PrologValidatorForms.Library
 {
+    /// <summary>
+    /// Klasa konwertująca rozmiar pliku
+    /// </summary>
     static class SizeConverter
     {
+        /// <summary>
+        /// Klasa zamieniająca rozmiar pliku (np. z kB na MB)
+        /// </summary>
+        /// <param name="fileSizeInBytes">Przechowywuje rozmiar pliku w baitach</param>
+        /// <returns>Zwraca zmieniony rozmiar pliku</returns>
         public static string ConvertSize(long fileSizeInBytes)
         {
             int prefix = 0;

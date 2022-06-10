@@ -11,6 +11,13 @@ using System.Drawing;
 
 namespace PrologValidatorForms.Library
 {
+    /// <summary>
+    /// Podstawowa klasa funkcji odpowiadającej za rozpoczęcie programu oraz generowanie wyniku
+    /// </summary>
+    /// <param name="groupDirectoryPath">Przechowywuje ścieżkę w której znajduje się grupa</param>
+    /// <param name="name">Przechowywuje nazwę grupy studentów</param>
+    /// <param name="destinationDirectory">Przechowywuje ścieżkę w której ma zostać wygenerowany plik exel</param>
+    
     class GroupManager
     {
         string groupDirectoryPath;
@@ -18,6 +25,11 @@ namespace PrologValidatorForms.Library
         string destinationDirectory;
         List<StudentTasksManager> studentTasksManagers = new List<StudentTasksManager>();
 
+        /// <summary>
+        /// Konstruktor kopiujący inicializujący wszystkie pola składowej klasy
+        /// </summary>
+        /// <param name="groupDirectoryPath">Przechowywuje ścieżkę w której znajduje się grupa</param>
+        /// <param name="destinationDirectory">Przechowywuje ścieżkę w której ma zostać wygenerowany plik exel</param>
         public GroupManager(string groupDirectoryPath, string destinationDirectory)
         {
             this.groupDirectoryPath = groupDirectoryPath;
@@ -26,6 +38,9 @@ namespace PrologValidatorForms.Library
             Console.WriteLine($"{name}");
         }
 
+        /// <summary>
+        /// Metoda rozpoczynająca i kończąca program 
+        /// </summary>
         public void AnalyzeSolution()
         {
             string keyFilePath = groupDirectoryPath + @"\klucz.txt";
@@ -55,6 +70,9 @@ namespace PrologValidatorForms.Library
             Console.WriteLine(this);
         }
 
+        /// <summary>
+        /// Metoda tworząca plik exel
+        /// </summary>
         public void CreateExcelFile()
         {
             using (ExcelPackage excelPackage = new ExcelPackage())
@@ -325,7 +343,10 @@ namespace PrologValidatorForms.Library
                 }
             }
         }
-
+        /// <summary>
+        /// Metoda prywatna wypisująca nazwy studentów
+        /// </summary>
+        /// <returns>Zwraca nazwy studentów</returns>
         private string ShowStudents()
         {
             string final = "";
@@ -340,6 +361,10 @@ namespace PrologValidatorForms.Library
             return final;
         }
 
+        /// <summary>
+        /// Metoda zwracająca nazwę grupy i studentów w niej zawartych
+        /// </summary>
+        /// <returns>Zwracająca nazwę grupy i studentów w niej zawartych</returns>
         public override string ToString()
         {
             return "####### " + name + " #######" + "\n" + ShowStudents();

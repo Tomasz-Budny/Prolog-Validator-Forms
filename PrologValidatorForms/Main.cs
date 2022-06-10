@@ -45,6 +45,7 @@ namespace PrologValidatorForms
             panel3.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, panel3.Width, panel3.Height, 30, 30));
             this.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, this.Width, this.Height, 70, 70));
             informator1.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, informator1.Width, informator1.Height, 30, 30));
+            pictureBox1.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, pictureBox1.Width, pictureBox1.Height, 30, 30));
         }
 
         private string DisplayErrors(string path, string finalPath)
@@ -154,14 +155,8 @@ namespace PrologValidatorForms
         {
             public static void Minimize(Form form)
             {
-                if (form.WindowState == FormWindowState.Minimized)
-                {
-                    form.WindowState = FormWindowState.Normal;
-                }
-                else if (form.WindowState == FormWindowState.Normal)
-                {
-                    form.WindowState = FormWindowState.Minimized;
-                }
+                   form.WindowState = FormWindowState.Minimized;
+                
             }
         }
 
@@ -229,6 +224,11 @@ namespace PrologValidatorForms
         private void Main_MouseUp(object sender, MouseEventArgs e)
         {
             mouse_Down = false;
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

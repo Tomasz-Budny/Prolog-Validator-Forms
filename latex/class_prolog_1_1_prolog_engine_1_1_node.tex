@@ -1,0 +1,55 @@
+\hypertarget{class_prolog_1_1_prolog_engine_1_1_node}{}\doxysection{Dokumentacja klasy Prolog.\+Prolog\+Engine.\+Node}
+\label{class_prolog_1_1_prolog_engine_1_1_node}\index{Prolog.PrologEngine.Node@{Prolog.PrologEngine.Node}}
+\doxysubsection*{Metody publiczne}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_prolog_1_1_prolog_engine_1_1_node_a6b13842b705d7a1037f645f31f14dc85}\label{class_prolog_1_1_prolog_engine_1_1_node_a6b13842b705d7a1037f645f31f14dc85}} 
+{\bfseries Node} (string node\+Name)
+\item 
+\mbox{\Hypertarget{class_prolog_1_1_prolog_engine_1_1_node_aa996fd321efcd42990426b6e566957c1}\label{class_prolog_1_1_prolog_engine_1_1_node_aa996fd321efcd42990426b6e566957c1}} 
+string {\bfseries Attribute\+Value} (string attribute\+Name)
+\item 
+\mbox{\Hypertarget{class_prolog_1_1_prolog_engine_1_1_node_a8acb7e742617faaaf153639a97692e1a}\label{class_prolog_1_1_prolog_engine_1_1_node_a8acb7e742617faaaf153639a97692e1a}} 
+void {\bfseries Add\+Attribute} (string attribute\+Name, string attribute\+Value)
+\item 
+\mbox{\Hypertarget{class_prolog_1_1_prolog_engine_1_1_node_aff2b4dde5c4e9cba5d2b5d51060fdc08}\label{class_prolog_1_1_prolog_engine_1_1_node_aff2b4dde5c4e9cba5d2b5d51060fdc08}} 
+void {\bfseries To\+Node} (Xml\+Text\+Reader reader, int level, bool comment)
+\item 
+\mbox{\Hypertarget{class_prolog_1_1_prolog_engine_1_1_node_a678e346b85f282e751b4ffef2d79eb00}\label{class_prolog_1_1_prolog_engine_1_1_node_a678e346b85f282e751b4ffef2d79eb00}} 
+\mbox{\hyperlink{class_prolog_1_1_prolog_engine_1_1_base_term}{Base\+Term}} {\bfseries To\+Term} ()
+\item 
+\mbox{\Hypertarget{class_prolog_1_1_prolog_engine_1_1_node_acaef158d7cdb5f365da54edc8eeffecb}\label{class_prolog_1_1_prolog_engine_1_1_node_acaef158d7cdb5f365da54edc8eeffecb}} 
+new string {\bfseries To\+String} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Statyczne metody publiczne}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_prolog_1_1_prolog_engine_1_1_node_ae77c240dbf948431614d6481c88de5ec}\label{class_prolog_1_1_prolog_engine_1_1_node_ae77c240dbf948431614d6481c88de5ec}} 
+static \mbox{\hyperlink{class_prolog_1_1_prolog_engine_1_1_base_term}{Base\+Term}} {\bfseries Xml\+To\+Term} (\mbox{\hyperlink{class_prolog_1_1_prolog_engine_1_1_base_term}{Base\+Term}} settings, string s, bool in\+File)
+\item 
+\mbox{\Hypertarget{class_prolog_1_1_prolog_engine_1_1_node_a694b5b1870fdd3dbbafeaff5c6c72f43}\label{class_prolog_1_1_prolog_engine_1_1_node_a694b5b1870fdd3dbbafeaff5c6c72f43}} 
+static void {\bfseries Term\+To\+Xml} (\mbox{\hyperlink{class_prolog_1_1_prolog_engine_1_1_base_term}{Base\+Term}} settings, \mbox{\hyperlink{class_prolog_1_1_prolog_engine_1_1_base_term}{Base\+Term}} xml\+Term, ref string file\+Name\+Or\+Xml\+String)
+\end{DoxyCompactItemize}
+\doxysubsection*{Właściwości}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_prolog_1_1_prolog_engine_1_1_node_a9b418af3a13db10b03dcac5bd5a4fe56}\label{class_prolog_1_1_prolog_engine_1_1_node_a9b418af3a13db10b03dcac5bd5a4fe56}} 
+Xml\+Node\+Type {\bfseries Type}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_prolog_1_1_prolog_engine_1_1_node_ac4996f30e2ab78b445f0fb6d9c9ba382}\label{class_prolog_1_1_prolog_engine_1_1_node_ac4996f30e2ab78b445f0fb6d9c9ba382}} 
+string {\bfseries Tag\+Name}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_prolog_1_1_prolog_engine_1_1_node_a6c41dd8b1bd6b7384a4e735685e4e1a5}\label{class_prolog_1_1_prolog_engine_1_1_node_a6c41dd8b1bd6b7384a4e735685e4e1a5}} 
+string {\bfseries Text}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_prolog_1_1_prolog_engine_1_1_node_ae9616e97ade7c5a0c3bd6f764602cdd7}\label{class_prolog_1_1_prolog_engine_1_1_node_ae9616e97ade7c5a0c3bd6f764602cdd7}} 
+List$<$ \mbox{\hyperlink{class_prolog_1_1_prolog_engine_1_1_node}{Node}} $>$ {\bfseries Child\+Nodes}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_prolog_1_1_prolog_engine_1_1_node_a0e4f706b840def0fa3b61e63c6b15678}\label{class_prolog_1_1_prolog_engine_1_1_node_a0e4f706b840def0fa3b61e63c6b15678}} 
+List$<$ Key\+Value\+Pair$<$ string, string $>$ $>$ {\bfseries Attributes}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\end{DoxyCompactItemize}
+
+
+Dokumentacja dla tej klasy została wygenerowana z pliku\+:\begin{DoxyCompactItemize}
+\item 
+CSProlog/Simple\+DOMParser.\+cs\end{DoxyCompactItemize}

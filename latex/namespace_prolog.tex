@@ -1,0 +1,362 @@
+\hypertarget{namespace_prolog}{}\doxysection{Dokumentacja przestrzeni nazw Prolog}
+\label{namespace_prolog}\index{Prolog@{Prolog}}
+\doxysubsection*{Komponenty}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_prolog_1_1_abort_query_exception}{Abort\+Query\+Exception}}
+\item 
+class {\bfseries Base\+Parser\+Extensions}
+\item 
+class \mbox{\hyperlink{class_prolog_1_1_basic_io}{Basic\+Io}}
+\item 
+class \mbox{\hyperlink{class_prolog_1_1_bootstrap}{Bootstrap}}
+\begin{DoxyCompactList}\small\item\em Contains the predefined predicates, also required to provide the \mbox{\hyperlink{namespace_prolog}{Prolog}} engine with basic capabilities \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_prolog_1_1_b_w_t_comparator}{BWTComparator}}
+\item 
+class \mbox{\hyperlink{class_prolog_1_1_b_w_t_implementation}{BWTImplementation}}
+\item 
+class \mbox{\hyperlink{class_prolog_1_1_dos_i_o}{Dos\+IO}}
+\item 
+class {\bfseries Extensions}
+\item 
+class \mbox{\hyperlink{class_prolog_1_1_file_i_o}{File\+IO}}
+\item 
+interface \mbox{\hyperlink{interface_prolog_1_1_i_term_node}{ITerm\+Node}}
+\item 
+class {\bfseries Json\+Parser\+Extensions}
+\item 
+class \mbox{\hyperlink{class_prolog_1_1_prolog_engine}{Prolog\+Engine}}
+\item 
+class {\bfseries Prolog\+Parser\+Extensions}
+\item 
+class \mbox{\hyperlink{class_prolog_1_1_solution}{Solution}}
+\item 
+class \mbox{\hyperlink{class_prolog_1_1_solution_set}{Solution\+Set}}
+\item 
+class \mbox{\hyperlink{class_prolog_1_1_variable}{Variable}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Wyliczenia}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{namespace_prolog_a4fece3da5d0ac7bff5cd2bd86d1b86ca}\label{namespace_prolog_a4fece3da5d0ac7bff5cd2bd86d1b86ca}} 
+enum {\bfseries Term\+Type} \{ \newline
+{\bfseries None}
+, {\bfseries Var}
+, {\bfseries Unbound\+Var}
+, {\bfseries Named\+Var}
+, \newline
+{\bfseries Number}
+, {\bfseries Imag\+Number}
+, {\bfseries Atom}
+, {\bfseries String}
+, \newline
+{\bfseries Date\+Time}
+, {\bfseries Time\+Span}
+, {\bfseries Bool}
+, {\bfseries File\+Reader}
+, \newline
+{\bfseries File\+Writer}
+, {\bfseries Sql\+Command}
+, {\bfseries Binary}
+, {\bfseries Compound}
+ \}
+\item 
+\mbox{\Hypertarget{namespace_prolog_a072f801ed5ffa851d90f623eb5420ced}\label{namespace_prolog_a072f801ed5ffa851d90f623eb5420ced}} 
+enum {\bfseries BI} \{ \newline
+{\bfseries none}
+, {\bfseries abolish}
+, {\bfseries arg}
+, {\bfseries append}
+, \newline
+{\bfseries append2}
+, {\bfseries assert}
+, {\bfseries asserta}
+, {\bfseries assertz}
+, \newline
+{\bfseries atom\+\_\+}
+, {\bfseries atom\+\_\+string}
+, {\bfseries atomic}
+, {\bfseries between}
+, \newline
+{\bfseries bool\+\_\+}
+, {\bfseries bw\+\_\+transform}
+, {\bfseries cache}
+, {\bfseries call}
+, \newline
+{\bfseries clause}
+, {\bfseries clearall}
+, {\bfseries clearprofile}
+, {\bfseries clipboard}
+, \newline
+{\bfseries cls}
+, {\bfseries collection\+\_\+add}
+, {\bfseries collection\+\_\+exit}
+, {\bfseries collection\+\_\+init}
+, \newline
+{\bfseries combination}
+, {\bfseries compound}
+, {\bfseries config\+\_\+setting}
+, {\bfseries console}
+, \newline
+{\bfseries consult}
+, {\bfseries copy\+\_\+term}
+, {\bfseries crossref}
+, {\bfseries current\+\_\+op}
+, \newline
+{\bfseries cut}
+, {\bfseries dayname}
+, {\bfseries dcg\+\_\+flat}
+, {\bfseries date\+\_\+part}
+, \newline
+{\bfseries datetime}
+, {\bfseries dayofweek}
+, {\bfseries dayofyear}
+, {\bfseries debug}
+, \newline
+{\bfseries dec\+\_\+counter}
+, {\bfseries display}
+, {\bfseries environment}
+, {\bfseries eq\+\_\+num}
+, \newline
+{\bfseries eq\+\_\+str}
+, {\bfseries errorlevel}
+, {\bfseries expand\+\_\+term}
+, {\bfseries fail}
+, \newline
+{\bfseries fileexists}
+, {\bfseries flat}
+, {\bfseries float\+\_\+}
+, {\bfseries format}
+, \newline
+{\bfseries functor}
+, {\bfseries ge\+\_\+num}
+, {\bfseries ge\+\_\+ord}
+, {\bfseries gensym}
+, \newline
+{\bfseries genvar}
+, {\bfseries get}
+, {\bfseries get\+\_\+counter}
+, {\bfseries get0}
+, \newline
+{\bfseries getenvvar}
+, {\bfseries getvar}
+, {\bfseries ground}
+, {\bfseries gt\+\_\+num}
+, \newline
+{\bfseries gt\+\_\+ord}
+, {\bfseries halt}
+, {\bfseries help}
+, {\bfseries inc\+\_\+counter}
+, \newline
+{\bfseries integer}
+, {\bfseries ip\+\_\+address}
+, {\bfseries is\+\_\+}
+, {\bfseries json\+\_\+term}
+, \newline
+{\bfseries json\+\_\+xml}
+, {\bfseries le\+\_\+num}
+, {\bfseries le\+\_\+ord}
+, {\bfseries leapyear}
+, \newline
+{\bfseries length}
+, {\bfseries license}
+, {\bfseries list}
+, {\bfseries listing}
+, \newline
+{\bfseries listing0}
+, {\bfseries listing0X}
+, {\bfseries listing0\+XN}
+, {\bfseries listingX}
+, \newline
+{\bfseries listing\+XN}
+, {\bfseries lt\+\_\+num}
+, {\bfseries lt\+\_\+ord}
+, {\bfseries make\+\_\+help\+\_\+resx}
+, \newline
+{\bfseries maxwritedepth}
+, {\bfseries member}
+, {\bfseries name}
+, {\bfseries ne\+\_\+num}
+, \newline
+{\bfseries ne\+\_\+str}
+, {\bfseries ne\+\_\+uni}
+, {\bfseries nl}
+, {\bfseries nocache}
+, \newline
+{\bfseries nodebug}
+, {\bfseries nonvar}
+, {\bfseries noprofile}
+, {\bfseries nospy}
+, \newline
+{\bfseries nospyall}
+, {\bfseries notrace}
+, {\bfseries noverbose}
+, {\bfseries now}
+, \newline
+{\bfseries number}
+, {\bfseries numbervars}
+, {\bfseries numcols}
+, {\bfseries or}
+, \newline
+{\bfseries permutation}
+, {\bfseries pp\+\_\+defines}
+, {\bfseries predicate\+PN}
+, {\bfseries predicateX}
+, \newline
+{\bfseries print}
+, {\bfseries profile}
+, {\bfseries put}
+, {\bfseries query\+\_\+timeout}
+, \newline
+{\bfseries read}
+, {\bfseries readatoms}
+, {\bfseries readatom}
+, {\bfseries readeof}
+, \newline
+{\bfseries readln}
+, {\bfseries regex\+\_\+match}
+, {\bfseries regex\+\_\+replace}
+, {\bfseries retract}
+, \newline
+{\bfseries retractall}
+, {\bfseries reverse}
+, {\bfseries sendmail}
+, {\bfseries see}
+, \newline
+{\bfseries seeing}
+, {\bfseries seen}
+, {\bfseries set\+\_\+counter}
+, {\bfseries setenvvar}
+, \newline
+{\bfseries setvar}
+, {\bfseries shell\+\_\+d}
+, {\bfseries shell\+\_\+p}
+, {\bfseries shell\+\_\+x}
+, \newline
+{\bfseries shell\+\_\+sync\+\_\+d}
+, {\bfseries shell\+\_\+sync\+\_\+p}
+, {\bfseries shell\+\_\+sync\+\_\+x}
+, {\bfseries shell\+\_\+dos}
+, \newline
+{\bfseries shell\+\_\+exe}
+, {\bfseries showfile}
+, {\bfseries showprofile}
+, {\bfseries silent}
+, \newline
+{\bfseries sort}
+, {\bfseries spy}
+, {\bfseries spypoints}
+, {\bfseries sql\+\_\+connect}
+, \newline
+{\bfseries sql\+\_\+connection}
+, {\bfseries sql\+\_\+command}
+, {\bfseries sql\+\_\+disconnect}
+, {\bfseries sql\+\_\+select}
+, \newline
+{\bfseries stacktrace}
+, {\bfseries callstack}
+, {\bfseries statistics}
+, {\bfseries string\+\_\+}
+, \newline
+{\bfseries string\+\_\+datetime}
+, {\bfseries string\+\_\+term}
+, {\bfseries string\+\_\+words}
+, {\bfseries stringstyle}
+, \newline
+{\bfseries succ}
+, {\bfseries tab}
+, {\bfseries tell}
+, {\bfseries telling}
+, \newline
+{\bfseries term\+\_\+pattern}
+, {\bfseries throw\+\_\+}
+, {\bfseries time\+\_\+part}
+, {\bfseries timespan}
+, \newline
+{\bfseries today}
+, {\bfseries told}
+, {\bfseries trace}
+, {\bfseries treeprint}
+, \newline
+{\bfseries undefineds}
+, {\bfseries unifiable}
+, {\bfseries univ}
+, {\bfseries username}
+, \newline
+{\bfseries userroles}
+, {\bfseries validdate}
+, {\bfseries validtime}
+, {\bfseries var}
+, \newline
+{\bfseries verbose}
+, {\bfseries version}
+, {\bfseries weekno}
+, {\bfseries workingdir}
+, \newline
+{\bfseries write}
+, {\bfseries writef}
+, {\bfseries writeln}
+, {\bfseries writelnf}
+, \newline
+{\bfseries xml\+\_\+term}
+, {\bfseries xmltrace}
+, {\bfseries xml\+\_\+transform}
+ \}
+\item 
+\mbox{\Hypertarget{namespace_prolog_a22d1525f2d61847c1ee5dbb670647342}\label{namespace_prolog_a22d1525f2d61847c1ee5dbb670647342}} 
+enum {\bfseries Prolog\+Exception} \{ {\bfseries io\+Exception}
+ \}
+\item 
+\mbox{\Hypertarget{namespace_prolog_aff2d13879e46295c88cccc34f5b9480a}\label{namespace_prolog_aff2d13879e46295c88cccc34f5b9480a}} 
+enum {\bfseries Assoc\+Type} \{ \newline
+{\bfseries None} =-\/1
+, {\bfseries xfx}
+, {\bfseries xfy}
+, {\bfseries yfx}
+, \newline
+{\bfseries fx}
+, {\bfseries fy}
+, {\bfseries xf}
+, {\bfseries yf}
+, \newline
+{\bfseries f}
+ \}
+\item 
+\mbox{\Hypertarget{namespace_prolog_a004e85496c242ae634bb91ab7ca43e5e}\label{namespace_prolog_a004e85496c242ae634bb91ab7ca43e5e}} 
+enum {\bfseries Assoc\+Group} \{ \newline
+{\bfseries None} =-\/1
+, {\bfseries Infix}
+, {\bfseries Prefix}
+, {\bfseries Postfix}
+, \newline
+{\bfseries Zerofix}
+ \}
+\item 
+\mbox{\Hypertarget{namespace_prolog_a75a34314d05025a67a00c3c1bbb5ff59}\label{namespace_prolog_a75a34314d05025a67a00c3c1bbb5ff59}} 
+enum {\bfseries Rel\+Op} \{ {\bfseries None}
+, {\bfseries LT}
+, {\bfseries LE}
+ \}
+\item 
+\mbox{\Hypertarget{namespace_prolog_a76108989bd4e8531a4564b51d59d1fe6}\label{namespace_prolog_a76108989bd4e8531a4564b51d59d1fe6}} 
+enum {\bfseries Spy\+Port} \+: short \{ \newline
+{\bfseries None} =0
+, {\bfseries Call} =1
+, {\bfseries Exit} =2
+, {\bfseries Fail} =4
+, \newline
+{\bfseries Redo} =8
+, {\bfseries Full} =15
+ \}
+\item 
+\mbox{\Hypertarget{namespace_prolog_a49c8a63903ff5b3cb82995043c819389}\label{namespace_prolog_a49c8a63903ff5b3cb82995043c819389}} 
+enum {\bfseries Cache\+Port} \{ {\bfseries Exit}
+, {\bfseries Fail}
+ \}
+\item 
+\mbox{\Hypertarget{namespace_prolog_af0672e3f3eb1b5fa7e1a7591aca6b1aa}\label{namespace_prolog_af0672e3f3eb1b5fa7e1a7591aca6b1aa}} 
+enum {\bfseries Dup\+Mode} \{ {\bfseries Dup\+Ignore}
+, {\bfseries Dup\+Accept}
+, {\bfseries Dup\+Error}
+ \}
+\end{DoxyCompactItemize}

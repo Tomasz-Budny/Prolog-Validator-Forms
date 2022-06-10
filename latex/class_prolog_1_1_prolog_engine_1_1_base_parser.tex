@@ -1,0 +1,393 @@
+\hypertarget{class_prolog_1_1_prolog_engine_1_1_base_parser}{}\doxysection{Dokumentacja szablonu klasy Prolog.\+Prolog\+Engine.\+Base\+Parser\texorpdfstring{$<$}{<} T \texorpdfstring{$>$}{>}}
+\label{class_prolog_1_1_prolog_engine_1_1_base_parser}\index{Prolog.PrologEngine.BaseParser$<$ T $>$@{Prolog.PrologEngine.BaseParser$<$ T $>$}}
+\doxysubsection*{Komponenty}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_prolog_1_1_prolog_engine_1_1_base_parser_1_1_base_trie}{Base\+Trie}}
+\item 
+class \mbox{\hyperlink{class_prolog_1_1_prolog_engine_1_1_base_parser_1_1_conditional_definition_handler}{Conditional\+Definition\+Handler}}
+\item 
+struct \mbox{\hyperlink{struct_prolog_1_1_prolog_engine_1_1_base_parser_1_1position_marker}{position\+Marker}}
+\item 
+struct \mbox{\hyperlink{struct_prolog_1_1_prolog_engine_1_1_base_parser_1_1_stream_pointer}{Stream\+Pointer}}
+\item 
+class \mbox{\hyperlink{class_prolog_1_1_prolog_engine_1_1_base_parser_1_1_symbol}{Symbol}}
+\item 
+class \mbox{\hyperlink{class_prolog_1_1_prolog_engine_1_1_base_parser_1_1_terminal_descr}{Terminal\+Descr}}
+\item 
+class \mbox{\hyperlink{class_prolog_1_1_prolog_engine_1_1_base_parser_1_1_trie_node}{Trie\+Node}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Metody publiczne}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_prolog_1_1_prolog_engine_1_1_base_parser_ac8548a9893e67bd3cffb201040db7ce3}\label{class_prolog_1_1_prolog_engine_1_1_base_parser_ac8548a9893e67bd3cffb201040db7ce3}} 
+void {\bfseries Warning} (string msg)
+\item 
+\mbox{\Hypertarget{class_prolog_1_1_prolog_engine_1_1_base_parser_ab9a18ef9383131b1441a85fa654e3850}\label{class_prolog_1_1_prolog_engine_1_1_base_parser_ab9a18ef9383131b1441a85fa654e3850}} 
+void {\bfseries Warning} (string msg, params Object\mbox{[}$\,$\mbox{]} o)
+\item 
+\mbox{\Hypertarget{class_prolog_1_1_prolog_engine_1_1_base_parser_a798f355cd64c46dab4968dc7d440a939}\label{class_prolog_1_1_prolog_engine_1_1_base_parser_a798f355cd64c46dab4968dc7d440a939}} 
+void {\bfseries Semantic\+Error} (string msg)
+\item 
+\mbox{\Hypertarget{class_prolog_1_1_prolog_engine_1_1_base_parser_add8bf8d309913797a8dff4ea49ec3448}\label{class_prolog_1_1_prolog_engine_1_1_base_parser_add8bf8d309913797a8dff4ea49ec3448}} 
+void {\bfseries Semantic\+Error} (string msg, params Object\mbox{[}$\,$\mbox{]} o)
+\item 
+\mbox{\Hypertarget{class_prolog_1_1_prolog_engine_1_1_base_parser_a5a87d87855ea63bcaeab30755c53990c}\label{class_prolog_1_1_prolog_engine_1_1_base_parser_a5a87d87855ea63bcaeab30755c53990c}} 
+void {\bfseries Fatal} (string msg)
+\item 
+\mbox{\Hypertarget{class_prolog_1_1_prolog_engine_1_1_base_parser_a141cb695c5c97ce98a27977870c58757}\label{class_prolog_1_1_prolog_engine_1_1_base_parser_a141cb695c5c97ce98a27977870c58757}} 
+void {\bfseries Fatal} (string msg, params Object\mbox{[}$\,$\mbox{]} o)
+\item 
+\mbox{\Hypertarget{class_prolog_1_1_prolog_engine_1_1_base_parser_a60f84cb804028cb4c5460e22518f15c9}\label{class_prolog_1_1_prolog_engine_1_1_base_parser_a60f84cb804028cb4c5460e22518f15c9}} 
+void {\bfseries Load\+From\+File} (string file\+Name)
+\item 
+\mbox{\Hypertarget{class_prolog_1_1_prolog_engine_1_1_base_parser_a9cdf20337617f934a85a90bf4646840e}\label{class_prolog_1_1_prolog_engine_1_1_base_parser_a9cdf20337617f934a85a90bf4646840e}} 
+void {\bfseries Set\+Input\+Stream} (Text\+Reader tr)
+\item 
+\mbox{\Hypertarget{class_prolog_1_1_prolog_engine_1_1_base_parser_a4ca95507f0902f3ea5cfae338a860cb7}\label{class_prolog_1_1_prolog_engine_1_1_base_parser_a4ca95507f0902f3ea5cfae338a860cb7}} 
+string {\bfseries Stream\+In\+Clip} (int n, int m)
+\item 
+\mbox{\Hypertarget{class_prolog_1_1_prolog_engine_1_1_base_parser_aef69add1b50b13bf0c4b29f3511cfcae}\label{class_prolog_1_1_prolog_engine_1_1_base_parser_aef69add1b50b13bf0c4b29f3511cfcae}} 
+string {\bfseries Stream\+In\+Clip} ()
+\item 
+\mbox{\Hypertarget{class_prolog_1_1_prolog_engine_1_1_base_parser_aa814837cdb2ac5c5097f69dc079a26ab}\label{class_prolog_1_1_prolog_engine_1_1_base_parser_aa814837cdb2ac5c5097f69dc079a26ab}} 
+virtual void {\bfseries Root\+Call} ()
+\item 
+\mbox{\Hypertarget{class_prolog_1_1_prolog_engine_1_1_base_parser_ae92960b4224b537f32ed93ab3ec8eea5}\label{class_prolog_1_1_prolog_engine_1_1_base_parser_ae92960b4224b537f32ed93ab3ec8eea5}} 
+virtual void {\bfseries Delegates} ()
+\item 
+\mbox{\Hypertarget{class_prolog_1_1_prolog_engine_1_1_base_parser_ab8da8abda75e3a3357d472b977d50ee7}\label{class_prolog_1_1_prolog_engine_1_1_base_parser_ab8da8abda75e3a3357d472b977d50ee7}} 
+void {\bfseries Init\+Parse} ()
+\item 
+\mbox{\Hypertarget{class_prolog_1_1_prolog_engine_1_1_base_parser_a3cf1f65161e0132c81045f76be950c63}\label{class_prolog_1_1_prolog_engine_1_1_base_parser_a3cf1f65161e0132c81045f76be950c63}} 
+void {\bfseries Exit\+Parse} ()
+\item 
+\mbox{\Hypertarget{class_prolog_1_1_prolog_engine_1_1_base_parser_a1831d53487f4fa29957a6f7be25d64c1}\label{class_prolog_1_1_prolog_engine_1_1_base_parser_a1831d53487f4fa29957a6f7be25d64c1}} 
+void {\bfseries Clip\+Start} ()
+\item 
+\mbox{\Hypertarget{class_prolog_1_1_prolog_engine_1_1_base_parser_a4b76974e3616990a5e8db58617977141}\label{class_prolog_1_1_prolog_engine_1_1_base_parser_a4b76974e3616990a5e8db58617977141}} 
+void {\bfseries Clip\+Start} (int clip\+Begin)
+\item 
+\mbox{\Hypertarget{class_prolog_1_1_prolog_engine_1_1_base_parser_a256d03eb982cef4002b782a8f4c5a2bd}\label{class_prolog_1_1_prolog_engine_1_1_base_parser_a256d03eb982cef4002b782a8f4c5a2bd}} 
+void {\bfseries Clip\+Final} ()
+\item 
+\mbox{\Hypertarget{class_prolog_1_1_prolog_engine_1_1_base_parser_af111c710f16d3eec9368a9094bad1877}\label{class_prolog_1_1_prolog_engine_1_1_base_parser_af111c710f16d3eec9368a9094bad1877}} 
+void {\bfseries Clip\+Final} (int clip\+Begin)
+\item 
+\mbox{\Hypertarget{class_prolog_1_1_prolog_engine_1_1_base_parser_a9c34e20c4e340d4025186c4d57ffb3b5}\label{class_prolog_1_1_prolog_engine_1_1_base_parser_a9c34e20c4e340d4025186c4d57ffb3b5}} 
+void {\bfseries Clip\+Final\+Plus} ()
+\item 
+\mbox{\Hypertarget{class_prolog_1_1_prolog_engine_1_1_base_parser_ad74f686cd48b7ec0711e8bcaa22c3ecd}\label{class_prolog_1_1_prolog_engine_1_1_base_parser_ad74f686cd48b7ec0711e8bcaa22c3ecd}} 
+void {\bfseries Clip\+Final\+Plus} (int clip\+End)
+\item 
+\mbox{\Hypertarget{class_prolog_1_1_prolog_engine_1_1_base_parser_ab6f209fcf4213245b3b78f183ad01dac}\label{class_prolog_1_1_prolog_engine_1_1_base_parser_ab6f209fcf4213245b3b78f183ad01dac}} 
+void {\bfseries Clip\+Final\+Trim} ()
+\begin{DoxyCompactList}\small\item\em exclude any text (i.\+e. comment) after last symbol \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_prolog_1_1_prolog_engine_1_1_base_parser_ab68f0f069c591b2232a7eaa6d2d993ad}\label{class_prolog_1_1_prolog_engine_1_1_base_parser_ab68f0f069c591b2232a7eaa6d2d993ad}} 
+void {\bfseries Clip\+Final\+Trim} (int clip\+End)
+\item 
+\mbox{\Hypertarget{class_prolog_1_1_prolog_engine_1_1_base_parser_a8180a88752fea35397e026684c571e39}\label{class_prolog_1_1_prolog_engine_1_1_base_parser_a8180a88752fea35397e026684c571e39}} 
+void {\bfseries Get\+Stream\+In\+Char} (int n, out char c)
+\item 
+\mbox{\Hypertarget{class_prolog_1_1_prolog_engine_1_1_base_parser_a079857ca74546e9f428f5778cb28d7f2}\label{class_prolog_1_1_prolog_engine_1_1_base_parser_a079857ca74546e9f428f5778cb28d7f2}} 
+string {\bfseries Read\+Line} ()
+\item 
+\mbox{\Hypertarget{class_prolog_1_1_prolog_engine_1_1_base_parser_acb03e879da7b656291d3ba7776688c79}\label{class_prolog_1_1_prolog_engine_1_1_base_parser_acb03e879da7b656291d3ba7776688c79}} 
+int {\bfseries Read\+Char} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Metody chronione}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_prolog_1_1_prolog_engine_1_1_base_parser_abc093e99abb205d5bbaa0de900454010}\label{class_prolog_1_1_prolog_engine_1_1_base_parser_abc093e99abb205d5bbaa0de900454010}} 
+void {\bfseries Error} (string msg)
+\item 
+\mbox{\Hypertarget{class_prolog_1_1_prolog_engine_1_1_base_parser_a89bdb6c458cc3e417af445ba1d01ec89}\label{class_prolog_1_1_prolog_engine_1_1_base_parser_a89bdb6c458cc3e417af445ba1d01ec89}} 
+void {\bfseries Error} (string msg, params Object\mbox{[}$\,$\mbox{]} o)
+\item 
+\mbox{\Hypertarget{class_prolog_1_1_prolog_engine_1_1_base_parser_afcee17edc5103b53beaf7612eec6cf1e}\label{class_prolog_1_1_prolog_engine_1_1_base_parser_afcee17edc5103b53beaf7612eec6cf1e}} 
+virtual void {\bfseries Scan\+Number} ()
+\item 
+\mbox{\Hypertarget{class_prolog_1_1_prolog_engine_1_1_base_parser_ab7f8dc1cf01d0f9adbc1ec8cebee92c9}\label{class_prolog_1_1_prolog_engine_1_1_base_parser_ab7f8dc1cf01d0f9adbc1ec8cebee92c9}} 
+virtual bool {\bfseries Scan\+Fraction} ()
+\item 
+\mbox{\Hypertarget{class_prolog_1_1_prolog_engine_1_1_base_parser_a6a43cddf20fb1861c4029fb4027de14a}\label{class_prolog_1_1_prolog_engine_1_1_base_parser_a6a43cddf20fb1861c4029fb4027de14a}} 
+virtual void {\bfseries Scan\+String} ()
+\item 
+\mbox{\Hypertarget{class_prolog_1_1_prolog_engine_1_1_base_parser_aff08891ebfec36184e806142fd4609bb}\label{class_prolog_1_1_prolog_engine_1_1_base_parser_aff08891ebfec36184e806142fd4609bb}} 
+virtual void {\bfseries Scan\+Id\+Or\+Terminal\+Or\+Comment\+Start} ()
+\item 
+\mbox{\Hypertarget{class_prolog_1_1_prolog_engine_1_1_base_parser_a492b170707296cf413923c32fa1fb028}\label{class_prolog_1_1_prolog_engine_1_1_base_parser_a492b170707296cf413923c32fa1fb028}} 
+virtual void {\bfseries Next\+Symbol} ()
+\item 
+\mbox{\Hypertarget{class_prolog_1_1_prolog_engine_1_1_base_parser_ae5b51b1556d8e50c0b566ac505e12855}\label{class_prolog_1_1_prolog_engine_1_1_base_parser_ae5b51b1556d8e50c0b566ac505e12855}} 
+virtual void {\bfseries Next\+Symbol} (string \+\_\+\+Proc)
+\item 
+\mbox{\Hypertarget{class_prolog_1_1_prolog_engine_1_1_base_parser_ae631b4ff268242fb0990433047670c29}\label{class_prolog_1_1_prolog_engine_1_1_base_parser_ae631b4ff268242fb0990433047670c29}} 
+virtual bool {\bfseries Get\+Symbol} (\mbox{\hyperlink{class_prolog_1_1_prolog_engine_1_1_terminal_set}{Terminal\+Set}} followers, bool done, bool gen\+XCPN)
+\item 
+\mbox{\Hypertarget{class_prolog_1_1_prolog_engine_1_1_base_parser_a5c6e550f93bb947c76b3b50604afd6db}\label{class_prolog_1_1_prolog_engine_1_1_base_parser_a5c6e550f93bb947c76b3b50604afd6db}} 
+void {\bfseries EOL} (\mbox{\hyperlink{class_prolog_1_1_prolog_engine_1_1_terminal_set}{Terminal\+Set}} followers, bool Gen\+XCPN)
+\item 
+\mbox{\Hypertarget{class_prolog_1_1_prolog_engine_1_1_base_parser_ab45dd42cc84cf87d58a8f8cfc70fd445}\label{class_prolog_1_1_prolog_engine_1_1_base_parser_ab45dd42cc84cf87d58a8f8cfc70fd445}} 
+void {\bfseries ANYTEXT} (\mbox{\hyperlink{class_prolog_1_1_prolog_engine_1_1_terminal_set}{Terminal\+Set}} followers)
+\item 
+\mbox{\Hypertarget{class_prolog_1_1_prolog_engine_1_1_base_parser_ad4df22e76f949f51664aafe76581a7f3}\label{class_prolog_1_1_prolog_engine_1_1_base_parser_ad4df22e76f949f51664aafe76581a7f3}} 
+void {\bfseries Init\+Position\+Markers} (\mbox{\hyperlink{struct_prolog_1_1_prolog_engine_1_1_base_parser_1_1position_marker}{position\+Marker}}\mbox{[}$\,$\mbox{]} ma)
+\item 
+\mbox{\Hypertarget{class_prolog_1_1_prolog_engine_1_1_base_parser_a67fd36ef91552d1368d8e8448e7e25ce}\label{class_prolog_1_1_prolog_engine_1_1_base_parser_a67fd36ef91552d1368d8e8448e7e25ce}} 
+void {\bfseries Report\+Parser\+Proc\+Entry} (string proc\+Name)
+\item 
+\mbox{\Hypertarget{class_prolog_1_1_prolog_engine_1_1_base_parser_a4c67f8cb2ec4e6ac815172b2a7690375}\label{class_prolog_1_1_prolog_engine_1_1_base_parser_a4c67f8cb2ec4e6ac815172b2a7690375}} 
+void {\bfseries Report\+Parser\+Proc\+Exit} (string proc\+Name)
+\item 
+\mbox{\Hypertarget{class_prolog_1_1_prolog_engine_1_1_base_parser_a6d4aea984d9545036ef59b7004625973}\label{class_prolog_1_1_prolog_engine_1_1_base_parser_a6d4aea984d9545036ef59b7004625973}} 
+void {\bfseries Input\+Stream\+Mark} (out \mbox{\hyperlink{struct_prolog_1_1_prolog_engine_1_1_base_parser_1_1position_marker}{position\+Marker}} m)
+\item 
+\mbox{\Hypertarget{class_prolog_1_1_prolog_engine_1_1_base_parser_ad7fceb7a1cdcbf777dbee123559e9b92}\label{class_prolog_1_1_prolog_engine_1_1_base_parser_ad7fceb7a1cdcbf777dbee123559e9b92}} 
+void {\bfseries Input\+Stream\+Redo} (\mbox{\hyperlink{struct_prolog_1_1_prolog_engine_1_1_base_parser_1_1position_marker}{position\+Marker}} m, int n)
+\item 
+\mbox{\Hypertarget{class_prolog_1_1_prolog_engine_1_1_base_parser_ab78d46d8a9a3353f9c163b52f124d242}\label{class_prolog_1_1_prolog_engine_1_1_base_parser_ab78d46d8a9a3353f9c163b52f124d242}} 
+void {\bfseries Parse} ()
+\item 
+\mbox{\Hypertarget{class_prolog_1_1_prolog_engine_1_1_base_parser_a647e760dc2d77b4935b27c49abd5dbbc}\label{class_prolog_1_1_prolog_engine_1_1_base_parser_a647e760dc2d77b4935b27c49abd5dbbc}} 
+void {\bfseries Next\+Ch} ()
+\item 
+\mbox{\Hypertarget{class_prolog_1_1_prolog_engine_1_1_base_parser_a8c3be0d9d77eb9fa22166384756819cf}\label{class_prolog_1_1_prolog_engine_1_1_base_parser_a8c3be0d9d77eb9fa22166384756819cf}} 
+void {\bfseries Init\+Ch} (\mbox{\hyperlink{struct_prolog_1_1_prolog_engine_1_1_base_parser_1_1_stream_pointer}{Stream\+Pointer}} c)
+\item 
+\mbox{\Hypertarget{class_prolog_1_1_prolog_engine_1_1_base_parser_a6a5f7a3a515d3dbc020f8a35cffa2c7e}\label{class_prolog_1_1_prolog_engine_1_1_base_parser_a6a5f7a3a515d3dbc020f8a35cffa2c7e}} 
+bool {\bfseries Skip\+Over\+Chars} (string p)
+\item 
+\mbox{\Hypertarget{class_prolog_1_1_prolog_engine_1_1_base_parser_a336d9a76845ede6907668fed1bf79096}\label{class_prolog_1_1_prolog_engine_1_1_base_parser_a336d9a76845ede6907668fed1bf79096}} 
+bool {\bfseries Do\+Comment} (string p, bool multi\+Line, bool first\+On\+Line)
+\end{DoxyCompactItemize}
+\doxysubsection*{Atrybuty chronione}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_prolog_1_1_prolog_engine_1_1_base_parser_a8a1cb2b7ff43bce58dadc74c5d0f2b4b}\label{class_prolog_1_1_prolog_engine_1_1_base_parser_a8a1cb2b7ff43bce58dadc74c5d0f2b4b}} 
+\mbox{\hyperlink{class_prolog_1_1_prolog_engine_1_1_base_parser_1_1_base_trie}{Base\+Trie}} {\bfseries terminal\+Table}
+\item 
+\mbox{\Hypertarget{class_prolog_1_1_prolog_engine_1_1_base_parser_ace55534f40f6f431f1464a3f975f49de}\label{class_prolog_1_1_prolog_engine_1_1_base_parser_ace55534f40f6f431f1464a3f975f49de}} 
+\mbox{\hyperlink{class_prolog_1_1_prolog_engine_1_1_base_parser_1_1_conditional_definition_handler}{Conditional\+Definition\+Handler}} {\bfseries cdh}
+\item 
+\mbox{\Hypertarget{class_prolog_1_1_prolog_engine_1_1_base_parser_a8863b98981cb2ca9821f0ca991962242}\label{class_prolog_1_1_prolog_engine_1_1_base_parser_a8863b98981cb2ca9821f0ca991962242}} 
+char {\bfseries ch}
+\item 
+\mbox{\Hypertarget{class_prolog_1_1_prolog_engine_1_1_base_parser_a14fb7d33887930f3553deb669b29d488}\label{class_prolog_1_1_prolog_engine_1_1_base_parser_a14fb7d33887930f3553deb669b29d488}} 
+char {\bfseries prev\+Ch}
+\item 
+\mbox{\Hypertarget{class_prolog_1_1_prolog_engine_1_1_base_parser_a684635bc48494f7f038ccfa657920620}\label{class_prolog_1_1_prolog_engine_1_1_base_parser_a684635bc48494f7f038ccfa657920620}} 
+bool {\bfseries end\+Text}
+\item 
+\mbox{\Hypertarget{class_prolog_1_1_prolog_engine_1_1_base_parser_a5ea62cbb800043c3669256f792d634fd}\label{class_prolog_1_1_prolog_engine_1_1_base_parser_a5ea62cbb800043c3669256f792d634fd}} 
+\mbox{\hyperlink{class_prolog_1_1_prolog_engine_1_1_base_parser_1_1_symbol}{Symbol}} {\bfseries symbol}
+\item 
+\mbox{\Hypertarget{class_prolog_1_1_prolog_engine_1_1_base_parser_ae6fd3c555e048542000525671d41f5c2}\label{class_prolog_1_1_prolog_engine_1_1_base_parser_ae6fd3c555e048542000525671d41f5c2}} 
+int {\bfseries max\+Runtime} = 0
+\item 
+\mbox{\Hypertarget{class_prolog_1_1_prolog_engine_1_1_base_parser_a23c7d58e33f405b6de7e3a1eb910b943}\label{class_prolog_1_1_prolog_engine_1_1_base_parser_a23c7d58e33f405b6de7e3a1eb910b943}} 
+int {\bfseries act\+Runtime}
+\item 
+\mbox{\Hypertarget{class_prolog_1_1_prolog_engine_1_1_base_parser_abe0b89751eedaddadd3a0711f93e5e48}\label{class_prolog_1_1_prolog_engine_1_1_base_parser_abe0b89751eedaddadd3a0711f93e5e48}} 
+\mbox{\hyperlink{class_prolog_1_1_prolog_engine_1_1_buffer}{Buffer}} {\bfseries in\+Stream} = null
+\item 
+\mbox{\Hypertarget{class_prolog_1_1_prolog_engine_1_1_base_parser_ac03fc662291ba13816c2d361f6a70f8b}\label{class_prolog_1_1_prolog_engine_1_1_base_parser_ac03fc662291ba13816c2d361f6a70f8b}} 
+\mbox{\hyperlink{class_prolog_1_1_prolog_engine_1_1_buffer}{Buffer}} {\bfseries out\+Stream} = null
+\item 
+\mbox{\Hypertarget{class_prolog_1_1_prolog_engine_1_1_base_parser_a6af7c409d637a519e7ab7608f74f7089}\label{class_prolog_1_1_prolog_engine_1_1_base_parser_a6af7c409d637a519e7ab7608f74f7089}} 
+string {\bfseries stream\+In\+Prefix}
+\item 
+\mbox{\Hypertarget{class_prolog_1_1_prolog_engine_1_1_base_parser_a57f356f5c5c02caa253977266b4e045e}\label{class_prolog_1_1_prolog_engine_1_1_base_parser_a57f356f5c5c02caa253977266b4e045e}} 
+bool {\bfseries syntax\+Error\+Stat}
+\item 
+\mbox{\Hypertarget{class_prolog_1_1_prolog_engine_1_1_base_parser_a92f1d1d7566533278a09bbdc95777bb4}\label{class_prolog_1_1_prolog_engine_1_1_base_parser_a92f1d1d7566533278a09bbdc95777bb4}} 
+string {\bfseries error\+Message}
+\item 
+\mbox{\Hypertarget{class_prolog_1_1_prolog_engine_1_1_base_parser_ad31caaac06e4f2a1cc014bf0c751b1cd}\label{class_prolog_1_1_prolog_engine_1_1_base_parser_ad31caaac06e4f2a1cc014bf0c751b1cd}} 
+int {\bfseries stream\+In\+Len}
+\item 
+\mbox{\Hypertarget{class_prolog_1_1_prolog_engine_1_1_base_parser_a0f9c79ce0fa1f97347a6025fd6a5a0ab}\label{class_prolog_1_1_prolog_engine_1_1_base_parser_a0f9c79ce0fa1f97347a6025fd6a5a0ab}} 
+\mbox{\hyperlink{struct_prolog_1_1_prolog_engine_1_1_base_parser_1_1_stream_pointer}{Stream\+Pointer}} {\bfseries stream\+In\+Ptr}
+\item 
+\mbox{\Hypertarget{class_prolog_1_1_prolog_engine_1_1_base_parser_a79e1dbb826ef824692301f50fb7c4a71}\label{class_prolog_1_1_prolog_engine_1_1_base_parser_a79e1dbb826ef824692301f50fb7c4a71}} 
+bool {\bfseries string\+Mode}
+\item 
+\mbox{\Hypertarget{class_prolog_1_1_prolog_engine_1_1_base_parser_ab7f30c0024455322a12a12878ee10865}\label{class_prolog_1_1_prolog_engine_1_1_base_parser_ab7f30c0024455322a12a12878ee10865}} 
+bool {\bfseries parse\+Any\+Text}
+\item 
+\mbox{\Hypertarget{class_prolog_1_1_prolog_engine_1_1_base_parser_aee622ca155dda28d645fbb87ef168d64}\label{class_prolog_1_1_prolog_engine_1_1_base_parser_aee622ca155dda28d645fbb87ef168d64}} 
+int {\bfseries prev\+Terminal}
+\item 
+\mbox{\Hypertarget{class_prolog_1_1_prolog_engine_1_1_base_parser_a8c695514b9ee6676e3a37bb762265b55}\label{class_prolog_1_1_prolog_engine_1_1_base_parser_a8c695514b9ee6676e3a37bb762265b55}} 
+int {\bfseries any\+Text\+Start}
+\item 
+\mbox{\Hypertarget{class_prolog_1_1_prolog_engine_1_1_base_parser_a697b18046a6cbe78ec238c1a1310e537}\label{class_prolog_1_1_prolog_engine_1_1_base_parser_a697b18046a6cbe78ec238c1a1310e537}} 
+int {\bfseries any\+Text\+Final}
+\item 
+\mbox{\Hypertarget{class_prolog_1_1_prolog_engine_1_1_base_parser_a07b3e6897979d3aa9d86177990a8cc7b}\label{class_prolog_1_1_prolog_engine_1_1_base_parser_a07b3e6897979d3aa9d86177990a8cc7b}} 
+int {\bfseries any\+Text\+FPlus}
+\item 
+\mbox{\Hypertarget{class_prolog_1_1_prolog_engine_1_1_base_parser_a76c0c443418d8877129b6bd1e1512ce9}\label{class_prolog_1_1_prolog_engine_1_1_base_parser_a76c0c443418d8877129b6bd1e1512ce9}} 
+int {\bfseries clip\+Begin}
+\item 
+\mbox{\Hypertarget{class_prolog_1_1_prolog_engine_1_1_base_parser_a847b59cda0bb5762b42a69a8f60b972c}\label{class_prolog_1_1_prolog_engine_1_1_base_parser_a847b59cda0bb5762b42a69a8f60b972c}} 
+int {\bfseries clip\+End}
+\item 
+\mbox{\Hypertarget{class_prolog_1_1_prolog_engine_1_1_base_parser_a03877ffc83faf36e4029ac8d792df1a7}\label{class_prolog_1_1_prolog_engine_1_1_base_parser_a03877ffc83faf36e4029ac8d792df1a7}} 
+bool {\bfseries see\+End\+Of\+Line}
+\item 
+\mbox{\Hypertarget{class_prolog_1_1_prolog_engine_1_1_base_parser_adfcf81b11945dbda1c7dff96fe3e6e58}\label{class_prolog_1_1_prolog_engine_1_1_base_parser_adfcf81b11945dbda1c7dff96fe3e6e58}} 
+bool {\bfseries format\+Mode}
+\item 
+\mbox{\Hypertarget{class_prolog_1_1_prolog_engine_1_1_base_parser_a4ac235071a3448ed80de1a4b0e0151aa}\label{class_prolog_1_1_prolog_engine_1_1_base_parser_a4ac235071a3448ed80de1a4b0e0151aa}} 
+int {\bfseries eo\+Line\+Count}
+\item 
+\mbox{\Hypertarget{class_prolog_1_1_prolog_engine_1_1_base_parser_a4c0c4b20c98d2c109b4afd196f126331}\label{class_prolog_1_1_prolog_engine_1_1_base_parser_a4c0c4b20c98d2c109b4afd196f126331}} 
+int {\bfseries line\+Count} = 0
+\item 
+\mbox{\Hypertarget{class_prolog_1_1_prolog_engine_1_1_base_parser_a476403e70d7d925035e0bcd79638be61}\label{class_prolog_1_1_prolog_engine_1_1_base_parser_a476403e70d7d925035e0bcd79638be61}} 
+bool {\bfseries show\+Err\+Trace} = true
+\item 
+\mbox{\Hypertarget{class_prolog_1_1_prolog_engine_1_1_base_parser_a26729d4e2869b4f675720a3438e99692}\label{class_prolog_1_1_prolog_engine_1_1_base_parser_a26729d4e2869b4f675720a3438e99692}} 
+int {\bfseries stream\+In\+Pre\+Len}
+\item 
+\mbox{\Hypertarget{class_prolog_1_1_prolog_engine_1_1_base_parser_a9593694a047de21f4f11bbfabc704ade}\label{class_prolog_1_1_prolog_engine_1_1_base_parser_a9593694a047de21f4f11bbfabc704ade}} 
+\mbox{\hyperlink{struct_prolog_1_1_prolog_engine_1_1_base_parser_1_1position_marker}{position\+Marker}} {\bfseries err\+Mark}
+\end{DoxyCompactItemize}
+\doxysubsection*{Statyczne atrybuty chronione}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_prolog_1_1_prolog_engine_1_1_base_parser_a4a55905e7c7d26ebaea8f8740f73cecd}\label{class_prolog_1_1_prolog_engine_1_1_base_parser_a4a55905e7c7d26ebaea8f8740f73cecd}} 
+const int {\bfseries Undefined} = 0
+\item 
+\mbox{\Hypertarget{class_prolog_1_1_prolog_engine_1_1_base_parser_aee51c675c7662399692c8acdc942a8c5}\label{class_prolog_1_1_prolog_engine_1_1_base_parser_aee51c675c7662399692c8acdc942a8c5}} 
+const int {\bfseries Comma} = 1
+\item 
+\mbox{\Hypertarget{class_prolog_1_1_prolog_engine_1_1_base_parser_ac5a7c405550f7f8f89ca0299d8a9aba0}\label{class_prolog_1_1_prolog_engine_1_1_base_parser_ac5a7c405550f7f8f89ca0299d8a9aba0}} 
+const int {\bfseries Left\+Paren} = 2
+\item 
+\mbox{\Hypertarget{class_prolog_1_1_prolog_engine_1_1_base_parser_a0d8aeb78fd685b8a65966a632c3509a3}\label{class_prolog_1_1_prolog_engine_1_1_base_parser_a0d8aeb78fd685b8a65966a632c3509a3}} 
+const int {\bfseries Right\+Paren} = 3
+\item 
+\mbox{\Hypertarget{class_prolog_1_1_prolog_engine_1_1_base_parser_a36070a31a33aca8807ead8fdc812d444}\label{class_prolog_1_1_prolog_engine_1_1_base_parser_a36070a31a33aca8807ead8fdc812d444}} 
+const int {\bfseries Identifier} = 4
+\item 
+\mbox{\Hypertarget{class_prolog_1_1_prolog_engine_1_1_base_parser_a64280bf68cef1fd27ddb6b87651ae59a}\label{class_prolog_1_1_prolog_engine_1_1_base_parser_a64280bf68cef1fd27ddb6b87651ae59a}} 
+const int {\bfseries Int\+Literal} = 5
+\item 
+\mbox{\Hypertarget{class_prolog_1_1_prolog_engine_1_1_base_parser_aeb9ddcccac337434e23ddb3fbb15223b}\label{class_prolog_1_1_prolog_engine_1_1_base_parser_aeb9ddcccac337434e23ddb3fbb15223b}} 
+const int {\bfseries pp\+Define} = 6
+\item 
+\mbox{\Hypertarget{class_prolog_1_1_prolog_engine_1_1_base_parser_a3a960abeb5e2788e06fbd48e72b553f6}\label{class_prolog_1_1_prolog_engine_1_1_base_parser_a3a960abeb5e2788e06fbd48e72b553f6}} 
+const int {\bfseries pp\+Undefine} = 7
+\item 
+\mbox{\Hypertarget{class_prolog_1_1_prolog_engine_1_1_base_parser_ad05cf42f9572966cb82f64fb69a7c8bc}\label{class_prolog_1_1_prolog_engine_1_1_base_parser_ad05cf42f9572966cb82f64fb69a7c8bc}} 
+const int {\bfseries pp\+If} = 8
+\item 
+\mbox{\Hypertarget{class_prolog_1_1_prolog_engine_1_1_base_parser_adcb0450129123980a4a5af73326c492b}\label{class_prolog_1_1_prolog_engine_1_1_base_parser_adcb0450129123980a4a5af73326c492b}} 
+const int {\bfseries pp\+If\+Not} = 9
+\item 
+\mbox{\Hypertarget{class_prolog_1_1_prolog_engine_1_1_base_parser_a3b2660c702c04d654fcd3001885fd712}\label{class_prolog_1_1_prolog_engine_1_1_base_parser_a3b2660c702c04d654fcd3001885fd712}} 
+const int {\bfseries pp\+Else} = 10
+\item 
+\mbox{\Hypertarget{class_prolog_1_1_prolog_engine_1_1_base_parser_aba283d2d02540ab3004c529f4c84f88a}\label{class_prolog_1_1_prolog_engine_1_1_base_parser_aba283d2d02540ab3004c529f4c84f88a}} 
+const int {\bfseries pp\+Else\+If} = 11
+\item 
+\mbox{\Hypertarget{class_prolog_1_1_prolog_engine_1_1_base_parser_a3e19a18bb82b4f8d4d18526c41962a3b}\label{class_prolog_1_1_prolog_engine_1_1_base_parser_a3e19a18bb82b4f8d4d18526c41962a3b}} 
+const int {\bfseries pp\+End\+If} = 12
+\item 
+\mbox{\Hypertarget{class_prolog_1_1_prolog_engine_1_1_base_parser_a03c7905f4af21f4fb19e1a89877965b8}\label{class_prolog_1_1_prolog_engine_1_1_base_parser_a03c7905f4af21f4fb19e1a89877965b8}} 
+const int {\bfseries Real\+Literal} = 13
+\item 
+\mbox{\Hypertarget{class_prolog_1_1_prolog_engine_1_1_base_parser_aa99b0df5ebeef701e0a6492dc0601785}\label{class_prolog_1_1_prolog_engine_1_1_base_parser_aa99b0df5ebeef701e0a6492dc0601785}} 
+const int {\bfseries Imag\+Literal} = 14
+\item 
+\mbox{\Hypertarget{class_prolog_1_1_prolog_engine_1_1_base_parser_ac5c04463c7cfc9286cc16732beddce46}\label{class_prolog_1_1_prolog_engine_1_1_base_parser_ac5c04463c7cfc9286cc16732beddce46}} 
+const int {\bfseries String\+Literal} = 15
+\item 
+\mbox{\Hypertarget{class_prolog_1_1_prolog_engine_1_1_base_parser_aa558b198e1d4a296c6366f1e774e2801}\label{class_prolog_1_1_prolog_engine_1_1_base_parser_aa558b198e1d4a296c6366f1e774e2801}} 
+const int {\bfseries Char\+Literal} = 16
+\item 
+\mbox{\Hypertarget{class_prolog_1_1_prolog_engine_1_1_base_parser_a67e67981cd94eec6f0e2fc78e4d3782f}\label{class_prolog_1_1_prolog_engine_1_1_base_parser_a67e67981cd94eec6f0e2fc78e4d3782f}} 
+const int {\bfseries Comment\+Start} = 17
+\item 
+\mbox{\Hypertarget{class_prolog_1_1_prolog_engine_1_1_base_parser_af130f1cc55c232ac05bcdbf95cb0e498}\label{class_prolog_1_1_prolog_engine_1_1_base_parser_af130f1cc55c232ac05bcdbf95cb0e498}} 
+const int {\bfseries Comment\+Single} = 18
+\item 
+\mbox{\Hypertarget{class_prolog_1_1_prolog_engine_1_1_base_parser_a75c23b7682ac73541b98166a5d599ec7}\label{class_prolog_1_1_prolog_engine_1_1_base_parser_a75c23b7682ac73541b98166a5d599ec7}} 
+const int {\bfseries End\+Of\+Line} = 19
+\item 
+\mbox{\Hypertarget{class_prolog_1_1_prolog_engine_1_1_base_parser_ac72d3c4adf150aed329a96151c527c9d}\label{class_prolog_1_1_prolog_engine_1_1_base_parser_ac72d3c4adf150aed329a96151c527c9d}} 
+const int {\bfseries ANYSYM} = 20
+\item 
+\mbox{\Hypertarget{class_prolog_1_1_prolog_engine_1_1_base_parser_a25b83f9de7d39144b76d6e9cf1a6af48}\label{class_prolog_1_1_prolog_engine_1_1_base_parser_a25b83f9de7d39144b76d6e9cf1a6af48}} 
+const int {\bfseries End\+Of\+Input} = 21
+\item 
+\mbox{\Hypertarget{class_prolog_1_1_prolog_engine_1_1_base_parser_a04821cf77ff6c5b8066f7979aa59f6b8}\label{class_prolog_1_1_prolog_engine_1_1_base_parser_a04821cf77ff6c5b8066f7979aa59f6b8}} 
+const char {\bfseries SQUOTE} = \textquotesingle{}\textbackslash{}\textquotesingle{}\textquotesingle{}
+\item 
+\mbox{\Hypertarget{class_prolog_1_1_prolog_engine_1_1_base_parser_ad18745421b1797affc7825774cf45773}\label{class_prolog_1_1_prolog_engine_1_1_base_parser_ad18745421b1797affc7825774cf45773}} 
+const char {\bfseries DQUOTE} = \textquotesingle{}\char`\"{}\textquotesingle{}
+\item 
+\mbox{\Hypertarget{class_prolog_1_1_prolog_engine_1_1_base_parser_a69e710e2ed6b61afca6758eb84aaad94}\label{class_prolog_1_1_prolog_engine_1_1_base_parser_a69e710e2ed6b61afca6758eb84aaad94}} 
+const char {\bfseries BSLASH} = \textquotesingle{}\textbackslash{}\textbackslash{}\textquotesingle{}
+\item 
+\mbox{\Hypertarget{class_prolog_1_1_prolog_engine_1_1_base_parser_a893d3b398f446ad90c646fe462ec9b49}\label{class_prolog_1_1_prolog_engine_1_1_base_parser_a893d3b398f446ad90c646fe462ec9b49}} 
+const int {\bfseries UNDEF} = -\/1
+\end{DoxyCompactItemize}
+\doxysubsection*{Właściwości}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_prolog_1_1_prolog_engine_1_1_base_parser_ae05bf6016de939375d2dee1899e271d0}\label{class_prolog_1_1_prolog_engine_1_1_base_parser_ae05bf6016de939375d2dee1899e271d0}} 
+virtual char {\bfseries pp\+Char}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_prolog_1_1_prolog_engine_1_1_base_parser_a0403afe90d5c9e38f9664ac53d14bcad}\label{class_prolog_1_1_prolog_engine_1_1_base_parser_a0403afe90d5c9e38f9664ac53d14bcad}} 
+bool {\bfseries See\+End\+Of\+Line}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_prolog_1_1_prolog_engine_1_1_base_parser_ac948d57a4eafe1ad0b34a2eae0c59e1b}\label{class_prolog_1_1_prolog_engine_1_1_base_parser_ac948d57a4eafe1ad0b34a2eae0c59e1b}} 
+int {\bfseries Clip\+Begin}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_prolog_1_1_prolog_engine_1_1_base_parser_a8893004656ca8b44b35bd8b3201098cc}\label{class_prolog_1_1_prolog_engine_1_1_base_parser_a8893004656ca8b44b35bd8b3201098cc}} 
+int {\bfseries Clip\+End}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_prolog_1_1_prolog_engine_1_1_base_parser_a93742748c1d2be197f312bc5eaa4b044}\label{class_prolog_1_1_prolog_engine_1_1_base_parser_a93742748c1d2be197f312bc5eaa4b044}} 
+bool {\bfseries Format\+Mode}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_prolog_1_1_prolog_engine_1_1_base_parser_a1b58925c16524b0e16a98ddf5b255372}\label{class_prolog_1_1_prolog_engine_1_1_base_parser_a1b58925c16524b0e16a98ddf5b255372}} 
+int {\bfseries Line\+Count}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_prolog_1_1_prolog_engine_1_1_base_parser_ad1e94d42e7eb6e31dba01c1c60867ff2}\label{class_prolog_1_1_prolog_engine_1_1_base_parser_ad1e94d42e7eb6e31dba01c1c60867ff2}} 
+bool {\bfseries Show\+Err\+Trace}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_prolog_1_1_prolog_engine_1_1_base_parser_a9a9c447058bb3d5ae653fb2cdc66255b}\label{class_prolog_1_1_prolog_engine_1_1_base_parser_a9a9c447058bb3d5ae653fb2cdc66255b}} 
+int {\bfseries Max\+Runtime}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_prolog_1_1_prolog_engine_1_1_base_parser_ac5485be0bd5a3b8a0856c19dd356258c}\label{class_prolog_1_1_prolog_engine_1_1_base_parser_ac5485be0bd5a3b8a0856c19dd356258c}} 
+int {\bfseries Act\+Runtime}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_prolog_1_1_prolog_engine_1_1_base_parser_a1a9c2f2800090d01b77faaaa485eef07}\label{class_prolog_1_1_prolog_engine_1_1_base_parser_a1a9c2f2800090d01b77faaaa485eef07}} 
+string {\bfseries Prefix}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_prolog_1_1_prolog_engine_1_1_base_parser_a842852d170d6aff659b1ba7fa4b2ccca}\label{class_prolog_1_1_prolog_engine_1_1_base_parser_a842852d170d6aff659b1ba7fa4b2ccca}} 
+string {\bfseries Syntax\+Error}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_prolog_1_1_prolog_engine_1_1_base_parser_aa523eed3c30471e02744739bb298f3a5}\label{class_prolog_1_1_prolog_engine_1_1_base_parser_aa523eed3c30471e02744739bb298f3a5}} 
+string {\bfseries Error\+Message}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_prolog_1_1_prolog_engine_1_1_base_parser_a9baaf61487d1b51f72a1e9d2c291d990}\label{class_prolog_1_1_prolog_engine_1_1_base_parser_a9baaf61487d1b51f72a1e9d2c291d990}} 
+string {\bfseries Stream\+In}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_prolog_1_1_prolog_engine_1_1_base_parser_acdf29cce2a75ab5bf9c1ffc358a697c1}\label{class_prolog_1_1_prolog_engine_1_1_base_parser_acdf29cce2a75ab5bf9c1ffc358a697c1}} 
+bool {\bfseries At\+End\+Of\+Input}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_prolog_1_1_prolog_engine_1_1_base_parser_aea45a152f6bfedc2b0c3d6c3c3734594}\label{class_prolog_1_1_prolog_engine_1_1_base_parser_aea45a152f6bfedc2b0c3d6c3c3734594}} 
+int {\bfseries Line\+No}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_prolog_1_1_prolog_engine_1_1_base_parser_adad37d320897d3ba383764dfd0404ba3}\label{class_prolog_1_1_prolog_engine_1_1_base_parser_adad37d320897d3ba383764dfd0404ba3}} 
+int {\bfseries Col\+No}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\end{DoxyCompactItemize}
+
+
+Dokumentacja dla tej klasy została wygenerowana z pliku\+:\begin{DoxyCompactItemize}
+\item 
+CSProlog/\+PG/Base\+Parser.\+cs\end{DoxyCompactItemize}

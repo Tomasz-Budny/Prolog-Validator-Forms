@@ -7,11 +7,18 @@ using System.Threading.Tasks;
 
 namespace PrologValidatorForms.Library
 {
+    /// <summary>
+    /// Klasa przetrzymująca informacje dotyczące klucza
+    /// </summary>
     class KeyManager
     {
         string keyFilePath;
         List<DeclaredTask> declaredTasks = new List<DeclaredTask>();
 
+        /// <summary>
+        /// Konstruktor kopiujący inicializujący wszystkie pola składowej klasy
+        /// </summary>
+        /// <param name="keyFilePath">Przechowywyje ścieżkę klucza</param>
         public KeyManager(string keyFilePath)
         {
             this.keyFilePath = keyFilePath;
@@ -19,6 +26,10 @@ namespace PrologValidatorForms.Library
 
         public List<DeclaredTask> DeclaredTasks => declaredTasks;
 
+        /// <summary>
+        /// Metoda zczytująca kolejne linijki z klucza, jeżeli napotka liniję z zadaniem (np. "zad1") tworzy nowy element listy DeclaredTask,
+        /// w przeciwnym wypadku dodaje linijkę z zapytaniem do ostatnio dodanego DeclaredTask
+        /// </summary>
         public void AnalyzeKeyFile()
         {
             try
@@ -46,6 +57,10 @@ namespace PrologValidatorForms.Library
             
         }
 
+        /// <summary>
+        /// Metoda dodająca zapytanie do ostatniego DeclaredTask
+        /// </summary>
+        /// <param name="path">Przechowywuje zawartość aktualnej linijki w kluczu</param>
         private void AddTestToLastTask(string currentLine)
         {
             if (currentLine == "")
@@ -58,6 +73,10 @@ namespace PrologValidatorForms.Library
         }
 
     }
+
+    /// <summary>
+    /// Klasa przetrzymująca 
+    /// </summary>
     class DeclaredTask
     {
         string nameOfTask;
