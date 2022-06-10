@@ -47,26 +47,6 @@ namespace PrologValidatorForms
             informator1.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, informator1.Width, informator1.Height, 30, 30));
         }
 
-        private string DisplayErrors(string path, string finalPath)
-        {
-            string result = "";
-
-            if (path == "")
-            {
-                result += "Nie podano ścieżki z rozwiązaniem!\n";
-            }
-            else if (InputValidator.ValidateStudentDirectory(path) != true)
-            {
-                result += "podana ścieżka jest w nieprawidłowym formacie, poprawny: Kx_yyyyyy_Z\n";
-            }
-            if (finalPath == "")
-            {
-                result += "nie podano ścieżki do zapisu pliku .xlsx!\n";
-            }
-
-            return result;
-        }
-
         private void btn_confirm_Click(object sender, EventArgs e)
         {
             
