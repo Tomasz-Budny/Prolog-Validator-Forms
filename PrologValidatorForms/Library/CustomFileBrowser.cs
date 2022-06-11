@@ -29,10 +29,8 @@ namespace PrologValidatorForms
             RefreshList(Environment.GetFolderPath(Environment.SpecialFolder.Desktop));
         }
 
-        // To może by wypadało przenieść do innego pliku
         private void RefreshList(string path)
         {
-            // Przyciski
             DisableNavButtons();
 
             textBox.Text = path;
