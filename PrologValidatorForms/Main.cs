@@ -22,7 +22,8 @@ namespace PrologValidatorForms
         {
             InitializeComponent();
             this.Text = string.Empty;
-            this.ControlBox = false;               
+            this.ControlBox = false;
+            panel5.Width = 0;
         }
 
         [System.Runtime.InteropServices.DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
