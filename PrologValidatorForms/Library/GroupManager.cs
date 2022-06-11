@@ -107,8 +107,6 @@ namespace PrologValidatorForms.Library
             {
                 MessageBox.Show($"W ścieżce: {groupDirectoryPath} brak pliku klucz.txt!", "Błąd", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-
-            Console.WriteLine(this);
         }
 
         /// <summary>
