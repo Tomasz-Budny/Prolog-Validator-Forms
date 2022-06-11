@@ -39,9 +39,6 @@
       <HintPath>..\packages\EPPlus.4.5.3.3\lib\net40\EPPlus.dll</HintPath>
     </Reference>
     <Reference Include="PresentationCore" />
-    <Reference Include="SwiftExcel, Version=1.0.11.0, Culture=neutral, PublicKeyToken=64ef85d6527da537, processorArchitecture=MSIL">
-      <HintPath>..\packages\SwiftExcel.1.0.11\lib\netstandard2.0\SwiftExcel.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.Annotations, Version=4.2.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\packages\System.ComponentModel.Annotations.4.7.0\lib\net461\System.ComponentModel.Annotations.dll</HintPath>
