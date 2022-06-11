@@ -1,0 +1,19 @@
+var searchData=
+[
+  ['settings_2edesigner_2ecs_0',['Settings.Designer.cs',['../_settings_8_designer_8cs.html',1,'']]],
+  ['showstudents_1',['ShowStudents',['../class_prolog_validator_forms_1_1_library_1_1_group_manager.html#a90812bc76ce253886cf9b899bf24ed2d',1,'PrologValidatorForms::Library::GroupManager']]],
+  ['showtasks_2',['ShowTasks',['../class_prolog_validator_forms_1_1_student_tasks_manager.html#ae24e3d2a79a37f644c75eea00b9f7285',1,'PrologValidatorForms::StudentTasksManager']]],
+  ['showtests_3',['ShowTests',['../class_prolog_validator_forms_1_1_task.html#a9e88b79730be98e472be0c4dc54a9f13',1,'PrologValidatorForms::Task']]],
+  ['sizecolumn_4',['sizeColumn',['../class_prolog_validator_forms_1_1_eksplorator.html#ac8dc813cfb587dd3fc1b9e7e1189996b',1,'PrologValidatorForms::Eksplorator']]],
+  ['sizeconverter_5',['SizeConverter',['../class_prolog_validator_forms_1_1_library_1_1_size_converter.html',1,'PrologValidatorForms::Library']]],
+  ['sizeconverter_2ecs_6',['SizeConverter.cs',['../_size_converter_8cs.html',1,'']]],
+  ['sizeoffile_7',['SizeOfFile',['../class_prolog_validator_forms_1_1_task.html#aae42ca3cffb8c3f8cc2c9260e338b217',1,'PrologValidatorForms::Task']]],
+  ['sizeoffile_8',['sizeOfFile',['../class_prolog_validator_forms_1_1_task.html#a7df63506200b36863d14efe17fa78c7e',1,'PrologValidatorForms::Task']]],
+  ['solutionname_9',['SolutionName',['../class_prolog_validator_forms_1_1_student_tasks_manager.html#aa9395089541f2009bfc4653ac0ed3aff',1,'PrologValidatorForms::StudentTasksManager']]],
+  ['solutionname_10',['solutionName',['../class_prolog_validator_forms_1_1_student_tasks_manager.html#a63f5c89dea8fea2e7f2f2f9af65d1993',1,'PrologValidatorForms::StudentTasksManager']]],
+  ['studentdirectorypath_11',['studentDirectoryPath',['../class_prolog_validator_forms_1_1_student_tasks_manager.html#ab6dbe13ea3c234235537690e3af53cb7',1,'PrologValidatorForms::StudentTasksManager']]],
+  ['studentdirectorypattern_12',['studentDirectoryPattern',['../class_prolog_validator_forms_1_1_input_validator.html#a4d7bae74504a8b9a86ba9ef25c99da71',1,'PrologValidatorForms::InputValidator']]],
+  ['studenttasksmanager_13',['StudentTasksManager',['../class_prolog_validator_forms_1_1_student_tasks_manager.html',1,'PrologValidatorForms.StudentTasksManager'],['../class_prolog_validator_forms_1_1_student_tasks_manager.html#a9b1273207ee7f15b8d9b13ed01511ad9',1,'PrologValidatorForms.StudentTasksManager.StudentTasksManager()']]],
+  ['studenttasksmanager_2ecs_14',['StudentTasksManager.cs',['../_student_tasks_manager_8cs.html',1,'']]],
+  ['studenttasksmanagers_15',['studentTasksManagers',['../class_prolog_validator_forms_1_1_library_1_1_group_manager.html#a50d8b24b61dd120af7d9a8741201a9b6',1,'PrologValidatorForms::Library::GroupManager']]]
+];

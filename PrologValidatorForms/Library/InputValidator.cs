@@ -22,10 +22,10 @@ namespace PrologValidatorForms
 
 
         /// <summary>
-        /// Metoda stpawdzająca poprawność nazwy studenta z paternem
+        /// Metoda stpawdzająca poprawność nazwy studenta z patternem
         /// </summary>
         /// <param name="path">Przechowywuje ścieżkę do studenta</param>
-        /// <returns>Zwraca informację czy nazwa studenta jest zgodna z paternem</returns>
+        /// <returns>Zwraca informację czy nazwa studenta jest zgodna z patternem</returns>
         public static bool ValidateStudentDirectory(string path)
         {
             string[] dirs = path.Split(Path.DirectorySeparatorChar);
@@ -33,10 +33,10 @@ namespace PrologValidatorForms
         }
 
         /// <summary>
-        /// Metoda stpawdzająca poprawność nazwy grupy studentów z paternem
+        /// Metoda stpawdzająca poprawność nazwy grupy studentów z patternem
         /// </summary>
         /// <param name="path">Przechowywuje ścieżkę do grupy studentów</param>
-        /// <returns>Zwraca informację czy nazwa grupy studentów jest zgodna z paternem</returns>
+        /// <returns>Zwraca informację czy nazwa grupy studentów jest zgodna z patternem</returns>
         public static bool ValidateGroupDirectory(string path)
         {
             string[] dirs = path.Split(Path.DirectorySeparatorChar);
@@ -44,10 +44,10 @@ namespace PrologValidatorForms
         }
 
         /// <summary>
-        /// Metoda stpawdzająca poprawność nazwy zadania z paternem
+        /// Metoda stpawdzająca poprawność nazwy zadania z patternem
         /// </summary>
         /// <param name="path">Przechowywuje ścieżkę do zadania</param>
-        /// <returns>Zwraca informację czy nazwa zadania jest zgodna z paternem</returns>
+        /// <returns>Zwraca informację czy nazwa zadania jest zgodna z patternem</returns>
         public static bool ValidateTaskName(string name)
         {
             return taskNamePattern.IsMatch(name);

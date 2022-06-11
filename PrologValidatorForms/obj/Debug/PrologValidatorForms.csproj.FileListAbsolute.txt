@@ -34,3 +34,22 @@ C:\Users\przem\Desktop\Projekt IO\PrologValidatorForms\obj\Debug\PrologValidator
 C:\Users\przem\Desktop\Projekt IO\PrologValidatorForms\obj\Debug\PrologValidatorForms.csproj.CopyComplete
 C:\Users\przem\Desktop\Projekt IO\PrologValidatorForms\obj\Debug\PrologValidatorForms.exe
 C:\Users\przem\Desktop\Projekt IO\PrologValidatorForms\obj\Debug\PrologValidatorForms.pdb
+C:\Users\GAMING\Desktop\Projekt IO KOD\PrologValidatorForms\bin\Debug\PrologValidatorForms.exe.config
+C:\Users\GAMING\Desktop\Projekt IO KOD\PrologValidatorForms\bin\Debug\PrologValidatorForms.exe
+C:\Users\GAMING\Desktop\Projekt IO KOD\PrologValidatorForms\bin\Debug\PrologValidatorForms.pdb
+C:\Users\GAMING\Desktop\Projekt IO KOD\PrologValidatorForms\bin\Debug\CSProlog.dll
+C:\Users\GAMING\Desktop\Projekt IO KOD\PrologValidatorForms\bin\Debug\EPPlus.dll
+C:\Users\GAMING\Desktop\Projekt IO KOD\PrologValidatorForms\bin\Debug\SwiftExcel.dll
+C:\Users\GAMING\Desktop\Projekt IO KOD\PrologValidatorForms\bin\Debug\System.ComponentModel.Annotations.dll
+C:\Users\GAMING\Desktop\Projekt IO KOD\PrologValidatorForms\bin\Debug\CSProlog.pdb
+C:\Users\GAMING\Desktop\Projekt IO KOD\PrologValidatorForms\bin\Debug\EPPlus.xml
+C:\Users\GAMING\Desktop\Projekt IO KOD\PrologValidatorForms\obj\Debug\PrologValidatorForms.csproj.AssemblyReference.cache
+C:\Users\GAMING\Desktop\Projekt IO KOD\PrologValidatorForms\obj\Debug\PrologValidatorForms.csproj.SuggestedBindingRedirects.cache
+C:\Users\GAMING\Desktop\Projekt IO KOD\PrologValidatorForms\obj\Debug\PrologValidatorForms.Eksplorator.resources
+C:\Users\GAMING\Desktop\Projekt IO KOD\PrologValidatorForms\obj\Debug\PrologValidatorForms.Main.resources
+C:\Users\GAMING\Desktop\Projekt IO KOD\PrologValidatorForms\obj\Debug\PrologValidatorForms.Properties.Resources.resources
+C:\Users\GAMING\Desktop\Projekt IO KOD\PrologValidatorForms\obj\Debug\PrologValidatorForms.csproj.GenerateResource.cache
+C:\Users\GAMING\Desktop\Projekt IO KOD\PrologValidatorForms\obj\Debug\PrologValidatorForms.csproj.CoreCompileInputs.cache
+C:\Users\GAMING\Desktop\Projekt IO KOD\PrologValidatorForms\obj\Debug\PrologValidatorForms.csproj.CopyComplete
+C:\Users\GAMING\Desktop\Projekt IO KOD\PrologValidatorForms\obj\Debug\PrologValidatorForms.exe
+C:\Users\GAMING\Desktop\Projekt IO KOD\PrologValidatorForms\obj\Debug\PrologValidatorForms.pdb

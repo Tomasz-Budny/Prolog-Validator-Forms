@@ -1,34 +1,217 @@
 \hypertarget{class_prolog_validator_forms_1_1_student_tasks_manager}{}\doxysection{Dokumentacja klasy Prolog\+Validator\+Forms.\+Student\+Tasks\+Manager}
 \label{class_prolog_validator_forms_1_1_student_tasks_manager}\index{PrologValidatorForms.StudentTasksManager@{PrologValidatorForms.StudentTasksManager}}
+
+
+Klasa odpowiadająca za analizę zadań dla konkretnego stydenta  
+
+
 \doxysubsection*{Metody publiczne}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{class_prolog_validator_forms_1_1_student_tasks_manager_a9b1273207ee7f15b8d9b13ed01511ad9}\label{class_prolog_validator_forms_1_1_student_tasks_manager_a9b1273207ee7f15b8d9b13ed01511ad9}} 
-{\bfseries Student\+Tasks\+Manager} (string student\+Directory\+Path, \mbox{\hyperlink{class_prolog_validator_forms_1_1_library_1_1_key_manager}{Key\+Manager}} key\+Manager)
-\item 
-\mbox{\Hypertarget{class_prolog_validator_forms_1_1_student_tasks_manager_ae24e3d2a79a37f644c75eea00b9f7285}\label{class_prolog_validator_forms_1_1_student_tasks_manager_ae24e3d2a79a37f644c75eea00b9f7285}} 
-string {\bfseries Show\+Tasks} ()
-\item 
-\mbox{\Hypertarget{class_prolog_validator_forms_1_1_student_tasks_manager_a4596fa320acce5d8c3352b48df151c98}\label{class_prolog_validator_forms_1_1_student_tasks_manager_a4596fa320acce5d8c3352b48df151c98}} 
-void {\bfseries Analyze\+Tasks} ()
-\item 
-\mbox{\Hypertarget{class_prolog_validator_forms_1_1_student_tasks_manager_a8178bfbe00c37a67d87e1e9a16352b74}\label{class_prolog_validator_forms_1_1_student_tasks_manager_a8178bfbe00c37a67d87e1e9a16352b74}} 
-override string {\bfseries To\+String} ()
-\end{DoxyCompactItemize}
+\mbox{\hyperlink{class_prolog_validator_forms_1_1_student_tasks_manager_a9b1273207ee7f15b8d9b13ed01511ad9}{Student\+Tasks\+Manager}} (string \mbox{\hyperlink{class_prolog_validator_forms_1_1_student_tasks_manager_ab6dbe13ea3c234235537690e3af53cb7}{student\+Directory\+Path}}, \mbox{\hyperlink{class_prolog_validator_forms_1_1_library_1_1_key_manager}{Key\+Manager}} \mbox{\hyperlink{class_prolog_validator_forms_1_1_student_tasks_manager_a43fca1bb9ff1aeaf5f73217f81c91d58}{key\+Manager}})
+\begin{DoxyCompactList}\small\item\em Konstruktor kopiujący inicializujący wszystkie pola składowej klasy \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_prolog_validator_forms_1_1_student_tasks_manager_ae24e3d2a79a37f644c75eea00b9f7285}{Show\+Tasks}} ()
+\begin{DoxyCompactList}\small\item\em Metoda zwracająca nazwę zadania, jego ścieżkę oraz wyniki testów \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_prolog_validator_forms_1_1_student_tasks_manager_a4596fa320acce5d8c3352b48df151c98}{Analyze\+Tasks}} ()
+\begin{DoxyCompactList}\small\item\em Metoda zbierająca podstawowe informacje o pliku oraz zapisuje wyniki zapytań \end{DoxyCompactList}\item 
+override string \mbox{\hyperlink{class_prolog_validator_forms_1_1_student_tasks_manager_a8178bfbe00c37a67d87e1e9a16352b74}{To\+String}} ()
+\begin{DoxyCompactList}\small\item\em Metoda zwracając anazwę studenta, jego grupy i numer podejścia \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Właściwości}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{class_prolog_validator_forms_1_1_student_tasks_manager_a703facd8ea7a3e065f413a4dc6dfb8a0}\label{class_prolog_validator_forms_1_1_student_tasks_manager_a703facd8ea7a3e065f413a4dc6dfb8a0}} 
-int {\bfseries Max\+Test\+Count}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+int \mbox{\hyperlink{class_prolog_validator_forms_1_1_student_tasks_manager_a703facd8ea7a3e065f413a4dc6dfb8a0}{Max\+Test\+Count}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Metoda zwracająca największą ilość testów przeprowadzanych dla wszystkich zadań \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_prolog_validator_forms_1_1_student_tasks_manager_aa9395089541f2009bfc4653ac0ed3aff}{Solution\+Name}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Metoda zwracająca nazwę studenta, jego grupy i numer podejścia \end{DoxyCompactList}\item 
+List$<$ \mbox{\hyperlink{class_prolog_validator_forms_1_1_task}{Task}} $>$ \mbox{\hyperlink{class_prolog_validator_forms_1_1_student_tasks_manager_a16ea15d614d370cf0a50a11baf1b9d1d}{Tasks}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Metoda zwracająca listę obiektów typu \mbox{\hyperlink{class_prolog_validator_forms_1_1_task}{Task}} \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Metody prywatne}
+\begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{class_prolog_validator_forms_1_1_student_tasks_manager_aa9395089541f2009bfc4653ac0ed3aff}\label{class_prolog_validator_forms_1_1_student_tasks_manager_aa9395089541f2009bfc4653ac0ed3aff}} 
-string {\bfseries Solution\+Name}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+void \mbox{\hyperlink{class_prolog_validator_forms_1_1_student_tasks_manager_a5ea63a83ec27f90d02ad1ce7817fec1d}{Add\+Task}} (\mbox{\hyperlink{class_prolog_validator_forms_1_1_task}{Task}} task)
+\begin{DoxyCompactList}\small\item\em Metoda dodająca do listy tasks dodająca obiekt typy \mbox{\hyperlink{class_prolog_validator_forms_1_1_task}{Task}} \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Atrybuty prywatne}
+\begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{class_prolog_validator_forms_1_1_student_tasks_manager_a16ea15d614d370cf0a50a11baf1b9d1d}\label{class_prolog_validator_forms_1_1_student_tasks_manager_a16ea15d614d370cf0a50a11baf1b9d1d}} 
-List$<$ \mbox{\hyperlink{class_prolog_validator_forms_1_1_task}{Task}} $>$ {\bfseries Tasks}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+string \mbox{\hyperlink{class_prolog_validator_forms_1_1_student_tasks_manager_ab6dbe13ea3c234235537690e3af53cb7}{student\+Directory\+Path}}
+\item 
+string \mbox{\hyperlink{class_prolog_validator_forms_1_1_student_tasks_manager_a63f5c89dea8fea2e7f2f2f9af65d1993}{solution\+Name}}
+\item 
+int \mbox{\hyperlink{class_prolog_validator_forms_1_1_student_tasks_manager_a38bb031b6a2a98093c03a0315741b455}{max\+Tests\+Count}}
+\item 
+\mbox{\hyperlink{class_prolog_validator_forms_1_1_library_1_1_key_manager}{Key\+Manager}} \mbox{\hyperlink{class_prolog_validator_forms_1_1_student_tasks_manager_a43fca1bb9ff1aeaf5f73217f81c91d58}{key\+Manager}}
+\item 
+List$<$ \mbox{\hyperlink{class_prolog_validator_forms_1_1_task}{Task}} $>$ \mbox{\hyperlink{class_prolog_validator_forms_1_1_student_tasks_manager_afd27cd22447a2414742a57324da886d0}{tasks}} = new List$<$\mbox{\hyperlink{class_prolog_validator_forms_1_1_task}{Task}}$>$()
 \end{DoxyCompactItemize}
+
+
+\doxysubsection{Opis szczegółowy}
+Klasa odpowiadająca za analizę zadań dla konkretnego stydenta 
+
+
+\begin{DoxyParams}{Parametry}
+{\em student\+Directory\+Path} & Przechowywuje ścieżkę w której znajduje się grupa\\
+\hline
+{\em solution\+Name} & Przechowywuje nazwę studenta, jego grupy i numer podejścia\\
+\hline
+{\em max\+Tests\+Count} & Przechowywuje największą ilość testów przeprowadzanych dla wszystkich zadań\\
+\hline
+{\em key\+Manager} & Przechowywuje obiekt typu Key\+Manager\\
+\hline
+{\em types} & Lista przechowująca obiekty typu \mbox{\hyperlink{class_prolog_validator_forms_1_1_task}{Task}}\\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Dokumentacja konstruktora i destruktora}
+\mbox{\Hypertarget{class_prolog_validator_forms_1_1_student_tasks_manager_a9b1273207ee7f15b8d9b13ed01511ad9}\label{class_prolog_validator_forms_1_1_student_tasks_manager_a9b1273207ee7f15b8d9b13ed01511ad9}} 
+\index{PrologValidatorForms.StudentTasksManager@{PrologValidatorForms.StudentTasksManager}!StudentTasksManager@{StudentTasksManager}}
+\index{StudentTasksManager@{StudentTasksManager}!PrologValidatorForms.StudentTasksManager@{PrologValidatorForms.StudentTasksManager}}
+\doxysubsubsection{\texorpdfstring{StudentTasksManager()}{StudentTasksManager()}}
+{\footnotesize\ttfamily Prolog\+Validator\+Forms.\+Student\+Tasks\+Manager.\+Student\+Tasks\+Manager (\begin{DoxyParamCaption}\item[{string}]{student\+Directory\+Path,  }\item[{\mbox{\hyperlink{class_prolog_validator_forms_1_1_library_1_1_key_manager}{Key\+Manager}}}]{key\+Manager }\end{DoxyParamCaption})}
+
+
+
+Konstruktor kopiujący inicializujący wszystkie pola składowej klasy 
+
+
+\begin{DoxyParams}{Parametry}
+{\em student\+Directory\+Path} & Przechowywuje ścieżkę w której znajduje się grupa\\
+\hline
+{\em key\+Manager} & Przechowywuje obiekt typu Key\+Manager\\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Dokumentacja funkcji składowych}
+\mbox{\Hypertarget{class_prolog_validator_forms_1_1_student_tasks_manager_a5ea63a83ec27f90d02ad1ce7817fec1d}\label{class_prolog_validator_forms_1_1_student_tasks_manager_a5ea63a83ec27f90d02ad1ce7817fec1d}} 
+\index{PrologValidatorForms.StudentTasksManager@{PrologValidatorForms.StudentTasksManager}!AddTask@{AddTask}}
+\index{AddTask@{AddTask}!PrologValidatorForms.StudentTasksManager@{PrologValidatorForms.StudentTasksManager}}
+\doxysubsubsection{\texorpdfstring{AddTask()}{AddTask()}}
+{\footnotesize\ttfamily void Prolog\+Validator\+Forms.\+Student\+Tasks\+Manager.\+Add\+Task (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_prolog_validator_forms_1_1_task}{Task}}}]{task }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Metoda dodająca do listy tasks dodająca obiekt typy \mbox{\hyperlink{class_prolog_validator_forms_1_1_task}{Task}} 
+
+
+\begin{DoxyParams}{Parametry}
+{\em task} & Przechowywuje obiekt typu \mbox{\hyperlink{class_prolog_validator_forms_1_1_task}{Task}}\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_prolog_validator_forms_1_1_student_tasks_manager_a4596fa320acce5d8c3352b48df151c98}\label{class_prolog_validator_forms_1_1_student_tasks_manager_a4596fa320acce5d8c3352b48df151c98}} 
+\index{PrologValidatorForms.StudentTasksManager@{PrologValidatorForms.StudentTasksManager}!AnalyzeTasks@{AnalyzeTasks}}
+\index{AnalyzeTasks@{AnalyzeTasks}!PrologValidatorForms.StudentTasksManager@{PrologValidatorForms.StudentTasksManager}}
+\doxysubsubsection{\texorpdfstring{AnalyzeTasks()}{AnalyzeTasks()}}
+{\footnotesize\ttfamily void Prolog\+Validator\+Forms.\+Student\+Tasks\+Manager.\+Analyze\+Tasks (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Metoda zbierająca podstawowe informacje o pliku oraz zapisuje wyniki zapytań 
+
+\mbox{\Hypertarget{class_prolog_validator_forms_1_1_student_tasks_manager_ae24e3d2a79a37f644c75eea00b9f7285}\label{class_prolog_validator_forms_1_1_student_tasks_manager_ae24e3d2a79a37f644c75eea00b9f7285}} 
+\index{PrologValidatorForms.StudentTasksManager@{PrologValidatorForms.StudentTasksManager}!ShowTasks@{ShowTasks}}
+\index{ShowTasks@{ShowTasks}!PrologValidatorForms.StudentTasksManager@{PrologValidatorForms.StudentTasksManager}}
+\doxysubsubsection{\texorpdfstring{ShowTasks()}{ShowTasks()}}
+{\footnotesize\ttfamily string Prolog\+Validator\+Forms.\+Student\+Tasks\+Manager.\+Show\+Tasks (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Metoda zwracająca nazwę zadania, jego ścieżkę oraz wyniki testów 
+
+\begin{DoxyReturn}{Zwraca}
+Zwraca nazwę zadania, jego ścieżkę oraz wyniki testów
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_prolog_validator_forms_1_1_student_tasks_manager_a8178bfbe00c37a67d87e1e9a16352b74}\label{class_prolog_validator_forms_1_1_student_tasks_manager_a8178bfbe00c37a67d87e1e9a16352b74}} 
+\index{PrologValidatorForms.StudentTasksManager@{PrologValidatorForms.StudentTasksManager}!ToString@{ToString}}
+\index{ToString@{ToString}!PrologValidatorForms.StudentTasksManager@{PrologValidatorForms.StudentTasksManager}}
+\doxysubsubsection{\texorpdfstring{ToString()}{ToString()}}
+{\footnotesize\ttfamily override string Prolog\+Validator\+Forms.\+Student\+Tasks\+Manager.\+To\+String (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Metoda zwracając anazwę studenta, jego grupy i numer podejścia 
+
+\begin{DoxyReturn}{Zwraca}
+Zwraca nazwę studenta, jego grupy i numer podejścia
+\end{DoxyReturn}
+
+
+\doxysubsection{Dokumentacja atrybutów składowych}
+\mbox{\Hypertarget{class_prolog_validator_forms_1_1_student_tasks_manager_a43fca1bb9ff1aeaf5f73217f81c91d58}\label{class_prolog_validator_forms_1_1_student_tasks_manager_a43fca1bb9ff1aeaf5f73217f81c91d58}} 
+\index{PrologValidatorForms.StudentTasksManager@{PrologValidatorForms.StudentTasksManager}!keyManager@{keyManager}}
+\index{keyManager@{keyManager}!PrologValidatorForms.StudentTasksManager@{PrologValidatorForms.StudentTasksManager}}
+\doxysubsubsection{\texorpdfstring{keyManager}{keyManager}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_prolog_validator_forms_1_1_library_1_1_key_manager}{Key\+Manager}} Prolog\+Validator\+Forms.\+Student\+Tasks\+Manager.\+key\+Manager\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_prolog_validator_forms_1_1_student_tasks_manager_a38bb031b6a2a98093c03a0315741b455}\label{class_prolog_validator_forms_1_1_student_tasks_manager_a38bb031b6a2a98093c03a0315741b455}} 
+\index{PrologValidatorForms.StudentTasksManager@{PrologValidatorForms.StudentTasksManager}!maxTestsCount@{maxTestsCount}}
+\index{maxTestsCount@{maxTestsCount}!PrologValidatorForms.StudentTasksManager@{PrologValidatorForms.StudentTasksManager}}
+\doxysubsubsection{\texorpdfstring{maxTestsCount}{maxTestsCount}}
+{\footnotesize\ttfamily int Prolog\+Validator\+Forms.\+Student\+Tasks\+Manager.\+max\+Tests\+Count\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_prolog_validator_forms_1_1_student_tasks_manager_a63f5c89dea8fea2e7f2f2f9af65d1993}\label{class_prolog_validator_forms_1_1_student_tasks_manager_a63f5c89dea8fea2e7f2f2f9af65d1993}} 
+\index{PrologValidatorForms.StudentTasksManager@{PrologValidatorForms.StudentTasksManager}!solutionName@{solutionName}}
+\index{solutionName@{solutionName}!PrologValidatorForms.StudentTasksManager@{PrologValidatorForms.StudentTasksManager}}
+\doxysubsubsection{\texorpdfstring{solutionName}{solutionName}}
+{\footnotesize\ttfamily string Prolog\+Validator\+Forms.\+Student\+Tasks\+Manager.\+solution\+Name\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_prolog_validator_forms_1_1_student_tasks_manager_ab6dbe13ea3c234235537690e3af53cb7}\label{class_prolog_validator_forms_1_1_student_tasks_manager_ab6dbe13ea3c234235537690e3af53cb7}} 
+\index{PrologValidatorForms.StudentTasksManager@{PrologValidatorForms.StudentTasksManager}!studentDirectoryPath@{studentDirectoryPath}}
+\index{studentDirectoryPath@{studentDirectoryPath}!PrologValidatorForms.StudentTasksManager@{PrologValidatorForms.StudentTasksManager}}
+\doxysubsubsection{\texorpdfstring{studentDirectoryPath}{studentDirectoryPath}}
+{\footnotesize\ttfamily string Prolog\+Validator\+Forms.\+Student\+Tasks\+Manager.\+student\+Directory\+Path\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_prolog_validator_forms_1_1_student_tasks_manager_afd27cd22447a2414742a57324da886d0}\label{class_prolog_validator_forms_1_1_student_tasks_manager_afd27cd22447a2414742a57324da886d0}} 
+\index{PrologValidatorForms.StudentTasksManager@{PrologValidatorForms.StudentTasksManager}!tasks@{tasks}}
+\index{tasks@{tasks}!PrologValidatorForms.StudentTasksManager@{PrologValidatorForms.StudentTasksManager}}
+\doxysubsubsection{\texorpdfstring{tasks}{tasks}}
+{\footnotesize\ttfamily List$<$\mbox{\hyperlink{class_prolog_validator_forms_1_1_task}{Task}}$>$ Prolog\+Validator\+Forms.\+Student\+Tasks\+Manager.\+tasks = new List$<$\mbox{\hyperlink{class_prolog_validator_forms_1_1_task}{Task}}$>$()\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+\doxysubsection{Dokumentacja właściwości}
+\mbox{\Hypertarget{class_prolog_validator_forms_1_1_student_tasks_manager_a703facd8ea7a3e065f413a4dc6dfb8a0}\label{class_prolog_validator_forms_1_1_student_tasks_manager_a703facd8ea7a3e065f413a4dc6dfb8a0}} 
+\index{PrologValidatorForms.StudentTasksManager@{PrologValidatorForms.StudentTasksManager}!MaxTestCount@{MaxTestCount}}
+\index{MaxTestCount@{MaxTestCount}!PrologValidatorForms.StudentTasksManager@{PrologValidatorForms.StudentTasksManager}}
+\doxysubsubsection{\texorpdfstring{MaxTestCount}{MaxTestCount}}
+{\footnotesize\ttfamily int Prolog\+Validator\+Forms.\+Student\+Tasks\+Manager.\+Max\+Test\+Count\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Metoda zwracająca największą ilość testów przeprowadzanych dla wszystkich zadań 
+
+\begin{DoxyReturn}{Zwraca}
+Zwraca największą ilość testów przeprowadzanych dla wszystkich zadań
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_prolog_validator_forms_1_1_student_tasks_manager_aa9395089541f2009bfc4653ac0ed3aff}\label{class_prolog_validator_forms_1_1_student_tasks_manager_aa9395089541f2009bfc4653ac0ed3aff}} 
+\index{PrologValidatorForms.StudentTasksManager@{PrologValidatorForms.StudentTasksManager}!SolutionName@{SolutionName}}
+\index{SolutionName@{SolutionName}!PrologValidatorForms.StudentTasksManager@{PrologValidatorForms.StudentTasksManager}}
+\doxysubsubsection{\texorpdfstring{SolutionName}{SolutionName}}
+{\footnotesize\ttfamily string Prolog\+Validator\+Forms.\+Student\+Tasks\+Manager.\+Solution\+Name\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Metoda zwracająca nazwę studenta, jego grupy i numer podejścia 
+
+\begin{DoxyReturn}{Zwraca}
+Zwraca nazwę studenta, jego grupy i numer podejścia
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_prolog_validator_forms_1_1_student_tasks_manager_a16ea15d614d370cf0a50a11baf1b9d1d}\label{class_prolog_validator_forms_1_1_student_tasks_manager_a16ea15d614d370cf0a50a11baf1b9d1d}} 
+\index{PrologValidatorForms.StudentTasksManager@{PrologValidatorForms.StudentTasksManager}!Tasks@{Tasks}}
+\index{Tasks@{Tasks}!PrologValidatorForms.StudentTasksManager@{PrologValidatorForms.StudentTasksManager}}
+\doxysubsubsection{\texorpdfstring{Tasks}{Tasks}}
+{\footnotesize\ttfamily List$<$\mbox{\hyperlink{class_prolog_validator_forms_1_1_task}{Task}}$>$ Prolog\+Validator\+Forms.\+Student\+Tasks\+Manager.\+Tasks\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Metoda zwracająca listę obiektów typu \mbox{\hyperlink{class_prolog_validator_forms_1_1_task}{Task}} 
+
+\begin{DoxyReturn}{Zwraca}
+Zwraca listę obiektów typu \mbox{\hyperlink{class_prolog_validator_forms_1_1_task}{Task}}
+\end{DoxyReturn}
 
 
 Dokumentacja dla tej klasy została wygenerowana z pliku\+:\begin{DoxyCompactItemize}
 \item 
-Prolog\+Validator\+Forms/\+Library/Student\+Tasks\+Manager.\+cs\end{DoxyCompactItemize}
+Prolog\+Validator\+Forms/\+Library/\mbox{\hyperlink{_student_tasks_manager_8cs}{Student\+Tasks\+Manager.\+cs}}\end{DoxyCompactItemize}

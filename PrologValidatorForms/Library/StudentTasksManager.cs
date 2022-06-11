@@ -11,7 +11,7 @@ namespace PrologValidatorForms
 {
 
     /// <summary>
-    /// Klasa odpowiadająca za analizę zadań dla konkretnego stydenta
+    /// Klasa odpowiadająca za analizę zadań dla konkretnego studenta
     /// </summary>
     /// <param name="studentDirectoryPath">Przechowywuje ścieżkę w której znajduje się grupa</param>
     /// <param name="solutionName">Przechowywuje nazwę studenta, jego grupy i numer podejścia</param>

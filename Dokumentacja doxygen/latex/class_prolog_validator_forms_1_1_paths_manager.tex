@@ -2,30 +2,69 @@
 \label{class_prolog_validator_forms_1_1_paths_manager}\index{PrologValidatorForms.PathsManager@{PrologValidatorForms.PathsManager}}
 
 
- 
+Klasa przechowywuje ścieżki plików, ich typ oraz zarządza nimi  
 
 
 \doxysubsection*{Metody publiczne}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{class_prolog_validator_forms_1_1_paths_manager_acbd09dc64b059d9f7d6288e0913b45b9}\label{class_prolog_validator_forms_1_1_paths_manager_acbd09dc64b059d9f7d6288e0913b45b9}} 
-void {\bfseries Add} (string path, Path\+List\+Types type)
-\item 
-\mbox{\Hypertarget{class_prolog_validator_forms_1_1_paths_manager_aa8e7e61416e488f05b21738eb0b49fae}\label{class_prolog_validator_forms_1_1_paths_manager_aa8e7e61416e488f05b21738eb0b49fae}} 
-void {\bfseries Clear} ()
-\begin{DoxyCompactList}\small\item\em Metoda \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_prolog_validator_forms_1_1_paths_manager_acbd09dc64b059d9f7d6288e0913b45b9}{Add}} (string path, \mbox{\hyperlink{namespace_prolog_validator_forms_abcd7873bc63e5d48c10aacd21f756c1b}{Path\+List\+Types}} type)
+\begin{DoxyCompactList}\small\item\em Metoda dodająca ścieżki i typy do odpowiednich list \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_prolog_validator_forms_1_1_paths_manager_aa8e7e61416e488f05b21738eb0b49fae}{Clear}} ()
+\begin{DoxyCompactList}\small\item\em Metoda czyszcząca listy \end{DoxyCompactList}\item 
 string \mbox{\hyperlink{class_prolog_validator_forms_1_1_paths_manager_ab3e5b70e057f630f4ddd9c9eb49baacb}{Get\+Path}} (int index)
-\begin{DoxyCompactList}\small\item\em Metoda \end{DoxyCompactList}\item 
-Path\+List\+Types \mbox{\hyperlink{class_prolog_validator_forms_1_1_paths_manager_af840d7a93399dcc2a759abd888377d2f}{Get\+Path\+Type}} (int index)
-\begin{DoxyCompactList}\small\item\em Metoda \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Metoda zwracająca ścieżkę o podanym indeksie \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespace_prolog_validator_forms_abcd7873bc63e5d48c10aacd21f756c1b}{Path\+List\+Types}} \mbox{\hyperlink{class_prolog_validator_forms_1_1_paths_manager_af840d7a93399dcc2a759abd888377d2f}{Get\+Path\+Type}} (int index)
+\begin{DoxyCompactList}\small\item\em Metoda zwracająca typ pliku o danym indeksie \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Atrybuty prywatne}
+\begin{DoxyCompactItemize}
+\item 
+List$<$ string $>$ \mbox{\hyperlink{class_prolog_validator_forms_1_1_paths_manager_a0a913368acd6c1655821e9604fc55b05}{paths}} = new List$<$string$>$()
+\item 
+List$<$ \mbox{\hyperlink{namespace_prolog_validator_forms_abcd7873bc63e5d48c10aacd21f756c1b}{Path\+List\+Types}} $>$ \mbox{\hyperlink{class_prolog_validator_forms_1_1_paths_manager_a2fba3e87cd13b10aa21fb196e8ebf019}{types}} = new List$<$\mbox{\hyperlink{namespace_prolog_validator_forms_abcd7873bc63e5d48c10aacd21f756c1b}{Path\+List\+Types}}$>$()
+\end{DoxyCompactItemize}
 
 
 \doxysubsection{Opis szczegółowy}
+Klasa przechowywuje ścieżki plików, ich typ oraz zarządza nimi 
 
 
+\begin{DoxyParams}{Parametry}
+{\em paths} & Lista przechowywująca ścieżki do plików lub folderów\\
+\hline
+{\em types} & Lista przechowująca typy powyższych ścieżek\\
+\hline
+\end{DoxyParams}
 
 
 \doxysubsection{Dokumentacja funkcji składowych}
+\mbox{\Hypertarget{class_prolog_validator_forms_1_1_paths_manager_acbd09dc64b059d9f7d6288e0913b45b9}\label{class_prolog_validator_forms_1_1_paths_manager_acbd09dc64b059d9f7d6288e0913b45b9}} 
+\index{PrologValidatorForms.PathsManager@{PrologValidatorForms.PathsManager}!Add@{Add}}
+\index{Add@{Add}!PrologValidatorForms.PathsManager@{PrologValidatorForms.PathsManager}}
+\doxysubsubsection{\texorpdfstring{Add()}{Add()}}
+{\footnotesize\ttfamily void Prolog\+Validator\+Forms.\+Paths\+Manager.\+Add (\begin{DoxyParamCaption}\item[{string}]{path,  }\item[{\mbox{\hyperlink{namespace_prolog_validator_forms_abcd7873bc63e5d48c10aacd21f756c1b}{Path\+List\+Types}}}]{type }\end{DoxyParamCaption})}
+
+
+
+Metoda dodająca ścieżki i typy do odpowiednich list 
+
+
+\begin{DoxyParams}{Parametry}
+{\em path} & Przechowywuje ścieżkę\\
+\hline
+{\em type} & Przechowywuje typ powyższej ścierzki\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_prolog_validator_forms_1_1_paths_manager_aa8e7e61416e488f05b21738eb0b49fae}\label{class_prolog_validator_forms_1_1_paths_manager_aa8e7e61416e488f05b21738eb0b49fae}} 
+\index{PrologValidatorForms.PathsManager@{PrologValidatorForms.PathsManager}!Clear@{Clear}}
+\index{Clear@{Clear}!PrologValidatorForms.PathsManager@{PrologValidatorForms.PathsManager}}
+\doxysubsubsection{\texorpdfstring{Clear()}{Clear()}}
+{\footnotesize\ttfamily void Prolog\+Validator\+Forms.\+Paths\+Manager.\+Clear (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Metoda czyszcząca listy 
+
 \mbox{\Hypertarget{class_prolog_validator_forms_1_1_paths_manager_ab3e5b70e057f630f4ddd9c9eb49baacb}\label{class_prolog_validator_forms_1_1_paths_manager_ab3e5b70e057f630f4ddd9c9eb49baacb}} 
 \index{PrologValidatorForms.PathsManager@{PrologValidatorForms.PathsManager}!GetPath@{GetPath}}
 \index{GetPath@{GetPath}!PrologValidatorForms.PathsManager@{PrologValidatorForms.PathsManager}}
@@ -34,36 +73,51 @@ Path\+List\+Types \mbox{\hyperlink{class_prolog_validator_forms_1_1_paths_manage
 
 
 
-Metoda 
+Metoda zwracająca ścieżkę o podanym indeksie 
 
 
 \begin{DoxyParams}{Parametry}
-{\em index} & \\
+{\em index} & Przechowywuje indeks\\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Zwraca}
-
+Zwraca ścieżkę o podanym indeksie
 \end{DoxyReturn}
 \mbox{\Hypertarget{class_prolog_validator_forms_1_1_paths_manager_af840d7a93399dcc2a759abd888377d2f}\label{class_prolog_validator_forms_1_1_paths_manager_af840d7a93399dcc2a759abd888377d2f}} 
 \index{PrologValidatorForms.PathsManager@{PrologValidatorForms.PathsManager}!GetPathType@{GetPathType}}
 \index{GetPathType@{GetPathType}!PrologValidatorForms.PathsManager@{PrologValidatorForms.PathsManager}}
 \doxysubsubsection{\texorpdfstring{GetPathType()}{GetPathType()}}
-{\footnotesize\ttfamily Path\+List\+Types Prolog\+Validator\+Forms.\+Paths\+Manager.\+Get\+Path\+Type (\begin{DoxyParamCaption}\item[{int}]{index }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespace_prolog_validator_forms_abcd7873bc63e5d48c10aacd21f756c1b}{Path\+List\+Types}} Prolog\+Validator\+Forms.\+Paths\+Manager.\+Get\+Path\+Type (\begin{DoxyParamCaption}\item[{int}]{index }\end{DoxyParamCaption})}
 
 
 
-Metoda 
+Metoda zwracająca typ pliku o danym indeksie 
 
 
 \begin{DoxyParams}{Parametry}
-{\em index} & \\
+{\em index} & Przechowywuje indeks\\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Zwraca}
-
+Zwraca typ pliku o danym indeksie
 \end{DoxyReturn}
+
+
+\doxysubsection{Dokumentacja atrybutów składowych}
+\mbox{\Hypertarget{class_prolog_validator_forms_1_1_paths_manager_a0a913368acd6c1655821e9604fc55b05}\label{class_prolog_validator_forms_1_1_paths_manager_a0a913368acd6c1655821e9604fc55b05}} 
+\index{PrologValidatorForms.PathsManager@{PrologValidatorForms.PathsManager}!paths@{paths}}
+\index{paths@{paths}!PrologValidatorForms.PathsManager@{PrologValidatorForms.PathsManager}}
+\doxysubsubsection{\texorpdfstring{paths}{paths}}
+{\footnotesize\ttfamily List$<$string$>$ Prolog\+Validator\+Forms.\+Paths\+Manager.\+paths = new List$<$string$>$()\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_prolog_validator_forms_1_1_paths_manager_a2fba3e87cd13b10aa21fb196e8ebf019}\label{class_prolog_validator_forms_1_1_paths_manager_a2fba3e87cd13b10aa21fb196e8ebf019}} 
+\index{PrologValidatorForms.PathsManager@{PrologValidatorForms.PathsManager}!types@{types}}
+\index{types@{types}!PrologValidatorForms.PathsManager@{PrologValidatorForms.PathsManager}}
+\doxysubsubsection{\texorpdfstring{types}{types}}
+{\footnotesize\ttfamily List$<$\mbox{\hyperlink{namespace_prolog_validator_forms_abcd7873bc63e5d48c10aacd21f756c1b}{Path\+List\+Types}}$>$ Prolog\+Validator\+Forms.\+Paths\+Manager.\+types = new List$<$\mbox{\hyperlink{namespace_prolog_validator_forms_abcd7873bc63e5d48c10aacd21f756c1b}{Path\+List\+Types}}$>$()\hspace{0.3cm}{\ttfamily [private]}}
+
 
 
 Dokumentacja dla tej klasy została wygenerowana z pliku\+:\begin{DoxyCompactItemize}
 \item 
-Prolog\+Validator\+Forms/\+Library/Paths\+Manager.\+cs\end{DoxyCompactItemize}
+Prolog\+Validator\+Forms/\+Library/\mbox{\hyperlink{_paths_manager_8cs}{Paths\+Manager.\+cs}}\end{DoxyCompactItemize}

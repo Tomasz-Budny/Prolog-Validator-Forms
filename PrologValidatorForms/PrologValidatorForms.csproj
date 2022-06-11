@@ -59,6 +59,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Library\CircularButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Library\CustomFileBrowser.cs">
       <SubType>UserControl</SubType>
     </Compile>

@@ -8,18 +8,38 @@ Podstawowa klasa funkcji odpowiadającej za rozpoczęcie programu oraz generowan
 \doxysubsection*{Metody publiczne}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{class_prolog_validator_forms_1_1_library_1_1_group_manager_a66cbf0da56d1bc91b5750c54c0b31238}{Group\+Manager}} (string group\+Directory\+Path, string destination\+Directory)
+\mbox{\hyperlink{class_prolog_validator_forms_1_1_library_1_1_group_manager_a66cbf0da56d1bc91b5750c54c0b31238}{Group\+Manager}} (string \mbox{\hyperlink{class_prolog_validator_forms_1_1_library_1_1_group_manager_a589f14109676ac339b05f6c479980fcd}{group\+Directory\+Path}}, string \mbox{\hyperlink{class_prolog_validator_forms_1_1_library_1_1_group_manager_a3e7576fee49ea3b091707143619dcfd1}{destination\+Directory}})
 \begin{DoxyCompactList}\small\item\em Konstruktor kopiujący inicializujący wszystkie pola składowej klasy \end{DoxyCompactList}\item 
-\mbox{\hyperlink{class_prolog_validator_forms_1_1_library_1_1_group_manager_a2e13a76d722e4040228097188aec2427}{Group\+Manager}} (string group\+Directory\+Path, string destination\+Directory, double max\+Progress\+Bar\+Value, Panel progress\+Bar)
+\mbox{\hyperlink{class_prolog_validator_forms_1_1_library_1_1_group_manager_a2e13a76d722e4040228097188aec2427}{Group\+Manager}} (string \mbox{\hyperlink{class_prolog_validator_forms_1_1_library_1_1_group_manager_a589f14109676ac339b05f6c479980fcd}{group\+Directory\+Path}}, string \mbox{\hyperlink{class_prolog_validator_forms_1_1_library_1_1_group_manager_a3e7576fee49ea3b091707143619dcfd1}{destination\+Directory}}, double \mbox{\hyperlink{class_prolog_validator_forms_1_1_library_1_1_group_manager_a0b5ef96c6f06ae3dd854f78322bee406}{max\+Progress\+Bar\+Value}}, Panel \mbox{\hyperlink{class_prolog_validator_forms_1_1_library_1_1_group_manager_a0dff763895939ed535d583cea8c76f26}{progress\+Bar}})
 \begin{DoxyCompactList}\small\item\em Alternatywny konstruktor kopiujący inicializujący wszystkie pola składowej klasy \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{class_prolog_validator_forms_1_1_library_1_1_group_manager_a5658053c576495985f71026a18f3ec82}\label{class_prolog_validator_forms_1_1_library_1_1_group_manager_a5658053c576495985f71026a18f3ec82}} 
-void {\bfseries Analyze\+Solution} ()
+void \mbox{\hyperlink{class_prolog_validator_forms_1_1_library_1_1_group_manager_a5658053c576495985f71026a18f3ec82}{Analyze\+Solution}} ()
 \begin{DoxyCompactList}\small\item\em Metoda rozpoczynająca i kończąca program \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{class_prolog_validator_forms_1_1_library_1_1_group_manager_a0dc8c7bbdddc43f877d1f7066341cbba}\label{class_prolog_validator_forms_1_1_library_1_1_group_manager_a0dc8c7bbdddc43f877d1f7066341cbba}} 
-void {\bfseries Create\+Excel\+File} ()
+void \mbox{\hyperlink{class_prolog_validator_forms_1_1_library_1_1_group_manager_a0dc8c7bbdddc43f877d1f7066341cbba}{Create\+Excel\+File}} ()
 \begin{DoxyCompactList}\small\item\em Metoda tworząca plik exel \end{DoxyCompactList}\item 
 override string \mbox{\hyperlink{class_prolog_validator_forms_1_1_library_1_1_group_manager_ad68a1849422e69b8762e730d0803c13c}{To\+String}} ()
 \begin{DoxyCompactList}\small\item\em Metoda zwracająca nazwę grupy i studentów w niej zawartych \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Metody prywatne}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_prolog_validator_forms_1_1_library_1_1_group_manager_a01c6cff8422ed0490c12118e93ccdfb7}{Update\+Progress\+Bar}} (double present\+Student\+Number, double max\+Student\+Number)
+\begin{DoxyCompactList}\small\item\em Metoda aktualizująca postęp paska postępu \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_prolog_validator_forms_1_1_library_1_1_group_manager_a90812bc76ce253886cf9b899bf24ed2d}{Show\+Students}} ()
+\begin{DoxyCompactList}\small\item\em Metoda prywatna wypisująca nazwy studentów \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Atrybuty prywatne}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{class_prolog_validator_forms_1_1_library_1_1_group_manager_a589f14109676ac339b05f6c479980fcd}{group\+Directory\+Path}}
+\item 
+string \mbox{\hyperlink{class_prolog_validator_forms_1_1_library_1_1_group_manager_a2690898d7770490e1e635a38600cd427}{name}}
+\item 
+string \mbox{\hyperlink{class_prolog_validator_forms_1_1_library_1_1_group_manager_a3e7576fee49ea3b091707143619dcfd1}{destination\+Directory}}
+\item 
+List$<$ \mbox{\hyperlink{class_prolog_validator_forms_1_1_student_tasks_manager}{Student\+Tasks\+Manager}} $>$ \mbox{\hyperlink{class_prolog_validator_forms_1_1_library_1_1_group_manager_a50d8b24b61dd120af7d9a8741201a9b6}{student\+Tasks\+Managers}} = new List$<$\mbox{\hyperlink{class_prolog_validator_forms_1_1_student_tasks_manager}{Student\+Tasks\+Manager}}$>$()
+\item 
+double \mbox{\hyperlink{class_prolog_validator_forms_1_1_library_1_1_group_manager_a0b5ef96c6f06ae3dd854f78322bee406}{max\+Progress\+Bar\+Value}}
+\item 
+Panel \mbox{\hyperlink{class_prolog_validator_forms_1_1_library_1_1_group_manager_a0dff763895939ed535d583cea8c76f26}{progress\+Bar}}
+\end{DoxyCompactItemize}
 
 
 \doxysubsection{Opis szczegółowy}
@@ -33,8 +53,23 @@ Podstawowa klasa funkcji odpowiadającej za rozpoczęcie programu oraz generowan
 \hline
 {\em destination\+Directory} & Przechowywuje ścieżkę w której ma zostać wygenerowany plik exel\\
 \hline
+{\em student\+Tasks\+Managers} & Lista przechowująca obiekty typu \mbox{\hyperlink{class_prolog_validator_forms_1_1_student_tasks_manager}{Student\+Tasks\+Manager}}\\
+\hline
 \end{DoxyParams}
-
+~\newline
+ 
+\begin{DoxyParams}{Parametry}
+{\em max\+Progress\+Bar\+Value} & Przechowywuje szerokość paska postępu w pełni wypełnionego\\
+\hline
+\end{DoxyParams}
+~\newline
+ 
+\begin{DoxyParams}{Parametry}
+{\em progress\+Bar} & Obiekt będący odwołaniem do paska postępu\\
+\hline
+\end{DoxyParams}
+~\newline
+ 
 
 \doxysubsection{Dokumentacja konstruktora i destruktora}
 \mbox{\Hypertarget{class_prolog_validator_forms_1_1_library_1_1_group_manager_a66cbf0da56d1bc91b5750c54c0b31238}\label{class_prolog_validator_forms_1_1_library_1_1_group_manager_a66cbf0da56d1bc91b5750c54c0b31238}} 
@@ -70,14 +105,47 @@ Alternatywny konstruktor kopiujący inicializujący wszystkie pola składowej kl
 \hline
 {\em destination\+Directory} & Przechowywuje ścieżkę w której ma zostać wygenerowany plik exel\\
 \hline
-{\em max\+Progress\+Bar\+Value} & \\
+{\em max\+Progress\+Bar\+Value} & Przechowywuje szerokość paska postępu w pełni wypełnionego\\
 \hline
-{\em progress\+Bar} & \\
+{\em progress\+Bar} & Obiekt będący odwołaniem do paska postępu\\
 \hline
 \end{DoxyParams}
 
 
 \doxysubsection{Dokumentacja funkcji składowych}
+\mbox{\Hypertarget{class_prolog_validator_forms_1_1_library_1_1_group_manager_a5658053c576495985f71026a18f3ec82}\label{class_prolog_validator_forms_1_1_library_1_1_group_manager_a5658053c576495985f71026a18f3ec82}} 
+\index{PrologValidatorForms.Library.GroupManager@{PrologValidatorForms.Library.GroupManager}!AnalyzeSolution@{AnalyzeSolution}}
+\index{AnalyzeSolution@{AnalyzeSolution}!PrologValidatorForms.Library.GroupManager@{PrologValidatorForms.Library.GroupManager}}
+\doxysubsubsection{\texorpdfstring{AnalyzeSolution()}{AnalyzeSolution()}}
+{\footnotesize\ttfamily void Prolog\+Validator\+Forms.\+Library.\+Group\+Manager.\+Analyze\+Solution (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Metoda rozpoczynająca i kończąca program 
+
+\mbox{\Hypertarget{class_prolog_validator_forms_1_1_library_1_1_group_manager_a0dc8c7bbdddc43f877d1f7066341cbba}\label{class_prolog_validator_forms_1_1_library_1_1_group_manager_a0dc8c7bbdddc43f877d1f7066341cbba}} 
+\index{PrologValidatorForms.Library.GroupManager@{PrologValidatorForms.Library.GroupManager}!CreateExcelFile@{CreateExcelFile}}
+\index{CreateExcelFile@{CreateExcelFile}!PrologValidatorForms.Library.GroupManager@{PrologValidatorForms.Library.GroupManager}}
+\doxysubsubsection{\texorpdfstring{CreateExcelFile()}{CreateExcelFile()}}
+{\footnotesize\ttfamily void Prolog\+Validator\+Forms.\+Library.\+Group\+Manager.\+Create\+Excel\+File (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Metoda tworząca plik exel 
+
+\mbox{\Hypertarget{class_prolog_validator_forms_1_1_library_1_1_group_manager_a90812bc76ce253886cf9b899bf24ed2d}\label{class_prolog_validator_forms_1_1_library_1_1_group_manager_a90812bc76ce253886cf9b899bf24ed2d}} 
+\index{PrologValidatorForms.Library.GroupManager@{PrologValidatorForms.Library.GroupManager}!ShowStudents@{ShowStudents}}
+\index{ShowStudents@{ShowStudents}!PrologValidatorForms.Library.GroupManager@{PrologValidatorForms.Library.GroupManager}}
+\doxysubsubsection{\texorpdfstring{ShowStudents()}{ShowStudents()}}
+{\footnotesize\ttfamily string Prolog\+Validator\+Forms.\+Library.\+Group\+Manager.\+Show\+Students (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Metoda prywatna wypisująca nazwy studentów 
+
+\begin{DoxyReturn}{Zwraca}
+Zwraca nazwy studentów
+\end{DoxyReturn}
 \mbox{\Hypertarget{class_prolog_validator_forms_1_1_library_1_1_group_manager_ad68a1849422e69b8762e730d0803c13c}\label{class_prolog_validator_forms_1_1_library_1_1_group_manager_ad68a1849422e69b8762e730d0803c13c}} 
 \index{PrologValidatorForms.Library.GroupManager@{PrologValidatorForms.Library.GroupManager}!ToString@{ToString}}
 \index{ToString@{ToString}!PrologValidatorForms.Library.GroupManager@{PrologValidatorForms.Library.GroupManager}}
@@ -91,8 +159,64 @@ Metoda zwracająca nazwę grupy i studentów w niej zawartych
 \begin{DoxyReturn}{Zwraca}
 Zwracająca nazwę grupy i studentów w niej zawartych
 \end{DoxyReturn}
+\mbox{\Hypertarget{class_prolog_validator_forms_1_1_library_1_1_group_manager_a01c6cff8422ed0490c12118e93ccdfb7}\label{class_prolog_validator_forms_1_1_library_1_1_group_manager_a01c6cff8422ed0490c12118e93ccdfb7}} 
+\index{PrologValidatorForms.Library.GroupManager@{PrologValidatorForms.Library.GroupManager}!UpdateProgressBar@{UpdateProgressBar}}
+\index{UpdateProgressBar@{UpdateProgressBar}!PrologValidatorForms.Library.GroupManager@{PrologValidatorForms.Library.GroupManager}}
+\doxysubsubsection{\texorpdfstring{UpdateProgressBar()}{UpdateProgressBar()}}
+{\footnotesize\ttfamily void Prolog\+Validator\+Forms.\+Library.\+Group\+Manager.\+Update\+Progress\+Bar (\begin{DoxyParamCaption}\item[{double}]{present\+Student\+Number,  }\item[{double}]{max\+Student\+Number }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Metoda aktualizująca postęp paska postępu 
+
+
+\begin{DoxyParams}{Parametry}
+{\em present\+Student\+Number} & Przechowywyje numer aktualnie sprawdzanego studenta\\
+\hline
+{\em max\+Student\+Number} & Przechowywuje ilość wszystkich analizowanych studentów\\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Dokumentacja atrybutów składowych}
+\mbox{\Hypertarget{class_prolog_validator_forms_1_1_library_1_1_group_manager_a3e7576fee49ea3b091707143619dcfd1}\label{class_prolog_validator_forms_1_1_library_1_1_group_manager_a3e7576fee49ea3b091707143619dcfd1}} 
+\index{PrologValidatorForms.Library.GroupManager@{PrologValidatorForms.Library.GroupManager}!destinationDirectory@{destinationDirectory}}
+\index{destinationDirectory@{destinationDirectory}!PrologValidatorForms.Library.GroupManager@{PrologValidatorForms.Library.GroupManager}}
+\doxysubsubsection{\texorpdfstring{destinationDirectory}{destinationDirectory}}
+{\footnotesize\ttfamily string Prolog\+Validator\+Forms.\+Library.\+Group\+Manager.\+destination\+Directory\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_prolog_validator_forms_1_1_library_1_1_group_manager_a589f14109676ac339b05f6c479980fcd}\label{class_prolog_validator_forms_1_1_library_1_1_group_manager_a589f14109676ac339b05f6c479980fcd}} 
+\index{PrologValidatorForms.Library.GroupManager@{PrologValidatorForms.Library.GroupManager}!groupDirectoryPath@{groupDirectoryPath}}
+\index{groupDirectoryPath@{groupDirectoryPath}!PrologValidatorForms.Library.GroupManager@{PrologValidatorForms.Library.GroupManager}}
+\doxysubsubsection{\texorpdfstring{groupDirectoryPath}{groupDirectoryPath}}
+{\footnotesize\ttfamily string Prolog\+Validator\+Forms.\+Library.\+Group\+Manager.\+group\+Directory\+Path\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_prolog_validator_forms_1_1_library_1_1_group_manager_a0b5ef96c6f06ae3dd854f78322bee406}\label{class_prolog_validator_forms_1_1_library_1_1_group_manager_a0b5ef96c6f06ae3dd854f78322bee406}} 
+\index{PrologValidatorForms.Library.GroupManager@{PrologValidatorForms.Library.GroupManager}!maxProgressBarValue@{maxProgressBarValue}}
+\index{maxProgressBarValue@{maxProgressBarValue}!PrologValidatorForms.Library.GroupManager@{PrologValidatorForms.Library.GroupManager}}
+\doxysubsubsection{\texorpdfstring{maxProgressBarValue}{maxProgressBarValue}}
+{\footnotesize\ttfamily double Prolog\+Validator\+Forms.\+Library.\+Group\+Manager.\+max\+Progress\+Bar\+Value\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_prolog_validator_forms_1_1_library_1_1_group_manager_a2690898d7770490e1e635a38600cd427}\label{class_prolog_validator_forms_1_1_library_1_1_group_manager_a2690898d7770490e1e635a38600cd427}} 
+\index{PrologValidatorForms.Library.GroupManager@{PrologValidatorForms.Library.GroupManager}!name@{name}}
+\index{name@{name}!PrologValidatorForms.Library.GroupManager@{PrologValidatorForms.Library.GroupManager}}
+\doxysubsubsection{\texorpdfstring{name}{name}}
+{\footnotesize\ttfamily string Prolog\+Validator\+Forms.\+Library.\+Group\+Manager.\+name\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_prolog_validator_forms_1_1_library_1_1_group_manager_a0dff763895939ed535d583cea8c76f26}\label{class_prolog_validator_forms_1_1_library_1_1_group_manager_a0dff763895939ed535d583cea8c76f26}} 
+\index{PrologValidatorForms.Library.GroupManager@{PrologValidatorForms.Library.GroupManager}!progressBar@{progressBar}}
+\index{progressBar@{progressBar}!PrologValidatorForms.Library.GroupManager@{PrologValidatorForms.Library.GroupManager}}
+\doxysubsubsection{\texorpdfstring{progressBar}{progressBar}}
+{\footnotesize\ttfamily Panel Prolog\+Validator\+Forms.\+Library.\+Group\+Manager.\+progress\+Bar\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_prolog_validator_forms_1_1_library_1_1_group_manager_a50d8b24b61dd120af7d9a8741201a9b6}\label{class_prolog_validator_forms_1_1_library_1_1_group_manager_a50d8b24b61dd120af7d9a8741201a9b6}} 
+\index{PrologValidatorForms.Library.GroupManager@{PrologValidatorForms.Library.GroupManager}!studentTasksManagers@{studentTasksManagers}}
+\index{studentTasksManagers@{studentTasksManagers}!PrologValidatorForms.Library.GroupManager@{PrologValidatorForms.Library.GroupManager}}
+\doxysubsubsection{\texorpdfstring{studentTasksManagers}{studentTasksManagers}}
+{\footnotesize\ttfamily List$<$\mbox{\hyperlink{class_prolog_validator_forms_1_1_student_tasks_manager}{Student\+Tasks\+Manager}}$>$ Prolog\+Validator\+Forms.\+Library.\+Group\+Manager.\+student\+Tasks\+Managers = new List$<$\mbox{\hyperlink{class_prolog_validator_forms_1_1_student_tasks_manager}{Student\+Tasks\+Manager}}$>$()\hspace{0.3cm}{\ttfamily [private]}}
+
 
 
 Dokumentacja dla tej klasy została wygenerowana z pliku\+:\begin{DoxyCompactItemize}
 \item 
-Prolog\+Validator\+Forms/\+Library/Group\+Manager.\+cs\end{DoxyCompactItemize}
+Prolog\+Validator\+Forms/\+Library/\mbox{\hyperlink{_group_manager_8cs}{Group\+Manager.\+cs}}\end{DoxyCompactItemize}
