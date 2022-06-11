@@ -38,7 +38,6 @@ C:\Users\GAMING\Desktop\Projekt IO KOD\PrologValidatorForms\bin\Debug\PrologVali
 C:\Users\GAMING\Desktop\Projekt IO KOD\PrologValidatorForms\bin\Debug\PrologValidatorForms.pdb
 C:\Users\GAMING\Desktop\Projekt IO KOD\PrologValidatorForms\bin\Debug\CSProlog.dll
 C:\Users\GAMING\Desktop\Projekt IO KOD\PrologValidatorForms\bin\Debug\EPPlus.dll
-C:\Users\GAMING\Desktop\Projekt IO KOD\PrologValidatorForms\bin\Debug\SwiftExcel.dll
 C:\Users\GAMING\Desktop\Projekt IO KOD\PrologValidatorForms\bin\Debug\System.ComponentModel.Annotations.dll
 C:\Users\GAMING\Desktop\Projekt IO KOD\PrologValidatorForms\bin\Debug\CSProlog.pdb
 C:\Users\GAMING\Desktop\Projekt IO KOD\PrologValidatorForms\bin\Debug\EPPlus.xml
