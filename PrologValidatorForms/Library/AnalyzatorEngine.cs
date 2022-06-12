@@ -8,7 +8,7 @@ using Prolog;
 using System.Windows.Forms;
 
 
-namespace PrologValidatorForms
+namespace PrologValidatorForms.Library
 {
     /// <summary>
     /// Klasa odpowiadająca za analizę wyników poszczególnych plików

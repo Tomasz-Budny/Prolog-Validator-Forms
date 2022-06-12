@@ -13,8 +13,10 @@ using System.Threading;
 namespace PrologValidatorForms
 {
     /// <summary>
-    /// Klasa zawierająca 
+    /// Klasa zawierająca metody GUI
     /// </summary>
+    /// <param name="gm">Przechowywyje obiekt typu GroupManager</param>
+    /// <param name="maxProgressBarValue">Przechowywyje maksymalną długość ProgressBaru</param>
     /// <param name="mouse_Down">Przechowywyje </param>
     /// <param name="offset">Przechowuje obiekt typu Point</param>
     public partial class Main : Form
@@ -45,7 +47,7 @@ namespace PrologValidatorForms
            );
 
         /// <summary>
-        /// Metoda 
+        /// Metoda ładująca formularz 
         /// </summary>
         /// <param name="sender">Przechowywuje </param>
         /// <param name="e">Przechowywuje obiekt typu EventArgs</param>
@@ -142,15 +144,7 @@ namespace PrologValidatorForms
             
         }
 
-        /// <summary>
-        /// Metoda generowana automatycznie
-        /// </summary>
-        /// <param name="sender">Przechowywuje </param>
-        /// <param name="e">Przechowywuje obiekt typu EventArgs</param>
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
+        
 
         /// <summary>
         /// Metoda generowana automatycznie
@@ -165,8 +159,8 @@ namespace PrologValidatorForms
         /// <summary>
         /// Metoda generowana automatycznie
         /// </summary>
-        /// <param name="keyManager">Przechowywuje odwołanie do obiektu</param>
-        /// <param name="keyManager">Przechowywuje obiekt typu EventArgs będący informacją o zdarzeniu</param>
+        /// <param name="sender">Przechowywuje </param>
+        /// <param name="e">Przechowywuje obiekt typu EventArgs</param>
         private void label1_Click(object sender, EventArgs e)
         {
 
@@ -175,8 +169,8 @@ namespace PrologValidatorForms
         /// <summary>
         /// Metoda generowana automatycznie
         /// </summary>
-        /// <param name="keyManager">Przechowywuje odwołanie do obiektu</param>
-        /// <param name="keyManager">Przechowywuje obiekt typu PaintEventArgs klasy do rysowania prostokątów w formularzu</param>
+        /// <param name="sender">Przechowywuje odwołanie do obiektu</param>
+        /// <param name="a">Przechowywuje obiekt typu PaintEventArgs klasy do rysowania prostokątów w formularzu</param>
         private void panel4_Paint(object sender, PaintEventArgs e)
         {            
         }
@@ -184,13 +178,18 @@ namespace PrologValidatorForms
         /// <summary>
         /// Metoda generowana automatycznie
         /// </summary>
-        /// <param name="keyManager">Przechowywuje odwołanie do obiektu</param>
-        /// <param name="keyManager">Przechowywuje obiekt typu PaintEventArgs klasy do rysowania prostokątów w formularzu</param>
+        /// <param name="sender">Przechowywuje odwołanie do obiektu</param>
+        /// <param name="e">Przechowywuje obiekt typu PaintEventArgs klasy do rysowania prostokątów w formularzu</param>
         private void panel5_Paint(object sender, PaintEventArgs e)
         {
 
         }
 
+        /// <summary>
+        /// Metoda odpowiadająca za działanie timera
+        /// </summary>
+        /// <param name="sender">Przechowywuje </param>
+        /// <param name="e">Przechowywuje obiekt typu EventArgs</param>
         private void timer1_Tick(object sender, EventArgs e)
         {
             timer1.Stop();
@@ -201,8 +200,8 @@ namespace PrologValidatorForms
         /// <summary>
         /// Metoda słóżąca do zamykania aplikacji za pomocą przycisku "Exit"
         /// </summary>
-        /// <param name="keyManager">Przechowywuje odwołanie do obiektu</param>
-        /// <param name="keyManager">Przechowywuje obiekt typu EventArgs będący informacją o zdarzeniu</param>
+        /// <param name="sender">Przechowywuje </param>
+        /// <param name="e">Przechowywuje obiekt typu EventArgs</param>
         private void button1_Click(object sender, EventArgs e)
         {
             Application.Exit();
@@ -226,7 +225,8 @@ namespace PrologValidatorForms
         /// <summary>
         /// Metoda minimalizująca okno aplikacji
         /// </summary>
-        /// <param name="form">Przetrzymuje obiekt typu typu Form</param>
+        /// <param name="sender">Przechowywuje odwołanie do obiektu</param>
+        /// <param name="e">Przechowywuje obiekt typu PaintEventArgs klasy do rysowania prostokątów w formularzu</param>
         private void button2_Click(object sender, EventArgs e)
         {
             Control.Minimize(this);
@@ -235,8 +235,8 @@ namespace PrologValidatorForms
         /// <summary>
         /// Metoda generowana automatycznie
         /// </summary>
-        /// <param name="keyManager">Przechowywuje odwołanie do obiektu</param>
-        /// <param name="keyManager">Przechowywuje obiekt typu EventArgs będący informacją o zdarzeniu</param>
+        /// <param name="sender">Przechowywuje </param>
+        /// <param name="e">Przechowywuje obiekt typu EventArgs</param>
         private void pictureBox1_Click(object sender, EventArgs e)
         {
 
@@ -245,17 +245,17 @@ namespace PrologValidatorForms
         /// <summary>
         /// Metoda generowana automatycznie
         /// </summary>
-        /// <param name="keyManager">Przechowywuje odwołanie do obiektu</param>
-        /// <param name="keyManager">Przechowywuje obiekt typu EventArgs będący informacją o zdarzeniu</param>
+        /// <param name="sender">Przechowywuje odwołanie do obiektu</param>
+        /// <param name="e">Przechowywuje obiekt typu PaintEventArgs klasy do rysowania prostokątów w formularzu</param>
         private void Main_Paint(object sender, PaintEventArgs e)
         {           
         }
 
         /// <summary>
-        /// Metoda 
+        /// Metoda przetrzymująca informacje o instrukcji po najechaniu myszką
         /// </summary>
-        /// <param name="keyManager">Przechowywuje odwołanie do obiektu</param>
-        /// <param name="keyManager">Przechowywuje obiekt typu EventArgs będący informacją o zdarzeniu</param>
+        /// <param name="sender">Przechowywuje </param>
+        /// <param name="e">Przechowywuje obiekt typu EventArgs</param>
         private void informator1_MouseHover(object sender, EventArgs e)
         {
             string Information = "------------------------------------------- INSTRUKCJA ------------------------------------------- \n" +
@@ -270,6 +270,11 @@ namespace PrologValidatorForms
             toolTip1.Show(Information, informator1);
         }
 
+        /// <summary>
+        /// Metoda przetrzymująca informacje o instrukcji po kliknięciu myszki
+        /// </summary>
+        /// <param name="sender">Przechowywuje </param>
+        /// <param name="e">Przechowywuje obiekt typu MouseEventArgs</param>
         private void informator1_MouseClick(object sender, MouseEventArgs e)
         {
             string Information = "------------------------------------------- INSTRUKCJA ------------------------------------------- \n" +
@@ -306,8 +311,8 @@ namespace PrologValidatorForms
         /// <summary>
         /// Metoda generowana automatycznie
         /// </summary>
-        /// <param name="keyManager">Przechowywuje odwołanie do obiektu</param>
-        /// <param name="keyManager">Przechowywuje obiekt typu EventArgs będący informacją o zdarzeniu</param>
+        /// <param name="sender">Przechowywuje </param>
+        /// <param name="e">Przechowywuje obiekt typu MouseEventArgs</param>
         private void Main_MouseUp(object sender, MouseEventArgs e)
         {
             mouse_Down = false;
@@ -316,14 +321,15 @@ namespace PrologValidatorForms
         /// <summary>
         /// Metoda generowana automatycznie
         /// </summary>
-        /// <param name="keyManager">Przechowywuje odwołanie do obiektu</param>
-        /// <param name="keyManager">Przechowywuje obiekt typu EventArgs będący informacją o zdarzeniu</param>
+        /// <param name="sender">Przechowywuje odwołanie do obiektu</param>
+        /// <param name="e">Przechowywuje obiekt typu PaintEventArgs klasy do rysowania prostokątów w formularzu</param>
         private void panel2_Paint(object sender, PaintEventArgs e)
         {
 
         }
 
-        /// <summary>
+        /// <param name="sender">Przechowywuje </param>
+        /// <param name="e">Przechowywuje obiekt typu EventArgs</param>/// <summary>
         /// Metoda generowana automatycznie
         /// </summary>
         /// <param name="keyManager">Przechowywuje odwołanie do obiektu</param>

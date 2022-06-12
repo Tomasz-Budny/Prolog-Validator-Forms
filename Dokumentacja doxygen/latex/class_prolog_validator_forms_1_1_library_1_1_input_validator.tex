@@ -1,0 +1,122 @@
+\hypertarget{class_prolog_validator_forms_1_1_library_1_1_input_validator}{}\doxysection{Dokumentacja klasy Prolog\+Validator\+Forms.\+Library.\+Input\+Validator}
+\label{class_prolog_validator_forms_1_1_library_1_1_input_validator}\index{PrologValidatorForms.Library.InputValidator@{PrologValidatorForms.Library.InputValidator}}
+
+
+Klasa która przetrzymuje paterny nazw i posiada metody je sprawdzające  
+
+
+\doxysubsection*{Statyczne metody publiczne}
+\begin{DoxyCompactItemize}
+\item 
+static bool \mbox{\hyperlink{class_prolog_validator_forms_1_1_library_1_1_input_validator_a777f647168813e121670044542c4d0e0}{Validate\+Student\+Directory}} (string path)
+\begin{DoxyCompactList}\small\item\em Metoda stpawdzająca poprawność nazwy studenta z patternem \end{DoxyCompactList}\item 
+static bool \mbox{\hyperlink{class_prolog_validator_forms_1_1_library_1_1_input_validator_a683655bd20eeaf517dd05952185b70db}{Validate\+Group\+Directory}} (string path)
+\begin{DoxyCompactList}\small\item\em Metoda stpawdzająca poprawność nazwy grupy studentów z patternem \end{DoxyCompactList}\item 
+static bool \mbox{\hyperlink{class_prolog_validator_forms_1_1_library_1_1_input_validator_a3d20aab850edaee9a701c2e7ce3bdae5}{Validate\+Task\+Name}} (string name)
+\begin{DoxyCompactList}\small\item\em Metoda stpawdzająca poprawność nazwy zadania z patternem \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Statyczne atrybuty prywatne}
+\begin{DoxyCompactItemize}
+\item 
+static Regex \mbox{\hyperlink{class_prolog_validator_forms_1_1_library_1_1_input_validator_ad212ab81276a9b0d3bb4dcf44c53c22a}{student\+Directory\+Pattern}} = new Regex(\char`\"{}$^\wedge$K\mbox{[}1-\/9\mbox{]}\+\_\+\mbox{[}0-\/9\mbox{]}\{6\}\+\_\+\mbox{[}1-\/9\mbox{]}\$\char`\"{})
+\item 
+static Regex \mbox{\hyperlink{class_prolog_validator_forms_1_1_library_1_1_input_validator_ad0020b3317f666ce83d75629c5318618}{task\+Name\+Pattern}} = new Regex(\char`\"{}$^\wedge$\mbox{[}z$\vert$Z\mbox{]}ad\mbox{[}0-\/9\mbox{]}\{1,2\}\$\char`\"{})
+\item 
+static Regex \mbox{\hyperlink{class_prolog_validator_forms_1_1_library_1_1_input_validator_a03bb077249d50b5cd13a977ee091974d}{group\+Directory\+Pattern}} = new Regex(\char`\"{}$^\wedge$G\mbox{[}1-\/9\mbox{]}\+\_\+\mbox{[}0-\/9\mbox{]}\{4\}\$\char`\"{})
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Opis szczegółowy}
+Klasa która przetrzymuje paterny nazw i posiada metody je sprawdzające 
+
+
+\begin{DoxyParams}{Parametry}
+{\em student\+Directory\+Pattern} & Przechowywuje patern nazwy studenta\\
+\hline
+{\em task\+Name\+Pattern} & Przechowywuje patern nazwy zadania\\
+\hline
+{\em group\+Directory\+Pattern} & Przechowywuje patern nazwy grupy studentów\\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Dokumentacja funkcji składowych}
+\mbox{\Hypertarget{class_prolog_validator_forms_1_1_library_1_1_input_validator_a683655bd20eeaf517dd05952185b70db}\label{class_prolog_validator_forms_1_1_library_1_1_input_validator_a683655bd20eeaf517dd05952185b70db}} 
+\index{PrologValidatorForms.Library.InputValidator@{PrologValidatorForms.Library.InputValidator}!ValidateGroupDirectory@{ValidateGroupDirectory}}
+\index{ValidateGroupDirectory@{ValidateGroupDirectory}!PrologValidatorForms.Library.InputValidator@{PrologValidatorForms.Library.InputValidator}}
+\doxysubsubsection{\texorpdfstring{ValidateGroupDirectory()}{ValidateGroupDirectory()}}
+{\footnotesize\ttfamily static bool Prolog\+Validator\+Forms.\+Library.\+Input\+Validator.\+Validate\+Group\+Directory (\begin{DoxyParamCaption}\item[{string}]{path }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Metoda stpawdzająca poprawność nazwy grupy studentów z patternem 
+
+
+\begin{DoxyParams}{Parametry}
+{\em path} & Przechowywuje ścieżkę do grupy studentów\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+Zwraca informację czy nazwa grupy studentów jest zgodna z patternem
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_prolog_validator_forms_1_1_library_1_1_input_validator_a777f647168813e121670044542c4d0e0}\label{class_prolog_validator_forms_1_1_library_1_1_input_validator_a777f647168813e121670044542c4d0e0}} 
+\index{PrologValidatorForms.Library.InputValidator@{PrologValidatorForms.Library.InputValidator}!ValidateStudentDirectory@{ValidateStudentDirectory}}
+\index{ValidateStudentDirectory@{ValidateStudentDirectory}!PrologValidatorForms.Library.InputValidator@{PrologValidatorForms.Library.InputValidator}}
+\doxysubsubsection{\texorpdfstring{ValidateStudentDirectory()}{ValidateStudentDirectory()}}
+{\footnotesize\ttfamily static bool Prolog\+Validator\+Forms.\+Library.\+Input\+Validator.\+Validate\+Student\+Directory (\begin{DoxyParamCaption}\item[{string}]{path }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Metoda stpawdzająca poprawność nazwy studenta z patternem 
+
+
+\begin{DoxyParams}{Parametry}
+{\em path} & Przechowywuje ścieżkę do studenta\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+Zwraca informację czy nazwa studenta jest zgodna z patternem
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_prolog_validator_forms_1_1_library_1_1_input_validator_a3d20aab850edaee9a701c2e7ce3bdae5}\label{class_prolog_validator_forms_1_1_library_1_1_input_validator_a3d20aab850edaee9a701c2e7ce3bdae5}} 
+\index{PrologValidatorForms.Library.InputValidator@{PrologValidatorForms.Library.InputValidator}!ValidateTaskName@{ValidateTaskName}}
+\index{ValidateTaskName@{ValidateTaskName}!PrologValidatorForms.Library.InputValidator@{PrologValidatorForms.Library.InputValidator}}
+\doxysubsubsection{\texorpdfstring{ValidateTaskName()}{ValidateTaskName()}}
+{\footnotesize\ttfamily static bool Prolog\+Validator\+Forms.\+Library.\+Input\+Validator.\+Validate\+Task\+Name (\begin{DoxyParamCaption}\item[{string}]{name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Metoda stpawdzająca poprawność nazwy zadania z patternem 
+
+
+\begin{DoxyParams}{Parametry}
+{\em path} & Przechowywuje ścieżkę do zadania\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+Zwraca informację czy nazwa zadania jest zgodna z patternem
+\end{DoxyReturn}
+
+
+\doxysubsection{Dokumentacja atrybutów składowych}
+\mbox{\Hypertarget{class_prolog_validator_forms_1_1_library_1_1_input_validator_a03bb077249d50b5cd13a977ee091974d}\label{class_prolog_validator_forms_1_1_library_1_1_input_validator_a03bb077249d50b5cd13a977ee091974d}} 
+\index{PrologValidatorForms.Library.InputValidator@{PrologValidatorForms.Library.InputValidator}!groupDirectoryPattern@{groupDirectoryPattern}}
+\index{groupDirectoryPattern@{groupDirectoryPattern}!PrologValidatorForms.Library.InputValidator@{PrologValidatorForms.Library.InputValidator}}
+\doxysubsubsection{\texorpdfstring{groupDirectoryPattern}{groupDirectoryPattern}}
+{\footnotesize\ttfamily Regex Prolog\+Validator\+Forms.\+Library.\+Input\+Validator.\+group\+Directory\+Pattern = new Regex(\char`\"{}$^\wedge$G\mbox{[}1-\/9\mbox{]}\+\_\+\mbox{[}0-\/9\mbox{]}\{4\}\$\char`\"{})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_prolog_validator_forms_1_1_library_1_1_input_validator_ad212ab81276a9b0d3bb4dcf44c53c22a}\label{class_prolog_validator_forms_1_1_library_1_1_input_validator_ad212ab81276a9b0d3bb4dcf44c53c22a}} 
+\index{PrologValidatorForms.Library.InputValidator@{PrologValidatorForms.Library.InputValidator}!studentDirectoryPattern@{studentDirectoryPattern}}
+\index{studentDirectoryPattern@{studentDirectoryPattern}!PrologValidatorForms.Library.InputValidator@{PrologValidatorForms.Library.InputValidator}}
+\doxysubsubsection{\texorpdfstring{studentDirectoryPattern}{studentDirectoryPattern}}
+{\footnotesize\ttfamily Regex Prolog\+Validator\+Forms.\+Library.\+Input\+Validator.\+student\+Directory\+Pattern = new Regex(\char`\"{}$^\wedge$K\mbox{[}1-\/9\mbox{]}\+\_\+\mbox{[}0-\/9\mbox{]}\{6\}\+\_\+\mbox{[}1-\/9\mbox{]}\$\char`\"{})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_prolog_validator_forms_1_1_library_1_1_input_validator_ad0020b3317f666ce83d75629c5318618}\label{class_prolog_validator_forms_1_1_library_1_1_input_validator_ad0020b3317f666ce83d75629c5318618}} 
+\index{PrologValidatorForms.Library.InputValidator@{PrologValidatorForms.Library.InputValidator}!taskNamePattern@{taskNamePattern}}
+\index{taskNamePattern@{taskNamePattern}!PrologValidatorForms.Library.InputValidator@{PrologValidatorForms.Library.InputValidator}}
+\doxysubsubsection{\texorpdfstring{taskNamePattern}{taskNamePattern}}
+{\footnotesize\ttfamily Regex Prolog\+Validator\+Forms.\+Library.\+Input\+Validator.\+task\+Name\+Pattern = new Regex(\char`\"{}$^\wedge$\mbox{[}z$\vert$Z\mbox{]}ad\mbox{[}0-\/9\mbox{]}\{1,2\}\$\char`\"{})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Dokumentacja dla tej klasy została wygenerowana z pliku\+:\begin{DoxyCompactItemize}
+\item 
+Prolog\+Validator\+Forms/\+Library/\mbox{\hyperlink{_input_validator_8cs}{Input\+Validator.\+cs}}\end{DoxyCompactItemize}

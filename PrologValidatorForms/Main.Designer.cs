@@ -41,9 +41,9 @@ namespace PrologValidatorForms
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.informator1 = new System.Windows.Forms.PictureBox();
-            this.cb2 = new PrologValidatorForms.Eksplorator();
+            this.cb2 = new PrologValidatorForms.Library.Eksplorator();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.cb1 = new PrologValidatorForms.Eksplorator();
+            this.cb1 = new PrologValidatorForms.Library.Eksplorator();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
@@ -294,8 +294,8 @@ namespace PrologValidatorForms
 
         #endregion
         private System.Windows.Forms.FolderBrowserDialog folderBrowserDialog1;
-        private Eksplorator cb1;
-        private Eksplorator cb2;
+        private PrologValidatorForms.Library.Eksplorator cb1;
+        private PrologValidatorForms.Library.Eksplorator cb2;
         private System.Windows.Forms.Button btn_confirm;
         private System.Windows.Forms.Label labelInfo;
         private System.Windows.Forms.Button btn_export;

@@ -1,0 +1,284 @@
+\hypertarget{class_prolog_validator_forms_1_1_library_1_1_task}{}\doxysection{Dokumentacja klasy Prolog\+Validator\+Forms.\+Library.\+Task}
+\label{class_prolog_validator_forms_1_1_library_1_1_task}\index{PrologValidatorForms.Library.Task@{PrologValidatorForms.Library.Task}}
+
+
+Klasa odpowiadająca za analizę wyników poszczególnych plików  
+
+
+\doxysubsection*{Metody publiczne}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_prolog_validator_forms_1_1_library_1_1_task_aa7cbfa6d53a68a717873079e67dd8056}{Task}} (string \mbox{\hyperlink{class_prolog_validator_forms_1_1_library_1_1_task_a46ad93721576b2a950dfc91004b7536b}{task\+File\+Path}}, string \mbox{\hyperlink{class_prolog_validator_forms_1_1_library_1_1_task_a104822107dd23dbfef90b6d97a7f231a}{task\+Name}})
+\begin{DoxyCompactList}\small\item\em Konstruktor kopiujący inicializujący pola klasy \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_prolog_validator_forms_1_1_library_1_1_task_ab3469aa5f5d5527699e2935be311a003}{Get\+Basic\+Informations}} ()
+\begin{DoxyCompactList}\small\item\em Metoda pobierająca infoemacje o pliku, datę utworzenia i rozmiar pliku \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_prolog_validator_forms_1_1_library_1_1_task_aa872863ff1bd0332067f41c65f2582a7}{Analyze\+Tests}} (List$<$ string $>$ \mbox{\hyperlink{class_prolog_validator_forms_1_1_library_1_1_task_a47c9b6f17e17af6237d6d3e3379ae604}{tests}})
+\begin{DoxyCompactList}\small\item\em Metoda tworząca metody klasy test zawierajaca informacje o testach oraz ich wyniki \end{DoxyCompactList}\item 
+override string \mbox{\hyperlink{class_prolog_validator_forms_1_1_library_1_1_task_a42a7468032a3be277f7670956a711aa2}{To\+String}} ()
+\begin{DoxyCompactList}\small\item\em Metoda zwtacająca stringa z nazwą zadania, ścieżką do pliku oraz wynikiem testów \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Właściwości}
+\begin{DoxyCompactItemize}
+\item 
+List$<$ \mbox{\hyperlink{class_prolog_validator_forms_1_1_library_1_1_test}{Test}} $>$ \mbox{\hyperlink{class_prolog_validator_forms_1_1_library_1_1_task_a769b2eea8cb5eb75003d5cac24a4aa12}{Tests}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+long \mbox{\hyperlink{class_prolog_validator_forms_1_1_library_1_1_task_aa10147fe2e5bf5efb01e986e605e8b1b}{Size\+Of\+File}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+string \mbox{\hyperlink{class_prolog_validator_forms_1_1_library_1_1_task_a6ee37f960a2edd4a093ec46ba992aea8}{Task\+Name}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+string \mbox{\hyperlink{class_prolog_validator_forms_1_1_library_1_1_task_a3e03a53af2654444e47707e52be653d5}{Creation\+Time}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+int \mbox{\hyperlink{class_prolog_validator_forms_1_1_library_1_1_task_a62d2eb5feefa87fabe999da2a7df0429}{Correct\+Answers}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+int \mbox{\hyperlink{class_prolog_validator_forms_1_1_library_1_1_task_ad0e98e95cf2f4358d98b2d6a314c576a}{Total\+Answers}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Metody prywatne}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_prolog_validator_forms_1_1_library_1_1_task_a172a281a3f6964554e7bcfe0b8e7fc3b}{Add\+Test}} (string content, bool is\+Correct)
+\begin{DoxyCompactList}\small\item\em Metoda dodająca obiekt typu \mbox{\hyperlink{class_prolog_validator_forms_1_1_library_1_1_test}{Test}} \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_prolog_validator_forms_1_1_library_1_1_task_a335ceede7ed30375a4ac01c8ba5765b3}{Anylyze\+Array}} (Prolog\+Engine e, string current)
+\begin{DoxyCompactList}\small\item\em Metoda odpowiadająca za analizowanie tablicy wyników dla zapytań oznaczonych \char`\"{}\$\char`\"{} \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_prolog_validator_forms_1_1_library_1_1_task_a427c58a87db4c1826b2a628b3db1c21c}{Show\+Tests}} ()
+\begin{DoxyCompactList}\small\item\em Metoda zwtacająca wyniki testów \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Atrybuty prywatne}
+\begin{DoxyCompactItemize}
+\item 
+long \mbox{\hyperlink{class_prolog_validator_forms_1_1_library_1_1_task_ab75d3874b9cab719a17bf6cc0e2219d4}{size\+Of\+File}}
+\item 
+string \mbox{\hyperlink{class_prolog_validator_forms_1_1_library_1_1_task_a46ad93721576b2a950dfc91004b7536b}{task\+File\+Path}}
+\item 
+string \mbox{\hyperlink{class_prolog_validator_forms_1_1_library_1_1_task_a104822107dd23dbfef90b6d97a7f231a}{task\+Name}}
+\item 
+string \mbox{\hyperlink{class_prolog_validator_forms_1_1_library_1_1_task_a7430547117ee55069c98e4b76b234877}{creation\+Date}}
+\item 
+int \mbox{\hyperlink{class_prolog_validator_forms_1_1_library_1_1_task_aa13ea652591294b5ec8e2a1f1a070769}{correct\+Answers}} = 0
+\item 
+int \mbox{\hyperlink{class_prolog_validator_forms_1_1_library_1_1_task_a63a12e25357b1658f36e41ad83e2162b}{total\+Answers}} = 0
+\item 
+List$<$ \mbox{\hyperlink{class_prolog_validator_forms_1_1_library_1_1_test}{Test}} $>$ \mbox{\hyperlink{class_prolog_validator_forms_1_1_library_1_1_task_a47c9b6f17e17af6237d6d3e3379ae604}{tests}} = new List$<$\mbox{\hyperlink{class_prolog_validator_forms_1_1_library_1_1_test}{Test}}$>$()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Opis szczegółowy}
+Klasa odpowiadająca za analizę wyników poszczególnych plików 
+
+
+\begin{DoxyParams}{Parametry}
+{\em size\+Of\+File} & Przechowywuje rozmiar pliku\\
+\hline
+{\em task\+File\+Path} & Przechowywuje ścieżkę do pliku\\
+\hline
+{\em task\+Name} & Przechowywuje nazwę pliku który będzie analizowany\\
+\hline
+{\em creation\+Date} & Przechowywuje datę utwórzenia pliku\\
+\hline
+{\em correct\+Answers} & Przechowywuje ilość zaliczonych testów\\
+\hline
+{\em total\+Answers} & Przechowywuje ilość wszystkich testów\\
+\hline
+{\em tests} & Lista przechowująca obiekty typu \mbox{\hyperlink{class_prolog_validator_forms_1_1_library_1_1_test}{Test}}\\
+\hline
+\end{DoxyParams}
+~\newline
+ 
+
+\doxysubsection{Dokumentacja konstruktora i destruktora}
+\mbox{\Hypertarget{class_prolog_validator_forms_1_1_library_1_1_task_aa7cbfa6d53a68a717873079e67dd8056}\label{class_prolog_validator_forms_1_1_library_1_1_task_aa7cbfa6d53a68a717873079e67dd8056}} 
+\index{PrologValidatorForms.Library.Task@{PrologValidatorForms.Library.Task}!Task@{Task}}
+\index{Task@{Task}!PrologValidatorForms.Library.Task@{PrologValidatorForms.Library.Task}}
+\doxysubsubsection{\texorpdfstring{Task()}{Task()}}
+{\footnotesize\ttfamily Prolog\+Validator\+Forms.\+Library.\+Task.\+Task (\begin{DoxyParamCaption}\item[{string}]{task\+File\+Path,  }\item[{string}]{task\+Name }\end{DoxyParamCaption})}
+
+
+
+Konstruktor kopiujący inicializujący pola klasy 
+
+
+\begin{DoxyParams}{Parametry}
+{\em task\+File\+Path} & Przechowywuje ścieżkę do pliku\\
+\hline
+{\em task\+Name} & Przechowywuje nazwę pliku który będzie analizowany\\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Dokumentacja funkcji składowych}
+\mbox{\Hypertarget{class_prolog_validator_forms_1_1_library_1_1_task_a172a281a3f6964554e7bcfe0b8e7fc3b}\label{class_prolog_validator_forms_1_1_library_1_1_task_a172a281a3f6964554e7bcfe0b8e7fc3b}} 
+\index{PrologValidatorForms.Library.Task@{PrologValidatorForms.Library.Task}!AddTest@{AddTest}}
+\index{AddTest@{AddTest}!PrologValidatorForms.Library.Task@{PrologValidatorForms.Library.Task}}
+\doxysubsubsection{\texorpdfstring{AddTest()}{AddTest()}}
+{\footnotesize\ttfamily void Prolog\+Validator\+Forms.\+Library.\+Task.\+Add\+Test (\begin{DoxyParamCaption}\item[{string}]{content,  }\item[{bool}]{is\+Correct }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Metoda dodająca obiekt typu \mbox{\hyperlink{class_prolog_validator_forms_1_1_library_1_1_test}{Test}} 
+
+
+\begin{DoxyParams}{Parametry}
+{\em content} & Przechowywuje zapytania\\
+\hline
+{\em is\+Correct} & Przechowywuje informacje czy test został wykonany poprawnie\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_prolog_validator_forms_1_1_library_1_1_task_aa872863ff1bd0332067f41c65f2582a7}\label{class_prolog_validator_forms_1_1_library_1_1_task_aa872863ff1bd0332067f41c65f2582a7}} 
+\index{PrologValidatorForms.Library.Task@{PrologValidatorForms.Library.Task}!AnalyzeTests@{AnalyzeTests}}
+\index{AnalyzeTests@{AnalyzeTests}!PrologValidatorForms.Library.Task@{PrologValidatorForms.Library.Task}}
+\doxysubsubsection{\texorpdfstring{AnalyzeTests()}{AnalyzeTests()}}
+{\footnotesize\ttfamily void Prolog\+Validator\+Forms.\+Library.\+Task.\+Analyze\+Tests (\begin{DoxyParamCaption}\item[{List$<$ string $>$}]{tests }\end{DoxyParamCaption})}
+
+
+
+Metoda tworząca metody klasy test zawierajaca informacje o testach oraz ich wyniki 
+
+
+\begin{DoxyParams}{Parametry}
+{\em tests} & Przechowywuje obiekt typu string z zapytaniami\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_prolog_validator_forms_1_1_library_1_1_task_a335ceede7ed30375a4ac01c8ba5765b3}\label{class_prolog_validator_forms_1_1_library_1_1_task_a335ceede7ed30375a4ac01c8ba5765b3}} 
+\index{PrologValidatorForms.Library.Task@{PrologValidatorForms.Library.Task}!AnylyzeArray@{AnylyzeArray}}
+\index{AnylyzeArray@{AnylyzeArray}!PrologValidatorForms.Library.Task@{PrologValidatorForms.Library.Task}}
+\doxysubsubsection{\texorpdfstring{AnylyzeArray()}{AnylyzeArray()}}
+{\footnotesize\ttfamily bool Prolog\+Validator\+Forms.\+Library.\+Task.\+Anylyze\+Array (\begin{DoxyParamCaption}\item[{Prolog\+Engine}]{e,  }\item[{string}]{current }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Metoda odpowiadająca za analizowanie tablicy wyników dla zapytań oznaczonych \char`\"{}\$\char`\"{} 
+
+
+\begin{DoxyParams}{Parametry}
+{\em e} & Przechowywuje obiekt klasy Prolog\+Engine\\
+\hline
+{\em current} & Przechowywuje zapytanie\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_prolog_validator_forms_1_1_library_1_1_task_ab3469aa5f5d5527699e2935be311a003}\label{class_prolog_validator_forms_1_1_library_1_1_task_ab3469aa5f5d5527699e2935be311a003}} 
+\index{PrologValidatorForms.Library.Task@{PrologValidatorForms.Library.Task}!GetBasicInformations@{GetBasicInformations}}
+\index{GetBasicInformations@{GetBasicInformations}!PrologValidatorForms.Library.Task@{PrologValidatorForms.Library.Task}}
+\doxysubsubsection{\texorpdfstring{GetBasicInformations()}{GetBasicInformations()}}
+{\footnotesize\ttfamily void Prolog\+Validator\+Forms.\+Library.\+Task.\+Get\+Basic\+Informations (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Metoda pobierająca infoemacje o pliku, datę utworzenia i rozmiar pliku 
+
+\mbox{\Hypertarget{class_prolog_validator_forms_1_1_library_1_1_task_a427c58a87db4c1826b2a628b3db1c21c}\label{class_prolog_validator_forms_1_1_library_1_1_task_a427c58a87db4c1826b2a628b3db1c21c}} 
+\index{PrologValidatorForms.Library.Task@{PrologValidatorForms.Library.Task}!ShowTests@{ShowTests}}
+\index{ShowTests@{ShowTests}!PrologValidatorForms.Library.Task@{PrologValidatorForms.Library.Task}}
+\doxysubsubsection{\texorpdfstring{ShowTests()}{ShowTests()}}
+{\footnotesize\ttfamily string Prolog\+Validator\+Forms.\+Library.\+Task.\+Show\+Tests (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Metoda zwtacająca wyniki testów 
+
+\begin{DoxyReturn}{Zwraca}
+Zwraca wyniki testów
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_prolog_validator_forms_1_1_library_1_1_task_a42a7468032a3be277f7670956a711aa2}\label{class_prolog_validator_forms_1_1_library_1_1_task_a42a7468032a3be277f7670956a711aa2}} 
+\index{PrologValidatorForms.Library.Task@{PrologValidatorForms.Library.Task}!ToString@{ToString}}
+\index{ToString@{ToString}!PrologValidatorForms.Library.Task@{PrologValidatorForms.Library.Task}}
+\doxysubsubsection{\texorpdfstring{ToString()}{ToString()}}
+{\footnotesize\ttfamily override string Prolog\+Validator\+Forms.\+Library.\+Task.\+To\+String (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Metoda zwtacająca stringa z nazwą zadania, ścieżką do pliku oraz wynikiem testów 
+
+
+\begin{DoxyParams}{Parametry}
+{\em tests} & Przechowywuje obiekt typu string z zapytaniami\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+Zwraca stringa z nazwą zadania, ścieżką do pliku oraz wynikiem testu
+\end{DoxyReturn}
+
+
+\doxysubsection{Dokumentacja atrybutów składowych}
+\mbox{\Hypertarget{class_prolog_validator_forms_1_1_library_1_1_task_aa13ea652591294b5ec8e2a1f1a070769}\label{class_prolog_validator_forms_1_1_library_1_1_task_aa13ea652591294b5ec8e2a1f1a070769}} 
+\index{PrologValidatorForms.Library.Task@{PrologValidatorForms.Library.Task}!correctAnswers@{correctAnswers}}
+\index{correctAnswers@{correctAnswers}!PrologValidatorForms.Library.Task@{PrologValidatorForms.Library.Task}}
+\doxysubsubsection{\texorpdfstring{correctAnswers}{correctAnswers}}
+{\footnotesize\ttfamily int Prolog\+Validator\+Forms.\+Library.\+Task.\+correct\+Answers = 0\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_prolog_validator_forms_1_1_library_1_1_task_a7430547117ee55069c98e4b76b234877}\label{class_prolog_validator_forms_1_1_library_1_1_task_a7430547117ee55069c98e4b76b234877}} 
+\index{PrologValidatorForms.Library.Task@{PrologValidatorForms.Library.Task}!creationDate@{creationDate}}
+\index{creationDate@{creationDate}!PrologValidatorForms.Library.Task@{PrologValidatorForms.Library.Task}}
+\doxysubsubsection{\texorpdfstring{creationDate}{creationDate}}
+{\footnotesize\ttfamily string Prolog\+Validator\+Forms.\+Library.\+Task.\+creation\+Date\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_prolog_validator_forms_1_1_library_1_1_task_ab75d3874b9cab719a17bf6cc0e2219d4}\label{class_prolog_validator_forms_1_1_library_1_1_task_ab75d3874b9cab719a17bf6cc0e2219d4}} 
+\index{PrologValidatorForms.Library.Task@{PrologValidatorForms.Library.Task}!sizeOfFile@{sizeOfFile}}
+\index{sizeOfFile@{sizeOfFile}!PrologValidatorForms.Library.Task@{PrologValidatorForms.Library.Task}}
+\doxysubsubsection{\texorpdfstring{sizeOfFile}{sizeOfFile}}
+{\footnotesize\ttfamily long Prolog\+Validator\+Forms.\+Library.\+Task.\+size\+Of\+File\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_prolog_validator_forms_1_1_library_1_1_task_a46ad93721576b2a950dfc91004b7536b}\label{class_prolog_validator_forms_1_1_library_1_1_task_a46ad93721576b2a950dfc91004b7536b}} 
+\index{PrologValidatorForms.Library.Task@{PrologValidatorForms.Library.Task}!taskFilePath@{taskFilePath}}
+\index{taskFilePath@{taskFilePath}!PrologValidatorForms.Library.Task@{PrologValidatorForms.Library.Task}}
+\doxysubsubsection{\texorpdfstring{taskFilePath}{taskFilePath}}
+{\footnotesize\ttfamily string Prolog\+Validator\+Forms.\+Library.\+Task.\+task\+File\+Path\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_prolog_validator_forms_1_1_library_1_1_task_a104822107dd23dbfef90b6d97a7f231a}\label{class_prolog_validator_forms_1_1_library_1_1_task_a104822107dd23dbfef90b6d97a7f231a}} 
+\index{PrologValidatorForms.Library.Task@{PrologValidatorForms.Library.Task}!taskName@{taskName}}
+\index{taskName@{taskName}!PrologValidatorForms.Library.Task@{PrologValidatorForms.Library.Task}}
+\doxysubsubsection{\texorpdfstring{taskName}{taskName}}
+{\footnotesize\ttfamily string Prolog\+Validator\+Forms.\+Library.\+Task.\+task\+Name\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_prolog_validator_forms_1_1_library_1_1_task_a47c9b6f17e17af6237d6d3e3379ae604}\label{class_prolog_validator_forms_1_1_library_1_1_task_a47c9b6f17e17af6237d6d3e3379ae604}} 
+\index{PrologValidatorForms.Library.Task@{PrologValidatorForms.Library.Task}!tests@{tests}}
+\index{tests@{tests}!PrologValidatorForms.Library.Task@{PrologValidatorForms.Library.Task}}
+\doxysubsubsection{\texorpdfstring{tests}{tests}}
+{\footnotesize\ttfamily List$<$\mbox{\hyperlink{class_prolog_validator_forms_1_1_library_1_1_test}{Test}}$>$ Prolog\+Validator\+Forms.\+Library.\+Task.\+tests = new List$<$\mbox{\hyperlink{class_prolog_validator_forms_1_1_library_1_1_test}{Test}}$>$()\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_prolog_validator_forms_1_1_library_1_1_task_a63a12e25357b1658f36e41ad83e2162b}\label{class_prolog_validator_forms_1_1_library_1_1_task_a63a12e25357b1658f36e41ad83e2162b}} 
+\index{PrologValidatorForms.Library.Task@{PrologValidatorForms.Library.Task}!totalAnswers@{totalAnswers}}
+\index{totalAnswers@{totalAnswers}!PrologValidatorForms.Library.Task@{PrologValidatorForms.Library.Task}}
+\doxysubsubsection{\texorpdfstring{totalAnswers}{totalAnswers}}
+{\footnotesize\ttfamily int Prolog\+Validator\+Forms.\+Library.\+Task.\+total\+Answers = 0\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+\doxysubsection{Dokumentacja właściwości}
+\mbox{\Hypertarget{class_prolog_validator_forms_1_1_library_1_1_task_a62d2eb5feefa87fabe999da2a7df0429}\label{class_prolog_validator_forms_1_1_library_1_1_task_a62d2eb5feefa87fabe999da2a7df0429}} 
+\index{PrologValidatorForms.Library.Task@{PrologValidatorForms.Library.Task}!CorrectAnswers@{CorrectAnswers}}
+\index{CorrectAnswers@{CorrectAnswers}!PrologValidatorForms.Library.Task@{PrologValidatorForms.Library.Task}}
+\doxysubsubsection{\texorpdfstring{CorrectAnswers}{CorrectAnswers}}
+{\footnotesize\ttfamily int Prolog\+Validator\+Forms.\+Library.\+Task.\+Correct\+Answers\hspace{0.3cm}{\ttfamily [get]}}
+
+\mbox{\Hypertarget{class_prolog_validator_forms_1_1_library_1_1_task_a3e03a53af2654444e47707e52be653d5}\label{class_prolog_validator_forms_1_1_library_1_1_task_a3e03a53af2654444e47707e52be653d5}} 
+\index{PrologValidatorForms.Library.Task@{PrologValidatorForms.Library.Task}!CreationTime@{CreationTime}}
+\index{CreationTime@{CreationTime}!PrologValidatorForms.Library.Task@{PrologValidatorForms.Library.Task}}
+\doxysubsubsection{\texorpdfstring{CreationTime}{CreationTime}}
+{\footnotesize\ttfamily string Prolog\+Validator\+Forms.\+Library.\+Task.\+Creation\+Time\hspace{0.3cm}{\ttfamily [get]}}
+
+\mbox{\Hypertarget{class_prolog_validator_forms_1_1_library_1_1_task_aa10147fe2e5bf5efb01e986e605e8b1b}\label{class_prolog_validator_forms_1_1_library_1_1_task_aa10147fe2e5bf5efb01e986e605e8b1b}} 
+\index{PrologValidatorForms.Library.Task@{PrologValidatorForms.Library.Task}!SizeOfFile@{SizeOfFile}}
+\index{SizeOfFile@{SizeOfFile}!PrologValidatorForms.Library.Task@{PrologValidatorForms.Library.Task}}
+\doxysubsubsection{\texorpdfstring{SizeOfFile}{SizeOfFile}}
+{\footnotesize\ttfamily long Prolog\+Validator\+Forms.\+Library.\+Task.\+Size\+Of\+File\hspace{0.3cm}{\ttfamily [get]}}
+
+\mbox{\Hypertarget{class_prolog_validator_forms_1_1_library_1_1_task_a6ee37f960a2edd4a093ec46ba992aea8}\label{class_prolog_validator_forms_1_1_library_1_1_task_a6ee37f960a2edd4a093ec46ba992aea8}} 
+\index{PrologValidatorForms.Library.Task@{PrologValidatorForms.Library.Task}!TaskName@{TaskName}}
+\index{TaskName@{TaskName}!PrologValidatorForms.Library.Task@{PrologValidatorForms.Library.Task}}
+\doxysubsubsection{\texorpdfstring{TaskName}{TaskName}}
+{\footnotesize\ttfamily string Prolog\+Validator\+Forms.\+Library.\+Task.\+Task\+Name\hspace{0.3cm}{\ttfamily [get]}}
+
+\mbox{\Hypertarget{class_prolog_validator_forms_1_1_library_1_1_task_a769b2eea8cb5eb75003d5cac24a4aa12}\label{class_prolog_validator_forms_1_1_library_1_1_task_a769b2eea8cb5eb75003d5cac24a4aa12}} 
+\index{PrologValidatorForms.Library.Task@{PrologValidatorForms.Library.Task}!Tests@{Tests}}
+\index{Tests@{Tests}!PrologValidatorForms.Library.Task@{PrologValidatorForms.Library.Task}}
+\doxysubsubsection{\texorpdfstring{Tests}{Tests}}
+{\footnotesize\ttfamily List$<$\mbox{\hyperlink{class_prolog_validator_forms_1_1_library_1_1_test}{Test}}$>$ Prolog\+Validator\+Forms.\+Library.\+Task.\+Tests\hspace{0.3cm}{\ttfamily [get]}}
+
+\mbox{\Hypertarget{class_prolog_validator_forms_1_1_library_1_1_task_ad0e98e95cf2f4358d98b2d6a314c576a}\label{class_prolog_validator_forms_1_1_library_1_1_task_ad0e98e95cf2f4358d98b2d6a314c576a}} 
+\index{PrologValidatorForms.Library.Task@{PrologValidatorForms.Library.Task}!TotalAnswers@{TotalAnswers}}
+\index{TotalAnswers@{TotalAnswers}!PrologValidatorForms.Library.Task@{PrologValidatorForms.Library.Task}}
+\doxysubsubsection{\texorpdfstring{TotalAnswers}{TotalAnswers}}
+{\footnotesize\ttfamily int Prolog\+Validator\+Forms.\+Library.\+Task.\+Total\+Answers\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Dokumentacja dla tej klasy została wygenerowana z pliku\+:\begin{DoxyCompactItemize}
+\item 
+Prolog\+Validator\+Forms/\+Library/\mbox{\hyperlink{_analyzator_engine_8cs}{Analyzator\+Engine.\+cs}}\end{DoxyCompactItemize}

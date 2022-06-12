@@ -9,7 +9,7 @@ using System.Windows.Forms;
 using System.IO;
 using System.Diagnostics;
 
-namespace PrologValidatorForms
+namespace PrologValidatorForms.Library
 {
     partial class Eksplorator : UserControl
     {

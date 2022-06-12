@@ -2,7 +2,7 @@
 using System.IO;
 using System.Text.RegularExpressions;
 
-namespace PrologValidatorForms
+namespace PrologValidatorForms.Library
 {
     /// <summary>
     /// Klasa która przetrzymuje paterny nazw i posiada metody je sprawdzające

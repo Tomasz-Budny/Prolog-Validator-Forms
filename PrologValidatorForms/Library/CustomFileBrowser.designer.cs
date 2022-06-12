@@ -1,5 +1,5 @@
 ﻿
-namespace PrologValidatorForms
+namespace PrologValidatorForms.Library
 {
     partial class Eksplorator
     {

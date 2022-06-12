@@ -43,7 +43,6 @@ C:\Users\GAMING\Desktop\Projekt IO KOD\PrologValidatorForms\bin\Debug\CSProlog.p
 C:\Users\GAMING\Desktop\Projekt IO KOD\PrologValidatorForms\bin\Debug\EPPlus.xml
 C:\Users\GAMING\Desktop\Projekt IO KOD\PrologValidatorForms\obj\Debug\PrologValidatorForms.csproj.AssemblyReference.cache
 C:\Users\GAMING\Desktop\Projekt IO KOD\PrologValidatorForms\obj\Debug\PrologValidatorForms.csproj.SuggestedBindingRedirects.cache
-C:\Users\GAMING\Desktop\Projekt IO KOD\PrologValidatorForms\obj\Debug\PrologValidatorForms.Eksplorator.resources
 C:\Users\GAMING\Desktop\Projekt IO KOD\PrologValidatorForms\obj\Debug\PrologValidatorForms.Main.resources
 C:\Users\GAMING\Desktop\Projekt IO KOD\PrologValidatorForms\obj\Debug\PrologValidatorForms.Properties.Resources.resources
 C:\Users\GAMING\Desktop\Projekt IO KOD\PrologValidatorForms\obj\Debug\PrologValidatorForms.csproj.GenerateResource.cache
@@ -51,3 +50,4 @@ C:\Users\GAMING\Desktop\Projekt IO KOD\PrologValidatorForms\obj\Debug\PrologVali
 C:\Users\GAMING\Desktop\Projekt IO KOD\PrologValidatorForms\obj\Debug\PrologValidatorForms.csproj.CopyComplete
 C:\Users\GAMING\Desktop\Projekt IO KOD\PrologValidatorForms\obj\Debug\PrologValidatorForms.exe
 C:\Users\GAMING\Desktop\Projekt IO KOD\PrologValidatorForms\obj\Debug\PrologValidatorForms.pdb
+C:\Users\GAMING\Desktop\Projekt IO KOD\PrologValidatorForms\obj\Debug\PrologValidatorForms.Library.Eksplorator.resources

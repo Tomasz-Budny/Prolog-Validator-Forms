@@ -7,14 +7,30 @@ class \mbox{\hyperlink{class_prolog_validator_forms_1_1_library_1_1_circular_but
 \item 
 class \mbox{\hyperlink{class_prolog_validator_forms_1_1_library_1_1_declared_task}{Declared\+Task}}
 \begin{DoxyCompactList}\small\item\em Klasa przetrzymująca zapytania do danego zadania \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_prolog_validator_forms_1_1_library_1_1_eksplorator}{Eksplorator}}
+\item 
 class \mbox{\hyperlink{class_prolog_validator_forms_1_1_library_1_1_group_manager}{Group\+Manager}}
 \begin{DoxyCompactList}\small\item\em Podstawowa klasa funkcji odpowiadającej za rozpoczęcie programu oraz generowanie wyniku \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_prolog_validator_forms_1_1_library_1_1_input_validator}{Input\+Validator}}
+\begin{DoxyCompactList}\small\item\em Klasa która przetrzymuje paterny nazw i posiada metody je sprawdzające \end{DoxyCompactList}\item 
 class \mbox{\hyperlink{class_prolog_validator_forms_1_1_library_1_1_key_manager}{Key\+Manager}}
 \begin{DoxyCompactList}\small\item\em Klasa przetrzymująca informacje dotyczące klucza \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_prolog_validator_forms_1_1_library_1_1_paths_manager}{Paths\+Manager}}
+\begin{DoxyCompactList}\small\item\em Klasa przechowywuje ścieżki plików, ich typ oraz zarządza nimi \end{DoxyCompactList}\item 
 class \mbox{\hyperlink{class_prolog_validator_forms_1_1_library_1_1_size_converter}{Size\+Converter}}
-\begin{DoxyCompactList}\small\item\em Klasa konwertująca rozmiar pliku \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Klasa konwertująca rozmiar pliku \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_prolog_validator_forms_1_1_library_1_1_student_tasks_manager}{Student\+Tasks\+Manager}}
+\begin{DoxyCompactList}\small\item\em Klasa odpowiadająca za analizę zadań dla konkretnego studenta \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_prolog_validator_forms_1_1_library_1_1_task}{Task}}
+\begin{DoxyCompactList}\small\item\em Klasa odpowiadająca za analizę wyników poszczególnych plików \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_prolog_validator_forms_1_1_library_1_1_test}{Test}}
+\begin{DoxyCompactList}\small\item\em Klasa zawierająca zapytania oraz wyniki zapytań \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Wyliczenia}
 \begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{namespace_prolog_validator_forms_1_1_library_a2b4c73393919d38f603b69031e58041c}{Path\+List\+Types}} \{ \mbox{\hyperlink{namespace_prolog_validator_forms_1_1_library_a2b4c73393919d38f603b69031e58041cae73cda510e8bb947f7e61089e5581494}{Directory}}
+, \mbox{\hyperlink{namespace_prolog_validator_forms_1_1_library_a2b4c73393919d38f603b69031e58041ca0b27918290ff5323bea1e3b78a9cf04e}{File}}
+ \}
 \item 
 enum \mbox{\hyperlink{namespace_prolog_validator_forms_1_1_library_a3dbee13a47e594e9816caf81add2cb68}{Prefixes}} \{ \newline
 \mbox{\hyperlink{namespace_prolog_validator_forms_1_1_library_a3dbee13a47e594e9816caf81add2cb68a9d5ed678fe57bcca610140957afab571}{B}}
@@ -28,6 +44,22 @@ enum \mbox{\hyperlink{namespace_prolog_validator_forms_1_1_library_a3dbee13a47e5
 
 
 \doxysubsection{Dokumentacja typów wyliczanych}
+\mbox{\Hypertarget{namespace_prolog_validator_forms_1_1_library_a2b4c73393919d38f603b69031e58041c}\label{namespace_prolog_validator_forms_1_1_library_a2b4c73393919d38f603b69031e58041c}} 
+\index{PrologValidatorForms.Library@{PrologValidatorForms.Library}!PathListTypes@{PathListTypes}}
+\index{PathListTypes@{PathListTypes}!PrologValidatorForms.Library@{PrologValidatorForms.Library}}
+\doxysubsubsection{\texorpdfstring{PathListTypes}{PathListTypes}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{namespace_prolog_validator_forms_1_1_library_a2b4c73393919d38f603b69031e58041c}{Prolog\+Validator\+Forms.\+Library.\+Path\+List\+Types}}}
+
+\begin{DoxyEnumFields}{Wartości wyliczeń}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Directory@{Directory}!PrologValidatorForms.Library@{PrologValidatorForms.Library}}\index{PrologValidatorForms.Library@{PrologValidatorForms.Library}!Directory@{Directory}}}\mbox{\Hypertarget{namespace_prolog_validator_forms_1_1_library_a2b4c73393919d38f603b69031e58041cae73cda510e8bb947f7e61089e5581494}\label{namespace_prolog_validator_forms_1_1_library_a2b4c73393919d38f603b69031e58041cae73cda510e8bb947f7e61089e5581494}} 
+Directory&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{File@{File}!PrologValidatorForms.Library@{PrologValidatorForms.Library}}\index{PrologValidatorForms.Library@{PrologValidatorForms.Library}!File@{File}}}\mbox{\Hypertarget{namespace_prolog_validator_forms_1_1_library_a2b4c73393919d38f603b69031e58041ca0b27918290ff5323bea1e3b78a9cf04e}\label{namespace_prolog_validator_forms_1_1_library_a2b4c73393919d38f603b69031e58041ca0b27918290ff5323bea1e3b78a9cf04e}} 
+File&\\
+\hline
+
+\end{DoxyEnumFields}
 \mbox{\Hypertarget{namespace_prolog_validator_forms_1_1_library_a3dbee13a47e594e9816caf81add2cb68}\label{namespace_prolog_validator_forms_1_1_library_a3dbee13a47e594e9816caf81add2cb68}} 
 \index{PrologValidatorForms.Library@{PrologValidatorForms.Library}!Prefixes@{Prefixes}}
 \index{Prefixes@{Prefixes}!PrologValidatorForms.Library@{PrologValidatorForms.Library}}
