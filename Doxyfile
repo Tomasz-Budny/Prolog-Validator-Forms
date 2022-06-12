@@ -996,7 +996,12 @@ RECURSIVE              = YES
 # run.
 
 EXCLUDE                = packages \
-                         CSProlog
+                         CSProlog \
+                         PrologValidatorForms/Library/CircularButton.cs \
+                         PrologValidatorForms/Main.cs \
+                         PrologValidatorForms/Main.Designer.cs \
+                         PrologValidatorForms/Library/CustomFileBrowser.cs \
+                         PrologValidatorForms/Library/CustomFileBrowser.designer.cs
 
 # The EXCLUDE_SYMLINKS tag can be used to select whether or not files or
 # directories that are symbolic links (a Unix file system feature) are excluded

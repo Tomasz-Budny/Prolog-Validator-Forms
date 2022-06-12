@@ -26,6 +26,9 @@ namespace PrologValidatorForms.Library
             this.keyFilePath = keyFilePath;
         }
 
+        /// <summary>
+        /// Metoda zwracająca declaredTasks
+        /// </summary>
         public List<DeclaredTask> DeclaredTasks => declaredTasks;
 
         /// <summary>
@@ -86,13 +89,20 @@ namespace PrologValidatorForms.Library
         string nameOfTask;
         List<string> declaredTests = new List<string>();
 
+        /// <summary>
+        /// Metoda zwracająca declaredTests
+        /// </summary>
         public List<string> DeclaredTests => declaredTests;
+
+        /// <summary>
+        /// Metoda zwracająca nameOfTask
+        /// </summary>
         public string NameOfTask => nameOfTask;
 
         /// <summary>
         /// Metoda dodająca zapytanie do listy zapytań
         /// </summary>
-        /// <param name="testContent">Przetrzymuje treśc zapytania</param>
+        /// <param name="testContent">Przetrzymuje treść zapytania</param>
         public void AddTest(string testContent)
         {
             declaredTests.Add(testContent);

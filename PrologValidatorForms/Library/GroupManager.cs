@@ -26,7 +26,6 @@ namespace PrologValidatorForms.Library
         string name;
         string destinationDirectory;
         List<StudentTasksManager> studentTasksManagers = new List<StudentTasksManager>();
-        // nowe
         double maxProgressBarValue;
         Panel progressBar;
 

@@ -1,6 +1,9 @@
 ﻿
 namespace PrologValidatorForms
 {
+    /// <summary>
+    /// Klasa inicjalizacyjna GUI
+    /// </summary>
     partial class Main
     {
         /// <summary>

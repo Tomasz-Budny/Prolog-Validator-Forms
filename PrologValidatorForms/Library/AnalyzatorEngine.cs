@@ -41,11 +41,34 @@ namespace PrologValidatorForms.Library
             this.taskName = taskName;
         }
 
+        /// <summary>
+        /// Metoda zwracająca Test
+        /// </summary>
         public List<Test> Tests => tests;
+
+        /// <summary>
+        /// Metoda zwracająca sizeOfFile
+        /// </summary>
         public long SizeOfFile => sizeOfFile;
+
+        /// <summary>
+        /// Metoda zwracająca taskName
+        /// </summary>
         public string TaskName => taskName;
+
+        /// <summary>
+        /// Metoda zwracająca creationDate
+        /// </summary>
         public string CreationTime => creationDate;
+
+        /// <summary>
+        /// Metoda zwracająca correctAnswers
+        /// </summary>
         public int CorrectAnswers => correctAnswers;
+
+        /// <summary>
+        /// Metoda zwracająca totalAnswers
+        /// </summary>
         public int TotalAnswers => totalAnswers;
 
         /// <summary>
@@ -202,6 +225,10 @@ namespace PrologValidatorForms.Library
         string content;
         bool isCorrect;
 
+
+        /// <summary>
+        /// Metoda zwracająca Content
+        /// </summary>
         public string Content => content;
 
         /// <summary>
