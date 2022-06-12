@@ -7,7 +7,6 @@ C:\Users\tomek\OneDrive\Pulpit\Semestr4\InżynieriaOprogramowania\ProjekcikProlo
 C:\Users\tomek\OneDrive\Pulpit\Semestr4\InżynieriaOprogramowania\ProjekcikProlog\IO\IO\PrologValidatorForms\bin\Debug\CSProlog.pdb
 C:\Users\tomek\OneDrive\Pulpit\Semestr4\InżynieriaOprogramowania\ProjekcikProlog\IO\IO\PrologValidatorForms\bin\Debug\EPPlus.xml
 C:\Users\tomek\OneDrive\Pulpit\Semestr4\InżynieriaOprogramowania\ProjekcikProlog\IO\IO\PrologValidatorForms\obj\Debug\PrologValidatorForms.csproj.AssemblyReference.cache
-C:\Users\tomek\OneDrive\Pulpit\Semestr4\InżynieriaOprogramowania\ProjekcikProlog\IO\IO\PrologValidatorForms\obj\Debug\PrologValidatorForms.Eksplorator.resources
 C:\Users\tomek\OneDrive\Pulpit\Semestr4\InżynieriaOprogramowania\ProjekcikProlog\IO\IO\PrologValidatorForms\obj\Debug\PrologValidatorForms.Main.resources
 C:\Users\tomek\OneDrive\Pulpit\Semestr4\InżynieriaOprogramowania\ProjekcikProlog\IO\IO\PrologValidatorForms\obj\Debug\PrologValidatorForms.Properties.Resources.resources
 C:\Users\tomek\OneDrive\Pulpit\Semestr4\InżynieriaOprogramowania\ProjekcikProlog\IO\IO\PrologValidatorForms\obj\Debug\PrologValidatorForms.csproj.GenerateResource.cache
@@ -68,3 +67,4 @@ D:\E-Szkoła\SGGW\Semestr 4\Inżynieria oprogramowania\Projekt\Final 3,0\IO\Prol
 D:\E-Szkoła\SGGW\Semestr 4\Inżynieria oprogramowania\Projekt\Final 3,0\IO\PrologValidatorForms\obj\Debug\PrologValidatorForms.csproj.CopyComplete
 D:\E-Szkoła\SGGW\Semestr 4\Inżynieria oprogramowania\Projekt\Final 3,0\IO\PrologValidatorForms\obj\Debug\PrologValidatorForms.exe
 D:\E-Szkoła\SGGW\Semestr 4\Inżynieria oprogramowania\Projekt\Final 3,0\IO\PrologValidatorForms\obj\Debug\PrologValidatorForms.pdb
+C:\Users\tomek\OneDrive\Pulpit\Semestr4\InżynieriaOprogramowania\ProjekcikProlog\IO\IO\PrologValidatorForms\obj\Debug\PrologValidatorForms.Library.Eksplorator.resources

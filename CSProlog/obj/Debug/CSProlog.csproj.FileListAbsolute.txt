@@ -13,3 +13,4 @@ D:\E-Szkoła\SGGW\Semestr 4\Inżynieria oprogramowania\Projekt\Final 3,0\IO\CSPr
 D:\E-Szkoła\SGGW\Semestr 4\Inżynieria oprogramowania\Projekt\Final 3,0\IO\CSProlog\obj\Debug\CSProlog.csproj.CoreCompileInputs.cache
 D:\E-Szkoła\SGGW\Semestr 4\Inżynieria oprogramowania\Projekt\Final 3,0\IO\CSProlog\obj\Debug\CSProlog.dll
 D:\E-Szkoła\SGGW\Semestr 4\Inżynieria oprogramowania\Projekt\Final 3,0\IO\CSProlog\obj\Debug\CSProlog.pdb
+C:\Users\tomek\OneDrive\Pulpit\Semestr4\InżynieriaOprogramowania\ProjekcikProlog\IO\IO\CSProlog\obj\Debug\CSProlog.csproj.AssemblyReference.cache
