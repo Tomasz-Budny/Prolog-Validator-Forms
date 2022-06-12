@@ -4,6 +4,25 @@ namespace PrologValidatorForms
     /// <summary>
     /// Klasa inicjalizacyjna GUI
     /// </summary>
+    /// <param name="folderBrowserDialog1">Przetrzymuje obiekt typu System.Windows.Forms.FolderBrowserDialog</param>
+    /// <param name="cb1">Przetrzymuje obiekt typu PrologValidatorForms.Library.Eksplorator</param>
+    /// <param name="cb2">Przetrzymuje obiekt typu PrologValidatorForms.Library.Eksplorator</param>
+    /// <param name="btn_confirm">Przetrzymuje obiekt typu System.Windows.Forms.Button</param>
+    /// <param name="labelInfo">Przetrzymuje obiekt typu System.Windows.Forms.Label</param>
+    /// <param name="btn_export">Przetrzymuje obiekt typu System.Windows.Forms.Button</param>
+    /// <param name="label1">Przetrzymuje obiekt typu System.Windows.Forms.Label</param>
+    /// <param name="label2">Przetrzymuje obiekt typu System.Windows.Forms.Label</param>
+    /// <param name="panel1">Przetrzymuje obiekt typu System.Windows.Forms.Panel</param>
+    /// <param name="panel2">Przetrzymuje obiekt typu System.Windows.Forms.Panel</param>
+    /// <param name="panel3">Przetrzymuje obiekt typu System.Windows.Forms.Panel</param>
+    /// <param name="panel4">Przetrzymuje obiekt typu System.Windows.Forms.Panel</param>
+    /// <param name="panel5">Przetrzymuje obiekt typu System.Windows.Forms.Panel</param>
+    /// <param name="timer1">Przetrzymuje obiekt typu System.Windows.Forms.Timer</param>
+    /// <param name="button1">Przetrzymuje obiekt typu System.Windows.Forms.Button</param>
+    /// <param name="button2">Przetrzymuje obiekt typu System.Windows.Forms.Button</param>
+    /// <param name="pictureBox1">Przetrzymuje obiekt typu System.Windows.Forms.PictureBox</param>
+    /// <param name="toolTip1">Przetrzymuje obiekt typu System.Windows.Forms.ToolTip</param>
+    /// <param name="informator1">Przetrzymuje obiekt typu System.Windows.Forms.PictureBox</param>
     partial class Main
     {
         /// <summary>
@@ -294,6 +313,9 @@ namespace PrologValidatorForms
             this.PerformLayout();
 
         }
+        
+
+
 
         #endregion
         private System.Windows.Forms.FolderBrowserDialog folderBrowserDialog1;

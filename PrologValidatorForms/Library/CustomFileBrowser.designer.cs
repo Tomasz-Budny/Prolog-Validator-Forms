@@ -1,6 +1,20 @@
 ﻿
 namespace PrologValidatorForms.Library
 {
+    /// <summary>
+    /// Klasa odpowiedzialna za formatowanie okna do wyborów plików w GUI
+    /// </summary>
+    /// <param name="listView">Przetrzymuje obiekt typu System.Windows.Forms.ListView</param>
+    /// <param name="btnChoose">Przetrzymuje obiekt typu System.Windows.Forms.Button</param>
+    /// <param name="textBox">Przetrzymuje obiekt typu System.Windows.Forms.TextBox</param>
+    /// <param name="nameColumn">Przetrzymuje obiekt typu System.Windows.Forms.ColumnHeader</param>
+    /// <param name="dateColumn">Przetrzymuje obiekt typu System.Windows.Forms.ColumnHeader</param>
+    /// <param name="typeColumn">Przetrzymuje obiekt typu System.Windows.Forms.ColumnHeader</param>
+    /// <param name="sizeColumn">Przetrzymuje obiekt typu System.Windows.Forms.ColumnHeader</param>
+    /// <param name="imageList">Przetrzymuje obiekt typu System.Windows.Forms.ImageList</param>
+    /// <param name="btnBackward">Przetrzymuje obiekt typu System.Windows.Forms.Button</param>
+    /// <param name="btnForward">Przetrzymuje obiekt typu System.Windows.Forms.Button</param>
+
     partial class Eksplorator
     {
         /// <summary>
@@ -166,7 +180,7 @@ namespace PrologValidatorForms.Library
         }
 
         #endregion
-
+        
         private System.Windows.Forms.ListView listView;
         private System.Windows.Forms.Button btnChoose;
         private System.Windows.Forms.TextBox textBox;

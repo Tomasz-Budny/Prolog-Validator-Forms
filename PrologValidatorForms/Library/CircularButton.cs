@@ -9,8 +9,15 @@ using System.Drawing.Drawing2D;
 
 namespace PrologValidatorForms.Library
 {
+    /// <summary>
+    /// Klasa odpowiedzialna za zaokraglanie elementow
+    /// </summary>
     public class CircularButton: Button
     {
+        /// <summary>
+        /// Metoda zaokrąglająca obiekty
+        /// </summary>
+        /// <param name="pevent">Odwolanie do klasy</param>
         protected override void OnPaint(PaintEventArgs pevent)
         {
             GraphicsPath g = new GraphicsPath();
