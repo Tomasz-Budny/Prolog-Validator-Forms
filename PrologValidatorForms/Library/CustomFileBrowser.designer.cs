@@ -104,13 +104,13 @@ namespace PrologValidatorForms.Library
             // 
             // btnChoose
             // 
-            this.btnChoose.BackColor = System.Drawing.Color.SlateGray;
+            this.btnChoose.BackColor = System.Drawing.Color.White;
             this.btnChoose.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnChoose.FlatAppearance.BorderSize = 0;
+            this.btnChoose.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.btnChoose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnChoose.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.btnChoose.ForeColor = System.Drawing.Color.Black;
-            this.btnChoose.Location = new System.Drawing.Point(515, 10);
+            this.btnChoose.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.btnChoose.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnChoose.Location = new System.Drawing.Point(515, 11);
             this.btnChoose.Margin = new System.Windows.Forms.Padding(2);
             this.btnChoose.Name = "btnChoose";
             this.btnChoose.Size = new System.Drawing.Size(144, 22);
@@ -132,14 +132,14 @@ namespace PrologValidatorForms.Library
             // 
             // btnBackward
             // 
-            this.btnBackward.BackColor = System.Drawing.Color.SlateGray;
+            this.btnBackward.BackColor = System.Drawing.Color.White;
             this.btnBackward.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnBackward.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBackward.Font = new System.Drawing.Font("Forte", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBackward.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.btnBackward.Location = new System.Drawing.Point(10, 10);
             this.btnBackward.Margin = new System.Windows.Forms.Padding(2);
             this.btnBackward.Name = "btnBackward";
-            this.btnBackward.Size = new System.Drawing.Size(69, 20);
+            this.btnBackward.Size = new System.Drawing.Size(69, 22);
             this.btnBackward.TabIndex = 3;
             this.btnBackward.Text = "<<";
             this.btnBackward.UseVisualStyleBackColor = false;
@@ -147,15 +147,15 @@ namespace PrologValidatorForms.Library
             // 
             // btnForward
             // 
-            this.btnForward.BackColor = System.Drawing.Color.SlateGray;
+            this.btnForward.BackColor = System.Drawing.Color.White;
             this.btnForward.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnForward.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnForward.Font = new System.Drawing.Font("Forte", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnForward.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.btnForward.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btnForward.Location = new System.Drawing.Point(83, 10);
             this.btnForward.Margin = new System.Windows.Forms.Padding(2);
             this.btnForward.Name = "btnForward";
-            this.btnForward.Size = new System.Drawing.Size(75, 20);
+            this.btnForward.Size = new System.Drawing.Size(75, 22);
             this.btnForward.TabIndex = 4;
             this.btnForward.Text = ">>";
             this.btnForward.UseVisualStyleBackColor = false;
