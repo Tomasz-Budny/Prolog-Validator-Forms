@@ -221,11 +221,13 @@ namespace PrologValidatorForms.Library
                     ws.Cells[basicCellsRow, basicCellsColumn + 1 + (stm.Tasks.Count) * 2].Style.Border.Left.Color.SetColor(Color.White);
 
                     dataCellsRow++;
+
+                    //Automatyczne wyrównanie kolumn
+
+                    ws.Cells[1, 1, dataCellsRow + 2, basicCellsColumn + 4 + (stm.Tasks.Count) * 2].AutoFitColumns();
                 }
 
-                //Automatyczne wyrównanie kolumn
-
-                ws.Cells[1, 1, 50, 50].AutoFitColumns();
+                
 
 
                 foreach (StudentTasksManager stm in studentTasksManagers)
@@ -392,7 +394,7 @@ namespace PrologValidatorForms.Library
                     
                     //Automatyczne wyrównanie kolumn
 
-                    ws.Cells[1, 1, 50, 50].AutoFitColumns();
+                    ws.Cells[1, 1, dataCellsRow + stm.Tasks.Count + 2, dataCellsColumn + How_many + 5].AutoFitColumns();
                 }
 
 
