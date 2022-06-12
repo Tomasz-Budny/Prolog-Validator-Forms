@@ -12,7 +12,7 @@ namespace PrologValidatorForms.Library
     static class SizeConverter
     {
         /// <summary>
-        /// Klasa zamieniająca rozmiar pliku (np. z kB na MB)
+        /// Metoda zamieniająca rozmiar pliku (np. z kB na MB)
         /// </summary>
         /// <param name="fileSizeInBytes">Przechowywuje rozmiar pliku w baitach</param>
         /// <returns>Zwraca zmieniony rozmiar pliku</returns>

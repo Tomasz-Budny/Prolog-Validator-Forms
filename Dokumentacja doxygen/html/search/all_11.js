@@ -2,8 +2,8 @@ var searchData=
 [
   ['task_0',['Task',['../class_prolog_validator_forms_1_1_task.html',1,'PrologValidatorForms.Task'],['../class_prolog_validator_forms_1_1_task.html#acbcb3cdead8b21366f4a2d3421966d91',1,'PrologValidatorForms.Task.Task(string taskFilePath, string taskName)']]],
   ['taskfilepath_1',['taskFilePath',['../class_prolog_validator_forms_1_1_task.html#a326f8f8fc3b2cb5491d1512c3250e950',1,'PrologValidatorForms::Task']]],
-  ['taskname_2',['taskName',['../class_prolog_validator_forms_1_1_task.html#a355dfb794785fe0ff49a04175f0f5b86',1,'PrologValidatorForms::Task']]],
-  ['taskname_3',['TaskName',['../class_prolog_validator_forms_1_1_task.html#a13d6f3c3732c2a2ea548fcd13d2b54db',1,'PrologValidatorForms::Task']]],
+  ['taskname_2',['TaskName',['../class_prolog_validator_forms_1_1_task.html#a13d6f3c3732c2a2ea548fcd13d2b54db',1,'PrologValidatorForms::Task']]],
+  ['taskname_3',['taskName',['../class_prolog_validator_forms_1_1_task.html#a355dfb794785fe0ff49a04175f0f5b86',1,'PrologValidatorForms::Task']]],
   ['tasknamepattern_4',['taskNamePattern',['../class_prolog_validator_forms_1_1_input_validator.html#ad77f6177dfa0c607c2085930635e1f75',1,'PrologValidatorForms::InputValidator']]],
   ['tasks_5',['Tasks',['../class_prolog_validator_forms_1_1_student_tasks_manager.html#a16ea15d614d370cf0a50a11baf1b9d1d',1,'PrologValidatorForms::StudentTasksManager']]],
   ['tasks_6',['tasks',['../class_prolog_validator_forms_1_1_student_tasks_manager.html#afd27cd22447a2414742a57324da886d0',1,'PrologValidatorForms::StudentTasksManager']]],

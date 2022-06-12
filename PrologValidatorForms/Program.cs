@@ -8,10 +8,13 @@ using PrologValidatorForms.Library;
 
 namespace PrologValidatorForms
 {
+    /// <summary>
+    /// Klasa odpowiedzialna za aktywowanie programu.
+    /// </summary>
     static class Program
     {
         /// <summary>
-        /// Główny punkt wejścia dla aplikacji.
+        /// Metoda uruchamiająca działanie aplikacji.
         /// </summary>
         [STAThread]
         public static void Main()

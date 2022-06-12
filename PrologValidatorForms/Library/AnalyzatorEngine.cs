@@ -11,14 +11,14 @@ using System.Windows.Forms;
 namespace PrologValidatorForms
 {
     /// <summary>
-    /// Klasa
+    /// Klasa odpowiadająca za analizę wyników poszczególnych plików
     /// </summary>
-    /// <param name="sizeOfFile">Przechowywuje </param>
-    /// <param name="taskFilePath">Przechowywuje </param>
-    /// <param name="taskName">Przechowywuje </param>
-    /// <param name="creationDate">Przechowywuje </param>
-    /// <param name="correctAnswers">Przechowywuje </param>
-    /// <param name="totalAnswers">Przechowywuje </param>
+    /// <param name="sizeOfFile">Przechowywuje rozmiar pliku</param>
+    /// <param name="taskFilePath">Przechowywuje ścieżkę do pliku</param>
+    /// <param name="taskName">Przechowywuje nazwę pliku który będzie analizowany</param>
+    /// <param name="creationDate">Przechowywuje datę utwórzenia pliku</param>
+    /// <param name="correctAnswers">Przechowywuje ilość zaliczonych testów</param>
+    /// <param name="totalAnswers">Przechowywuje ilość wszystkich testów</param>
     /// <param name="tests">Lista przechowująca obiekty typu Test</param> 
     class Task
     {
@@ -33,8 +33,8 @@ namespace PrologValidatorForms
         /// <summary>
         /// Konstruktor kopiujący inicializujący pola klasy
         /// </summary>
-        /// <param name="taskFilePath">Przechowywuje </param>
-        /// <param name="taskName">Przechowywuje </param>
+        /// <param name="taskFilePath">Przechowywuje ścieżkę do pliku</param>
+        /// <param name="taskName">Przechowywuje nazwę pliku który będzie analizowany</param>
         public Task(string taskFilePath, string taskName)
         {
             this.taskFilePath = taskFilePath;
@@ -48,6 +48,11 @@ namespace PrologValidatorForms
         public int CorrectAnswers => correctAnswers;
         public int TotalAnswers => totalAnswers;
 
+        /// <summary>
+        /// Metoda dodająca obiekt typu Test
+        /// </summary>
+        /// <param name="content">Przechowywuje zapytania</param>
+        /// <param name="isCorrect">Przechowywuje informacje czy test został wykonany poprawnie</param>
         private void AddTest(string content, bool isCorrect)
         {
             totalAnswers++;
@@ -56,6 +61,11 @@ namespace PrologValidatorForms
             tests.Add(new Test(content, isCorrect));
         }
 
+        /// <summary>
+        /// Metoda odpowiadająca za analizowanie tablicy wyników dla zapytań oznaczonych "$"
+        /// </summary>
+        /// <param name="e">Przechowywuje obiekt klasy PrologEngine</param>
+        /// <param name="current">Przechowywuje zapytanie</param>
         private bool AnylyzeArray(PrologEngine e, string current)
         {
             string query = "";
@@ -111,6 +121,9 @@ namespace PrologValidatorForms
             return final;
         }
 
+        /// <summary>
+        /// Metoda pobierająca infoemacje o pliku, datę utworzenia i rozmiar pliku
+        /// </summary>
         public void GetBasicInformations()
         {
             FileInfo fi = new FileInfo(taskFilePath);
@@ -126,6 +139,10 @@ namespace PrologValidatorForms
             }
         }
 
+        /// <summary>
+        /// Metoda tworząca metody klasy test zawierajaca informacje o testach oraz ich wyniki
+        /// </summary>
+        /// <param name="tests">Przechowywuje obiekt typu string z zapytaniami</param>
         public void AnalyzeTests(List<string> tests)
         {
 
@@ -148,7 +165,11 @@ namespace PrologValidatorForms
             }
         }
 
-
+        /// <summary>
+        /// Metoda zwtacająca stringa z nazwą zadania, ścieżką do pliku oraz wynikiem testów
+        /// </summary>
+        /// <param name="tests">Przechowywuje obiekt typu string z zapytaniami</param>
+        /// <returns>Zwraca stringa z nazwą zadania, ścieżką do pliku oraz wynikiem testu</returns>
         public override string ToString()
         {
             if (taskFilePath != null)
@@ -156,6 +177,10 @@ namespace PrologValidatorForms
             return "";
         }
 
+        /// <summary>
+        /// Metoda zwtacająca wyniki testów
+        /// </summary>
+        /// <returns>Zwraca wyniki testów</returns>
         private string ShowTests()
         {
             string result = "";
@@ -167,22 +192,42 @@ namespace PrologValidatorForms
         }
     }
 
+    /// <summary>
+    /// Klasa zawierająca zapytania oraz wyniki zapytań
+    /// </summary>
+    /// <param name="content">Przechowywuje zapytania</param>
+    /// <param name="isCorrect">Przechowywuje informacje czy test został wykonany poprawnie</param>
     class Test
     {
         string content;
         bool isCorrect;
 
         public string Content => content;
+
+        /// <summary>
+        /// Metoda zwtacająca informację czy test został wykonany poprawnie
+        /// </summary>
+        /// <returns>Zwraca informację czy test został wykonany poprawnie</returns>
         public int IsCorrect
         {
             get { if (isCorrect) { return 1; } else { return 0; } }
         }
+
+        /// <summary>
+        /// Konstruktor kopiujący inicializujący pola klasy
+        /// </summary>
+        /// <param name="content">Przechowywuje zapytania</param>
+        /// <param name="isCorrect">Przechowywuje informacje czy test został wykonany poprawnie</param>
         public Test(string content, bool isCorrect)
         {
             this.content = content;
             this.isCorrect = isCorrect;
         }
 
+        /// <summary>
+        /// Metoda zwtacająca zapytanie oraz informacje czy test został wykonany poprawnie 
+        /// </summary>
+        /// <returns>Zwraca zapytanie oraz informacje czy test został wykonany poprawnie </returns>
         public override string ToString()
         {
             return $"[ {content}   |   {isCorrect} ]";

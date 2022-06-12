@@ -2,7 +2,7 @@
 \label{class_prolog_validator_forms_1_1_task}\index{PrologValidatorForms.Task@{PrologValidatorForms.Task}}
 
 
-Klasa  
+Klasa odpowiadająca za analizę wyników poszczególnych plików  
 
 
 \doxysubsection*{Metody publiczne}
@@ -11,11 +11,11 @@ Klasa
 \mbox{\hyperlink{class_prolog_validator_forms_1_1_task_acbcb3cdead8b21366f4a2d3421966d91}{Task}} (string \mbox{\hyperlink{class_prolog_validator_forms_1_1_task_a326f8f8fc3b2cb5491d1512c3250e950}{task\+File\+Path}}, string \mbox{\hyperlink{class_prolog_validator_forms_1_1_task_a355dfb794785fe0ff49a04175f0f5b86}{task\+Name}})
 \begin{DoxyCompactList}\small\item\em Konstruktor kopiujący inicializujący pola klasy \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_prolog_validator_forms_1_1_task_ad19893bd761006bf809034129d9cdf5e}{Get\+Basic\+Informations}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Metoda pobierająca infoemacje o pliku, datę utworzenia i rozmiar pliku \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_prolog_validator_forms_1_1_task_a6791893fa50f7a5bb0c4288bc59725e9}{Analyze\+Tests}} (List$<$ string $>$ \mbox{\hyperlink{class_prolog_validator_forms_1_1_task_a93ef74f5e360dfb5ba5c5a3d61c4ef61}{tests}})
-\item 
+\begin{DoxyCompactList}\small\item\em Metoda tworząca metody klasy test zawierajaca informacje o testach oraz ich wyniki \end{DoxyCompactList}\item 
 override string \mbox{\hyperlink{class_prolog_validator_forms_1_1_task_a1f19418bce2440fa2c781e50940d7197}{To\+String}} ()
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Metoda zwtacająca stringa z nazwą zadania, ścieżką do pliku oraz wynikiem testów \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Właściwości}
 \begin{DoxyCompactItemize}
 \item 
@@ -35,11 +35,11 @@ int \mbox{\hyperlink{class_prolog_validator_forms_1_1_task_aa105362fb144fdb61929
 \begin{DoxyCompactItemize}
 \item 
 void \mbox{\hyperlink{class_prolog_validator_forms_1_1_task_acb77a89eb41e7f08198754902fbf8482}{Add\+Test}} (string content, bool is\+Correct)
-\item 
+\begin{DoxyCompactList}\small\item\em Metoda dodająca obiekt typu \mbox{\hyperlink{class_prolog_validator_forms_1_1_test}{Test}} \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{class_prolog_validator_forms_1_1_task_ab87033e33428a6f8f7ea134af7ce3d6b}{Anylyze\+Array}} (Prolog\+Engine e, string current)
-\item 
+\begin{DoxyCompactList}\small\item\em Metoda odpowiadająca za analizowanie tablicy wyników dla zapytań oznaczonych \char`\"{}\$\char`\"{} \end{DoxyCompactList}\item 
 string \mbox{\hyperlink{class_prolog_validator_forms_1_1_task_a9e88b79730be98e472be0c4dc54a9f13}{Show\+Tests}} ()
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Metoda zwtacająca wyniki testów \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Atrybuty prywatne}
 \begin{DoxyCompactItemize}
 \item 
@@ -60,21 +60,21 @@ List$<$ \mbox{\hyperlink{class_prolog_validator_forms_1_1_test}{Test}} $>$ \mbox
 
 
 \doxysubsection{Opis szczegółowy}
-Klasa 
+Klasa odpowiadająca za analizę wyników poszczególnych plików 
 
 
 \begin{DoxyParams}{Parametry}
-{\em size\+Of\+File} & Przechowywuje \\
+{\em size\+Of\+File} & Przechowywuje rozmiar pliku\\
 \hline
-{\em task\+File\+Path} & Przechowywuje \\
+{\em task\+File\+Path} & Przechowywuje ścieżkę do pliku\\
 \hline
-{\em task\+Name} & Przechowywuje \\
+{\em task\+Name} & Przechowywuje nazwę pliku który będzie analizowany\\
 \hline
-{\em creation\+Date} & Przechowywuje \\
+{\em creation\+Date} & Przechowywuje datę utwórzenia pliku\\
 \hline
-{\em correct\+Answers} & Przechowywuje \\
+{\em correct\+Answers} & Przechowywuje ilość zaliczonych testów\\
 \hline
-{\em total\+Answers} & Przechowywuje \\
+{\em total\+Answers} & Przechowywuje ilość wszystkich testów\\
 \hline
 {\em tests} & Lista przechowująca obiekty typu \mbox{\hyperlink{class_prolog_validator_forms_1_1_test}{Test}}\\
 \hline
@@ -95,9 +95,9 @@ Konstruktor kopiujący inicializujący pola klasy
 
 
 \begin{DoxyParams}{Parametry}
-{\em task\+File\+Path} & Przechowywuje \\
+{\em task\+File\+Path} & Przechowywuje ścieżkę do pliku\\
 \hline
-{\em task\+Name} & Przechowywuje \\
+{\em task\+Name} & Przechowywuje nazwę pliku który będzie analizowany\\
 \hline
 \end{DoxyParams}
 
@@ -109,23 +109,58 @@ Konstruktor kopiujący inicializujący pola klasy
 \doxysubsubsection{\texorpdfstring{AddTest()}{AddTest()}}
 {\footnotesize\ttfamily void Prolog\+Validator\+Forms.\+Task.\+Add\+Test (\begin{DoxyParamCaption}\item[{string}]{content,  }\item[{bool}]{is\+Correct }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
 
+
+
+Metoda dodająca obiekt typu \mbox{\hyperlink{class_prolog_validator_forms_1_1_test}{Test}} 
+
+
+\begin{DoxyParams}{Parametry}
+{\em content} & Przechowywuje zapytania\\
+\hline
+{\em is\+Correct} & Przechowywuje informacje czy test został wykonany poprawnie\\
+\hline
+\end{DoxyParams}
 \mbox{\Hypertarget{class_prolog_validator_forms_1_1_task_a6791893fa50f7a5bb0c4288bc59725e9}\label{class_prolog_validator_forms_1_1_task_a6791893fa50f7a5bb0c4288bc59725e9}} 
 \index{PrologValidatorForms.Task@{PrologValidatorForms.Task}!AnalyzeTests@{AnalyzeTests}}
 \index{AnalyzeTests@{AnalyzeTests}!PrologValidatorForms.Task@{PrologValidatorForms.Task}}
 \doxysubsubsection{\texorpdfstring{AnalyzeTests()}{AnalyzeTests()}}
 {\footnotesize\ttfamily void Prolog\+Validator\+Forms.\+Task.\+Analyze\+Tests (\begin{DoxyParamCaption}\item[{List$<$ string $>$}]{tests }\end{DoxyParamCaption})}
 
+
+
+Metoda tworząca metody klasy test zawierajaca informacje o testach oraz ich wyniki 
+
+
+\begin{DoxyParams}{Parametry}
+{\em tests} & Przechowywuje obiekt typu string z zapytaniami\\
+\hline
+\end{DoxyParams}
 \mbox{\Hypertarget{class_prolog_validator_forms_1_1_task_ab87033e33428a6f8f7ea134af7ce3d6b}\label{class_prolog_validator_forms_1_1_task_ab87033e33428a6f8f7ea134af7ce3d6b}} 
 \index{PrologValidatorForms.Task@{PrologValidatorForms.Task}!AnylyzeArray@{AnylyzeArray}}
 \index{AnylyzeArray@{AnylyzeArray}!PrologValidatorForms.Task@{PrologValidatorForms.Task}}
 \doxysubsubsection{\texorpdfstring{AnylyzeArray()}{AnylyzeArray()}}
 {\footnotesize\ttfamily bool Prolog\+Validator\+Forms.\+Task.\+Anylyze\+Array (\begin{DoxyParamCaption}\item[{Prolog\+Engine}]{e,  }\item[{string}]{current }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
 
+
+
+Metoda odpowiadająca za analizowanie tablicy wyników dla zapytań oznaczonych \char`\"{}\$\char`\"{} 
+
+
+\begin{DoxyParams}{Parametry}
+{\em e} & Przechowywuje obiekt klasy Prolog\+Engine\\
+\hline
+{\em current} & Przechowywuje zapytanie\\
+\hline
+\end{DoxyParams}
 \mbox{\Hypertarget{class_prolog_validator_forms_1_1_task_ad19893bd761006bf809034129d9cdf5e}\label{class_prolog_validator_forms_1_1_task_ad19893bd761006bf809034129d9cdf5e}} 
 \index{PrologValidatorForms.Task@{PrologValidatorForms.Task}!GetBasicInformations@{GetBasicInformations}}
 \index{GetBasicInformations@{GetBasicInformations}!PrologValidatorForms.Task@{PrologValidatorForms.Task}}
 \doxysubsubsection{\texorpdfstring{GetBasicInformations()}{GetBasicInformations()}}
 {\footnotesize\ttfamily void Prolog\+Validator\+Forms.\+Task.\+Get\+Basic\+Informations (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Metoda pobierająca infoemacje o pliku, datę utworzenia i rozmiar pliku 
 
 \mbox{\Hypertarget{class_prolog_validator_forms_1_1_task_a9e88b79730be98e472be0c4dc54a9f13}\label{class_prolog_validator_forms_1_1_task_a9e88b79730be98e472be0c4dc54a9f13}} 
 \index{PrologValidatorForms.Task@{PrologValidatorForms.Task}!ShowTests@{ShowTests}}
@@ -133,12 +168,31 @@ Konstruktor kopiujący inicializujący pola klasy
 \doxysubsubsection{\texorpdfstring{ShowTests()}{ShowTests()}}
 {\footnotesize\ttfamily string Prolog\+Validator\+Forms.\+Task.\+Show\+Tests (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
 
+
+
+Metoda zwtacająca wyniki testów 
+
+\begin{DoxyReturn}{Zwraca}
+Zwraca wyniki testów
+\end{DoxyReturn}
 \mbox{\Hypertarget{class_prolog_validator_forms_1_1_task_a1f19418bce2440fa2c781e50940d7197}\label{class_prolog_validator_forms_1_1_task_a1f19418bce2440fa2c781e50940d7197}} 
 \index{PrologValidatorForms.Task@{PrologValidatorForms.Task}!ToString@{ToString}}
 \index{ToString@{ToString}!PrologValidatorForms.Task@{PrologValidatorForms.Task}}
 \doxysubsubsection{\texorpdfstring{ToString()}{ToString()}}
 {\footnotesize\ttfamily override string Prolog\+Validator\+Forms.\+Task.\+To\+String (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
+
+
+Metoda zwtacająca stringa z nazwą zadania, ścieżką do pliku oraz wynikiem testów 
+
+
+\begin{DoxyParams}{Parametry}
+{\em tests} & Przechowywuje obiekt typu string z zapytaniami\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+Zwraca stringa z nazwą zadania, ścieżką do pliku oraz wynikiem testu
+\end{DoxyReturn}
 
 
 \doxysubsection{Dokumentacja atrybutów składowych}
