@@ -11,8 +11,7 @@ CSProlog/bin/
 CSProlog/obj/
 PrologValidatorForms/obj/
 PrologValidatorForms/bin/
-.vs/PrologValidatorForms/v16/
-
+.vs
 
 # User-specific files
 *.rsuser
